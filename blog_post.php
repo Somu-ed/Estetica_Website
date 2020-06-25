@@ -26,7 +26,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- ==== Document Title ==== -->
-    <title>Dashboard - Estetica</title>
+    <title>Blog Compose - Estetica Admin</title>
     
     <!-- ==== Document Meta ==== -->
     <meta name="author" content="">
@@ -34,7 +34,7 @@ else{
     <meta name="keywords" content="">
 
     <!-- ==== Favicon ==== -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/png">
 
     <!-- ==== Google Font ==== -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700%7CMontserrat:400,500">
@@ -57,7 +57,41 @@ else{
     <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Page Level Stylesheets -->
-    
+    <link rel="stylesheet" href="assets/css/summernote-bs4.min.css">
+    <link rel="stylesheet" href="assets/css/summernote-bs4-overrides.css">
+
+    <style>
+        .copyright {
+          display:block;
+          margin-top: 100px;
+          text-align: center;
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 12px;
+          font-weight: bold;
+          text-transform: uppercase;
+        }
+        .copyright a{
+          text-decoration: none;
+          color: #EE4E44;
+        }
+
+
+        /****** CODE ******/
+        .file-upload{display:block;text-align:center;font-family: Helvetica, Arial, sans-serif;font-size: 12px;}
+        .file-upload .file-select{display:block;border: 1px solid #dce4ec; border-radius: 5px;color: #34495e;cursor:pointer;height:40px;line-height:40px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;}
+        .file-upload .file-select .file-select-button{background:#dce4ec;padding:0 10px;display:inline-block;height:40px;line-height:40px;}
+        .file-upload .file-select .file-select-name{line-height:40px;display:inline-block;padding:0 10px;}
+        .file-upload .file-select:hover{border-color:#ff4040;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+        .file-upload .file-select:hover .file-select-button{background:#ff4040;color:#FFFFFF;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+        .file-upload.active .file-select{border-color:#3fa46a;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+        .file-upload.active .file-select .file-select-button{background:#3fa46a;color:#FFFFFF;transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;}
+        .file-upload .file-select input[type=file]{z-index:100;cursor:pointer;position:absolute;height:100%;width:100%;top:0;left:0;opacity:0;filter:alpha(opacity=0);}
+        .file-upload .file-select.file-select-disabled{opacity:0.65;}
+        .file-upload .file-select.file-select-disabled:hover{cursor:default;display:block;border: 2px solid #dce4ec;color: #34495e;cursor:pointer;height:40px;line-height:40px;margin-top:5px;text-align:left;background:#FFFFFF;overflow:hidden;position:relative;}
+        .file-upload .file-select.file-select-disabled:hover .file-select-button{background:#dce4ec;color:#666666;padding:0 10px;display:inline-block;height:40px;line-height:40px;}
+        .file-upload .file-select.file-select-disabled:hover .file-select-name{line-height:40px;display:inline-block;padding:0 10px;}
+    </style>
+
 </head>
 <body>
 
@@ -145,11 +179,6 @@ else{
                                 <i class="fa fa-user"></i>
                             </a>
                         </li>
-                        <!--<li class="nav-item">
-                            <a href="lock-screen.html" class="nav-link" title="Lock Screen">
-                                <i class="fa fa-lock"></i>
-                            </a>
-                        </li>-->
                         <li class="nav-item">
                             <a href="logout.php" class="nav-link" title="Logout">
                                 <i class="fa fa-sign-out-alt"></i>
@@ -165,7 +194,7 @@ else{
                 <ul>
                     <li>
                         <ul>
-                            <li class="active">
+                            <li>
                                 <a href="index.php">
                                     <i class="fa fa-home"></i>
                                     <span>Dashboard</span>
@@ -183,7 +212,7 @@ else{
                                     <span>Newsletter</span>
                                 </a>
                             </li>
-                            <li>
+                            <li class="active open is-dropdown">
                                 <a href="#">
                                     <i class="fab fa-blogger-b"></i>
                                     <span>Blog</span>
@@ -191,7 +220,7 @@ else{
 
                                 <ul>
                                     <li><a href="admin_blog.php">Posted Blogs</a></li>
-                                    <li><a href="blog_post.php">Compose</a></li>
+                                    <li class="active"><a href="blog_post.php">Compose</a></li>
                                     <!--<li><a href="products-edit.html">Edit Products</a></li>
                                     <li><a href="orders.html">Orders</a></li>
                                     <li><a href="order-view.html">Order View</a></li>-->
@@ -271,7 +300,7 @@ else{
                         <a href="#">Apps and Charts</a>
 
                         <ul>
-                            <li>
+                            <li class="active open">
                                 <a href="#">
                                     <i class="far fa-envelope"></i>
                                     <span>Mailbox</span>
@@ -279,7 +308,7 @@ else{
 
                                 <ul>
                                     <li><a href="mailbox_inbox.html">Inbox</a></li>
-                                    <li><a href="mailbox_compose.html">Compose</a></li>
+                                    <li class="active"><a href="mailbox_compose.html">Compose</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -319,9 +348,9 @@ else{
                                 </a>
                             </li>
                         </ul>
-                    </li>-->
+                    </li>
 
-                    <!--<li>
+                    <li>
                         <a href="#">Extra</a>
 
                         <ul>
@@ -395,7 +424,7 @@ else{
                     </div>
                     
                 </div>
-            </div> -->
+            </div>-->
             <!-- Sidebar Widgets End -->
         </aside>
         <!-- Sidebar End -->
@@ -408,11 +437,12 @@ else{
                     <div class="row">
                         <div class="col-lg-6">
                             <!-- Page Title Start -->
-                            <h2 class="page--title h5">Dashboard</h2>
+                            <h2 class="page--title h5">Compose</h2>
                             <!-- Page Title End -->
 
                             <ul class="breadcrumb">
-                                <li class="breadcrumb-item active"><span>Dashboard</span></li>
+                                <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                                <li class="breadcrumb-item active"><span>Compose</span></li>
                             </ul>
                         </div>
 
@@ -442,129 +472,158 @@ else{
 
             <!-- Main Content Start -->
             <section class="main--content">
-                <div class="row gutter-20">
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <!-- Mini Stats Panel Start -->
-                            <div class="miniStats--panel">
-                                <div class="miniStats--header bg-darker">
-                                    <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#2bb3c0">5,6,9,4,9,5,3,5,9,15,3,2,2,3,9,11,9,7,20,9,7,6</p>
-
-                                    <p class="miniStats--label text-white bg-blue">
-                                        <i class="fa fa-level-up-alt"></i>
-                                        <span>10%</span>
-                                    </p>
-                                </div>
-
-                                <div class="miniStats--body">
-                                    <i class="miniStats--icon fa fa-newspaper text-blue"></i>
-
-                                    <p class="miniStats--caption text-blue">Subscribers</p>
-                                    <h3 class="miniStats--title h4">Newsletter</h3>
-                                    <p class="miniStats--num text-blue">0</p>
-                                </div>
+                <div class="panel">
+                    <!-- App Start -->
+                    <div class="app_wrapper row">
+                        <!-- App Sidebar Start -->
+                        <div class="app_sidebar col-lg-3">
+                            <!-- Toolbar Start -->
+                            <div class="toolbar">
+                                <a href="" class="btn btn-block btn-rounded btn-danger fw--600">Compose</a>
                             </div>
-                            <!-- Mini Stats Panel End -->
+                            <!-- Toolbar End -->
+
+                            <!-- Mailbox Navigation Start -->
+                            <!--<ul class="navigation navigation-highlighted">
+                                <li class="title">MAILBOX</li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-envelope"></i>
+                                        <span>Inbox</span>
+                                        <span class="badge text-white bg-blue">3</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-paper-plane"></i>
+                                        <span>Sent</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="has-unread">
+                                        <i class="far fa-edit"></i>
+                                        <span>Draft</span>
+                                        <span class="badge text-white bg-blue">1</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-star"></i>
+                                        <span>Important</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-tags"></i>
+                                        <span>Tags</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-trash-alt"></i>
+                                        <span>Trash</span>
+                                    </a>
+                                </li>
+
+                                <li class="title">LABELS</li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-circle text-blue"></i>
+                                        <span>Work</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-circle text-green"></i>
+                                        <span>Family</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-circle text-orange"></i>
+                                        <span>Friends</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="far fa-circle text-red"></i>
+                                        <span>Others</span>
+                                    </a>
+                                </li>
+                            </ul>-->
+                            <!-- Mailbox Navigation End -->
                         </div>
-                    </div>
+                        <!-- App Sidebar End -->
+                        
+                        <!-- App Content Start -->
+                        <div class="app_content col-lg-9">
+                            <!-- Mail Compose Start -->
+                            <div class="mail-compose">
+                                <h3 class="mail-compose__title">Compose Blog</h3>
 
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <!-- Mini Stats Panel Start -->
-                            <div class="miniStats--panel">
-                                <div class="miniStats--header bg-darker">
-                                    <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#e16123">2,2,3,9,11,9,7,20,9,7,6,5,6,9,4,9,5,3,5,9,15,3</p>
+                                <form action="" method="post">
 
-                                    <p class="miniStats--label text-white bg-orange">
-                                        <i class="fa fa-level-down-alt"></i>
-                                        <span>10%</span>
-                                    </p>
-                                </div>
-
-                                <div class="miniStats--body">
-                                    <i class="miniStats--icon fa fa-phone text-orange"></i>
-
-                                    <p class="miniStats--caption text-orange">Responses</p>
-                                    <h3 class="miniStats--title h4">Contact</h3>
-                                    <p class="miniStats--num text-orange">0</p>
-                                </div>
-                            </div>
-                            <!-- Mini Stats Panel End -->
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="panel">
-                            <!-- Mini Stats Panel Start -->
-                            <div class="miniStats--panel">
-                                <div class="miniStats--header bg-darker">
-                                    <p class="miniStats--chart" data-trigger="sparkline" data-type="bar" data-width="4" data-height="30" data-color="#009378">2,2,3,9,11,9,7,20,9,7,6,5,6,9,4,9,5,3,5,9,15,3</p>
-
-                                    <p class="miniStats--label text-white bg-green">
-                                        <i class="fa fa-level-up-alt"></i>
-                                        <span>10%</span>
-                                    </p>
-                                </div>
-
-                                <div class="miniStats--body">
-                                    <i class="miniStats--icon fab fa-blogger-b text-green"></i>
-
-                                    <p class="miniStats--caption text-green">Posts</p>
-                                    <h3 class="miniStats--title h4">Blog</h3>
-                                    <p class="miniStats--num text-green">0</p>
-                                </div>
-                            </div>
-                            <!-- Mini Stats Panel End -->
-                        </div>
-                    </div>
-
-                    <div class="col-xl-6">
-                        <div class="panel">
-                            <div class="profile--panel">
-                                <div class="img-wrapper" data-bg-img="assets/img/covers/01_800x150.jpg">
-                                    <div class="img online">
-                                        <img src="assets/img/avatars/01_150x150.png" alt="" class="rounded-circle">
+                                    <script type="text/javascript" src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+                                    <div class="file-upload">
+                                        <div class="file-select">
+                                          <div class="file-select-button" id="fileName">Image</div>
+                                          <div class="file-select-name" id="noFile">Choose a cover image...</div> 
+                                          <input type="file" name="img" id="chooseFile" required>
+                                        </div>
                                     </div>
-                                </div>
+                                    <br>
 
-                                <div class="name">
-                                    <h3 class="h3"><?php echo"$name";?></h3>
-                                </div>
+                                    <div class="form-group">
+                                        <input type="date" name="date" placeholder="Date :" class="form-control" required>
+                                    </div>
 
-                                <div class="role">
-                                    <p>Web Developer &amp; Graphic Designer</p>
-                                </div><br>
+                                    <div class="form-group">
+                                        <input type="text" name="author" placeholder="Author :" class="form-control" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <input type="text" name="heading" placeholder="Heading :" class="form-control" required>
+                                    </div>
 
-                                <div class="bio">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo ratione vitae aliquid aliquam provident nostrum itaque quam minima molestias.</p>
-                                </div>
+                                    <div class="form-group">
+                                        <select name="cars" id="cars" aria-placeholder="Category" class="form-control">
+                                            <option value="" disabled selected>Select Category</option>
+                                            <option value="volvo">Furniture</option>
+                                            <option value="saab">Curtains</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <textarea name="mail_message" class="form-control" data-trigger="summernote"></textarea>
+                                    </div>
 
-                                <ul class="info nav text-uppercase">
-                                    <li>
-                                        <strong>1125</strong>
-                                        <span>Items</span>
-                                    </li>
-                                    <li>
-                                        <strong>133</strong>
-                                        <span>Projects</span>
-                                    </li>
-                                    <li>
-                                        <strong>3025</strong>
-                                        <span>Followers</span>
-                                    </li>
-                                </ul>
+                                    <div class="form-group">
+                                        <input type="text" name="keywords" placeholder="Tags : (eg: furniture, curtains, carpets)" class="form-control" required>
+                                    </div>
+
+                                    <div class="btn-list pt-3">
+                                        <button type="submit" class="btn btn-sm btn-rounded btn-success">Post &nbsp;<i class="far fa-paper-plane"></i></button>
+
+                                        <button type="reset" class="btn btn-sm btn-rounded btn-default">Reset</button>
+
+                                        <!--<button type="button" class="btn btn-sm btn-rounded btn-default">Draft</button>-->
+                                    </div>
+
+                                    
+                                </form>
                             </div>
+                            <!-- Mail Compose End -->
                         </div>
+                        <!-- App Content End -->
                     </div>
-
-                    
+                    <!-- App Sidebar End -->
                 </div>
             </section>
             <!-- Main Content End -->
 
             <!-- Main Footer Start -->
             <footer class="main--footer main--footer-light">
-                <p>Copyright &copy; <a href="http://esteticasolutions.in/">Estetica</a>. All Rights Reserved.</p>
+                <p>Copyright &copy; <a href="#">Estetica</a>. All Rights Reserved.</p>
             </footer>
             <!-- Main Footer End -->
         </main>
@@ -591,7 +650,23 @@ else{
     <script src="assets/js/datatables.min.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+        $('#chooseFile').bind('change', function () {
+        var filename = $("#chooseFile").val();
+        if (/^\s*$/.test(filename)) {
+            $(".file-upload").removeClass('active');
+            $("#noFile").text("No file chosen..."); 
+        }
+        else {
+            $(".file-upload").addClass('active');
+            $("#noFile").text(filename.replace("C:\\fakepath\\", "")); 
+        }
+    });
+    </script>
+
     <!-- Page Level Scripts -->
+    <script src="assets/js/summernote-bs4.min.js"></script>
+    <script src="assets/js/summernote-bs4-init.js"></script>
 
 </body>
 </html>
