@@ -1,3 +1,22 @@
+<?php
+session_start();
+include("config/dbconnect.php");
+?>
+
+<?php
+if(isset($_SESSION['id'])){
+    $id= $_SESSION['id'];
+    $query = "SELECT * FROM user WHERE email = '$id'";
+    $fire = mysqli_query($con, $query);
+    $details = mysqli_fetch_array($fire);
+    
+    $name = $details['name'];
+    $img = $details['img'];
+}
+else{
+    echo'<script type="text/javascript">window.location.href="login.php"</script>';
+}
+?>
 <!DOCTYPE html>
 <html dir="ltr" lang="en" class="no-outlines">
 <head>
@@ -161,18 +180,23 @@
                     <!-- Nav User Start -->
                     <li class="nav-item dropdown nav--user online">
                         <a href="#" class="nav-link" data-toggle="dropdown">
-                            <img src="assets/img/avatars/01_80x80.png" alt="" class="rounded-circle">
-                            <span>Henry Foster</span>
+                        <?php
+                         if($img == ""){
+                          echo"<img src='assets/img/avatars/default_profile.png' alt='$name[0]' class='rounded-circle'>";
+                         }
+                         else{
+                          echo"<img src='assets/img/avatars/$img' alt='$name[0]' class='rounded-circle'>";
+                         }
+                        ?>
+                            <span><?php echo"$name"; ?></span>
                             <i class="fa fa-angle-down"></i>
                         </a>
 
                         <ul class="dropdown-menu">
                             <li><a href="profile.html"><i class="far fa-user"></i>Profile</a></li>
-                            <li><a href="mailbox_inbox.html"><i class="far fa-envelope"></i>Inbox</a></li>
-                            <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li>
                             <li class="dropdown-divider"></li>
-                            <li><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock Screen</a></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i>Logout</a></li>
+                            <!--<li><a href="lock-screen.html"><i class="fa fa-lock"></i>Lock Screen</a></li>-->
+                            <li><a href="logout.php"><i class="fa fa-power-off"></i>Logout</a></li>
                         </ul>
                     </li>
                     <!-- Nav User End -->
@@ -187,7 +211,14 @@
             <div class="sidebar--profile">
                 <div class="profile--img">
                     <a href="profile.html">
-                        <img src="assets/img/avatars/01_80x80.png" alt="" class="rounded-circle">
+                        <?php
+                        if($img == ""){
+                        echo"<img src='assets/img/avatars/default_profile_white.png' alt='$name[0]' class='rounded-circle'>";
+                        }
+                        else{
+                        echo"<img src='assets/img/avatars/$img' alt='$name[0]' class='rounded-circle'>";
+                        }
+                        ?>
                     </a>
                 </div>
 
@@ -203,17 +234,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="lock-screen.html" class="nav-link" title="Lock Screen">
-                                <i class="fa fa-lock"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="mailbox_inbox.html" class="nav-link" title="Messages">
-                                <i class="fa fa-envelope"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" title="Logout">
+                            <a href="logout.php" class="nav-link" title="Logout">
                                 <i class="fa fa-sign-out-alt"></i>
                             </a>
                         </li>
@@ -228,9 +249,21 @@
                     <li>
                         <ul>
                             <li>
-                                <a href="index.html">
+                                <a href="index.php">
                                     <i class="fa fa-home"></i>
                                     <span>Dashboard</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="contact.php">
+                                    <i class="fa fa-phone"></i>
+                                    <span>Contact us</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="newsletter.php">
+                                    <i class="fa fa-newspaper"></i>
+                                    <span>Newsletter</span>
                                 </a>
                             </li>
                             <li class="active open is-dropdown">
@@ -500,7 +533,7 @@
                         <div class="app_sidebar col-lg-3">
                             <!-- Toolbar Start -->
                             <div class="toolbar">
-                                <a href="mailbox_compose.html" class="btn btn-block btn-rounded btn-danger fw--600">Compose</a>
+                                <a href="" class="btn btn-block btn-rounded btn-danger fw--600">Compose</a>
                             </div>
                             <!-- Toolbar End -->
 
