@@ -24,7 +24,7 @@
 		<link href="assets/css/themes/layout/brand/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="assets/media/favicon.svg" />
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -144,7 +144,7 @@
 												</span>
 											</li>
 											<li class="menu-item" aria-haspopup="true">
-												<a href="posted.php" class="menu-link">
+												<a href="posted.php?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>

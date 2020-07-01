@@ -1,11 +1,20 @@
 <?php include 'include.php'; ?>
 
+<?php
+if(isset($_POST['num_rows'])){
+	$per_page = $_POST['num_rows'];
+	echo"<script>alert(Records: $per_page);</script>";
+}
+else{
+	$per_page = 1;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Metronic | Dashboard</title>
+		<title>Posted Blogs | Estetica</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -25,7 +34,7 @@
 		<link href="assets/css/themes/layout/brand/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/logos/favicon.ico" />
+		<link rel="shortcut icon" href="assets/media/favicon.svg" />
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -145,7 +154,7 @@
 												</span>
 											</li>
 											<li class="menu-item menu-item-active" aria-haspopup="true">
-												<a href="#" class="menu-link">
+												<a href="posted.php?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
@@ -237,156 +246,232 @@
 								<div class="row">
 									<!--begin::Col-->
 									<?php 
-									$fetch = "SELECT * FROM blog ORDER BY 1 DESC LIMIT 0,6";
+									global $con;
+									$aWhere = array(); 
+			
+									if(isset($_GET['page'])){
+										$page = $_GET['page'];
+			
+									}
+									else{
+										$page=1;
+									}
+									
+									$start_from = ($page-1) * $per_page;
+									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
+									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
+									$fetch = "SELECT * FROM blog".$sWhere;
 									$fetch_fire = mysqli_query($con,$fetch);
 									while ($row = mysqli_fetch_array($fetch_fire)) {
 										$blog_id = $row['id'];
+										$blog_head = $row['heading'];
+										$blog_date = $row['date'];
+										$blog_cat = $row['category'];
+										$blog_auth = $row['author'];
+										$blog_desc = $row['short'];
 
-										echo('<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
-											<!--begin::Card-->
-											<div class="card card-custom gutter-b card-stretch">
-												<!--begin::Body-->
-												<div class="card-body pt-4">
-													<!--begin::Toolbar-->
-													<div class="d-flex justify-content-end">
-														<div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
-															<a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-																<i class="ki ki-bold-more-hor"></i>
-															</a>
-															<div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-																<!--begin::Navigation-->
-																<ul class="navi navi-hover">
-																	<li class="navi-header pb-1">
-																		<span class="text-primary text-uppercase font-weight-bold font-size-sm">Add new:</span>
-																	</li>
-																	<li class="navi-item">
-																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-shopping-cart-1"></i>
-																			</span>
-																			<span class="navi-text">Order</span>
-																		</a>
-																	</li>
-																	<li class="navi-item">
-																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-calendar-8"></i>
-																			</span>
-																			<span class="navi-text">Event</span>
-																		</a>
-																	</li>
-																	<li class="navi-item">
-																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-graph-1"></i>
-																			</span>
-																			<span class="navi-text">Report</span>
-																		</a>
-																	</li>
-																	<li class="navi-item">
-																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-rocket-1"></i>
-																			</span>
-																			<span class="navi-text">Post</span>
-																		</a>
-																	</li>
-																	<li class="navi-item">
-																		<a href="#" class="navi-link">
-																			<span class="navi-icon">
-																				<i class="flaticon2-writing"></i>
-																			</span>
-																			<span class="navi-text">File</span>
-																		</a>
-																	</li>
-																</ul>
-																<!--end::Navigation-->
-															</div>
+										$length = 100;
+
+										if(strlen($blog_desc)<=$length)
+										  {
+											$desc = $blog_desc;
+										  }
+										  else
+										  {
+											$desc=substr($blog_desc,0,$length) . '...';
+										  }
+
+										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+										<!--begin::Card-->
+										<div class='card card-custom gutter-b card-stretch'>
+											<!--begin::Body-->
+											<div class='card-body pt-4'>
+												<!--begin::Toolbar-->
+												<div class='d-flex justify-content-end'>
+													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
+														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
+															<i class='ki ki-bold-more-hor'></i>
+														</a>
+														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
+															<!--begin::Navigation-->
+															<ul class='navi navi-hover'>
+																<li class='navi-header pb-1'>
+																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
+																</li>
+																<li class='navi-item'>
+																	<a href='#' class='navi-link'>
+																		<span class='navi-icon'>
+																			<i class='flaticon2-file-1'></i>
+																		</span>
+																		<span class='navi-text'>View</span>
+																	</a>
+																</li>
+																<li class='navi-item'>
+																	<a href='#' class='navi-link'>
+																		<span class='navi-icon'>
+																			<i class='flaticon2-edit'></i>
+																		</span>
+																		<span class='navi-text'>Edit</span>
+																	</a>
+																</li>
+															</ul>
+															<!--end::Navigation-->
 														</div>
 													</div>
-													<!--end::Toolbar-->
-													<!--begin::User-->
-													<div class="d-flex align-items-center mb-7">
-														<!--begin::Pic-->
-														<div class="flex-shrink-0 mr-4">
-															<div class="symbol symbol-circle symbol-lg-75">
-																<img src="assets/media/project-logos/2.png" alt="image" />
-															</div>
-														</div>
-														<!--end::Pic-->
-														<!--begin::Title-->
-														<!--end::Title-->
-													</div>
-													<!--end::User-->
-													<!--begin::Desc-->
-													<a href="#" class="text-dark font-weight-bold text-hover-primary font-size-h4 mb-0">Ad Brand</a>
-													<p class="mb-7">I distinguish three main text objectives. First, your objective
-													<a href="#" class="text-primary pr-1">#xrs-54pq</a></p>
-													<!--end::Desc-->
-													<!--begin::Info-->
-													<div class="mb-7">
-														<div class="d-flex justify-content-between align-items-center">
-															<span class="text-dark-75 font-weight-bolder mr-2">Budget:</span>
-															<a href="#" class="text-muted text-hover-primary">$249,500</a>
-														</div>
-														<div class="d-flex justify-content-between align-items-cente my-1">
-															<span class="text-dark-75 font-weight-bolder mr-2">Expences:</span>
-															<a href="#" class="text-muted text-hover-primary">$76,810</a>
-														</div>
-														<div class="d-flex justify-content-between align-items-center">
-															<span class="text-dark-75 font-weight-bolder mr-2">Due Date:</span>
-															<span class="text-muted font-weight-bold">21.05.2016</span>
-														</div>
-													</div>
-													<!--end::Info-->
-													<a href="#" class="btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4">write message</a>
 												</div>
-												<!--end::Body-->
+												<!--end::Toolbar-->
+												<!--begin::User-->
+												<div class='d-flex align-items-center mb-7'>
+													<!--begin::Pic-->
+													<!--<div class='flex-shrink-0 mr-4'>
+														<div class='symbol symbol-circle symbol-lg-75'>
+															<img src='assets/media/project-logos/2.png' alt='image' />
+														</div>
+													</div>-->
+													<!--end::Pic-->
+													<!--begin::Title-->
+													<!--end::Title-->
+												</div>
+												<!--end::User-->
+												<!--begin::Desc-->
+												<a href='#' class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$blog_head</a><br><br>
+												<p class='mb-7'>$desc
+												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
+												<!--end::Desc-->
+												<!--begin::Info-->
+												<div class='mb-7'>
+													<div class='d-flex justify-content-between align-items-center'>
+														<span class='text-dark-75 font-weight-bolder mr-2'>Author:</span>
+														<a href='#' class='text-muted text-hover-primary'>$blog_auth</a>
+													</div>
+													<div class='d-flex justify-content-between align-items-cente my-1'>
+														<span class='text-dark-75 font-weight-bolder mr-2'>Category:</span>
+														<a href='#' class='text-muted text-hover-primary'>$blog_cat</a>
+													</div>
+													<div class='d-flex justify-content-between align-items-center'>
+														<span class='text-dark-75 font-weight-bolder mr-2'>Date:</span>
+														<span class='text-muted font-weight-bold'>$blog_date</span>
+													</div>
+												</div>
+												<!--end::Info-->
+												<a href='view_post.php?blog_id=$blog_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>View Post</a>
 											</div>
-											<!--end:: Card-->
-										</div>'); 
+											<!--end::Body-->
+										</div>
+										<!--end:: Card-->
+									</div>"); 
 									} ?>
 									<!--end::Col-->
 								</div>
 								<!--end::Row-->
 								<!--begin::Pagination-->
+								<script src="assets/js/jquery-3.5.1.min.js"></script>
+								<script>
+									$(document).ready(function(){
+										// Number of rows selection
+                                        $("#num_rows").change(function(){
+											// Submitting form
+											$("#form").submit();
+										});
+									});
+								</script>
+
 								<div class="card card-custom">
 									<div class="card-body py-7">
 										<!--begin::Pagination-->
-										<div class="d-flex justify-content-between align-items-center flex-wrap">
-											<div class="d-flex flex-wrap mr-3">
-												<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-													<i class="ki ki-bold-double-arrow-back icon-xs"></i>
-												</a>
-												<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-													<i class="ki ki-bold-arrow-back icon-xs"></i>
-												</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">...</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">23</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1">24</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">25</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">26</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">27</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">28</a>
-												<a href="#" class="btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1">...</a>
-												<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-													<i class="ki ki-bold-arrow-next icon-xs"></i>
-												</a>
-												<a href="#" class="btn btn-icon btn-sm btn-light-primary mr-2 my-1">
-													<i class="ki ki-bold-double-arrow-next icon-xs"></i>
-												</a>
-											</div>
-											<div class="d-flex align-items-center">
-												<select class="form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-primary" style="width: 75px;">
-													<option value="10">10</option>
-													<option value="20">20</option>
-													<option value="30">30</option>
-													<option value="50">50</option>
-													<option value="100">100</option>
-												</select>
-												<span class="text-muted">Displaying 10 of 230 records</span>
-											</div>
+										<?php
+										global $con;
+										if(isset($_GET['page'])){
+
+											$page = $_GET['page'];
+									
+										}else{
+											$page=1;
+										}
+									
+										//$per_page=1;
+										$aWhere = array();
+										$aPath = '';
+															
+										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
+										$query = "SELECT * FROM blog".$sWhere;
+										$result = mysqli_query($con,$query);
+										$total_records = mysqli_num_rows($result);
+										$total_pages = ceil($total_records / $per_page);
+										$prev = $page -1;
+
+										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
+										<div class='d-flex flex-wrap mr-3'>";
+										if($page>1){
+											echo"
+											<a href='posted.php?page=1' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
+											</a>
+											<a href='posted.php?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+												<i class='ki ki-bold-arrow-back icon-xs'></i>
+											</a>";
+										}
+										else{
+											echo"
+											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
+												<i style='color:grey;' class='ki ki-bold-double-arrow-back icon-xs'></i>
+											</a>
+											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
+												<i style='color:grey;' class='ki ki-bold-arrow-back icon-xs'></i>
+											</a>";
+										}
+										for($i=1; $i<=$total_pages; $i++){
+											if($i == $page){
+												echo"
+												  <a href='posted.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
+												";
+											}
+											else{
+												echo"
+												  <a href='posted.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
+												";
+											}
+										}
+										if($page == $total_pages){
+											echo"
+											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
+												<i style='color: grey;' class='ki ki-bold-arrow-next icon-xs'></i>
+											</a>
+											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
+												<i style='color: grey;' class='ki ki-bold-double-arrow-next icon-xs'></i>
+											</a>";
+										}
+										else{
+											$next = $page+1;
+											echo"
+											<a href='posted.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+												<i class='ki ki-bold-arrow-next icon-xs'></i>
+											</a>
+											<a href='posted.php?page=$total_pages' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
+											</a>";
+										}
+
+										echo"
 										</div>
+										<div class='d-flex align-items-center'>
+										<form action='posted.php' method='post' id='form'>
+											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-primary' style='width: 60px;'>";
+											$numrows_arr = array("1","2");
+											foreach($numrows_arr as $nrow){
+												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
+													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
+												}else{
+													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
+												}
+											}
+											echo"</select>
+										</form>
+											<span class='text-muted'>Displaying $per_page of $total_records records</span>
+										</div>
+									</div>";
+										?>
+										
 										<!--end:: Pagination-->
 									</div>
 								</div>
@@ -432,6 +517,7 @@
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
+		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
