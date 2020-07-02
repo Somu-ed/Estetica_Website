@@ -34,7 +34,7 @@
 		<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
 			<!--begin::Logo-->
 			<a href="index.php">
-				<img alt="Logo" src="assets/media/logos/logo-dark.png" />
+				<img style="height: 28px;" alt="Logo" src="assets/media/navbar.png" />
 			</a>
 			<!--end::Logo-->
 			<!--begin::Toolbar-->
@@ -76,7 +76,7 @@
 					<!--begin::Brand-->
 					<div class="brand flex-column-auto" id="kt_brand">
 						<!--begin::Logo-->
-						<a href="index.html" class="brand-logo">
+						<a href="index.php" class="brand-logo">
 							<img style="height: 32px; margin-left: auto; margin-right: auto; margin-top: 10px;" alt="Logo" src="assets/media/navbar.svg" />
 						</a>
 						<!--end::Logo-->
