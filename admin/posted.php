@@ -3,7 +3,6 @@
 <?php
 if(isset($_POST['num_rows'])){
 	$per_page = $_POST['num_rows'];
-	echo"<script>alert(Records: $per_page);</script>";
 }
 else{
 	$per_page = 1;
