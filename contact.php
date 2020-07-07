@@ -253,7 +253,7 @@
 					<!--=======  box layout map container  =======-->
 					
 					<div class="box-layout-map-container">
-						<div class="google-map" id="google-map-one"></div>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14963.677629431844!2d85.8240402!3d20.3449478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90848377c4e04171!2sEstetica%20Furnishings!5e0!3m2!1sen!2sin!4v1594119094435!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 					
 					<!--=======  End of box layout map container  =======-->
