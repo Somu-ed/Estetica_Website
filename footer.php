@@ -10,7 +10,7 @@
                     <!--=======  logo  =======-->
                     
                     <div class="logo">
-                        <img src="assets/images/logo.png" class="img-fluid" alt="">
+                        <img style="height: 35px;" src="assets/images/navbar.png" class="img-fluid" alt="estetica logo">
                     </div>
                     
                     <!--=======  End of logo  =======-->
@@ -18,7 +18,7 @@
                     <!--=======  copyright text  =======-->
                     
                     <div class="copyright-text">
-                        <p> &copy; 2019 lezada.  <span>All Rights Reserved</span></p>
+                        <p> &copy; 2020 Estetica.  <span>All Rights Reserved</span></p>
                     </div>
                     
                     <!--=======  End of copyright text  =======-->
