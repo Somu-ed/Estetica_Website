@@ -24,7 +24,7 @@
                         
                         <div class="logo">
                             <a href="index.html">
-                                <img src="assets/images/logo.png" class="img-fluid" alt="">
+                                <img style="height: 40px;" src="assets/images/navbar.png" class="img-fluid" alt="estetica logo">
                             </a>
                         </div>
                         
@@ -247,35 +247,36 @@
                                     <i class="ion-ios-search-strong"></i>
                                 </a>
                             </div>
+                            &nbsp;
                             
                             <!--=======  End of single-icon  =======-->
                             <!--=======  single-icon  =======-->
                             
-                            <div class="single-icon user-login">
+                            <!-- <div class="single-icon user-login">
                                 <a href="shop-customer-login.html">
                                     <i class="ion-android-person"></i>
                                 </a>
-                            </div>
+                            </div> -->
                             
                             <!--=======  End of single-icon  =======-->
                             <!--=======  single-icon  =======-->
                             
-                            <div class="single-icon wishlist">
+                            <!-- <div class="single-icon wishlist">
                                 <a href="javascript:void(0)" id="offcanvas-wishlist-icon">
                                     <i class="ion-android-favorite-outline"></i>
                                     <span class="count">2</span>
                                 </a>
-                            </div>
+                            </div> -->
                             
                             <!--=======  End of single-icon  =======-->
                             <!--=======  single-icon  =======-->
                             
-                            <div class="single-icon cart">
+                            <!-- <div class="single-icon cart">
                                 <a href="javascript:void(0)" id="offcanvas-cart-icon">
                                     <i class="ion-ios-cart"></i>
                                     <span class="count">3</span>
                                 </a>
-                            </div>
+                            </div> -->
                             <!--=======  End of single-icon  =======-->
                         </div>
                         <!--=======  End of header right icons  =======-->
