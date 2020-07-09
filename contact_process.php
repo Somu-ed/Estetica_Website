@@ -7,7 +7,7 @@
     $address = $_POST['address'];
     $msg = $_POST['msg'];
 
-    $query = "INSERT INTO contact(name, email, contact, address, msg) VALUES('$name','$email','$contact','$address','$msg')";
+    $query = "INSERT INTO contact(name, email, contact, address, msg, time, date) VALUES('$name','$email','$contact','$address','$msg', CURTIME(), CURDATE())";
     $fire = mysqli_query($con,$query) or die('Cannot connect to db');
 
     if($fire == true){
