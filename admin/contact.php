@@ -8,6 +8,83 @@ else{
 	$per_page = 1;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#submit').click(function() {
+
+			var email = $("#email").val().trim();
+			var password = $("#password").val().trim();
+
+			if( email != "" && password != "" ){
+				$.ajax({
+					url:'loginprocess.php',
+					type:'post',
+					data:{email:email,password:password},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Login Successful",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Let me in",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "index.php";
+						});
+							
+						}else{
+							swal.fire({
+								text: "invalid credentials",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Ok, got it!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			else{
+				validateForm();
+			}
+		});
+	});
+</script>
+<?php
+if(isset($_POST['delete'])){
+    $del_id = $_POST['del_id'];
+    $delete_query = "DELETE FROM contact WHERE id = $del_id";
+    $delete_fire = mysqli_query($con, $delete_query) or die('Cannot connect to db');
+
+    if($delete_fire){
+        echo"
+        swal.fire({
+            text: 'Login Successful',
+            icon: 'success',
+            buttonsStyling: false,
+            confirmButtonText: 'Let me in',
+            customClass: {
+                confirmButton: 'btn font-weight-bold btn-light-success'
+            }
+        }).then(function() {
+            KTUtil.scrollTop();
+        });";
+    }
+    else{
+        echo"<script type='text/javascript'>alert('Failed');</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
@@ -172,7 +249,7 @@ else{
 									</div>
 								</li>
 								<li class="menu-item menu-item-active " aria-haspopup="true">
-									<a href="index.html" class="menu-link">
+									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -188,7 +265,7 @@ else{
 									</a>
 								</li>
 								<li class="menu-item " aria-haspopup="true">
-									<a href="index.html" class="menu-link">
+									<a href="newsletter.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -246,6 +323,7 @@ else{
                                 $contact_fire = mysqli_query($con,$contact_query);
 
                                 while($row = mysqli_fetch_array($contact_fire)){
+                                    $cont_id = $row['id'];
                                     $cont_name = $row['name'];
                                     $cont_email = $row['email'];
                                     $cont_no = $row['contact'];
@@ -303,13 +381,16 @@ else{
                                                         <!--end::Contacts-->
                                                     </div>
                                                     <div class='my-lg-0 my-1'>
-                                                        <a href='#' class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase'>Delete</a>
+                                                    <form action='contact.php' method='post'>
+                                                        <input type='hidden' name='del_id' value='$cont_id'>
+                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase' type='submit' name='delete'>Delete</button>
+                                                    </form>
                                                     </div>
                                                 </div>
                                                 <!--end: Title-->
                                                 <!--begin: Content-->
                                                 <div class='d-flex align-items-center flex-wrap justify-content-between'>
-                                                    <div class='flex-grow-1 font-weight-bold text-dark-50 py-5 py-lg-2 mr-5'>$cont_msg</div>
+                                                    <div style='text-align: justify;' class='flex-grow-1 font-weight-bold text-dark-50 py-5 py-lg-2 mr-5'>$cont_msg</div>
                                                     <div class='d-flex flex-wrap align-items-center py-2'>
                                                         <div class='d-flex align-items-center'>
                                                             <div class='mr-6'>
@@ -373,7 +454,7 @@ else{
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
