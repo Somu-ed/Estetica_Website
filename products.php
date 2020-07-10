@@ -1,9 +1,4 @@
 <?php include"db_connect.php";?>
-<?php 
-
-$query = "SELECT * FROM p_cat";
-
-?>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -84,6 +79,7 @@ $query = "SELECT * FROM p_cat";
 	=============================================-->
     <!-- Product Filter -->
 	<?php
+
 	// Category wise filter
 	if(isset($_POST['cat'])){
 		$cur_cat_id = $_POST['cat'];
@@ -149,7 +145,17 @@ $query = "SELECT * FROM p_cat";
 		$cur_brand_id = 0;
 		$cur_brand_name = "Brand";
 	}
+
+	//Reset Filter
+	if(isset($_POST['reset'])){
+		$cur_brand_id = 0;
+		$cur_brand_name = "Brand";
+		$cur_cat_id = 0;
+		$cur_cat_name = "Category";
+	}
 	?>
+
+	
     <div class="shop-page-wrapper">
 
         <!--=======  shop page header  =======-->
@@ -220,16 +226,16 @@ $query = "SELECT * FROM p_cat";
 									?>
                                 </select>
 							</div>
-							&nbsp;
-							&nbsp;
-							&nbsp;
-
-							<button class="lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left"> <i class="fa fa-adjust"></i> ICON LEFT</button>
-                    
-
-								
-                            
-                            <!--=======  End of filter dropdown  =======-->
+							&nbsp;&nbsp;&nbsp;
+							<?php
+							if($cur_brand_id > 0 || $cur_cat_id > 0){
+								echo"
+								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
+								";
+							}
+							?>
+							
+							<!--=======  End of filter dropdown  =======-->
 
                             <!--=======  grid icons  =======-->
                             
@@ -248,7 +254,7 @@ $query = "SELECT * FROM p_cat";
                             
                             <!--=======  End of advance filter icon  =======-->
                         </div>
-								</form>
+						</form>
                         <!--=======  End of filter icons  =======-->
                     </div>
 
@@ -505,59 +511,35 @@ $query = "SELECT * FROM p_cat";
 						<div class="row product-isotope shop-product-wrap five-column">
 							
 							<!--=======  single product  =======-->
-                            <?php
+							<?php
+							$aWhere = array(); 
+							$sLimit = " order by 1 DESC LIMIT 0,10";
+							$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
                             if($cur_cat_id == 0 && $cur_brand_id == 0){
-								$query = 'SELECT * FROM products ORDER BY 1 DESC LIMIT 0,10';
+								$query = "SELECT * FROM products".$sWhere;
 							}
 							elseif($cur_cat_id != 0 && $cur_brand_id == 0){
-								$query = 'SELECT * FROM products WHERE cat_id = "$cur_cat_id" ORDER BY 1 DESC LIMIT 0,10';
+								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id".$sWhere;
 							}
 							elseif($cur_cat_id == 0 && $cur_brand_id != 0){
-								$query = 'SELECT * FROM products WHERE brand_id = "$cur_brand_id" ORDER BY 1 DESC LIMIT 0,10';
+								$query = "SELECT * FROM products WHERE brand_id = $cur_brand_id".$sWhere;
 							}
 							else{
-								$query = 'SELECT * FROM products WHERE cat_id = "$cur_cat_id" AND brand_id = "$cur_brand_id" ORDER BY 1 DESC LIMIT 0,10';
+								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id AND brand_id = $cur_brand_id".$sWhere;
 							}
-							$fire = mysqli_query($con, $query);
+							$fire = mysqli_query($con, $query) or die("cannot coonect to db");
 							if($fire){
-								while($row = mysqli_fetch_array($fire)){
-									$id = $row['id'];
-									$name = $row['p_name'];
-									$img = $row['p_img'];
-									$cat = $row['p_cat'];
-									$brand = $row['p_brand'];
-									$desc = $row['p_desc'];
-									echo"
-									<div class='col-12 col-lg-is-5 col-md-6 col-sm-6 mb-45 hot sale'>
-									<div class='single-product'>
-									<!--=======  single product image  =======-->
-									
-									<div class='single-product__image'>
-										<a class='image-wrap' href='shop-product-basic.html'>
-											<img src='assets/images/products/$img' class='img-fluid' alt=''>
-											<img src='assets/images/products/$img' class='img-fluid' alt=''>
-										</a>	
-									</div>
-									
-									<!--=======  End of single product image  =======-->
-				
-									<!--=======  single product content  =======-->
-							
-									<div class='single-product__content'>
-											
-										<div class='title'>
-											<h3> <a href='shop-product-basic.html'>$name</a></h3>
-											
-										</div>
-										<!--<div class='price'>
-											<span class='main-price discounted'>$160.00</span>
-											<span class='discounted-price'>$180.00</span>
-										</div>-->
-									</div>
-									
-									<!--=======  End of single product content  =======-->
-									</div>
-									<div class='single-product--list'>
+								if(mysqli_num_rows($fire)>0){
+									while($row = mysqli_fetch_array($fire)){
+										$id = $row['id'];
+										$name = $row['p_name'];
+										$img = $row['p_img'];
+										$cat = $row['p_cat'];
+										$brand = $row['p_brand'];
+										$desc = $row['p_desc'];
+										echo"
+										<div class='col-12 col-lg-is-5 col-md-6 col-sm-6 mb-45 hot sale'>
+										<div class='single-product'>
 										<!--=======  single product image  =======-->
 										
 										<div class='single-product__image'>
@@ -574,22 +556,51 @@ $query = "SELECT * FROM p_cat";
 										<div class='single-product__content'>
 												
 											<div class='title'>
-												<h3> <a href='shop-product-basic.html'>$name</a></h3>
+												<h3> <a style='text-align: justify;' href='shop-product-basic.html'>$name</a></h3>
+												<a class='lezada-button lezada-button--medium'>$cat</a>
 											</div>
 											<!--<div class='price'>
 												<span class='main-price discounted'>$160.00</span>
 												<span class='discounted-price'>$180.00</span>
 											</div>-->
-											<p class='short-desc'> $desc</p>	
 										</div>
 										
 										<!--=======  End of single product content  =======-->
-									</div>
-								</div>";
+										</div>
+										<div class='single-product--list'>
+											<!--=======  single product image  =======-->
+											
+											<div class='single-product__image'>
+												<a class='image-wrap' href='shop-product-basic.html'>
+													<img src='assets/images/products/$img' class='img-fluid' alt=''>
+													<img src='assets/images/products/$img' class='img-fluid' alt=''>
+												</a>	
+											</div>
+											
+											<!--=======  End of single product image  =======-->
+						
+											<!--=======  single product content  =======-->
+									
+											<div class='single-product__content'>
+													
+												<div class='title'>
+													<h3> <a href='shop-product-basic.html'>$name</a></h3>
+												</div>
+												<!--<div class='price'>
+													<span class='main-price discounted'>$160.00</span>
+													<span class='discounted-price'>$180.00</span>
+												</div>-->
+												<p class='short-desc'> $desc</p>	
+											</div>
+											
+											<!--=======  End of single product content  =======-->
+										</div>
+									</div>";
+									}
 								}
-							}
-							else{
-								echo"No Products Found";
+								else{
+									echo"No Products Found";
+								}
 							}
                             ?>
 							<!--=======  End of single product  =======-->
