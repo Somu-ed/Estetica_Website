@@ -79,6 +79,22 @@
 	=============================================-->
     <!-- Product Filter -->
 	<?php
+	
+	$max_limit = 2;
+	$limit = 2;
+	//increase limit
+	if(isset($_POST['more'])){
+		$new_limit = $_POST['limit'];
+		$max_limit = $new_limit + $limit;
+	}
+	//decrease limit
+	elseif(isset($_POST['less'])){
+		$dec_limit = $_POST['limit'];
+		$max_limit = $dec_limit - $limit;
+	}
+	else{
+		$max_limit = 2;
+	}
 
 	// Category wise filter
 	if(isset($_POST['cat'])){
@@ -247,12 +263,6 @@
                             </div>
                             
                             <!--=======  End of grid icons  =======-->
-
-                            <!--=======  advance filter icon  =======-->
-                            
-                            
-                            
-                            <!--=======  End of advance filter icon  =======-->
                         </div>
 						</form>
                         <!--=======  End of filter icons  =======-->
@@ -513,7 +523,7 @@
 							<!--=======  single product  =======-->
 							<?php
 							$aWhere = array(); 
-							$sLimit = " order by 1 DESC LIMIT 0,10";
+							$sLimit = " order by 1 DESC LIMIT 0,$max_limit";
 							$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
                             if($cur_cat_id == 0 && $cur_brand_id == 0){
 								$query = "SELECT * FROM products".$sWhere;
@@ -527,7 +537,7 @@
 							else{
 								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id AND brand_id = $cur_brand_id".$sWhere;
 							}
-							$fire = mysqli_query($con, $query) or die("cannot coonect to db");
+							$fire = mysqli_query($con, $query) or die("cannot connect to db");
 							if($fire){
 								if(mysqli_num_rows($fire)>0){
 									while($row = mysqli_fetch_array($fire)){
@@ -536,6 +546,7 @@
 										$img = $row['p_img'];
 										$cat = $row['p_cat'];
 										$brand = $row['p_brand'];
+										$brand = $row['p_brand'];
 										$desc = $row['p_desc'];
 										echo"
 										<div class='col-12 col-lg-is-5 col-md-6 col-sm-6 mb-45 hot sale'>
@@ -543,10 +554,14 @@
 										<!--=======  single product image  =======-->
 										
 										<div class='single-product__image'>
-											<a class='image-wrap' href='shop-product-basic.html'>
+											<a class='image-wrap'>
 												<img src='assets/images/products/$img' class='img-fluid' alt=''>
 												<img src='assets/images/products/$img' class='img-fluid' alt=''>
-											</a>	
+											</a>
+											
+											<!--<div class='single-product__floating-icons'>
+												<span class='quickview'><a class='cd-trigger' href='#qv-1'  data-tippy='Quick View' data-tippy-inertia='true' data-tippy-animation='shift-away' data-tippy-delay='50' data-tippy-arrow='true' data-tippy-theme = 'sharpborder' data-tippy-placement = 'left'  ><i class='ion-ios-search-strong'></i></a></span>
+											</div>-->
 										</div>
 										
 										<!--=======  End of single product image  =======-->
@@ -571,10 +586,16 @@
 											<!--=======  single product image  =======-->
 											
 											<div class='single-product__image'>
-												<a class='image-wrap' href='shop-product-basic.html'>
+												<a class='image-wrap'>
 													<img src='assets/images/products/$img' class='img-fluid' alt=''>
 													<img src='assets/images/products/$img' class='img-fluid' alt=''>
-												</a>	
+												</a>
+												
+												<!--<div class='single-product__floating-icons'>
+													<span class='quickview'>
+														<a class='cd-trigger' href='#qv-1'  data-tippy='Quick View' data-tippy-inertia='true' data-tippy-animation='shift-away' data-tippy-delay='50' data-tippy-arrow='true' data-tippy-theme = 'sharpborder' data-tippy-placement = 'left'  ><i class='ion-ios-search-strong'></i></a>
+													</span>
+												</div>-->
 											</div>
 											
 											<!--=======  End of single product image  =======-->
@@ -595,7 +616,80 @@
 											
 											<!--=======  End of single product content  =======-->
 										</div>
-									</div>";
+									</div>
+									";
+									echo"
+									<!--=============================================
+									=            quick view         =
+									=============================================-->
+									
+									<div id='qv-1' class='cd-quick-view' '>
+										<div class='cd-slider-wrapper'>
+											<ul class='cd-slider'>
+												<li class='selected'><img src='assets/images/products/$img' alt='Product 2'></li>
+												<li><img src='assets/images/products/$img' alt='Product 1'></li>
+											</ul> <!-- cd-slider -->
+										</div> <!-- cd-slider-wrapper -->
+
+										<div class='lezada-item-info cd-item-info ps-scroll'>
+
+											<h3 class='item-subtitle'>$name</h3>
+											<!--<p class='price'>
+												<span class='main-price discounted'>$360.00</span>
+												<span class='discounted-price'>$300.00</span>
+											</p>-->
+											
+											<p class='description'>$desc</p>
+
+											<!--<span class='quickview-title'>Quantity:</span>
+											<div class='pro-qty d-inline-block mb-40'>
+												<input type='text' value='1'>
+											</div>-->
+
+											<!--<div class='add-to-cart-btn mb-25'>
+
+												<button class='lezada-button lezada-button--medium'>add to cart</button>
+											</div>-->
+
+											<div class='quick-view-other-info'>
+												<table>
+													<tr class='single-info'>
+														<td class='quickview-title'>Brand: </td>
+														<td class='quickview-value'>$brand</td>
+													</tr>
+													<tr class='single-info'>
+														<td class='quickview-title'>Category: </td>
+														<td class='quickview-value'>
+															<a>$cat</a>  
+														</td>
+													</tr>
+													<tr class='single-info'>
+														<td class='quickview-title'>Tags: </td>
+														<td class='quickview-value'>
+															<a href='#'>$cat</a>, 
+															<a href='#'>$brand</a>
+														</td>
+													</tr>
+													<tr class='single-info'>
+														<td class='quickview-title'>Share on: </td>
+														<td class='quickview-value'>
+															<ul class='quickview-social-icons'>
+																<li><a href='#'><i class='fa fa-facebook'></i></a></li>
+																<li><a href='#'><i class='fa fa-twitter'></i></a></li>
+																<li><a href='#'><i class='fa fa-google-plus'></i></a></li>
+																<li><a href='#'><i class='fa fa-pinterest'></i></a></li>
+															</ul>
+														</td>
+													</tr>
+												</table>
+											</div>
+
+											
+										</div> <!-- cd-item-info -->
+										<a href='#0' class='cd-close'>Close</a>
+									</div>
+
+									<!--=====  End of quick view  ======-->";
 									}
 								}
 								else{
@@ -607,12 +701,22 @@
 
 						</div>
 
-						<div class="row">
+						<div class="row ">
 							<div class="col-lg-12 text-center mt-30">
-								<a class="lezada-button lezada-button--medium lezada-button--icon--left" href="#"><i class="ion-android-add"></i> MORE</a>
+							<?php
+							echo"
+							<form action='products.php' method='post'>
+								<input type='hidden' name='limit' value='$max_limit'>";
+								if($max_limit > 2){
+									echo"
+									<button type='submit' name='less' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-remove'></i> LESS</button>
+									";
+								}
+								echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>
+							</form>";
+							?>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
@@ -641,90 +745,6 @@
 	
 	<!--=====  End of overlay items  ======-->
 
-
-	<!--=============================================
-	=            quick view         =
-	=============================================-->
-	
-	<div id="qv-1" class="cd-quick-view">
-		<div class="cd-slider-wrapper">
-			<ul class="cd-slider">
-				<li class="selected"><img src="assets/images/products/cloth-1-2-600x800.jpg" alt="Product 2"></li>
-				<li><img src="assets/images/products/cloth-1-1-600x800.jpg" alt="Product 1"></li>
-			</ul> <!-- cd-slider -->
-
-			<ul class="cd-slider-pagination">
-				<li class="active"><a href="#0">1</a></li>
-				<li><a href="#1">2</a></li>
-			</ul> <!-- cd-slider-pagination -->
-
-			<ul class="cd-slider-navigation">
-				<li><a class="cd-prev" href="#0">Prev</a></li>
-				<li><a class="cd-next" href="#0">Next</a></li>
-			</ul> <!-- cd-slider-navigation -->
-		</div> <!-- cd-slider-wrapper -->
-
-		<div class="lezada-item-info cd-item-info ps-scroll">
-
-			<h2 class="item-title">High Waist Trousers</h2>
-			<p class="price">
-				<span class="main-price discounted">$360.00</span>
-				<span class="discounted-price">$300.00</span>
-			</p>
-			
-			<p class="description">Hurley Dry-Fit Chino Short. Men's chino short. Outseam Length: 19 Dri-FIT Technology helps keep you dry and comfortable. Made with sweat-wicking fabric. Fitted waist with belt loops. Button waist with zip fly provides a classic look and feel .</p>
-
-			<span class="quickview-title">Quantity:</span>
-			<div class="pro-qty d-inline-block mb-40">
-				<input type="text" value="1">
-			</div>
-
-			<div class="add-to-cart-btn mb-25">
-
-				<button class="lezada-button lezada-button--medium">add to cart</button>
-			</div>
-
-			<div class="quick-view-other-info">
-				<table>
-					<tr class="single-info">
-						<td class="quickview-title">SKU: </td>
-						<td class="quickview-value">12345</td>
-					</tr>
-					<tr class="single-info">
-						<td class="quickview-title">Categories: </td>
-						<td class="quickview-value">
-							<a href="#">Fashion</a>, 
-							<a href="#">Men</a>, 
-							<a href="#">Sunglasses</a> 
-						</td>
-					</tr>
-					<tr class="single-info">
-						<td class="quickview-title">Tags: </td>
-						<td class="quickview-value">
-							<a href="#">Fashion</a>, 
-							<a href="#">Men</a>
-						</td>
-					</tr>
-					<tr class="single-info">
-						<td class="quickview-title">Share on: </td>
-						<td class="quickview-value">
-							<ul class="quickview-social-icons">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							</ul>
-						</td>
-					</tr>
-				</table>
-			</div>
-
-			
-		</div> <!-- cd-item-info -->
-		<a href="#0" class="cd-close">Close</a>
-	</div>
-
-	<!--=====  End of quick view  ======-->
 
 	<!-- scroll to top  -->
 	<a href="#" class="scroll-top"></a>
