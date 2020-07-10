@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2020 at 02:19 PM
+-- Generation Time: Jul 10, 2020 at 03:15 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -96,7 +96,11 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `cat_id`, `brand_id`, `p_name`, `p_img`, `p_cat`, `p_brand`, `p_desc`) VALUES
 (1, 1, 6, 'Bombay Dyeing 136 TC Polyester Double Abstract Bedsheet (Pack of 1, Black, White)', 'bd_abstract.jpg', 'Bedsheets', 'Bombay Dyeing', 'Flat (L x W): 218 cm x 218 cm\r\nMaterial: Polyester\r\nIncludes: Number of Bedsheets: 1, Number of Pillow Covers: 2\r\nThread Count: 136\r\nColor: Black, White'),
-(2, 1, 6, 'Bombay Dyeing 136 TC Polyester Double Motifs Bedsheet  (Pack of 1, Blue, Grey)', 'bd_motifs.jpg', 'Bedsheets', 'Bombay Dyeing', 'Flat (L x W): 218 cm x 218 cm\r\nMaterial: Polyester\r\nIncludes: Number of Bedsheets: 1, Number of Pillow Covers: 2\r\nThread Count: 136\r\nColor: Blue, Grey');
+(2, 1, 6, 'Bombay Dyeing 136 TC Polyester Double Motifs Bedsheet  (Pack of 1, Blue, Grey)', 'bd_motifs.jpg', 'Bedsheets', 'Bombay Dyeing', 'Flat (L x W): 218 cm x 218 cm\r\nMaterial: Polyester\r\nIncludes: Number of Bedsheets: 1, Number of Pillow Covers: 2\r\nThread Count: 136\r\nColor: Blue, Grey'),
+(3, 1, 1, 'D\'Decor 136 TC Cotton Double King Floral Bedsheet (Pack of 1, Orange)', 'dd_floral.png', 'Bedsheets', 'D\'DECOR', 'Material: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 136\r\nColor: Orange'),
+(4, 1, 1, 'D\'Decor 136 TC Cotton Double King Floral Bedsheet (Pack of 1, Blue)', 'dd_floral2.png', 'Bedsheets', 'D\'DECOR', 'Material: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 136\r\nColor: Blue'),
+(5, 1, 3, 'Portico New York 144 TC Cotton Double Printed Bedsheet (Pack of 1, Multicolor)', 'portico_ny.jpg', 'Bedsheets', 'PORTICO', 'Flat (L x W): 254 cm x 224 cm\r\nMaterial: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 144\r\nColor: Multicolor'),
+(6, 1, 3, 'Portico New York 144 TC Cotton Double Printed Bedsheet (Pack of 1, Beige, Black, White, Grey)', 'portico_ny2.jpg', 'Bedsheets', 'PORTICO', 'Flat (L x W): 254 cm x 224 cm\r\nMaterial: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 144\r\nColor: Beige, Black, White, Grey');
 
 -- --------------------------------------------------------
 
@@ -227,7 +231,7 @@ ALTER TABLE `contact`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `p_brand`
