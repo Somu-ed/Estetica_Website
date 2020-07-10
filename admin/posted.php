@@ -460,7 +460,8 @@ else{
 											foreach($numrows_arr as $nrow){
 												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
 													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
-												}else{
+												}
+												else{
 													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
 												}
 											}
