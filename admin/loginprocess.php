@@ -7,7 +7,7 @@ session_start();
 $email = htmlspecialchars($_POST['email']);
 $pwd = htmlspecialchars($_POST['password']);
 
-$query = "SELECT * FROM user WHERE email = '$email' and pwd = '$pwd'";
+$query = "SELECT * FROM user WHERE email = '".$email."' and pwd = '".$pwd."'";
 $fire = mysqli_query($con,$query);
 
 if($fire == true){
@@ -15,7 +15,6 @@ if($fire == true){
     if($row > 0){
         $_SESSION['id'] = $email; 
         echo 1;
-
     }
     else{
         echo 0;
