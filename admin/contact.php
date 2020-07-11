@@ -14,36 +14,35 @@ else{
 <script>
 	$(document).ready(function() {
 
-		$('#submit').click(function() {
+		$('#delete').click(function() {
 
-			var email = $("#email").val().trim();
-			var password = $("#password").val().trim();
+			var del_id = $("#del_id").val().trim();
 
-			if( email != "" && password != "" ){
 				$.ajax({
-					url:'loginprocess.php',
+					url:'cont_del_process.php',
 					type:'post',
-					data:{email:email,password:password},
+					data:{del_id:del_id},
 					success:function(response){
 						if(response == 1){
 							swal.fire({
-							text: "Login Successful",
+							text: "Response Deleted Successfully!!",
 							icon: "success",
 							buttonsStyling: false,
-							confirmButtonText: "Let me in",
+							confirmButtonText: "Okay!",
 							customClass: {
 								confirmButton: "btn font-weight-bold btn-light-success"
 							}
 						}).then(function() {
-							window.location = "index.php";
+							window.location = "contact.php";
 						});
 							
-						}else{
+						}
+						else{
 							swal.fire({
-								text: "invalid credentials",
+								text: "Action Failed",
 								icon: "error",
 								buttonsStyling: false,
-								confirmButtonText: "Ok, got it!",
+								confirmButtonText: "Try again!",
 								customClass: {
 									confirmButton: "btn font-weight-bold btn-light-primary"
 								}
@@ -53,38 +52,9 @@ else{
 						}
 					}
 				});
-			}
-			else{
-				validateForm();
-			}
 		});
 	});
 </script>
-<?php
-if(isset($_POST['delete'])){
-    $del_id = $_POST['del_id'];
-    $delete_query = "DELETE FROM contact WHERE id = $del_id";
-    $delete_fire = mysqli_query($con, $delete_query) or die('Cannot connect to db');
-
-    if($delete_fire){
-        echo"
-        swal.fire({
-            text: 'Login Successful',
-            icon: 'success',
-            buttonsStyling: false,
-            confirmButtonText: 'Let me in',
-            customClass: {
-                confirmButton: 'btn font-weight-bold btn-light-success'
-            }
-        }).then(function() {
-            KTUtil.scrollTop();
-        });";
-    }
-    else{
-        echo"<script type='text/javascript'>alert('Failed');</script>";
-    }
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
@@ -381,9 +351,9 @@ if(isset($_POST['delete'])){
                                                         <!--end::Contacts-->
                                                     </div>
                                                     <div class='my-lg-0 my-1'>
-                                                    <form action='contact.php' method='post'>
-                                                        <input type='hidden' name='del_id' value='$cont_id'>
-                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase' type='submit' name='delete'>Delete</button>
+                                                    <form>
+                                                        <input type='hidden' id='del_id' value='$cont_id'>
+                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase' type='button' id='delete'>Delete</button>
                                                     </form>
                                                     </div>
                                                 </div>

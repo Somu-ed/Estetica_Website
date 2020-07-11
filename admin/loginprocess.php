@@ -4,10 +4,10 @@ include("db_connect.php");
 <?php
 session_start();
 
-$email = $_POST['email'];
-$pwd = $_POST['password'];
+$email = htmlspecialchars($_POST['email']);
+$pwd = htmlspecialchars($_POST['password']);
 
-$query = "SELECT * FROM user WHERE email = '".$email."' and pwd = '".$pwd."'";
+$query = "SELECT * FROM user WHERE email = '$email' and pwd = '$pwd'";
 $fire = mysqli_query($con,$query);
 
 if($fire == true){
