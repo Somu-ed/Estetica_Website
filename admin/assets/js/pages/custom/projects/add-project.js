@@ -79,6 +79,20 @@ var KTProjectsAdd = function () {
 							}
 						}
 					},
+					head: {
+						validators: {
+							notEmpty: {
+								message: 'Head is required'
+							}
+						}
+					},
+					tags: {
+						validators: {
+							notEmpty: {
+								message: 'Tags are required'
+							}
+						}
+					},
 					phone: {
 						validators: {
 							notEmpty: {

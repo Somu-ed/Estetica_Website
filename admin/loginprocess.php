@@ -4,14 +4,17 @@ include("db_connect.php");
 <?php
 session_start();
 
-$email = htmlspecialchars($_POST['email']);
-$pwd = htmlspecialchars($_POST['password']);
+$email = $_POST['email'];
+$pwd = $_POST['password'];
 
-$query = "SELECT * FROM user WHERE email = '".$email."' and pwd = '".$pwd."'";
-$fire = mysqli_query($con,$query);
+$stmt = $con->prepare('SELECT * FROM user WHERE email = ? and pwd = ?');
+$stmt->bind_param('ss', $email, $pwd); // 's' specifies the variable type => 'string'
 
-if($fire == true){
-    $row = mysqli_fetch_array($fire);
+$stmt->execute();
+
+$result = $stmt->get_result();
+
+if($row = $result->fetch_assoc()){
     if($row > 0){
         $_SESSION['id'] = $email; 
         echo 1;

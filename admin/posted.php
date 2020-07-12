@@ -403,10 +403,10 @@ else{
 										<div class='d-flex flex-wrap mr-3'>";
 										if($page>1){
 											echo"
-											<a href='posted.php?page=1' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+											<a href='posted.php?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
 											</a>
-											<a href='posted.php?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+											<a href='posted.php?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-back icon-xs'></i>
 											</a>";
 										}
@@ -443,10 +443,10 @@ else{
 										else{
 											$next = $page+1;
 											echo"
-											<a href='posted.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+											<a href='posted.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-next icon-xs'></i>
 											</a>
-											<a href='posted.php?page=$total_pages' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
+											<a href='posted.php?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
 											</a>";
 										}
@@ -455,7 +455,7 @@ else{
 										</div>
 										<div class='d-flex align-items-center'>
 										<form action='posted.php' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-primary' style='width: 60px;'>";
+											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
 											$numrows_arr = array("1","2");
 											foreach($numrows_arr as $nrow){
 												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
