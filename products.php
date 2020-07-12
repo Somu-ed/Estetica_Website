@@ -256,10 +256,10 @@
                             <!--=======  grid icons  =======-->
                             
                             <div class="single-icon grid-icons">
-                                <a data-target="five-column"  class="active" href="javascript:void(0)"><i class="ti-layout-grid4-alt"></i></a>
-                                <a data-target="four-column"  href="javascript:void(0)"><i class="ti-layout-grid3-alt"></i></a>
-								<a data-target="three-column" href="javascript:void(0)"><i class="ti-layout-grid2-alt"></i></a>
-								<a data-target="list" href="javascript:void(0)"><i class="ti-view-list"></i></a>
+							<a data-target="four-column" class="active" href="javascript:void(0)"><i class="ti-layout-grid3-alt"></i></a>
+							<a data-target="five-column"   href="javascript:void(0)"><i class="ti-layout-grid4-alt"></i></a>
+							<a data-target="three-column" href="javascript:void(0)"><i class="ti-layout-grid2-alt"></i></a>
+							<a data-target="list" href="javascript:void(0)"><i class="ti-view-list"></i></a>
                             </div>
                             
                             <!--=======  End of grid icons  =======-->
@@ -518,7 +518,7 @@
 					</div>
 					<div class="col-lg-12 order-1 order-lg-2 mb-md-80 mb-sm-80">
 
-						<div class="row product-isotope shop-product-wrap five-column">
+						<div class="row product-isotope shop-product-wrap four-column">
 							
 							<!--=======  single product  =======-->
 							<?php
