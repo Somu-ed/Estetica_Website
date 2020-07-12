@@ -8,12 +8,89 @@ else{
 	$per_page = 1;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#submit').click(function() {
+
+			var email = $("#email").val().trim();
+			var password = $("#password").val().trim();
+
+			if( email != "" && password != "" ){
+				$.ajax({
+					url:'loginprocess.php',
+					type:'post',
+					data:{email:email,password:password},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Login Successful",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Let me in",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "index.php";
+						});
+							
+						}else{
+							swal.fire({
+								text: "invalid credentials",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Ok, got it!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			else{
+				validateForm();
+			}
+		});
+	});
+</script>
+<?php
+if(isset($_POST['delete'])){
+    $del_id = $_POST['del_id'];
+    $delete_query = "DELETE FROM contact WHERE id = $del_id";
+    $delete_fire = mysqli_query($con, $delete_query) or die('Cannot connect to db');
+
+    if($delete_fire){
+        echo"
+        swal.fire({
+            text: 'Login Successful',
+            icon: 'success',
+            buttonsStyling: false,
+            confirmButtonText: 'Let me in',
+            customClass: {
+                confirmButton: 'btn font-weight-bold btn-light-success'
+            }
+        }).then(function() {
+            KTUtil.scrollTop();
+        });";
+    }
+    else{
+        echo"<script type='text/javascript'>alert('Failed');</script>";
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Posted Blogs | Estetica</title>
+		<title>Contact Responses | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -128,7 +205,7 @@ else{
 										<span class="menu-text">Dashboard</span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/src/media/svg/icons/Communication/Write.svg-->
@@ -152,7 +229,7 @@ else{
 													<span class="menu-text">Blog</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item menu-item" aria-haspopup="true">
 												<a href="posted.php?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -171,7 +248,7 @@ else{
 										</ul>
 									</div>
 								</li>
-								<li class="menu-item " aria-haspopup="true">
+								<li class="menu-item menu-item-active " aria-haspopup="true">
 									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -216,20 +293,19 @@ else{
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
 					<?php include 'header.php'; ?>
-					<!--end::Header-->
-					<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Subheader-->
+                    <!--end::Header-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Subheader-->
 						<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Blogs</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Contact Form Responses</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#XRS-45671</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -237,251 +313,112 @@ else{
 							</div>
 						</div>
 						<!--end::Subheader-->
-						<!--begin::Entry-->
-						<div class="d-flex flex-column-fluid">
+                    <!--begin::Content-->
+                    <div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
-							<div class="container">
-								<!--begin::Row-->
-								<div class="row">
-									<!--begin::Col-->
-									<?php 
-									global $con;
-									$aWhere = array(); 
-			
-									if(isset($_GET['page'])){
-										$page = $_GET['page'];
-			
-									}
-									else{
-										$page=1;
-									}
-									
-									$start_from = ($page-1) * $per_page;
-									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
-									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM blog".$sWhere;
-									$fetch_fire = mysqli_query($con,$fetch);
-									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$blog_id = $row['id'];
-										$blog_head = $row['heading'];
-										$blog_date = $row['date'];
-										$blog_cat = $row['category'];
-										$blog_auth = $row['author'];
-										$blog_desc = $row['short'];
+							<div class="container-fluid">
+                                <!--begin::Card-->
+                                <?php
+                                $contact_query = "SELECT * FROM contact";
+                                $contact_fire = mysqli_query($con,$contact_query);
 
-										$length = 100;
-
-										if(strlen($blog_desc)<=$length)
-										  {
-											$desc = $blog_desc;
-										  }
-										  else
-										  {
-											$desc=substr($blog_desc,0,$length) . '...';
-										  }
-
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
-										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::Toolbar-->
-												<div class='d-flex justify-content-end'>
-													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
-														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
-															<!--begin::Navigation-->
-															<ul class='navi navi-hover'>
-																<li class='navi-header pb-1'>
-																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-file-1'></i>
-																		</span>
-																		<span class='navi-text'>View</span>
-																	</a>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-edit'></i>
-																		</span>
-																		<span class='navi-text'>Edit</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
-												<a href='#' class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$blog_head</a><br><br>
-												<p class='mb-7'>$desc
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
-												<!--end::Desc-->
-												<!--begin::Info-->
-												<div class='mb-7'>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Author:</span>
-														<a href='#' class='text-muted text-hover-primary'>$blog_auth</a>
-													</div>
-													<div class='d-flex justify-content-between align-items-cente my-1'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Category:</span>
-														<a href='#' class='text-muted text-hover-primary'>$blog_cat</a>
-													</div>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Date:</span>
-														<span class='text-muted font-weight-bold'>$blog_date</span>
-													</div>
-												</div>
-												<!--end::Info-->
-												<a href='view_post.php?blog_id=$blog_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>View Post</a>
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end:: Card-->
-									</div>"); 
-									} ?>
-									<!--end::Col-->
-								</div>
-								<!--end::Row-->
-								<!--begin::Pagination-->
-								<script src="assets/js/jquery-3.5.1.min.js"></script>
-								<script>
-									$(document).ready(function(){
-										// Number of rows selection
-                                        $("#num_rows").change(function(){
-											// Submitting form
-											$("#form").submit();
-										});
-									});
-								</script>
-
-								<div class="card card-custom">
-									<div class="card-body py-7">
-										<!--begin::Pagination-->
-										<?php
-										global $con;
-										if(isset($_GET['page'])){
-
-											$page = $_GET['page'];
-									
-										}else{
-											$page=1;
-										}
-									
-										//$per_page=1;
-										$aWhere = array();
-										$aPath = '';
-															
-										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM blog".$sWhere;
-										$result = mysqli_query($con,$query);
-										$total_records = mysqli_num_rows($result);
-										$total_pages = ceil($total_records / $per_page);
-										$prev = $page -1;
-
-										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
-										<div class='d-flex flex-wrap mr-3'>";
-										if($page>1){
-											echo"
-											<a href='posted.php?page=1' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a href='posted.php?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
-												<i class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										else{
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										for($i=1; $i<=$total_pages; $i++){
-											if($i == $page){
-												echo"
-												  <a href='posted.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
-												";
-											}
-											else{
-												echo"
-												  <a href='posted.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
-												";
-											}
-										}
-										if($page == $total_pages){
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-										else{
-											$next = $page+1;
-											echo"
-											<a href='posted.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
-												<i class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a href='posted.php?page=$total_pages' class='btn btn-icon btn-sm btn-light-primary mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-
-										echo"
-										</div>
-										<div class='d-flex align-items-center'>
-										<form action='posted.php' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-primary' style='width: 60px;'>";
-											$numrows_arr = array("1","2");
-											foreach($numrows_arr as $nrow){
-												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
-													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
-												}
-												else{
-													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
-												}
-											}
-											echo"</select>
-										</form>
-											<span class='text-muted'>Displaying $per_page of $total_records records</span>
-										</div>
-									</div>";
-										?>
-										
-										<!--end:: Pagination-->
-									</div>
-								</div>
-								<!--end::Pagination-->
+                                while($row = mysqli_fetch_array($contact_fire)){
+                                    $cont_id = $row['id'];
+                                    $cont_name = $row['name'];
+                                    $cont_email = $row['email'];
+                                    $cont_no = $row['contact'];
+                                    $cont_addr = $row['address'];
+                                    $cont_msg = $row['msg'];
+                                    $cont_date = $row['date'];
+                                    $cont_time = $row['time'];
+                                    echo"<div class='card card-custom gutter-b'>
+                                    <div class='card-body'>
+                                        <div class='d-flex'>
+                                            <!--begin: Info-->
+                                            <div class='flex-grow-1'>
+                                                <!--begin: Title-->
+                                                <div class='d-flex align-items-center justify-content-between flex-wrap'>
+                                                    <div class='mr-3'>
+                                                        <!--begin::Name-->
+                                                        <a href='#' class='d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3'>$cont_name
+                                                        <i class='flaticon2-correct text-success icon-md ml-2'></i></a>
+                                                        <!--end::Name-->
+                                                        <!--begin::Contacts-->
+                                                        <div class='d-flex flex-wrap my-2'>
+                                                            <a href='#' class='text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2'>
+                                                            <span class='svg-icon svg-icon-md svg-icon-gray-500 mr-1'>
+                                                                <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-notification.svg-->
+                                                                <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 24 24' version='1.1'>
+                                                                    <g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                                                                        <rect x='0' y='0' width='24' height='24' />
+                                                                        <path d='M21,12.0829584 C20.6747915,12.0283988 20.3407122,12 20,12 C16.6862915,12 14,14.6862915 14,18 C14,18.3407122 14.0283988,18.6747915 14.0829584,19 L5,19 C3.8954305,19 3,18.1045695 3,17 L3,8 C3,6.8954305 3.8954305,6 5,6 L19,6 C20.1045695,6 21,6.8954305 21,8 L21,12.0829584 Z M18.1444251,7.83964668 L12,11.1481833 L5.85557487,7.83964668 C5.4908718,7.6432681 5.03602525,7.77972206 4.83964668,8.14442513 C4.6432681,8.5091282 4.77972206,8.96397475 5.14442513,9.16035332 L11.6444251,12.6603533 C11.8664074,12.7798822 12.1335926,12.7798822 12.3555749,12.6603533 L18.8555749,9.16035332 C19.2202779,8.96397475 19.3567319,8.5091282 19.1603533,8.14442513 C18.9639747,7.77972206 18.5091282,7.6432681 18.1444251,7.83964668 Z' fill='#000000' />
+                                                                        <circle fill='#000000' opacity='0.3' cx='19.5' cy='17.5' r='2.5' />
+                                                                    </g>
+                                                                </svg>
+                                                                <!--end::Svg Icon-->
+                                                            </span>$cont_email</a>
+                                                            <a href='#' class='text-muted text-hover-primary font-weight-bold mr-lg-8 mr-5 mb-lg-0 mb-2'>
+                                                            <span class='svg-icon svg-icon-md svg-icon-gray-500 mr-1'>
+                                                            <!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Communication\Call#1.svg--><svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 24 24' version='1.1'>
+                                                                <g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                                                                    <rect x='0' y='0' width='24' height='24'/>
+                                                                    <path d='M11.914857,14.1427403 L14.1188827,11.9387145 C14.7276032,11.329994 14.8785122,10.4000511 14.4935235,9.63007378 L14.3686433,9.38031323 C13.9836546,8.61033591 14.1345636,7.680393 14.7432841,7.07167248 L17.4760882,4.33886839 C17.6713503,4.14360624 17.9879328,4.14360624 18.183195,4.33886839 C18.2211956,4.37686904 18.2528214,4.42074752 18.2768552,4.46881498 L19.3808309,6.67676638 C20.2253855,8.3658756 19.8943345,10.4059034 18.5589765,11.7412615 L12.560151,17.740087 C11.1066115,19.1936265 8.95659008,19.7011777 7.00646221,19.0511351 L4.5919826,18.2463085 C4.33001094,18.1589846 4.18843095,17.8758246 4.27575484,17.613853 C4.30030124,17.5402138 4.34165566,17.4733009 4.39654309,17.4184135 L7.04781491,14.7671417 C7.65653544,14.1584211 8.58647835,14.0075122 9.35645567,14.3925008 L9.60621621,14.5173811 C10.3761935,14.9023698 11.3061364,14.7514608 11.914857,14.1427403 Z' fill='#000000'/>
+                                                                </g>
+                                                            </svg><!--end::Svg Icon-->
+                                                            </span>$cont_no</a>
+                                                            <a href='#' class='text-muted text-hover-primary font-weight-bold'>
+                                                            <span class='svg-icon svg-icon-md svg-icon-gray-500 mr-1'>
+                                                                <!--begin::Svg Icon | path:assets/media/svg/icons/Map/Marker2.svg-->
+                                                                <svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24px' height='24px' viewBox='0 0 24 24' version='1.1'>
+                                                                    <g stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'>
+                                                                        <rect x='0' y='0' width='24' height='24' />
+                                                                        <path d='M9.82829464,16.6565893 C7.02541569,15.7427556 5,13.1079084 5,10 C5,6.13400675 8.13400675,3 12,3 C15.8659932,3 19,6.13400675 19,10 C19,13.1079084 16.9745843,15.7427556 14.1717054,16.6565893 L12,21 L9.82829464,16.6565893 Z M12,12 C13.1045695,12 14,11.1045695 14,10 C14,8.8954305 13.1045695,8 12,8 C10.8954305,8 10,8.8954305 10,10 C10,11.1045695 10.8954305,12 12,12 Z' fill='#000000' />
+                                                                    </g>
+                                                                </svg>
+                                                                <!--end::Svg Icon-->
+                                                            </span>$cont_addr</a>
+                                                        </div>
+                                                        <!--end::Contacts-->
+                                                    </div>
+                                                    <div class='my-lg-0 my-1'>
+                                                    <form action='contact.php' method='post'>
+                                                        <input type='hidden' name='del_id' value='$cont_id'>
+                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase' type='submit' name='delete'>Delete</button>
+                                                    </form>
+                                                    </div>
+                                                </div>
+                                                <!--end: Title-->
+                                                <!--begin: Content-->
+                                                <div class='d-flex align-items-center flex-wrap justify-content-between'>
+                                                    <div style='text-align: justify;' class='flex-grow-1 font-weight-bold text-dark-50 py-5 py-lg-2 mr-5'>$cont_msg</div>
+                                                    <div class='d-flex flex-wrap align-items-center py-2'>
+                                                        <div class='d-flex align-items-center'>
+                                                            <div class='mr-6'>
+                                                                <div class='font-weight-bold mb-2'>Date</div>
+                                                                <span class='btn btn-sm btn-text btn-light-danger text-uppercase font-weight-bold'>$cont_date</span>
+                                                            </div>
+                                                            <div class=''>
+                                                                <div class='font-weight-bold mb-2'>Time</div>
+                                                                <span class='btn btn-sm btn-text btn-light-danger text-uppercase font-weight-bold'>$cont_time</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!--end: Content-->
+                                            </div>
+                                            <!--end: Info-->
+                                            
+                                        </div>
+                                    </div>
+                                </div>";
+                                }
+                                ?>
+                                <!--end::Card-->
 							</div>
 							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
-					</div>
-					<!--end::Content-->
+                    </div>
+                    <!--end::Content-->
 					<!--begin::Footer-->
 					<?php include 'footer.php'; ?>
 					<!--end::Footer-->
@@ -517,7 +454,7 @@ else{
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
