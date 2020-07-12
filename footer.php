@@ -98,11 +98,57 @@
                     <p class="subscription-subtitle">Subscribe to our newsletter to receive news on update.</p>
 
                     <!--=======  subscription form  =======-->
-                    
+                    <script src="assets/js/jquery-3.5.1.min.js"></script>
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+                    <script src="sweetalert2.all.min.js"></script>
+                    <script src="sweetalert2.min.js"></script>
+
+                    <script>
+                        $(document).ready(function() {
+
+                            $('#subscribe-btn').click(function() {
+
+                                var subscriber = $("#subscriber").val().trim();
+                                $.ajax({
+                                    url:'subs_process.php',
+                                    type:'post',
+                                    data:{subscriber:subscriber,},
+                                    success:function(response){
+                                        if(response == 1){
+                                            swal.fire({
+                                            text: "Tank you for subscribing to our Newsletter",
+                                            icon: "success",
+                                            buttonsStyling: false,
+                                            confirmButtonText: "Okay!",
+                                            customClass: {
+                                                confirmButton: "btn font-weight-bold btn-light-success"
+                                            }
+                                        }).then(function() {
+                                            window.location = "index.php";
+                                        });
+                                            
+                                        }else{
+                                            swal.fire({
+                                                text: "Error!!",
+                                                icon: "error",
+                                                buttonsStyling: false,
+                                                confirmButtonText: "Try again!",
+                                                customClass: {
+                                                    confirmButton: "btn font-weight-bold btn-light-primary"
+                                                }
+                                            }).then(function() {
+                                                KTUtil.scrollTop();
+                                            });
+                                        }
+                                    }
+                                });
+                            });
+                        });
+                    </script>
                     <div class="subscription-form">
-                        <form id="mc-form" class="mc-form">
-                            <input type="email" placeholder="Your email address" required>
-                            <button type="submit"><i class="ion-ios-arrow-thin-right"></i></button>
+                        <form class="mc-form">
+                            <input type="email" id="subscriber" placeholder="Your email address" required>
+                            <button type="button" id="subscribe-btn"><i class="ion-ios-arrow-thin-right"></i></button>
                         </form>
                     </div>
                     
