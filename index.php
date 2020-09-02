@@ -41,6 +41,12 @@
 	<!-- Modernizer JS -->
 	<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
+    <style>
+        .partner_logos {
+            height: 65px;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -1664,13 +1670,36 @@
 	
 	<div class="brand-logo-area mb-90 mb-md-60 mb-sm-60">
 		<div class="container wide">
+            <!--=======  Row 1  =======-->
 			<div class="row">
 				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
 					<!--=======  single brand logo  =======-->
 					
 					<div class="single-brand">
-						<a href="#">
-							<img style=" height: 65px;" src="assets/images/brands/Ddecor.png" class="img-fluid" alt="">
+						<a href="">
+							<img class="partner_logos" src="assets/images/brands/Ddecor.png" class="img-fluid" alt="Ddecor">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="">
+							<img class="partner_logos"  src="assets/images/brands/Malhar.png" class="img-fluid" alt="Malhar">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="">
+							<img class="partner_logos"  src="assets/images/brands/Marvel.png" class="img-fluid" alt="Marvel">
 						</a>
 					</div>
 					
@@ -1681,7 +1710,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-2.png" class="img-fluid" alt="">
+							<img class="partner_logos"  src="assets/images/brands/Mac.png" class="img-fluid" alt="Mac">
 						</a>
 					</div>
 					
@@ -1692,7 +1721,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-3.png" class="img-fluid" alt="">
+							<img class="partner_logos"  src="assets/images/brands/Karpets.png" class="img-fluid" alt="Karpets">
 						</a>
 					</div>
 					
@@ -1703,7 +1732,44 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-4.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Square_foot.png" class="img-fluid" alt="Square Foot">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+			</div>
+            <br><br>
+            <!--=======  Row 2 =======-->
+            <div class="row">
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="">
+							<img class="partner_logos" src="assets/images/brands/Portico.png" class="img-fluid" alt="Portico">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="">
+							<img class="partner_logos"  src="assets/images/brands/Sky_homes.png" class="img-fluid" alt="Sky Homes">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="">
+							<img class="partner_logos"  src="assets/images/brands/True_colors.png" class="img-fluid" alt="True Colors">
 						</a>
 					</div>
 					
@@ -1714,7 +1780,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-5.png" class="img-fluid" alt="">
+							<img class="partner_logos"  src="assets/images/brands/Tarkett.png" class="img-fluid" alt="Tarkett">
 						</a>
 					</div>
 					
@@ -1725,7 +1791,18 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-6.png" class="img-fluid" alt="">
+							<img class="partner_logos"  src="assets/images/brands/WK.png" class="img-fluid" alt="WK">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/India_handloom.png" class="img-fluid" alt="India Handloom">
 						</a>
 					</div>
 					
