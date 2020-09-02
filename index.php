@@ -1670,7 +1670,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-1.png" class="img-fluid" alt="">
+							<img style=" height: 65px;" src="assets/images/brands/Ddecor.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
