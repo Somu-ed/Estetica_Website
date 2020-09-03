@@ -1,3 +1,5 @@
+<?php include("config/db_connect.php"); ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -1522,7 +1524,7 @@
     =            multi item testimonial area        =
     =============================================-->
     
-    <div class="lezada-testimonial multi-item-testimonial-area testimonial-bg testimonial-bg-1 mb-100 pt-135 pb-135">
+    <div class="lezada-testimonial multi-item-testimonial-area testimonial-bg mb-100 pt-135 pb-135">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 mb-60">
