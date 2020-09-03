@@ -42,8 +42,8 @@
                                         <li class="menu-item"><a href="index.php">Home</a></li>
                                         <li class="menu-item"><a href="about.php">About</a></li>
                                         <li class="menu-item"><a href="products.php">Products</a></li>
-                                        <li class="menu-item"><a href="works.php">Work</a></li>
-                                        <li class="menu-item"><a href="blog.php">Blog</a></li>
+                                        <!-- <li class="menu-item"><a href="works.php">Work</a></li>
+                                        <li class="menu-item"><a href="blog.php">Blog</a></li> -->
                                         <li class="menu-items"><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </nav>
@@ -61,11 +61,11 @@
                         <div class="header-right-icons d-flex justify-content-end align-items-center h-100">
                             <!--=======  single-icon  =======-->
                             
-                            <div class="single-icon search">
+                            <!-- <div class="single-icon search">
                                 <a href="javascript:void(0)" id="search-icon">
                                     <i class="ion-ios-search-strong"></i>
                                 </a>
-                            </div>
+                            </div> -->
                             &nbsp;
                             
                             <!--=======  End of single-icon  =======-->

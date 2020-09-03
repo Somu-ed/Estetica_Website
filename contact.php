@@ -115,6 +115,21 @@
 	<!-- Modernizer JS -->
 	<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
+	<style>
+		.google-maps {
+			position: relative; padding-bottom: 40%; padding-left: 56.25%; height: 0; overflow: hidden; max-width: 100%;
+		}
+		.google-maps iframe {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			padding-left: 20px;
+			padding-right: 20px;
+		}
+  	</style>
+
 </head>
 
 <body>
@@ -252,8 +267,8 @@
 				<div class="col-lg-12">
 					<!--=======  box layout map container  =======-->
 					
-					<div class="box-layout-map-container">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14963.677629431844!2d85.8240402!3d20.3449478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90848377c4e04171!2sEstetica%20Furnishings!5e0!3m2!1sen!2sin!4v1594119094435!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					<div class="box-layout-map-container google-maps">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14963.677629431844!2d85.8240402!3d20.3449478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90848377c4e04171!2sEstetica%20Furnishings!5e0!3m2!1sen!2sin!4v1594119094435!5m2!1sen!2sin" width="700" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 					
 					<!--=======  End of box layout map container  =======-->
