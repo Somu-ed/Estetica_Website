@@ -253,8 +253,8 @@
 										<!--=======  image  =======-->
 										
 										<div class='single-slider-post__image mb-30'>
-											<a href='blog-single-post-left-sidebar.html'>
-												<img src='assets/images/blog/$image' class='img-fluid' alt=''>
+											<a href='blog_single.php?id=$id'>
+												<img src='assets/images/blog/$image' class='img-fluid' alt='blog cover'>
 											</a>
 										</div>
 										
@@ -265,9 +265,9 @@
 										<div class='single-slider-post__content'>
 											<div class='post-date'>
 												<i class='ion-android-calendar'></i>
-												<a href='blog-standard-left-sidebar.html'> $date</a>
+												<a> $date</a>
 											</div>
-											<h2 class='post-title'><a href='blog-single-post-left-sidebar.html'>$heading</a></h2>
+											<h2 class='post-title'><a href='blog_single.php?id=$id'>$heading</a></h2>
 											<p class='post-excerpt'>$description</p>
 											<a href='blog_single.php?id=$id' class='blog-readmore-btn'>read more</a>
 										</div>
