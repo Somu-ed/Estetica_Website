@@ -1,4 +1,4 @@
-<?php require "db_connect.php";?>
+<?php require "config/db_connect.php";?>
 <?php
      if(isset($_GET['id'])){
          $id = $_GET['id'];

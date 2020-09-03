@@ -1,5 +1,5 @@
 <?php
-include("db_connect.php");
+include("config/db_connect.php");
 
     $del_id = $_POST['del_id'];
     $delete_query = "DELETE FROM contact WHERE id = $del_id";

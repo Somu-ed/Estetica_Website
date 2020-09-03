@@ -1,4 +1,4 @@
-<?php include"db_connect.php";?>
+<?php include"config/db_connect.php";?>
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
