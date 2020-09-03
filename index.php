@@ -676,7 +676,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-            <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['469auto','469auto','469auto','370px']" data-hh="['708px','708','708','558px']" data-lazyload="assets/images/revimages/smart/slider-homepage5-img3.png" data-no-retina> </div></div>
+            <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['469auto','469auto','469auto','370px']" data-hh="['708px','708','708','558px']" data-lazyload="assets/images/slider/slider_1.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 26 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -1003,7 +1003,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 6;"><img src="assets/images/revimages/smart/sofa.png" alt="" data-ww="['1006px','762px','762px','422px']" data-hh="['429px','325px','325px','180px']" data-no-retina> </div>
+                    style="z-index: 6;"><img src="assets/images/home/hello.png" alt="" data-ww="['1006px','762px','762px','422px']" data-hh="['429px','325px','325px','180px']" data-no-retina> </div>
         
                 <!-- LAYER NR. 3 -->
                 <div class="tp-caption   tp-resizeme" 
