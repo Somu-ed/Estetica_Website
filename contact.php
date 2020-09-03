@@ -122,7 +122,7 @@
 	<!--==== Start of Header offcanvas about ====-->
     
     <?php
-    include("header.php");
+    include("includes/header.php");
     ?>
 
     <!--===== End of Header offcanvas about ======-->
@@ -332,7 +332,7 @@
 	=            footer area         =
 	=============================================-->
 	
-    <?php include("footer.php"); ?>
+    <?php include("includes/footer.php"); ?>
 	
 	<!--=====  End of footer area  ======-->
 
@@ -340,7 +340,7 @@
 	=            overlay items         =
 	=============================================-->
 	
-	<?php include("overlay.php"); ?>
+	<?php include("includes/overlay.php"); ?>
 
 	<!-- scroll to top  -->
 		<a href="#" class="scroll-top"></a>

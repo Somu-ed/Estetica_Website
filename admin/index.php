@@ -206,7 +206,7 @@
 				<!--begin::Wrapper-->
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
-					<?php include 'header.php'; ?>
+					<?php include 'includes/header.php'; ?>
 					<!--end::Header-->
 					<!--begin::Content-->
 					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
@@ -2613,7 +2613,7 @@
 					</div>
 					<!--end::Content-->
 					<!--begin::Footer-->
-					<?php include 'footer.php'; ?>
+					<?php include 'includes/footer.php'; ?>
 					<!--end::Footer-->
 				</div>
 				<!--end::Wrapper-->

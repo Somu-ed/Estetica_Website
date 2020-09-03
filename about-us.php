@@ -45,7 +45,7 @@
 	=            Header offcanvas about         =
 	=============================================-->
 	
-	<?php include "header.php";?>
+	<?php include "includes/header.php";?>
 	
 	<!--===== End of Header offcanvas about ======-->
 
@@ -233,7 +233,7 @@
 	=            footer area         =
 	=============================================-->
 	
-	<?php include "footer.php"?>
+	<?php include "includes/footer.php"?>
 	
 	<!--=====  End of footer area  ======-->
 
@@ -243,7 +243,7 @@
 	
 	<!--=======  about overlay  =======-->
 	
-	<?php include "overlay.php";?>
+	<?php include "includes/overlay.php";?>
 	
 	<!--=====  End of overlay items  ======-->
 

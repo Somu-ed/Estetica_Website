@@ -56,7 +56,7 @@
 	=            Header without topbar         =
 	=============================================-->
 	
-	<?php include 'header.php'; ?>
+	<?php include 'includes/header.php'; ?>
 
 	<!--=============================================
 	=            slider area         =
@@ -1769,13 +1769,13 @@
 	=            footer area         =
 	=============================================-->
 	
-    <?php include 'footer.php'; ?>
+    <?php include 'includes/footer.php'; ?>
 
 	<!--=============================================
 	=            overlay items         =
 	=============================================-->
 	
-	<?php include 'overlay.php'; ?>
+	<?php include 'includes/overlay.php'; ?>
     
     <!--=============================================
 	=            quick view         =
