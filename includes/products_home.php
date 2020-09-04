@@ -33,8 +33,8 @@
                     "arrows": false,
                     "dots": true,
                     "autoplay": false,
-                    "autoplaySpeed": 5000,
-                    "speed": 1000,
+                    "autoplaySpeed": 1000,
+                    "speed": 500,
                     "prevArrow": {"buttonClass": "slick-prev", "iconClass": "ti-angle-left" },
                     "nextArrow": {"buttonClass": "slick-next", "iconClass": "ti-angle-right" }
                 }'
@@ -54,35 +54,21 @@
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-1-1-600x800.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products/furniture-1-2-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Artifact01.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Artifact01.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                    <span class="onsale">-10%</span>
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a class="cd-trigger" href="#qv-1" data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
         
                             <!--=======  single product content  =======-->
                     
-                            <div class="single-product__content">
+                            <!-- <div class="single-product__content">
                                 <div class="title">
-                                    <h3> <a href="shop-product-basic.html">Round Wooden Table</a></h3>
-                                    <a href="#">Add to cart</a>
+                                    <h3>Round Wooden Table</h3>
                                 </div>
-                                <div class="price">
-                                    <span class="main-price">$130.00</span>
-                                </div>
-                            </div>
+                            </div> -->
                             
                             <!--=======  End of single product content  =======-->
                             </div>
@@ -95,206 +81,149 @@
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-2-1-600x800.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products/furniture-2-2-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Bed-Linen-01.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Bed-Linen-01.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                    <span class="hot">hot</span>
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a class="cd-trigger" href="#qv-1"  data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
-        
-                            <!--=======  single product content  =======-->
-                    
-                            <div class="single-product__content">
-                                <div class="title">
-                                    <h3> <a href="shop-product-basic.html">Comfort Sofa</a></h3>
-                                    <a href="#">Add to cart</a>
-                                </div>
-                                <div class="price">
-                                    <span class="main-price discounted">$260.00</span>
-                                    <span class="discounted-price">$230.00</span>
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single product content  =======-->
                             </div>
                         </div>
                         <!--=======  End of single product  =======-->
-                        
+
                         <!--=======  single product  =======-->
                         <div class="col">
                             <div class="single-product single-product--smarthome">
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-3-1-600x800.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products/furniture-3-2-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Blind-01.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Blind-01.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a  class="cd-trigger" href="#qv-1" data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
-        
-                            <!--=======  single product content  =======-->
-                    
-                            <div class="single-product__content">
-                                <div class="title">
-                                    <h3> <a href="shop-product-basic.html"> Comfort Sofa Green</a></h3>
-                                    <a href="#">Add to cart</a>
-                                </div>
-                                <div class="price">
-                                    <span class="main-price discounted">$120.00</span>
-                                    <span class="discounted-price">$100.00</span>
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single product content  =======-->
                             </div>
                         </div>
                         <!--=======  End of single product  =======-->
-                        
+
                         <!--=======  single product  =======-->
                         <div class="col">
                             <div class="single-product single-product--smarthome">
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-4-1-600x800.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products/furniture-4-2-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Carpet-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Carpet-02.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                    <span class="onsale">-15%</span>
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a  class="cd-trigger" href="#qv-1"  data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
-        
-                            <!--=======  single product content  =======-->
-                    
-                            <div class="single-product__content">
-                                <div class="title">
-                                    <h3> <a href="shop-product-basic.html">Wooden Round Table</a></h3>
-                                    <a href="#">Add to cart</a>
-                                </div>
-                                <div class="price">
-                                    <span class="main-price discounted">$400.00</span>
-                                    <span class="discounted-price">$380.00</span>
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single product content  =======-->
                             </div>
                         </div>
                         <!--=======  End of single product  =======-->
-                        
+
                         <!--=======  single product  =======-->
                         <div class="col">
                             <div class="single-product single-product--smarthome">
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-8-1-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Extra-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Extra-02.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                    <span class="onsale">-15%</span>
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a  class="cd-trigger" href="#qv-1"  data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
-        
-                            <!--=======  single product content  =======-->
-                    
-                            <div class="single-product__content">
-                                <div class="title">
-                                    <h3> <a href="shop-product-basic.html">Wooden Round Table</a></h3>
-                                    <a href="#">Add to cart</a>
-                                </div>
-                                <div class="price">
-                                    <span class="main-price discounted">$400.00</span>
-                                    <span class="discounted-price">$380.00</span>
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single product content  =======-->
                             </div>
                         </div>
                         <!--=======  End of single product  =======-->
-                        
-                        
-                        
+
                         <!--=======  single product  =======-->
                         <div class="col">
                             <div class="single-product single-product--smarthome">
                             <!--=======  single product image  =======-->
                             
                             <div class="single-product__image">
-                                <a class="image-wrap" href="shop-product-basic.html">
-                                    <img src="assets/images/products/furniture-3-1-600x800.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products/furniture-3-2-600x800.jpg" class="img-fluid" alt="">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
                                 </a>
-        
-                                <div class="single-product__floating-badges">
-                                    <span class="onsale">-25%</span>
-                                </div>
-                                
-                                <div class="single-product__floating-icons">
-                                    <span class="wishlist"><a href="#" data-tippy="Add to wishlist" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-android-favorite-outline"></i></a></span>
-                                    <span class="compare"><a href="#" data-tippy="Compare" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left" ><i class="ion-ios-shuffle-strong"></i></a></span>
-                                    <span class="quickview"><a class="cd-trigger" href="#qv-1" data-tippy="Quick View" data-tippy-inertia="true" data-tippy-animation="shift-away" data-tippy-delay="50" data-tippy-arrow="true" data-tippy-theme = "sharpborder" data-tippy-placement = "left"  ><i class="ion-ios-search-strong"></i></a></span>
-                                </div>
                             </div>
                             
                             <!--=======  End of single product image  =======-->
-        
-                            <!--=======  single product content  =======-->
-                    
-                            <div class="single-product__content">
-                                <div class="title">
-                                    <h3> <a href="shop-product-basic.html">Green Coutch</a></h3>
-                                    <a href="#">Add to cart</a>
-                                </div>
-                                <div class="price">
-                                    <span class="main-price discounted">$360.00</span>
-                                    <span class="discounted-price">$300.00</span>
-                                </div>
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Flooring-2.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Flooring-2.jpg" class="img-fluid" alt="">
+                                </a>
                             </div>
                             
-                            <!--=======  End of single product content  =======-->
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Hand-Painted-Wall.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Hand-Painted-Wall.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
                             </div>
                         </div>
                         <!--=======  End of single product  =======-->

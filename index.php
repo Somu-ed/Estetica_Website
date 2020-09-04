@@ -94,7 +94,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-            <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['1453px','1281px','1149px','933px']" data-hh="['727px','641px','575px','467px']" data-lazyload="assets/images/revimages/smart/slider-homepage5-img1.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['1453px','1281px','1149px','933px']" data-hh="['727px','641px','575px','467px']" data-lazyload="assets/images/revimages/smart/slider-homepage5-img1.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 2 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -287,7 +287,7 @@
             
                     <!-- LAYER NR. 10 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-27-layer-25" 
+                    href="" target="_self"			 id="slide-27-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -312,7 +312,7 @@
             
                     <!-- LAYER NR. 11 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-27-layer-26" 
+                    href="" target="_self"			 id="slide-27-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -337,7 +337,7 @@
             
                     <!-- LAYER NR. 12 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-27-layer-27" 
+                    href="" target="_self"			 id="slide-27-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -386,7 +386,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-            <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['341auto','341auto','341auto','226px']" data-hh="['651px','651px','651px','432px']" data-lazyload="assets/images/revimages/smart/image.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['341auto','341auto','341auto','226px']" data-hh="['651px','651px','651px','432px']" data-lazyload="assets/images/revimages/smart/image.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 14 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -579,7 +579,7 @@
             
                     <!-- LAYER NR. 22 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-28-layer-25" 
+                    href="" target="_self"			 id="slide-28-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -604,7 +604,7 @@
             
                     <!-- LAYER NR. 23 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-28-layer-26" 
+                    href="" target="_self"			 id="slide-28-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -629,7 +629,7 @@
             
                     <!-- LAYER NR. 24 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-28-layer-27" 
+                    href="" target="_self"			 id="slide-28-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -678,7 +678,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-            <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['469auto','469auto','469auto','370px']" data-hh="['708px','708','708','558px']" data-lazyload="assets/images/slider/slider_1.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['469auto','469auto','469auto','370px']" data-hh="['708px','708','708','558px']" data-lazyload="assets/images/slider/slider_1.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 26 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -871,7 +871,7 @@
             
                     <!-- LAYER NR. 34 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-29-layer-25" 
+                    			 id="slide-29-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -896,7 +896,7 @@
             
                     <!-- LAYER NR. 35 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-29-layer-26" 
+                 href="" target="_self"			 id="slide-29-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -921,7 +921,7 @@
             
                     <!-- LAYER NR. 36 -->
                     <a class="tp-caption   tp-resizeme" 
-             href="" target="_self"			 id="slide-29-layer-27" 
+                    href="" target="_self"			 id="slide-29-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -1566,16 +1566,16 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-									I can say your dedication is second to none. I like the fact that you are strongly proud of your work in every way.
+                                Estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
-										<img src="assets/images/testimonial/testimonial-1-80x80.png" class="img-fluid" alt="">
+										<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
 									</div>
 
 									<div class="content">
-										<p class="name">Sally Ramsey</p>
-										<span class="designation">/ Reporter</span>
+										<p class="name">Revati Pany</p>
+										<span class="designation">Managing Director, Ocasa Design Studio</span>
 									</div>
 								</div>
 							</div>
@@ -1588,16 +1588,16 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-										This has already been my fifth-time purchasing their theme. I have been highly satisfied with their work.
+                                ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at Estética has been satisfying indeed. We do recommend them to discerning clients.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
-										<img src="assets/images/testimonial/testimonial-2-80x80.jpg" class="img-fluid" alt="">
+										<img src="assets/images/testimonial/t2.jpg" style="width: 80px" class="img-fluid" alt="">
 									</div>
 
 									<div class="content">
-										<p class="name">Lois Thompson</p>
-										<span class="designation">/ Actor</span>
+										<p class="name">Ar. Prateek Gupta</p>
+										<span class="designation">Principal Architect, Prateek Gupta Architects</span>
 									</div>
 								</div>
 							</div>
@@ -1610,38 +1610,16 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-									There's nothing would satisfy me much more than a worry-free clean and responsive theme for my high-traffic site.
+                                In one word, Estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend Estética to people who are looking for exceptional quality at a fair price!
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
-										<img src="assets/images/testimonial/testimonial-3-80x80.jpg" class="img-fluid" alt="">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
 									</div>
 									
 									<div class="content">
-										<p class="name">Florence Pittman</p>
-										<span class="designation">/ Model</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__text">
-										Five-star for good customer support. They have the ability to resolve any issue in less than the time for a coffee cup.
-								</div>
-								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
-										<img src="assets/images/testimonial/testimonial-4-80x80.jpg" class="img-fluid" alt="">
-									</div>
-
-									<div class="content">
-										<p class="name">Anais Coulon</p>
-										<span class="designation">/ Model</span>
+										<p class="name">Sambid Mohapatra</p>
+										<span class="designation">Principal architect, SDS consulting</span>
 									</div>
 								</div>
 							</div>
@@ -1694,7 +1672,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-1.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/picture1.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
@@ -1705,7 +1683,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-2.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Picture2.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
@@ -1716,7 +1694,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-3.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Picture3.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
@@ -1727,7 +1705,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-4.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Picture5.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
@@ -1738,7 +1716,7 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-5.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Picture6.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
@@ -1749,7 +1727,76 @@
 					
 					<div class="single-brand">
 						<a href="#">
-							<img src="assets/images/brands/logo-6.png" class="img-fluid" alt="">
+							<img class="partner_logos" src="assets/images/brands/Picture8.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+            </div>
+            <br></br>
+            <div class="row">
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture11.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture12.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture13.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture14.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture15.png" class="img-fluid" alt="">
+						</a>
+					</div>
+					
+					<!--=======  End of single brand logo  =======-->
+				</div>
+                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
+					<!--=======  single brand logo  =======-->
+					
+					<div class="single-brand">
+						<a href="#">
+							<img class="partner_logos" src="assets/images/brands/Picture16.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
