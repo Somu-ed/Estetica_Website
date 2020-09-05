@@ -93,7 +93,7 @@
 		$max_limit = $dec_limit - $limit;
 	}
 	else{
-		$max_limit = 2;
+		$max_limit = 10;
 	}
 
 	// Category wise filter
@@ -214,10 +214,10 @@
                             <!--=======  grid icons  =======-->
                             
                             <div class="single-icon grid-icons">
-							<a data-target="four-column" class="active" href="javascript:void(0)"><i class="ti-layout-grid3-alt"></i></a>
-							<a data-target="five-column"   href="javascript:void(0)"><i class="ti-layout-grid4-alt"></i></a>
+							<a data-target="five-column" class="active"  href="javascript:void(0)"><i class="ti-layout-grid4-alt"></i></a>
+							<a data-target="four-column" href="javascript:void(0)"><i class="ti-layout-grid3-alt"></i></a>
 							<a data-target="three-column" href="javascript:void(0)"><i class="ti-layout-grid2-alt"></i></a>
-							<a data-target="list" href="javascript:void(0)"><i class="ti-view-list"></i></a>
+							<!-- <a data-target="list" href="javascript:void(0)"><i class="ti-view-list"></i></a> -->
                             </div>
                             
                             <!--=======  End of grid icons  =======-->
@@ -529,7 +529,7 @@
 										<div class='single-product__content'>
 												
 											<div class='title'>
-												<h3> <a style='text-align: justify;' href='shop-product-basic.html'>$name</a></h3>
+												<h3> <a style='text-align: justify;' href='shop-product-basic.html'><br></a></h3>
 												<a class='lezada-button lezada-button--medium'>$cat</a>
 											</div>
 											<!--<div class='price'>
@@ -665,13 +665,15 @@
 							echo"
 							<form action='products.php' method='post'>
 								<input type='hidden' name='limit' value='$max_limit'>";
-								if($max_limit > 2){
+								if($max_limit > 10){
 									echo"
 									<button type='submit' name='less' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-remove'></i> LESS</button>
 									";
 								}
-								echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>
-							</form>";
+								if($max_limit<31){
+									echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>";
+								}
+							echo"</form>";
 							?>
 							</div>
 						</div>

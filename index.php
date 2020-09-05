@@ -1490,7 +1490,7 @@
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
-										<img src="assets/images/testimonial/t2.jpg" style="width: 80px" class="img-fluid" alt="">
+										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
 									</div>
 
 									<div class="content">
