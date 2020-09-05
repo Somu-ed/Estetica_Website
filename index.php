@@ -94,7 +94,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['1453px','1281px','1149px','933px']" data-hh="['727px','641px','575px','467px']" data-lazyload="assets/images/revimages/smart/slider-homepage5-img1.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['1453px','1281px','1149px','933px']" data-hh="['727px','641px','575px','467px']" data-lazyload="assets/images/slider/slider_2.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 2 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -1177,7 +1177,7 @@
                     data-paddingleft="[35,35,35,35]"
         
                     style="z-index: 14; white-space: nowrap; letter-spacing: 1px;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;">
-                    <a class="revslider-button" href="#"> About us</a>  </div>
+                    <a class="revslider-button" href="about.php"> About us</a>  </div>
             </li>
         </ul>
         <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
