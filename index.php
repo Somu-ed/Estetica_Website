@@ -1164,7 +1164,7 @@
                         <a >
                             <img src="assets/images/banners/s1.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name" style="font-weight: bold; font-size: 25px">Curtain stiching</span>
+                                <span class="name" style="font-size: 25px; color: white;">Curtain stiching</span>
                                 <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
@@ -1212,7 +1212,7 @@
                         <a >
                             <img src="assets/images/banners/s2.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name" style="font-weight: bold; font-size: 25px">Customized Furniture</span>
+                                <span class="name" style="font-size: 25px; color: white;">Customized Furniture</span>
                                 <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
