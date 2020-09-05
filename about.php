@@ -36,6 +36,8 @@
 	<!-- Modernizer JS -->
 	<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
+    
+
 </head>
 
 <body>
@@ -88,7 +90,7 @@
                         
                         <p class="subtitle subtitle--deep">ESTETICA FURNISHING</p>
                         <h1>Our Story</h1>
-                        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit met condimentum estibulum is Suspe ndisse suscipit sagittis leo sit met condimentum estibulorem ipsum dolor sit amet, consectetur cing elit.</p>
+                        <p class="subtitle">Estética was born out of our long-drawn dream of bringing Odisha to the centre of attention with respect to furnishings. The state since long has been taken for granted for its consumption of soft furnishings and usually treated to the unwanted dump from the rest of the country. We opened our doors to smart city, Bhubaneswar for giving it a deserved due!</p>
                     </div>
                     
                     <!--=======  End of section title  =======-->
@@ -108,27 +110,7 @@
             <div class="row">
                 <div class="col-lg-10 offset-lg-1">
                     <!--=======  about video area  =======-->
-                    
-                    <div class="about-video-bg-area about-video-bg-2 pt-300 pb-300 pt-sm-200 pb-sm-200  pt-xs-150 pb-xs-150  mb-50">
-                        <!--=======  floating-text left  =======-->
-                        
-                        <p class="video-text video-text-left"><a href="#">ESTETICA</a></p>
-                        
-                        <!--=======  End of floating-text left  =======-->
-                        <div class="play-icon text-center mb-40">
-                            <a href="https://www.youtube.com/watch?v=feOScd2HdiU" class="popup-video">
-                                <img src="assets/images/icons/icon-play-100x100.png" class="img-fluid" alt="">
-                            </a>
-                        </div>
-                        <h1>OUR STORY</h1>
-
-                        <!--=======  floating-text right  =======-->
-                        
-                        <p class="video-text video-text-right"><a href="#">OUR STORY</a></p>
-                        
-                        <!--=======  End of floating-text right  =======-->
-
-                    </div>
+                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Festeticafurnishings%2Fvideos%2F209853666596611%2F&show_text=false&width=734&height=411&appId" width="734" height="411" style="border:none; overflow:hidden;padding-left: 22%" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
                     
                     <!--=======  End of about video area  =======-->
                 </div>
@@ -152,7 +134,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/image-about-us.png" class="img-fluid" alt="">
+                        <img src="assets/images/backgrounds/approach.jpg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
@@ -163,7 +145,7 @@
                     <div class="about-page-text">
                         <p class="subtitle subtitle--deep">ESTETICA</p>
                         <h1>Our Approach</h1>
-                        <p class=" mb-35">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit estibulum issim Lorem ipsum dolor sit amet, consectetur cing elit. ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit es</p>
+                        <p class=" mb-35">We offer consulting on furnishings; we do not just sell it! The team focuses on understanding the customers’ needs, offers all possible options by sharing the technical details on the make & break of fabric and helps the customer to take an informed decision. The team spends time on knowledge share with customers and associates to emphasize on choosing the right kind of furnishings for their spaces. Right from a detailed project brief to execution, we have developed a structured process to serve our customers in the best possible manner. There are checks incorporated at every level of the process to ensure no compromise on quality and timeline adherence. </p>
                     </div>
 
                 </div>
@@ -180,7 +162,7 @@
                     <div class="about-page-text">
                         <p class="subtitle subtitle--deep">ESTETICA</p>
                         <h1>Our Mission</h1>
-                        <p class=" mb-35">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit estibulum issim Lorem ipsum dolor sit amet, consectetur cing elit. ipsum dolor sit amet, consectetur cing elit. Suspe ndisse suscipit sagittis leo sit es</p>
+                        <p class=" mb-35">To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share</p>
                     </div>
 
                 </div>
@@ -189,7 +171,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/image-about-us.png" class="img-fluid" alt="">
+                        <img src="assets/images/backgrounds/mission.jpg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
@@ -207,7 +189,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/image-about-us.png" class="img-fluid" alt="">
+                        <img src="assets/images/backgrounds/vision.jpg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->

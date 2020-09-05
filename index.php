@@ -118,7 +118,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;">New collection A-W ss17 </div>
+                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 3 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -143,28 +143,6 @@
             
                         style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Chair <br> collection </div>
             
-                    <!-- LAYER NR. 4 -->
-                    <div class="tp-caption Slider-button-alt rev-btn  tp-resizeme" 
-                         id="slide-27-layer-20" 
-                         data-x="['center','center','center','left']" data-hoffset="['301','171','-248','48']" 
-                         data-y="['top','top','top','top']" data-voffset="['610','515','459','327']" 
-                                    data-color="['rgb(255,255,255)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
-                        data-width="['154','none','none','none']"
-                        data-height="['45','none','none','none']"
-                        data-whitespace="nowrap"
-             
-                        data-type="button" 
-                        data-actions=''
-                        data-responsive_offset="on" 
-            
-                        data-frames='[{"delay":1610,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(51,51,51);bg:transparent;"}]'
-                        data-textAlign="['inherit','inherit','inherit','inherit']"
-                        data-paddingtop="[12,12,12,12]"
-                        data-paddingright="[35,35,35,35]"
-                        data-paddingbottom="[12,12,12,12]"
-                        data-paddingleft="[35,35,35,35]"
-            
-                        style="z-index: 8; min-width: 154px; max-width: 154px; max-width: 45px; max-width: 45px; white-space: nowrap; letter-spacing: 1px;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"><a class="revslider-button" href="shop-left-sidebar.html"> SHOP NOW</a></div>
             
                     <!-- LAYER NR. 5 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -262,7 +240,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;">ONLINE STORE </div>
+                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 9 -->
                     <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
@@ -407,7 +385,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;">New collection A-W ss17 </div>
+                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 15 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -432,28 +410,7 @@
             
                         style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> design </div>
             
-                    <!-- LAYER NR. 16 -->
-                    <div class="tp-caption Slider-button-alt rev-btn  tp-resizeme" 
-                         id="slide-28-layer-20" 
-                         data-x="['center','center','center','left']" data-hoffset="['303','135','-244','48']" 
-                         data-y="['top','top','top','top']" data-voffset="['581','478','421','261']" 
-                                    data-color="['rgb(255,255,255)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
-                        data-width="['154','none','none','none']"
-                        data-height="['45','none','none','none']"
-                        data-whitespace="nowrap"
-             
-                        data-type="button" 
-                        data-actions=''
-                        data-responsive_offset="on" 
-            
-                        data-frames='[{"delay":1610,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(51,51,51);bg:transparent;"}]'
-                        data-textAlign="['inherit','inherit','inherit','inherit']"
-                        data-paddingtop="[12,12,12,12]"
-                        data-paddingright="[35,35,35,35]"
-                        data-paddingbottom="[12,12,12,12]"
-                        data-paddingleft="[35,35,35,35]"
-            
-                        style="z-index: 8; min-width: 154px; max-width: 154px; max-width: 45px; max-width: 45px; white-space: nowrap; letter-spacing: 1px;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"> <a class="revslider-button" href="shop-left-sidebar.html"> SHOP NOW</a></div>
+                   
             
                     <!-- LAYER NR. 17 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -551,7 +508,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;">ONLINE STORE </div>
+                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 21 -->
                     <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
@@ -696,7 +653,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;">New collection A-W ss17 </div>
+                        style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;"></div>
             
                     <!-- LAYER NR. 27 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -721,28 +678,6 @@
             
                         style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> design </div>
             
-                    <!-- LAYER NR. 28 -->
-                    <div class="tp-caption Slider-button-alt rev-btn  tp-resizeme" 
-                         id="slide-29-layer-20" 
-                         data-x="['center','center','center','left']" data-hoffset="['305','135','-244','48']" 
-                         data-y="['top','top','top','top']" data-voffset="['578','478','421','261']" 
-                                    data-color="['rgb(255,255,255)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
-                        data-width="['154','none','none','none']"
-                        data-height="['45','none','none','none']"
-                        data-whitespace="nowrap"
-             
-                        data-type="button" 
-                        data-actions=''
-                        data-responsive_offset="on" 
-            
-                        data-frames='[{"delay":1660,"speed":2000,"frame":"0","from":"y:-50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Linear.easeNone","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgb(51,51,51);bg:transparent;"}]'
-                        data-textAlign="['inherit','inherit','inherit','inherit']"
-                        data-paddingtop="[12,12,12,12]"
-                        data-paddingright="[35,35,35,35]"
-                        data-paddingbottom="[12,12,12,12]"
-                        data-paddingleft="[35,35,35,35]"
-            
-                        style="z-index: 8; min-width: 154px; max-width: 154px; max-width: 45px; max-width: 45px; white-space: nowrap; letter-spacing: 1px;border-color:rgba(0,0,0,1);outline:none;box-shadow:none;box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;cursor:pointer;"> <a class="revslider-button" href="shop-left-sidebar.html"> SHOP NOW</a> </div>
             
                     <!-- LAYER NR. 29 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -840,7 +775,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;">ONLINE STORE </div>
+                        style="z-index: 12; white-space: nowrap; font-size: 14px; line-height: 24px; font-weight: 400; color: #333333; letter-spacing: 1px;font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 33 -->
                     <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme" 
@@ -1146,7 +1081,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">Lorem ipsum dolor sit amet, consectetur cing elit. Suspe ndisse<br> suscipit sagittis leo estibulum issim Lorem ipsum dolor sit amet,<br> consectetur cing elit. </div>
+                    style="z-index: 13; white-space: nowrap; font-size: 15px; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">Welcome to the world of Estética where you will <br>consume and experience furnishing like never before! </div>
         
                 <!-- LAYER NR. 10 -->
                 <div class="tp-caption Slider-button-alt rev-btn " 
@@ -1226,11 +1161,11 @@
                     <!--=======  hover zoom banner  =======-->
                     
                     <div class="single-banner single-banner--hoverzoom">
-                        <a href="shop-left-sidebar.html">
-                            <img src="assets/images/banners/category-furniture-3.jpg" class="img-fluid" alt="">
+                        <a >
+                            <img src="assets/images/banners/s1.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name">Tumbler Alarm Clock</span>
-                                <span class="price">$19.00</span>
+                                <span class="name" style="font-weight: bold; font-size: 25px">Curtain stiching</span>
+                                <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
                     </div>
@@ -1242,11 +1177,11 @@
                     <!--=======  hover zoom banner  =======-->
                     
                     <div class="single-banner single-banner--hoverzoom">
-                        <a href="shop-left-sidebar.html">
-                            <img src="assets/images/banners/category-furniture-1.jpg" class="img-fluid" alt="">
+                        <a >
+                            <img src="assets/images/banners/s3.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--banner-type banner-content--banner-type--top-right">
-                                <span class="name">Prismatic <span>Table</span> </span>
-                                <span class="lezada-button-link">SHOP NOW</span>
+                                <span class="name" >Sofa <span>Making</span> </span>
+                                <!-- <span class="lezada-button-link">SHOP NOW</span> -->
                             </span>
                         </a>
                     </div>
@@ -1258,11 +1193,11 @@
                     <!--=======  hover zoom banner  =======-->
                     
                     <div class="single-banner single-banner--hoverzoom">
-                        <a href="shop-left-sidebar.html">
-                            <img src="assets/images/banners/category-furniture-2.jpg" class="img-fluid" alt="">
+                        <a >
+                            <img src="assets/images/banners/s4.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--banner-type banner-content--banner-type--top-left">
-                                <span class="name">Wooden <span>birds decor</span> </span>
-                                <span class="lezada-button-link">SHOP NOW</span>
+                                <span class="name" style="font-weight: 5px">Interior <span>solutions</span> </span>
+                                <!-- <span class="lezada-button-link">SHOP NOW</span> -->
                             </span>
                         </a>
                     </div>
@@ -1274,11 +1209,11 @@
                     <!--=======  hover zoom banner  =======-->
                     
                     <div class="single-banner single-banner--hoverzoom">
-                        <a href="shop-left-sidebar.html">
-                            <img src="assets/images/banners/category-furniture-4.jpg" class="img-fluid" alt="">
+                        <a >
+                            <img src="assets/images/banners/s2.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name">Rocking chair</span>
-                                <span class="price">$19.00</span>
+                                <span class="name" style="font-weight: bold; font-size: 25px">Customized Furniture</span>
+                                <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
                     </div>
@@ -1290,35 +1225,7 @@
     </div>
     
     <!--=====  End of banner category area  ======-->
-
-    <!--=============================================
-    =            countdowntimer area         =
-    =============================================-->
-    
-    <!-- <div class="countdown-timer-area mb-100 mb-md-80 mb-sm-80 countdown-background pt-30 pb-30">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                        <div class="row align-items-center">
-                            <div class="col-lg-4 col-xl-5">
-                                <div class="countdown-image text-center">
-                                    <img src="assets/images/countdown/countdown-3.jpg" class="img-fluid" alt="">
-                                </div>
-                            </div>
-                            <div class=" col-12 col-xl-7 col-lg-8">
-                                <div class="countdown-wrapper text-center">
-                                    <h3>Deal of the day</h3>
-                                    <div class="deal-countdown" data-countdown="2020/01/01"></div>
-                                    <a href="shop-left-sidebar.html" class="lezada-button lezada-button--medium lezada-button--icon--left"> <i class="icon-left ion-ios-cart"></i> Only $39</a>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    
-    <!--=====  End of countdowntimer area  ======-->   
+ 
 
     <!--=============================================
 	=            section title  container      =
@@ -1798,12 +1705,6 @@
 	</div>
 	
 	<!--=====  End of brand logo area  ======-->
-
-    <!--=============================================
-	=            instagram slider area         =
-	=============================================-->
-	
-	<!-- deleted  -->
 
     <!--=============================================
 	=            footer area         =

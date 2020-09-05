@@ -18,8 +18,9 @@
                     <!--=======  copyright text  =======-->
                     
                     <div class="copyright-text">
-                        <p> &copy; 2020 Estetica.  <span>All Rights Reserved</span></p>
+                        <p> &copy; 2020 Estetica. </p>
                         <p><span>Designed with <i class="fa fa-heart"></i> <br> by <a href="https://perfectshades.in">Perfect Shades</a></span></p>
+                        <p>  <span>All Rights Reserved.</span></p>
                     </div>
                     
                     <!--=======  End of copyright text  =======-->
@@ -35,10 +36,10 @@
                     <div class="footer-nav-container">
                         <nav>
                             <ul>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Store location</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">Orders tracking</a></li>
+                                <li><a href="about">About us</a></li>
+                                <li><a href="https://www.google.com/search?q=estetica+furnishings&oq=estetica+furnishings&aqs=chrome..69i57j46j69i60l3.7448j0j7&sourceid=chrome&ie=UTF-8#">Store location</a></li>
+                                <li><a href="contact">Contact</a></li>
+                                <li><a href="products">Products</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -47,13 +48,13 @@
                 
                 <!--=======  single widget  =======-->
             </div>
-            <div class="col footer-single-widget">
+            <!-- <div class="col footer-single-widget"> -->
                 <!--=======  single widget  =======-->
-                    <h5 class="widget-title">USEFUL LINKS</h5>
+                    <!-- <h5 class="widget-title">USEFUL LINKS</h5> -->
 
                     <!--=======  footer navigation container  =======-->
                     
-                    <div class="footer-nav-container">
+                    <!-- <div class="footer-nav-container">
                         <nav>
                             <ul>
                                 <li><a href="#">Returns</a></li>
@@ -62,12 +63,12 @@
                                 <li><a href="#">FAQs</a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div> -->
                     
                     <!--=======  End of footer navigation container  =======-->
                 
                 <!--=======  single widget  =======-->
-            </div>
+            <!-- </div> -->
 
             <div class="col footer-single-widget">
                 <!--=======  single widget  =======-->

@@ -206,7 +206,7 @@
 						</div>
 						<div class="icon-box-content">
 							<h3 class="title">ADDRESS</h3>
-							<p class="content">1800 Abbot Kinney Blvd. Unit D & E Venice</p>
+							<p class="content">2nd floor, plot no, 372 4695, Nandankanan Rd, Kanan Vihar, Chandrasekharpur, Bhubaneswar, Odisha 751024</p>
 						</div>
 					</div>
 					
@@ -221,7 +221,7 @@
 						</div>
 						<div class="icon-box-content">
 							<h3 class="title">CONTACT</h3>
-							<p class="content">Mobile: (+88) – 1990 – 6886 <span>Hotline: 1800 – 1102</span></p>
+							<p class="content">Phone: (+91) 674 – 297 – 3337 </p>
 						</div>
 					</div>
 					
@@ -230,7 +230,7 @@
 							<i class="ion-ios-email"></i>
 						</div>
 						<div class="icon-box-content">
-							<p class="content">	Mail: contact@lezadastore.com </p>
+							<p class="content">	Mail: admin@esteticasolutions.in </p>
 						</div>
 					</div>
 					
@@ -245,7 +245,7 @@
 						</div>
 						<div class="icon-box-content">
 							<h3 class="title">HOUR OF OPERATION</h3>
-							<p class="content">Monday – Friday : 09:00 – 20:00<span>Sunday & Saturday: 10:30 – 22:00</span></p>
+							<p class="content">Monday – Sunday : 11:00 – 21:00</p>
 						</div>
 					</div>
 					
