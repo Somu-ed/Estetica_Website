@@ -141,7 +141,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Chair <br> collection </div>
+                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Contemporary <br> designs </div>
             
             
                     <!-- LAYER NR. 5 -->
@@ -408,7 +408,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> design </div>
+                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> concepts </div>
             
                    
             
@@ -676,7 +676,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> design </div>
+                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Vibrant<br> colours </div>
             
             
                     <!-- LAYER NR. 29 -->
