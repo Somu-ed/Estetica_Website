@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jul 10, 2020 at 03:15 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.1
+-- Generation Time: Sep 05, 2020 at 10:04 PM
+-- Server version: 10.4.13-MariaDB
+-- PHP Version: 7.4.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -76,6 +75,42 @@ INSERT INTO `contact` (`id`, `name`, `email`, `contact`, `address`, `msg`, `time
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `newsletter`
+--
+
+CREATE TABLE `newsletter` (
+  `id` int(50) NOT NULL,
+  `email` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `newsletter`
+--
+
+INSERT INTO `newsletter` (`id`, `email`) VALUES
+(1, 'nishantnarayanrout@gmail.com'),
+(4, 'nishantnarayanrout@gmail.com'),
+(5, 'ps@gmail.com'),
+(6, 'psnew@gmail.com'),
+(7, 'new@gmail.com'),
+(8, 'final@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `prd_temp`
+--
+
+CREATE TABLE `prd_temp` (
+  `id` int(50) NOT NULL,
+  `cat_id` int(50) NOT NULL,
+  `p_img` text NOT NULL,
+  `p_cat` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `products`
 --
 
@@ -95,12 +130,40 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `cat_id`, `brand_id`, `p_name`, `p_img`, `p_cat`, `p_brand`, `p_desc`) VALUES
-(1, 1, 6, 'Bombay Dyeing 136 TC Polyester Double Abstract Bedsheet (Pack of 1, Black, White)', 'bd_abstract.jpg', 'Bedsheets', 'Bombay Dyeing', 'Flat (L x W): 218 cm x 218 cm\r\nMaterial: Polyester\r\nIncludes: Number of Bedsheets: 1, Number of Pillow Covers: 2\r\nThread Count: 136\r\nColor: Black, White'),
-(2, 1, 6, 'Bombay Dyeing 136 TC Polyester Double Motifs Bedsheet  (Pack of 1, Blue, Grey)', 'bd_motifs.jpg', 'Bedsheets', 'Bombay Dyeing', 'Flat (L x W): 218 cm x 218 cm\r\nMaterial: Polyester\r\nIncludes: Number of Bedsheets: 1, Number of Pillow Covers: 2\r\nThread Count: 136\r\nColor: Blue, Grey'),
-(3, 1, 1, 'D\'Decor 136 TC Cotton Double King Floral Bedsheet (Pack of 1, Orange)', 'dd_floral.png', 'Bedsheets', 'D\'DECOR', 'Material: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 136\r\nColor: Orange'),
-(4, 1, 1, 'D\'Decor 136 TC Cotton Double King Floral Bedsheet (Pack of 1, Blue)', 'dd_floral2.png', 'Bedsheets', 'D\'DECOR', 'Material: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 136\r\nColor: Blue'),
-(5, 1, 3, 'Portico New York 144 TC Cotton Double Printed Bedsheet (Pack of 1, Multicolor)', 'portico_ny.jpg', 'Bedsheets', 'PORTICO', 'Flat (L x W): 254 cm x 224 cm\r\nMaterial: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 144\r\nColor: Multicolor'),
-(6, 1, 3, 'Portico New York 144 TC Cotton Double Printed Bedsheet (Pack of 1, Beige, Black, White, Grey)', 'portico_ny2.jpg', 'Bedsheets', 'PORTICO', 'Flat (L x W): 254 cm x 224 cm\r\nMaterial: Cotton\r\nIncludes: Number of Bedsheets: 1\r\nThread Count: 144\r\nColor: Beige, Black, White, Grey');
+(1, 1, 1, 'N/A', 'Artifact 01.jpg', 'Artifact', 'Estetica', 'N/A'),
+(2, 1, 1, 'N/A', 'Artifact 02.JPG', 'Artifact', 'Estetica', 'N/A'),
+(3, 1, 1, 'N/A', 'Artificial Grass 01.jpg', 'Artificial Grass', 'Estetica', 'N/A'),
+(4, 1, 1, 'N/A', 'Artificial Grass 02.jpg', 'Artificial Grass', 'Estetica', 'N/A'),
+(5, 1, 1, 'N/A', 'Awning 01.jpg', 'Awning', 'Estetica', 'N/A'),
+(6, 1, 1, 'N/A', 'Awning 02.jpg', 'Awning', 'Estetica', 'N/A'),
+(7, 1, 1, 'N/A', 'Bed Linen 01.jpg', 'Bed Linen', 'Estetica', 'N/A'),
+(8, 1, 1, 'N/A', 'Bed Linen 02.jpg', 'Bed Linen', 'Estetica', 'N/A'),
+(9, 1, 1, 'N/A', 'Blind 01.jpg', 'Blind', 'Estetica', 'N/A'),
+(10, 1, 1, 'N/A', 'Blind 02.jpg', 'Blind', 'Estetica', 'N/A'),
+(11, 1, 1, 'N/A', 'Blinds shankarjee.jpeg', 'Blind', 'Estetica', 'N/A'),
+(12, 1, 1, 'N/A', 'Carpet 01.jpg', 'Carpet', 'Estetica', 'N/A'),
+(13, 1, 1, 'N/A', 'Carpet 02.jpg', 'Carpet', 'Estetica', 'N/A'),
+(14, 1, 1, 'N/A', 'Curtain 01.jpg', 'Curtain', 'Estetica', 'N/A'),
+(15, 1, 1, 'N/A', 'Curtain 02.jpg', 'Curtain', 'Estetica', 'N/A'),
+(16, 1, 1, 'N/A', 'Customised fabric design with Matty Weave.jpg', 'Custom', 'Estetica', 'N/A'),
+(17, 1, 1, 'N/A', 'Customised Furniture.jpg', 'Custom', 'Estetica', 'N/A'),
+(18, 1, 1, 'N/A', 'Extra 01.JPG', 'Interior Solutions', 'Estetica', 'N/A'),
+(19, 1, 1, 'N/A', 'Extra 02.jpg', 'Cushion', 'Estetica', 'N/A'),
+(20, 1, 1, 'N/A', 'Extra 03.jpg', 'Interior Solutions', 'Estetica', 'N/A'),
+(21, 1, 1, 'N/A', 'Flooring 01.jpg', 'Flooring', 'Estetica', 'N/A'),
+(22, 1, 1, 'N/A', 'Flooring 2.jpg', 'Flooring', 'Estetica', 'N/A'),
+(23, 1, 1, 'N/A', 'Government Guest House 01.jpg', 'Interior Solutions', 'Estetica', 'N/A'),
+(24, 1, 1, 'N/A', 'Government Guest House 02.jpg', 'Interior Solutions', 'Estetica', 'N/A'),
+(25, 1, 1, 'N/A', 'Hand Painted Wall.jpg', 'Wall Painting', 'Estetica', 'N/A'),
+(26, 1, 1, 'N/A', 'Institutional 01.jpg', 'Institutional', 'Estetica', 'N/A'),
+(27, 1, 1, 'N/A', 'Institutional 02.jpg', 'Institutional', 'Estetica', 'N/A'),
+(28, 1, 1, 'N/A', 'Institutional 03.jpg', 'Institutional', 'Estetica', 'N/A'),
+(29, 1, 1, 'N/A', 'Rugs 01.jpg', 'Rugs', 'Estetica', 'N/A'),
+(30, 1, 1, 'N/A', 'Rugs 02.jpg', 'Rugs', 'Estetica', 'N/A'),
+(31, 1, 1, 'N/A', 'Upholstery 01.jpg', 'Upholstery', 'Estetica', 'N/A'),
+(32, 1, 1, 'N/A', 'Upholstery 02.JPG', 'Upholstery', 'Estetica', 'N/A'),
+(33, 1, 1, 'N/A', 'Wall Coverings 01.jpg', 'Wall Coverings', 'Estetica', 'N/A'),
+(34, 1, 1, 'N/A', 'Wall Coverings 02.jpg', 'Wall Coverings', 'Estetica', 'N/A');
 
 -- --------------------------------------------------------
 
@@ -168,8 +231,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `email`, `pwd`, `img`) VALUES
-('Nishant Narayan Rout', 'nishant@perfectshades.in', 'nishant1999', 'nishant.png'),
-('Soumyajeet Satpathy', 'soumyajeet@perfectshades.in', 'somu1999', '');
+('Nishant Narayan Rout', 'nishant@perfectshades.in', 'nishant1999', 'nishant.jpg'),
+('Soumyajeet Satpathy', 'soumyajeet@perfectshades.in', 'somu1999', 'somu.jpg');
 
 --
 -- Indexes for dumped tables
@@ -185,6 +248,18 @@ ALTER TABLE `blog`
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `prd_temp`
+--
+ALTER TABLE `prd_temp`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -225,13 +300,25 @@ ALTER TABLE `blog`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `newsletter`
+--
+ALTER TABLE `newsletter`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT for table `prd_temp`
+--
+ALTER TABLE `prd_temp`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT for table `p_brand`
