@@ -60,7 +60,7 @@
 					<!--=======  breadcrumb list  =======-->
 					
 						<ul class="breadcrumb-list">
-							<li class="breadcrumb-list__item"><a href="index.html">HOME</a></li>
+							<li class="breadcrumb-list__item"><a href="index.php">HOME</a></li>
 							<li class="breadcrumb-list__item breadcrumb-list__item--active">About Us</li>
 						</ul>
 					

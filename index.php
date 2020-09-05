@@ -286,8 +286,7 @@
                         style="z-index: 13;background-color:rgb(155,155,155);"> </div>
             
                     <!-- LAYER NR. 10 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-27-layer-25" 
+                    <a class="tp-caption   tp-resizeme" id="slide-27-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -308,11 +307,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Popular </a>
+                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Classy </a>
             
                     <!-- LAYER NR. 11 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-27-layer-26" 
+                    <a class="tp-caption   tp-resizeme" id="slide-27-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -333,11 +331,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Sale </a>
+                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Exclusive </a>
             
                     <!-- LAYER NR. 12 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-27-layer-27" 
+                    <a class="tp-caption   tp-resizeme" id="slide-27-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -358,7 +355,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">New </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-28" data-transition="fadetoleftfadefromright,parallaxtoright,parallaxtoleft,parallaxtotop,parallaxtobottom,parallaxhorizontal,parallaxvertical" data-slotamount="default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -386,7 +383,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['341auto','341auto','341auto','226px']" data-hh="['651px','651px','651px','432px']" data-lazyload="assets/images/revimages/smart/image.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['341auto','341auto','341auto','226px']" data-hh="['651px','651px','651px','432px']" data-lazyload="assets/images/slider/slider_3.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 14 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -578,8 +575,7 @@
                         style="z-index: 13;background-color:rgb(155,155,155);"> </div>
             
                     <!-- LAYER NR. 22 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-28-layer-25" 
+                    <a class="tp-caption   tp-resizeme" id="slide-28-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -600,11 +596,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Popular </a>
+                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Classy </a>
             
                     <!-- LAYER NR. 23 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-28-layer-26" 
+                    <a class="tp-caption   tp-resizeme" id="slide-28-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -625,11 +620,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Sale </a>
+                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Exclusive </a>
             
                     <!-- LAYER NR. 24 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-28-layer-27" 
+                    <a class="tp-caption   tp-resizeme" id="slide-28-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -650,7 +644,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">New </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-29" data-transition="slidingoverlayup,slidingoverlaydown,slidingoverlayright,slidingoverlayleft,slidingoverlayhorizontal,slidingoverlayvertical" data-slotamount="default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default" data-easeout="default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -870,8 +864,7 @@
                         style="z-index: 13;background-color:rgb(155,155,155);"> </div>
             
                     <!-- LAYER NR. 34 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    			 id="slide-29-layer-25" 
+                    <a class="tp-caption   tp-resizeme" id="slide-29-layer-25" 
                          data-x="['left','left','center','left']" data-hoffset="['215','42','-598','-393']" 
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
@@ -892,11 +885,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Popular </a>
+                        style="z-index: 14; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Classy </a>
             
                     <!-- LAYER NR. 35 -->
-                    <a class="tp-caption   tp-resizeme" 
-                 href="" target="_self"			 id="slide-29-layer-26" 
+                    <a class="tp-caption   tp-resizeme" id="slide-29-layer-26" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-661','-292']" 
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
@@ -917,11 +909,10 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Sale </a>
+                        style="z-index: 15; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Exclusive </a>
             
                     <!-- LAYER NR. 36 -->
-                    <a class="tp-caption   tp-resizeme" 
-                    href="" target="_self"			 id="slide-29-layer-27" 
+                    <a class="tp-caption   tp-resizeme" id="slide-29-layer-27" 
                          data-x="['left','center','center','left']" data-hoffset="['215','-435','-654','-390']" 
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
@@ -942,7 +933,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">New </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
