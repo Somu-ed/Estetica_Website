@@ -19,6 +19,7 @@
                     
                     <div class="copyright-text">
                         <p> &copy; 2020 Estetica.  <span>All Rights Reserved</span></p>
+                        <p><span>Designed with <i class="fa fa-heart"></i> <br> by <a href="https://perfectshades.in">Perfect Shades</a></span></p>
                     </div>
                     
                     <!--=======  End of copyright text  =======-->
