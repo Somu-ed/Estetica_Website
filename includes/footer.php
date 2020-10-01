@@ -118,7 +118,7 @@
                                     success:function(response){
                                         if(response == 1){
                                             swal.fire({
-                                            text: "Tank you for subscribing to our Newsletter",
+                                            text: "Thank you for subscribing to our Newsletter",
                                             icon: "success",
                                             buttonsStyling: false,
                                             confirmButtonText: "Okay!",
