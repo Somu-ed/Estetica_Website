@@ -111,7 +111,8 @@
                             $('#subscribe-btn').click(function() {
 
                                 var subscriber = $("#subscriber").val().trim();
-                                $.ajax({
+                                if(subscriber != ""){
+                                    $.ajax({
                                     url:'subs_process.php',
                                     type:'post',
                                     data:{subscriber:subscriber,},
@@ -144,6 +145,20 @@
                                         }
                                     }
                                 });
+                                } else {
+                                    swal.fire({
+                                        text: "Please Enter a valid email !!",
+                                        icon: "warning",
+                                        buttonsStyling: false,
+                                        confirmButtonText: "Okay",
+                                        customClass: {
+                                            confirmButton: "btn font-weight-bold btn-light-primary"
+                                        }
+                                    }).then(function() {
+                                        KTUtil.scrollTop();
+                                    });
+                                }
+                                
                             });
                         });
                     </script>
