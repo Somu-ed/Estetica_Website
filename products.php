@@ -97,25 +97,17 @@
 	}
 
 	// Category wise filter
+
 	if(isset($_POST['cat'])){
 		$cur_cat_id = $_POST['cat'];
-		if($cur_cat_id == 1){
-			$cur_cat_name = "Bed Linen";
-		}
-		elseif($cur_cat_id == 2){
-			$cur_cat_name = "Curtains";
-		}
-		elseif($cur_cat_id == 3){
-			$cur_cat_name = "Wallpapers";
-		}
-		elseif($cur_cat_id == 4){
-			$cur_cat_name = "Blinds";
-		}
-		elseif($cur_cat_id == 5){
-			$cur_cat_name = "Upholstery";
-		}
-		else{
-			$cur_cat_name = "Category";
+		$cat_query = "SELECT * FROM p_cat";
+		$cat_fetch = mysqli_query($con,$cat_query);
+		while($cat=mysqli_fetch_array($cat_fetch)){
+			$cat_id = $cat['cat_id'];
+			$cat_name = $cat['cat_name'];
+			if($cur_cat_id == $cat_id){
+				$cur_cat_name = $cat_name;
+			}
 		}
 	}
 	else{
@@ -126,35 +118,14 @@
 	//Brand wise filter
 	if(isset($_POST['brand'])){
 		$cur_brand_id = $_POST['brand'];
-		if($cur_brand_id == 1){
-			$cur_brand_name = "D'DECOR";
-		}
-		elseif($cur_brand_id == 2){
-			$cur_brand_name = "KALAGYA";
-		}
-		elseif($cur_brand_id == 3){
-			$cur_brand_name = "PORTICO";
-		}
-		elseif($cur_brand_id == 4){
-			$cur_brand_name = "MASPAR";
-		}
-		elseif($cur_brand_id == 5){
-			$cur_brand_name = "SAROM";
-		}
-		elseif($cur_brand_id == 6){
-			$cur_brand_name = "BOMBAY DYEING";
-		}
-		elseif($cur_brand_id == 7){
-			$cur_brand_name = "WALL KING";
-		}
-		elseif($cur_brand_id == 8){
-			$cur_brand_name = "PURE";
-		}
-		elseif($cur_brand_id == 9){
-			$cur_brand_name = "RUMORS";
-		}
-		else{
-			$cur_brand_name = "Brand";
+		$brand_query = "SELECT * FROM p_brand WHERE cat_id = $cur_cat_id ";
+		$brand_fetch = mysqli_query($con,$brand_query);
+		while($brand=mysqli_fetch_array($brand_fetch)){
+			$brand_id = $brand['brand_id'];
+			$brand_name = $brand['brand_name'];
+			if($cur_brand_id == $brand_id){
+				$cur_brand_name = $brand_name;
+			}
 		}
 	}
 	else{
@@ -251,6 +222,7 @@
 								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
 								";
 							}
+							echo"$cur_brand_id,$cur_cat_id";
 							?>
 							
 							<!--=======  End of filter dropdown  =======-->
