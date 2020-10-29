@@ -756,6 +756,7 @@
 
 	<!-- JS
 	============================================ -->
+
 	<!-- jQuery JS -->
 	<script src="assets/js/vendor/jquery.min.js"></script>
 
