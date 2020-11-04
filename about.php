@@ -36,7 +36,41 @@
 	<!-- Modernizer JS -->
 	<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
-    
+    <style>
+     .about__video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+     }
+     .mb-35 {
+        text-align: justify;
+        text-justify: inter-word;
+     }
+
+     @media screen and (min-width: 990px) {
+         .about-page-2-image {
+             margin-left: 200px;
+         }
+         .about__video {
+            margin-bottom: 50px;
+         }
+     }
+     @media screen and (max-width: 990px) {
+         .about-page-2-image {
+             display: flex;
+             align-items: center;
+             justify-content: center;
+         }
+         .about-page-2-image > img {
+             height: 250px !important;
+         }
+         .about__video {
+             padding: 20px;
+             margin-bottom: -100px;
+         }
+     }
+    </style>
 
 </head>
 
@@ -105,22 +139,22 @@
     =            about us video content         =
     =============================================-->
     
-    <div class="about-video-content mb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 offset-lg-1">
-                    <!--=======  about video area  =======-->
-                    <iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Festeticafurnishings%2Fvideos%2F209853666596611%2F&show_text=false&width=734&height=411&appId" width="734" height="411" style="border:none; overflow:hidden;padding-left: 22%" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
-                    
-                    <!--=======  End of about video area  =======-->
-                </div>
-
-        
-            </div>
-
-            
-        </div>
+    <!--=======  about video area  =======-->
+    <div class="about__video" >
+        <iframe
+            src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Festeticafurnishings%2Fvideos%2F209853666596611%2F&show_text=false&width=734&height=411&appId"
+            width="800"
+            height="480"
+            scrolling="no"
+            frameborder="0"
+            allowTransparency="true"
+            allow="encrypted-media"
+            allowFullScreen="true"
+        >
+        </iframe>
     </div>
+    
+    <!--=======  End of about video area  =======-->
     
     <!--=====  End of about us video content  ======-->
 
@@ -134,7 +168,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/approach.jpg" class="img-fluid" alt="">
+                        <img style="height: 300px;" src="assets/images/backgrounds/approach.svg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
@@ -171,7 +205,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/mission.jpg" class="img-fluid" alt="">
+                        <img style="height: 300px;" src="assets/images/backgrounds/mission.svg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
@@ -189,7 +223,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img src="assets/images/backgrounds/vision.jpg" class="img-fluid" alt="">
+                        <img style="height: 300px;" src="assets/images/backgrounds/vision.svg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
