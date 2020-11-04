@@ -79,6 +79,12 @@
 	=============================================-->
     <!-- Product Filter -->
 	<?php
+
+	$cur_cat_id = 0;
+	$cur_cat_name = "Category";
+
+	$cur_subcat_id = 0;
+	$cur_subcat_name = "Sub-Category";
 	
 	$max_limit = 10;
 	$limit = 10;
@@ -100,7 +106,7 @@
 
 	if(isset($_POST['cat'])){
 		$cur_cat_id = $_POST['cat'];
-		$cat_query = "SELECT * FROM p_cat";
+		$cat_query = "SELECT * FROM category";
 		$cat_fetch = mysqli_query($con,$cat_query);
 		while($cat=mysqli_fetch_array($cat_fetch)){
 			$cat_id = $cat['cat_id'];
@@ -117,26 +123,26 @@
 
 	//Brand wise filter
 	if(isset($_POST['brand'])){
-		$cur_brand_id = $_POST['brand'];
-		$brand_query = "SELECT * FROM p_brand WHERE cat_id = $cur_cat_id ";
+		$cur_subcat_id = $_POST['brand'];
+		$brand_query = "SELECT * FROM sub_category WHERE cat_id = $cur_cat_id ";
 		$brand_fetch = mysqli_query($con,$brand_query);
 		while($brand=mysqli_fetch_array($brand_fetch)){
-			$brand_id = $brand['brand_id'];
-			$brand_name = $brand['brand_name'];
-			if($cur_brand_id == $brand_id){
-				$cur_brand_name = $brand_name;
+			$subcat_id = $brand['subcat_id'];
+			$brand_name = $brand['subcat_name'];
+			if($cur_subcat_id == $subcat_id){
+				$cur_subcat_name = $brand_name;
 			}
 		}
 	}
 	else{
-		$cur_brand_id = 0;
-		$cur_brand_name = "Brand";
+		$cur_subcat_id = 0;
+		$cur_subcat_name = "Sub-Category";
 	}
 
 	//Reset Filter
 	if(isset($_POST['reset'])){
-		$cur_brand_id = 0;
-		$cur_brand_name = "Brand";
+		$cur_subcat_id = 0;
+		$cur_subcat_name = "Sub-Category";
 		$cur_cat_id = 0;
 		$cur_cat_name = "Category";
 	}
@@ -184,7 +190,7 @@
 									<?php 
 									echo"<option value='$cur_cat_id' selected>$cur_cat_name</option>";
 						    
-									$cat_query = "SELECT * FROM p_cat";
+									$cat_query = "SELECT * FROM category";
 									$cat_fetch = mysqli_query($con,$cat_query);
 									while($cat=mysqli_fetch_array($cat_fetch)){
 										$cat_id = $cat['cat_id'];
@@ -201,15 +207,15 @@
 							<div class='single-icon filter-dropdown'>
 								<select id='brand' name='brand' class='nice-select'>";
 								
-									echo"<option value='$cur_brand_id' selected>$cur_brand_name</option>";
+									echo"<option value='$cur_subcat_id' selected>$cur_subcat_name</option>";
 
-									$brand_query = "SELECT * FROM p_brand WHERE cat_id = $cur_cat_id ";
+									$brand_query = "SELECT * FROM sub_category WHERE cat_id = $cur_cat_id ";
 									$brand_fetch = mysqli_query($con,$brand_query);
 									while($brand=mysqli_fetch_array($brand_fetch)){
-										$brand_id = $brand['brand_id'];
-										$brand_name = $brand['brand_name'];
+										$subcat_id = $brand['subcat_id'];
+										$brand_name = $brand['subcat_name'];
 										
-										echo"<option value='$brand_id'>$brand_name</option>";
+										echo"<option value='$subcat_id'>$brand_name</option>";
 									}
 									echo"</select>
 							</div>";
@@ -217,12 +223,12 @@
 							?>
 							&nbsp;&nbsp;&nbsp;
 							<?php
-							if($cur_brand_id > 0 || $cur_cat_id > 0){
+							if($cur_subcat_id > 0 || $cur_cat_id > 0){
 								echo"
 								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
 								";
 							}
-							echo"$cur_brand_id,$cur_cat_id";
+							echo"$cur_subcat_id,$cur_cat_id";
 							?>
 							
 							<!--=======  End of filter dropdown  =======-->
@@ -499,17 +505,17 @@
 							$aWhere = array(); 
 							$sLimit = " order by 1 DESC LIMIT 0,$max_limit";
 							$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-                            if($cur_cat_id == 0 && $cur_brand_id == 0){
+                            if($cur_cat_id == 0 && $cur_subcat_id == 0){
 								$query = "SELECT * FROM products".$sWhere;
 							}
-							elseif($cur_cat_id != 0 && $cur_brand_id == 0){
+							elseif($cur_cat_id != 0 && $cur_subcat_id == 0){
 								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id".$sWhere;
 							}
-							elseif($cur_cat_id == 0 && $cur_brand_id != 0){
-								$query = "SELECT * FROM products WHERE brand_id = $cur_brand_id".$sWhere;
+							elseif($cur_cat_id == 0 && $cur_subcat_id != 0){
+								$query = "SELECT * FROM products WHERE subcat_id = $cur_subcat_id".$sWhere;
 							}
 							else{
-								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id AND brand_id = $cur_brand_id".$sWhere;
+								$query = "SELECT * FROM products WHERE cat_id = $cur_cat_id AND subcat_id = $cur_subcat_id".$sWhere;
 							}
 							$fire = mysqli_query($con, $query) or die("cannot connect to db");
 							if($fire){
