@@ -47,6 +47,9 @@
         text-align: justify;
         text-justify: inter-word;
      }
+     .row {
+        align-items: center;
+     }
 
      @media screen and (min-width: 990px) {
          .about-page-2-image {
