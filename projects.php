@@ -177,8 +177,8 @@
 
                     <div class="about-page-text">
                         <p class="subtitle subtitle--deep">ESTETICA</p>
-                        <h1>Customised Re-furbishing Project</h1>
-                        <p class=" mb-35">This was a special project and 1st of its kind for us. One of our client wanted her sofa to be re-furbished with Odisha handloom fabric. Initially we were little worried, as normally in Odisha we make light weight handloom fabrics for dress material and sarees,  but took the challenge and we specially developed this ikat fabric with small motif designs for her and were happy to surpass her expectations.</p>
+                        <h1>Residential Interior Project </h1>
+                        <p class=" mb-35">Theme for this project was WHITE. Client needed all wardrobes, book shelf, kitchen and ceiling colours to be white with combination of rubber wood for panelling of kitchen and living area, TV Unit and all walls in light grey colour. One wall in Master bed Room was painted with Stucco finish, while other 3 Bed Rooms, one wall was painted with textured paint. All furnitures were made in teak wood and doors were changed to white colour. Even dish washer, ceiling fans and refrigerator was ordered in white colour. One of the most elegant projects undertaken by us.</p>
                     </div>
 
                 </div>
@@ -187,7 +187,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img style="width: 100%;" src="assets/images/projects/P2.jpg" class="img-fluid" alt="">
+                        <img style="width: 100%;" src="assets/images/projects/P8.jpg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
@@ -345,8 +345,8 @@
 
                     <div class="about-page-text">
                         <p class="subtitle subtitle--deep">ESTETICA</p>
-                        <h1>Residential Interior Project </h1>
-                        <p class=" mb-35">Theme for this project was WHITE. Client needed all wardrobes, book shelf, kitchen and ceiling colours to be white with combination of rubber wood for panelling of kitchen and living area, TV Unit and all walls in light grey colour. One wall in Master bed Room was painted with Stucco finish, while other 3 Bed Rooms, one wall was painted with textured paint. All furnitures were made in teak wood and doors were changed to white colour. Even dish washer, ceiling fans and refrigerator was ordered in white colour. One of the most elegant projects undertaken by us.</p>
+                        <h1>Customised Re-furbishing Project</h1>
+                        <p class=" mb-35">This was a special project and 1st of its kind for us. One of our client wanted her sofa to be re-furbished with Odisha handloom fabric. Initially we were little worried, as normally in Odisha we make light weight handloom fabrics for dress material and sarees,  but took the challenge and we specially developed this ikat fabric with small motif designs for her and were happy to surpass her expectations.</p>
                     </div>
 
                 </div>
@@ -355,7 +355,7 @@
                     <!--=======  about page 2 image  =======-->
                     
                     <div class="about-page-2-image">
-                        <img style="width: 100%;" src="assets/images/projects/P8.jpg" class="img-fluid" alt="">
+                        <img style="width: 100%;" src="assets/images/projects/P2.jpg" class="img-fluid" alt="">
                     </div>
                     
                     <!--=======  End of about page 2 image  =======-->
