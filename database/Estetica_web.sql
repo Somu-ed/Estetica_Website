@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.3
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 05, 2020 at 10:04 PM
--- Server version: 10.4.13-MariaDB
--- PHP Version: 7.4.8
+-- Generation Time: Nov 14, 2020 at 09:28 AM
+-- Server version: 10.4.14-MariaDB
+-- PHP Version: 7.4.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -46,6 +46,34 @@ CREATE TABLE `blog` (
 INSERT INTO `blog` (`id`, `image`, `date`, `author`, `category`, `heading`, `short`, `description`, `keywords`) VALUES
 (1, 'post-thumbnail.png', '2020-06-25', 'Amit Ranjan Jena', 'Furniture', 'THE SOLUTION TO DISINFECTING FABRICS!', 'With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.', 'Personal Hygiene\r\nWith new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.\r\n\r\nWe highly recommend washing your hands for approximately 20 seconds to ensure no spreading of the virus. That is the first of many steps to ensure your furniture is virus free!\r\n\r\nMaintaining the Fabrics\r\nAs people have their different techniques on how to clean furniture, there are four different methods to always remember!\r\nThese methods may vary depending on the type of fabric…\r\n\r\n1.Regular cleaning: This provides a daily cleaning that will remove any dust and/or debris that could damage the fabrics. This ensures that your furniture will look good for much longer.\r\n2.Vacuum Fabrics: Vacuuming provides a deeper clean to ensure that no dirt is left on the furniture that could slowly damage the furniture over time. Continue to do this and your furniture will remain better for longer!\r\n3.Removing stains: Stains by far are one thing to fear when it comes to your beautiful furniture. However, by using the right techniques to remove the stains, it will help provide a cleaner look to your fabrics. More details coming up!\r\n4.Deep Cleaning: Finally, depending on your fabrics, it is important to provide a deep clean to remove any build up of dirt. Methods may include steaming the fabrics, if removable, placing them in a washer or using other cleaners.', 'furniture,indoor'),
 (2, 'post-thumbnail.png', '2020-06-24', 'Aditya Attri', 'Furniture', 'MODERN FURNITURE IN HEALTH FACILITIES', 'Whether it’s a doctor’s office or at the dentist, what is it that most patients hope to see once they enter through the door? A Beautiful seating area, an elegant but organized reception desk, and different accessories to make them feel comfortable.\r\n\r\n', 'What Look Are You Looking For?\r\nThe first things clients, patients and customers look at are the things that leave the biggest impression. Here at SohoConcept, modern furniture helps bring the whole room together. As explained before, we want to make the patient feel at home, feel comfortable and most importantly confident in the healthcare facility.\r\n\r\nLet’s start off with the variety of chairs SohoConcept has to offer. From the Soho wood chair that will look perfect in a pediatrician’s office to the Crescent wire chair suitable for every waiting room. There is a chair ready for every healthcare facility. The variety of chairs is endless and will without a doubt impress the patients and/or clients.\r\n\r\nSohoConcept doesn’t only offer the best appearance of modern furniture but ensures the greatest quality as well. Patients are in and out of healthcare facilities every day, which means the quality of modern furniture is crucial to ensure it being long lasting. The maintenance of the modern furniture we have to offer are a few quick easy steps to make certain that it stays in the best conditions for years to come.\r\n\r\nModern Furniture is sweeping the nation, and SohoConcept is ready to bring the right energy needed for your location. From homes, to Healthcare Facilities, we are ready!', 'furniture,estetica');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `category`
+--
+
+CREATE TABLE `category` (
+  `cat_id` int(50) NOT NULL,
+  `cat_name` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
+(1, 'upholstery'),
+(2, 'curtain'),
+(3, 'blinds'),
+(4, 'wall coverings'),
+(5, 'carpets'),
+(6, 'flooring'),
+(7, 'bed linen'),
+(8, 'cushions'),
+(9, 'artifacts'),
+(10, 'hospitality'),
+(11, 'custom');
 
 -- --------------------------------------------------------
 
@@ -98,26 +126,13 @@ INSERT INTO `newsletter` (`id`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `prd_temp`
---
-
-CREATE TABLE `prd_temp` (
-  `id` int(50) NOT NULL,
-  `cat_id` int(50) NOT NULL,
-  `p_img` text NOT NULL,
-  `p_cat` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `products`
 --
 
 CREATE TABLE `products` (
   `id` int(50) NOT NULL,
   `cat_id` int(50) NOT NULL,
-  `brand_id` int(50) NOT NULL,
+  `subcat_id` int(50) NOT NULL,
   `p_name` varchar(255) NOT NULL,
   `p_img` text NOT NULL,
   `p_cat` varchar(100) NOT NULL,
@@ -129,22 +144,22 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `cat_id`, `brand_id`, `p_name`, `p_img`, `p_cat`, `p_brand`, `p_desc`) VALUES
+INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_name`, `p_img`, `p_cat`, `p_brand`, `p_desc`) VALUES
 (1, 1, 1, 'N/A', 'Artifact 01.jpg', 'Artifact', 'Estetica', 'N/A'),
 (2, 1, 1, 'N/A', 'Artifact 02.JPG', 'Artifact', 'Estetica', 'N/A'),
 (3, 1, 1, 'N/A', 'Artificial Grass 01.jpg', 'Artificial Grass', 'Estetica', 'N/A'),
 (4, 1, 1, 'N/A', 'Artificial Grass 02.jpg', 'Artificial Grass', 'Estetica', 'N/A'),
 (5, 1, 1, 'N/A', 'Awning 01.jpg', 'Awning', 'Estetica', 'N/A'),
 (6, 1, 1, 'N/A', 'Awning 02.jpg', 'Awning', 'Estetica', 'N/A'),
-(7, 1, 1, 'N/A', 'Bed Linen 01.jpg', 'Bed Linen', 'Estetica', 'N/A'),
-(8, 1, 1, 'N/A', 'Bed Linen 02.jpg', 'Bed Linen', 'Estetica', 'N/A'),
+(7, 7, 24, 'N/A', 'Bed Linen 01.jpg', 'Bed Linen', 'Estetica', 'N/A'),
+(8, 7, 25, 'N/A', 'Bed Linen 02.jpg', 'Bed Linen', 'Estetica', 'N/A'),
 (9, 1, 1, 'N/A', 'Blind 01.jpg', 'Blind', 'Estetica', 'N/A'),
 (10, 1, 1, 'N/A', 'Blind 02.jpg', 'Blind', 'Estetica', 'N/A'),
 (11, 1, 1, 'N/A', 'Blinds shankarjee.jpeg', 'Blind', 'Estetica', 'N/A'),
 (12, 1, 1, 'N/A', 'Carpet 01.jpg', 'Carpet', 'Estetica', 'N/A'),
 (13, 1, 1, 'N/A', 'Carpet 02.jpg', 'Carpet', 'Estetica', 'N/A'),
-(14, 1, 1, 'N/A', 'Curtain 01.jpg', 'Curtain', 'Estetica', 'N/A'),
-(15, 1, 1, 'N/A', 'Curtain 02.jpg', 'Curtain', 'Estetica', 'N/A'),
+(14, 2, 1, 'N/A', 'Curtain 01.jpg', 'Curtain', 'Estetica', 'N/A'),
+(15, 2, 1, 'N/A', 'Curtain 02.jpg', 'Curtain', 'Estetica', 'N/A'),
 (16, 1, 1, 'N/A', 'Customised fabric design with Matty Weave.jpg', 'Custom', 'Estetica', 'N/A'),
 (17, 1, 1, 'N/A', 'Customised Furniture.jpg', 'Custom', 'Estetica', 'N/A'),
 (18, 1, 1, 'N/A', 'Extra 01.JPG', 'Interior Solutions', 'Estetica', 'N/A'),
@@ -168,32 +183,6 @@ INSERT INTO `products` (`id`, `cat_id`, `brand_id`, `p_name`, `p_img`, `p_cat`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `p_brand`
---
-
-CREATE TABLE `p_brand` (
-  `brand_id` int(50) NOT NULL,
-  `brand_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `p_brand`
---
-
-INSERT INTO `p_brand` (`brand_id`, `brand_name`) VALUES
-(1, 'D\'DECOR'),
-(2, 'KALAGYA'),
-(3, 'PORTICO'),
-(4, 'MASPAR'),
-(5, 'SAROM'),
-(6, 'BOMBAY DYEING'),
-(7, 'WALL KING'),
-(8, 'PURE'),
-(9, 'RUMORS');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `p_cat`
 --
 
@@ -207,11 +196,78 @@ CREATE TABLE `p_cat` (
 --
 
 INSERT INTO `p_cat` (`cat_id`, `cat_name`) VALUES
-(1, 'Bedsheets        '),
+(1, 'Bed Linen    '),
 (2, 'Curtains                      '),
 (3, 'Wallpapers     '),
 (4, 'Blinds'),
 (5, 'Upholstery');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_category`
+--
+
+CREATE TABLE `sub_category` (
+  `subcat_id` int(50) NOT NULL,
+  `subcat_name` varchar(100) NOT NULL,
+  `cat_id` int(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sub_category`
+--
+
+INSERT INTO `sub_category` (`subcat_id`, `subcat_name`, `cat_id`) VALUES
+(1, 'cotton', 1),
+(2, 'polyester', 1),
+(3, 'acrylic', 1),
+(4, 'mixed blend', 1),
+(5, 'PVC', 1),
+(6, 'main', 2),
+(7, 'sheer', 2),
+(8, 'roman', 3),
+(9, 'roller', 3),
+(10, 'vertical', 3),
+(11, 'venetian', 3),
+(12, 'luzon', 3),
+(13, 'wallpaper', 4),
+(14, 'poster & sticker', 4),
+(15, 'wall to wall & tile', 5),
+(16, 'machine made', 5),
+(17, 'hand crafted', 5),
+(18, 'grass carpet', 5),
+(19, 'wooden', 6),
+(20, 'laminated', 6),
+(21, 'engineered wood', 6),
+(22, 'vinyl', 6),
+(23, 'outdoor deck', 6),
+(24, 'bed sheet', 7),
+(25, 'bed cover', 7),
+(26, 'comforter', 7),
+(27, 'dohar', 7),
+(28, 'bed runner', 7),
+(29, 'pillow covers', 7),
+(30, 'fillers', 8),
+(31, 'cushion covers', 8),
+(32, 'ceramics', 9),
+(33, 'wooden', 9),
+(34, 'painting', 9),
+(35, 'metallics', 9),
+(36, 'bed sheet', 10),
+(37, 'pillow & pillow cover', 10),
+(38, 'mattress', 10),
+(39, 'towels', 10),
+(40, 'mattress protector', 10),
+(41, 'bed runners', 10),
+(42, 'bath mats', 10),
+(43, 'cushion fillers', 11),
+(44, 'curtain fabric', 11),
+(45, 'upholstery fabric', 11),
+(46, 'special finished fabric', 11),
+(47, 'blinds', 11),
+(48, 'wallpapers', 11),
+(49, 'rugs', 11);
 
 -- --------------------------------------------------------
 
@@ -245,6 +301,12 @@ ALTER TABLE `blog`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`cat_id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -257,28 +319,22 @@ ALTER TABLE `newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `prd_temp`
---
-ALTER TABLE `prd_temp`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `p_brand`
---
-ALTER TABLE `p_brand`
-  ADD PRIMARY KEY (`brand_id`);
-
---
 -- Indexes for table `p_cat`
 --
 ALTER TABLE `p_cat`
   ADD PRIMARY KEY (`cat_id`);
+
+--
+-- Indexes for table `sub_category`
+--
+ALTER TABLE `sub_category`
+  ADD PRIMARY KEY (`subcat_id`);
 
 --
 -- Indexes for table `user`
@@ -297,6 +353,12 @@ ALTER TABLE `blog`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `category`
+--
+ALTER TABLE `category`
+  MODIFY `cat_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
@@ -309,22 +371,10 @@ ALTER TABLE `newsletter`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `prd_temp`
---
-ALTER TABLE `prd_temp`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT;
-
---
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
-
---
--- AUTO_INCREMENT for table `p_brand`
---
-ALTER TABLE `p_brand`
-  MODIFY `brand_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `p_cat`
