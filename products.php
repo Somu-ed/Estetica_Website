@@ -228,7 +228,7 @@
 								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
 								";
 							}
-							echo"$cur_subcat_id,$cur_cat_id";
+							// echo"$cur_subcat_id,$cur_cat_id";
 							?>
 							
 							<!--=======  End of filter dropdown  =======-->
@@ -671,9 +671,11 @@
 
 									<!--=====  End of quick view  ======-->";
 									}
+								$item_count = 1;
 								}
 								else{
 									echo"No Products Found";
+									$item_count = 0;
 								}
 							}
                             ?>
@@ -692,7 +694,7 @@
 									<button type='submit' name='less' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-remove'></i> LESS</button>
 									";
 								}
-								if($max_limit<31){
+								if($max_limit<31 && $item_count != 0){
 									echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>";
 								}
 							echo"</form>";
