@@ -106,6 +106,7 @@
 
 	if(isset($_POST['cat'])){
 		$cur_cat_id = $_POST['cat'];
+		
 		$cat_query = "SELECT * FROM category";
 		$cat_fetch = mysqli_query($con,$cat_query);
 		while($cat=mysqli_fetch_array($cat_fetch)){
@@ -119,10 +120,13 @@
 	else{
 		$cur_cat_id = 0;
 		$cur_cat_name = "Category";
+		$cur_subcat_id = 0;
+		$cur_subcat_name = "Sub-Category";
 	}
 
 	//Brand wise filter
 	if(isset($_POST['brand'])){
+
 		$cur_subcat_id = $_POST['brand'];
 		$brand_query = "SELECT * FROM sub_category WHERE cat_id = $cur_cat_id ";
 		$brand_fetch = mysqli_query($con,$brand_query);
@@ -132,6 +136,7 @@
 			if($cur_subcat_id == $subcat_id){
 				$cur_subcat_name = $brand_name;
 			}
+			
 		}
 	}
 	else{
@@ -228,7 +233,7 @@
 								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
 								";
 							}
-							// echo"$cur_subcat_id,$cur_cat_id";
+							echo"$cur_cat_id,$cur_subcat_id",$cur_subcat_name;
 							?>
 							
 							<!--=======  End of filter dropdown  =======-->
@@ -522,12 +527,8 @@
 								if(mysqli_num_rows($fire)>0){
 									while($row = mysqli_fetch_array($fire)){
 										$id = $row['id'];
-										$name = $row['p_name'];
 										$img = $row['p_img'];
 										$cat = $row['p_cat'];
-										$brand = $row['p_brand'];
-										$brand = $row['p_brand'];
-										$desc = $row['p_desc'];
 										echo"
 										<div class='col-12 col-lg-is-5 col-md-6 col-sm-6 mb-45 hot sale'>
 										<div class='single-product'>
@@ -585,13 +586,13 @@
 											<div class='single-product__content'>
 													
 												<div class='title'>
-													<h3> <a href='shop-product-basic.html'>$name</a></h3>
+													<h3> <a href='shop-product-basic.html'>$cat</a></h3>
 												</div>
 												<!--<div class='price'>
 													<span class='main-price discounted'>$160.00</span>
 													<span class='discounted-price'>$180.00</span>
-												</div>-->
-												<p class='short-desc'> $desc</p>	
+												</div>
+												<p class='short-desc'></p>	-->
 											</div>
 											
 											<!--=======  End of single product content  =======-->
@@ -613,13 +614,13 @@
 
 										<div class='lezada-item-info cd-item-info ps-scroll'>
 
-											<h3 class='item-subtitle'>$name</h3>
+											<h3 class='item-subtitle'>$cat</h3>
 											<!--<p class='price'>
 												<span class='main-price discounted'>$360.00</span>
 												<span class='discounted-price'>$300.00</span>
 											</p>-->
 											
-											<p class='description'>$desc</p>
+											<!-- <p class='description'></p>-->
 
 											<!--<span class='quickview-title'>Quantity:</span>
 											<div class='pro-qty d-inline-block mb-40'>
@@ -635,7 +636,7 @@
 												<table>
 													<tr class='single-info'>
 														<td class='quickview-title'>Brand: </td>
-														<td class='quickview-value'>$brand</td>
+														<!-- <td class='quickview-value'></td> -->
 													</tr>
 													<tr class='single-info'>
 														<td class='quickview-title'>Category: </td>
@@ -647,7 +648,7 @@
 														<td class='quickview-title'>Tags: </td>
 														<td class='quickview-value'>
 															<a href='#'>$cat</a>, 
-															<a href='#'>$brand</a>
+															<!-- <a href='#'></a> -->
 														</td>
 													</tr>
 													<tr class='single-info'>
@@ -694,7 +695,7 @@
 									<button type='submit' name='less' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-remove'></i> LESS</button>
 									";
 								}
-								if($max_limit<31 && $item_count != 0){
+								if($max_limit<94 && $item_count != 0){
 									echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>";
 								}
 							echo"</form>";
