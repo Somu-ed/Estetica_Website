@@ -85,7 +85,9 @@
 
 	$cur_subcat_id = 0;
 	$cur_subcat_name = "Sub-Category";
-	
+
+	$temp = 0;
+
 	$max_limit = 10;
 	$limit = 10;
 	//increase limit
@@ -116,30 +118,33 @@
 				$cur_cat_name = $cat_name;
 			}
 		}
+		if(isset($_POST['temp'])){
+			$temp = $_POST['temp'];
+		}
+		if($temp != $cur_cat_id ){
+			$temp = $cur_cat_id;
+			$cur_subcat_id = 0;
+		} else {
+			if(isset($_POST['brand'])){
+
+				$cur_subcat_id = $_POST['brand'];
+				$brand_query = "SELECT * FROM sub_category WHERE cat_id = $cur_cat_id ";
+				$brand_fetch = mysqli_query($con,$brand_query);
+				while($brand=mysqli_fetch_array($brand_fetch)){
+					$subcat_id = $brand['subcat_id'];
+					$brand_name = $brand['subcat_name'];
+					if($cur_subcat_id == $subcat_id){
+						$cur_subcat_name = $brand_name;
+					}
+					
+				}
+			}	
+		}	
 	}
+	//Brand wise filter
 	else{
 		$cur_cat_id = 0;
 		$cur_cat_name = "Category";
-		$cur_subcat_id = 0;
-		$cur_subcat_name = "Sub-Category";
-	}
-
-	//Brand wise filter
-	if(isset($_POST['brand'])){
-
-		$cur_subcat_id = $_POST['brand'];
-		$brand_query = "SELECT * FROM sub_category WHERE cat_id = $cur_cat_id ";
-		$brand_fetch = mysqli_query($con,$brand_query);
-		while($brand=mysqli_fetch_array($brand_fetch)){
-			$subcat_id = $brand['subcat_id'];
-			$brand_name = $brand['subcat_name'];
-			if($cur_subcat_id == $subcat_id){
-				$cur_subcat_name = $brand_name;
-			}
-			
-		}
-	}
-	else{
 		$cur_subcat_id = 0;
 		$cur_subcat_name = "Sub-Category";
 	}
@@ -151,6 +156,7 @@
 		$cur_cat_id = 0;
 		$cur_cat_name = "Category";
 	}
+	
 	?>
 
 	
@@ -206,6 +212,7 @@
 									?>
                                 </select>
                             </div>
+							<?php echo"<input type='hidden' name='temp' value='$temp'>"; ?>
 							<?php
 							if($cur_cat_id != 0) {
 							echo"
@@ -233,7 +240,7 @@
 								   <button type='submit' name='reset' class='lezada-button lezada-button--small lezada-button--icon lezada-button--icon--left'> <i class='fa fa-refresh'></i> Reset Filter</button>
 								";
 							}
-							echo"$cur_cat_id,$cur_subcat_id",$cur_subcat_name;
+							// echo"$cur_cat_id,$cur_subcat_id",$cur_subcat_name;
 							?>
 							
 							<!--=======  End of filter dropdown  =======-->
