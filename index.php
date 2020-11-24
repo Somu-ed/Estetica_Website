@@ -71,7 +71,7 @@
             <ul>	<!-- SLIDE  -->
                 <li data-index="rs-27" data-transition="slotslide-horizontal,slotslide-vertical,fadefromright,fadefromleft,fadefromtop,fadefrombottom,fadetoleftfadefromright" data-slotamount="default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default" data-masterspeed="default,default,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#dbe7ff' style='background:#dbe7ff' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#feeab7' style='background:#feeab7' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
             
                     <!-- LAYER NR. 1 -->
