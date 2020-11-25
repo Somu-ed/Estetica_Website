@@ -79,10 +79,10 @@
                     <div class="footer-nav-container footer-social-links">
                         <nav>
                             <ul>
-                                <li><a href="//twitter.com"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="//facebook.com"> <i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li><a href="//instagram.com"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                <li><a href="//youtube.com"> <i class="fa fa-youtube"></i> Youtube</a></li>
+                                <!-- <li><a href="//twitter.com"><i class="fa fa-twitter"></i> Twitter</a></li> -->
+                                <li><a href="https://www.facebook.com/esteticafurnishings"> <i class="fa fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://www.instagram.com/esteticafurnishings/"><i class="fa fa-instagram"></i> Instagram</a></li>
+                                <!-- <li><a href="//youtube.com"> <i class="fa fa-youtube"></i> Youtube</a></li> -->
                             </ul>
                         </nav>
                     </div>
