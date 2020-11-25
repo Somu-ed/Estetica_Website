@@ -1240,6 +1240,132 @@
 	<!--=======  End of Our Products  =======-->
 
     <!--=============================================
+    =            blog post area         =
+    =============================================-->
+    
+    <?php //include("includes/blog_home.php"); ?>
+    
+    <!--=====  End of blog post area  ======-->
+
+    <!--=============================================
+    =            multi item testimonial area        =
+    =============================================-->
+    
+    <div class="lezada-testimonial multi-item-testimonial-area testimonial-bg mb-100 pt-135 pb-135">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 mb-60">
+					<!--=======  section title  =======-->
+					
+					<div class="section-title section-title--one text-center">
+						<h1>Testimonials</h1>
+                        <p>estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.</p>
+					</div>
+					
+					<!--=======  End of section title  =======-->
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12">
+					<!--=======  testmonial slider container  =======-->
+					
+					<div class="lezada-slick-slider multi-testimonial-slider-container"
+					data-slick-setting='{
+						"slidesToShow": 3,
+						"arrows": true,
+						"autoplay": false,
+						"autoplaySpeed": 5000,
+						"speed": 1000,
+						"prevArrow": {"buttonClass": "slick-prev", "iconClass": "ti-angle-left" },
+						"nextArrow": {"buttonClass": "slick-next", "iconClass": "ti-angle-right" }
+					}'
+					data-slick-responsive='[
+						{"breakpoint":1501, "settings": {"slidesToShow": 3} },
+						{"breakpoint":1199, "settings": {"slidesToShow": 3} },
+						{"breakpoint":991, "settings": {"slidesToShow": 2, "arrows": false} },
+						{"breakpoint":767, "settings": {"slidesToShow": 1, "arrows": false} },
+						{"breakpoint":575, "settings": {"slidesToShow": 1, "arrows": false} },
+						{"breakpoint":479, "settings": {"slidesToShow": 1, "arrows": false} }
+					]'
+					>
+						
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at estética has been satisfying indeed. We do recommend them to discerning clients.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<div class="image">
+										<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div>
+
+									<div class="content">
+										<p class="name">Revati Pany</p>
+										<span class="designation">Managing Director, Ocasa Design Studio</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                In one word, estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend estética to people who are looking for exceptional quality at a fair price!
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<div class="image">
+										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
+									</div>
+
+									<div class="content">
+										<p class="name">Ar. Prateek Gupta</p>
+										<span class="designation">Principal Architect, Prateek Gupta Architects</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+						
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Excellent collections! Speciality is the spaciousness of the premise alongwith the décor, product display and well behaved staff. Though never been your customer, will look forward to be one in near future.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<div class="image">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div>
+									
+									<div class="content">
+										<p class="name">Sambid Mohapatra</p>
+										<span class="designation">Principal architect, SDS consulting</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+					</div>
+					
+					<!--=======  End of testmonial slider container  =======-->
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--=====  End of multi item testimonial area ======-->
+
+    <!--=============================================
 	=            section title  container      =
 	=============================================-->
 	
@@ -1250,7 +1376,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h1>Our Partners</h1>
+						<h1>Our Partner Brands</h1>
 					</div>
 					
 					<!--=======  End of section title  =======-->
@@ -1401,303 +1527,6 @@
 					<div class="single-brand">
 						<a href="#">
 							<img class="partner_logos" src="assets/images/brands/India_handloom.png" class="img-fluid" alt="India Handloom">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--=====  End of brand logo area  ======-->
-
-    <!--=============================================
-    =            blog post area         =
-    =============================================-->
-    
-    <?php //include("includes/blog_home.php"); ?>
-    
-    <!--=====  End of blog post area  ======-->
-
-    <!--=============================================
-    =            multi item testimonial area        =
-    =============================================-->
-    
-    <div class="lezada-testimonial multi-item-testimonial-area testimonial-bg mb-100 pt-135 pb-135">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 mb-60">
-					<!--=======  section title  =======-->
-					
-					<div class="section-title section-title--one text-center">
-						<h1>Testimonials</h1>
-                        <p>estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.</p>
-					</div>
-					
-					<!--=======  End of section title  =======-->
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<!--=======  testmonial slider container  =======-->
-					
-					<div class="lezada-slick-slider multi-testimonial-slider-container"
-					data-slick-setting='{
-						"slidesToShow": 3,
-						"arrows": true,
-						"autoplay": false,
-						"autoplaySpeed": 5000,
-						"speed": 1000,
-						"prevArrow": {"buttonClass": "slick-prev", "iconClass": "ti-angle-left" },
-						"nextArrow": {"buttonClass": "slick-next", "iconClass": "ti-angle-right" }
-					}'
-					data-slick-responsive='[
-						{"breakpoint":1501, "settings": {"slidesToShow": 3} },
-						{"breakpoint":1199, "settings": {"slidesToShow": 3} },
-						{"breakpoint":991, "settings": {"slidesToShow": 2, "arrows": false} },
-						{"breakpoint":767, "settings": {"slidesToShow": 1, "arrows": false} },
-						{"breakpoint":575, "settings": {"slidesToShow": 1, "arrows": false} },
-						{"breakpoint":479, "settings": {"slidesToShow": 1, "arrows": false} }
-					]'
-					>
-						
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__text">
-                                ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at estética has been satisfying indeed. We do recommend them to discerning clients.
-								</div>
-								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
-										<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div>
-
-									<div class="content">
-										<p class="name">Revati Pany</p>
-										<span class="designation">Managing Director, Ocasa Design Studio</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__text">
-                                In one word, estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend estética to people who are looking for exceptional quality at a fair price!
-								</div>
-								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
-										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
-									</div>
-
-									<div class="content">
-										<p class="name">Ar. Prateek Gupta</p>
-										<span class="designation">Principal Architect, Prateek Gupta Architects</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-						
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__text">
-                                Excellent collections! Speciality is the spaciousness of the premise alongwith the décor, product display and well behaved staff. Though never been your customer, will look forward to be one in near future.
-								</div>
-								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
-										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div>
-									
-									<div class="content">
-										<p class="name">Sambid Mohapatra</p>
-										<span class="designation">Principal architect, SDS consulting</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-					</div>
-					
-					<!--=======  End of testmonial slider container  =======-->
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--=====  End of multi item testimonial area ======-->
-
-    <!--=============================================
-	=            section title  container      =
-	=============================================-->
-	
-	<div class="section-title-container mb-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<!--=======  section title  =======-->
-					
-					<div class="section-title section-title--one text-center">
-						<h1>Our Customers</h1>
-					</div>
-					
-					<!--=======  End of section title  =======-->
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--=====  End of section title container ======-->
-
-
-	<!--=============================================
-	=            brand logo area         =
-	=============================================-->
-	
-	<div class="brand-logo-area mb-90 mb-md-60 mb-sm-60">
-		<div class="container wide">
-			<div class="row">
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/picture1.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture2.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture3.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture5.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture6.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture8.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-            </div>
-            <br></br>
-            <div class="row">
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture11.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture12.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture13.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture14.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture15.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture16.png" class="img-fluid" alt="">
 						</a>
 					</div>
 					
