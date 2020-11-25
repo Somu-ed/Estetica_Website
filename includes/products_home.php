@@ -82,8 +82,8 @@
                             
                             <div class="single-product__image">
                                 <a class="image-wrap">
-                                    <img src="assets/images/products_home/Bed-Linen-01.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products_home/Bed-Linen-01.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Bed-Linen-01.JPG" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Bed-Linen-01.JPG" class="img-fluid" alt="">
                                 </a>
                             </div>
                             

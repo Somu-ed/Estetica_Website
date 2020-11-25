@@ -4712,7 +4712,7 @@ nav.site-nav > ul > li {
           transition-duration: 0.6s; }
       .single-product__content .title > a {
         display: inline-block;
-        font-size: 18px;
+        font-size: 12px;
         line-height: 28px;
         color: #d3122a;
         -webkit-transform: translateY(60%);
