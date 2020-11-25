@@ -47,7 +47,7 @@
         text-align: justify;
         text-justify: inter-word;
      }
-     .row {
+     .img-center {
         align-items: center;
      }
 
@@ -165,7 +165,7 @@
     <div class="about-page-content mb-100 mb-sm-45">
         <div class="container wide">
             
-            <div class="row">
+            <div class="row img-center">
 
                 <div class="col-lg-6 mb-md-50 mb-sm-50">
                     <!--=======  about page 2 image  =======-->
@@ -192,7 +192,7 @@
     <div class="about-page-content mb-100 mb-sm-45">
         <div class="container wide">
     
-            <div class="row">
+            <div class="row img-center">
 
                 <div class="offset-xl-1 col-xl-4 col-lg-6 col-md-6 mb-sm-50">
 
@@ -220,7 +220,7 @@
     <div class="about-page-content mb-100 mb-sm-45">
         <div class="container wide">
             
-            <div class="row">
+            <div class="row img-center">
 
                 <div class="col-lg-6 mb-md-50 mb-sm-50">
                     <!--=======  about page 2 image  =======-->
