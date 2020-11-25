@@ -86,9 +86,25 @@
                 <div class="col-lg-12 order-1">
                     <div class="row">
 						<?php
-						$query = "SELECT * FROM blog ORDER BY 1 DESC LIMIT 0,8";
+                        global $db;
+                        $aWhere = array(); 
+                        
+                        $per_page=9;
 
-						$fire = mysqli_query($con,$query);
+                        if(isset($_GET['page'])){
+                            $page = $_GET['page'];
+
+                        }
+                        else{
+                            $page=1;
+                        }
+                        
+                        $start_from = ($page-1) * $per_page;
+                        $sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
+                        $sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
+						$query = "SELECT * FROM blog".$sWhere;
+
+                        $fire = mysqli_query($con,$query);
 
 						while($row = mysqli_fetch_array($fire)){
 							$id = $row['id'];
@@ -140,11 +156,31 @@
                             
                             <div class="pagination text-center">
                                 <ul>
-                                    <li class="active"><a href="#">1</a></li>
+                                <?php
+                                $count_query = "SELECT * FROM blog";
+                                $result = mysqli_query($con, $count_query );
+                                $total_records = mysqli_num_rows($result);
+                                $total_pages = ceil($total_records / $per_page);
+                                $prev = $page -1;
+
+                                for($i=1; $i<=$total_pages; $i++){
+                                    if($i == $page){
+                                        echo"<li class='active'><a href='blog.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."'>$i</a></li>";
+                                    } else {
+                                        echo"<li><a href='blog.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."'>$i</a></li>";
+                                    }
+                                }
+                                // if($page == $total_pages){
+                                //     $next = $page+1;
+                                //     echo"<li><a href='blog.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."'>NEXT</a></li>";
+                                // }
+                                
+                                ?>
+                                    <!-- <li class="active"><a href="#">1</a></li>
                                     <li><a href="#">2</a></li>
                                     <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">NEXT</a></li>
+                                    <li><a href="#">4</a></li> -->
+                                    
                                 </ul>
                             </div>
                             

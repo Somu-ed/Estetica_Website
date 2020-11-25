@@ -51,6 +51,10 @@
         align-items: center;
      }
 
+	 .partner_logos {
+            height: 65px;
+        }
+
      @media screen and (min-width: 990px) {
          .about-page-2-image {
              margin-left: 200px;

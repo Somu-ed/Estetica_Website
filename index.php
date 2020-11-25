@@ -47,12 +47,35 @@
         .partner_logos {
             height: 65px;
         }
+
+        #loading{
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background: #fff
+            url('https://i.pinimg.com/originals/78/e8/26/78e826ca1b9351214dfdd5e47f7e2024.gif')
+            no-repeat center center;	
+            z-index: 99999;
+        }
     </style>
 
 </head>
 
-<body>
+<body onload="myFunction()">
+    <div id="loading"></div>
+    <script>
+		// $(document).ready(function(){
+			// 	$('div#loading').removeAttr('id');
+		// });
+		var preloader = document.getElementById("loading");
+		// window.addEventListener('load', function(){
+		// 	preloader.style.display = 'none';
+		// 	})
 
+		function myFunction(){
+			preloader.style.display = 'none';
+		};
+	</script>
 	
 	<!--=============================================
 	=            Header without topbar         =
@@ -1243,7 +1266,7 @@
     =            blog post area         =
     =============================================-->
     
-    <?php //include("includes/blog_home.php"); ?>
+    <?php include("includes/blog_home.php"); ?>
     
     <!--=====  End of blog post area  ======-->
 

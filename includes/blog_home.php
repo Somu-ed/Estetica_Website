@@ -1,3 +1,5 @@
+<?php include("config/db_connect.php");?>
+
 <div class="blog-post-area mb-100">
         <div class="container">
             <div class="row align-items-center">
@@ -5,9 +7,8 @@
                     <!--=======  blog intro  =======-->
                     
                     <div class="blog-intro">
-                        <h2>From our blog</h2>
-                        <p>Lorem ipsum dolor sit amet, consecte tur cing elit. Suspe ndisse suscipit sagittis leo sit met condim entum.</p>
-                        <a href="blog-standard-left-sidebar.html" class="lezada-button lezada-button--medium">view all</a>
+                        <h2>From our blog</h2><br>
+                        <a href="blog" class="lezada-button lezada-button--medium">view all</a>
                     </div>
                     
                     <!--=======  End of blog intro  =======-->
@@ -36,13 +37,26 @@
 
                         >
                             <!--=======  single slider post  =======-->
-                            <div class="col">
-                                <div class="single-slider-post">
+                            <?php
+						$query = "SELECT * FROM blog ORDER BY 1 DESC LIMIT 0,8";
+
+						$fire = mysqli_query($con,$query);
+
+						while($row = mysqli_fetch_array($fire)){
+							$id = $row['id'];
+							$image = $row['image'];
+							$date = $row['date'];
+							$heading = $row['heading'];
+                            $description = $row['short'];
+
+                            echo"
+                            <div class='col'>
+                                <div class='single-slider-post'>
                                 <!--=======  image  =======-->
                                 
-                                <div class="single-slider-post__image mb-30">
-                                    <a href="blog-single-post-left-sidebar.html">
-                                        <img src="assets/images/blog/post-thumbnail-1-370x200.png" class="img-fluid" alt="">
+                                <div class='single-slider-post__image mb-30'>
+                                    <a href='blog_single.php?id=$id'>
+                                        <img style='width: 370px; height: 200px; object-fit: cover;' src='assets/images/blog/$image' class='img-fluid' alt='blog image'>
                                     </a>
                                 </div>
                                 
@@ -50,109 +64,22 @@
 
                                 <!--=======  content  =======-->
                                 
-                                <div class="single-slider-post__content">
-                                    <div class="post-date">
-                                        <i class="ion-android-calendar"></i>
-                                        <a href="blog-standard-left-sidebar.html"> june 5, 2018</a>
+                                <div class='single-slider-post__content'>
+                                    <div class='post-date'>
+                                        <i class='ion-android-calendar'></i>
+                                        <a>$date</a>
                                     </div>
-                                    <h2 class="post-title"><a href="blog-single-post-left-sidebar.html">Chic Fashion Phenomenon</a></h2>
-                                    <p class="post-excerpt">Michele seemed to say, was the 21st-century Gucci girl, an eccentric, fresh-faced weirdo who wasn’t afraid to wear backless fur-lined loafers, to personify the idea of “ugly pretty.”</p>
-                                    <a href="blog-single-post-left-sidebar.html" class="blog-readmore-btn">read more</a>
+                                    <h2 class='post-title'><a href='blog_single.php?id=$id'>$heading</a></h2>
+                                    <p class='post-excerpt'>$description</p>
+                                    <a href='blog_single.php?id=$id' class='blog-readmore-btn'>read more</a>
                                 </div>
                                 
                                 <!--=======  End of content  =======-->
                                 </div>
                             </div>
-                            
-                            <!--=======  End of single slider post  =======-->
-                            <!--=======  single slider post  =======-->
-                            <div class="col">
-                                <div class="single-slider-post">
-                                <!--=======  image  =======-->
-                                
-                                <div class="single-slider-post__image mb-30">
-                                    <a href="blog-single-post-left-sidebar.html">
-                                        <img src="assets/images/blog/post-thumbnail-2-1-370x200.png" class="img-fluid" alt="">
-                                    </a>
-                                </div>
-                                
-                                <!--=======  End of image  =======-->
-
-                                <!--=======  content  =======-->
-                                
-                                <div class="single-slider-post__content">
-                                    <div class="post-date">
-                                        <i class="ion-android-calendar"></i>
-                                        <a href="blog-standard-left-sidebar.html"> june 6, 2018</a>
-                                    </div>
-                                    <h2 class="post-title"><a href="blog-single-post-left-sidebar.html">Shirt Color Picking Guide</a></h2>
-                                    <p class="post-excerpt">Michele seemed to say, was the 21st-century Gucci girl, an eccentric, fresh-faced weirdo who wasn’t afraid to wear backless fur-lined loafers, to personify the idea of “ugly pretty.”</p>
-                                    <a href="blog-single-post-left-sidebar.html" class="blog-readmore-btn">read more</a>
-                                </div>
-                                
-                                <!--=======  End of content  =======-->
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single slider post  =======-->
-                            <!--=======  single slider post  =======-->
-                            <div class="col">
-                                <div class="single-slider-post">
-									<!--=======  image  =======-->
-									
-									<div class="single-slider-post__image mb-30">
-										<a href="blog-single-post-left-sidebar.html">
-											<img src="assets/images/blog/post-thumbnail-8-370x200.png" class="img-fluid" alt="">
-										</a>
-									</div>
-									
-									<!--=======  End of image  =======-->
-
-									<!--=======  content  =======-->
-									
-									<div class="single-slider-post__content">
-										<div class="post-date">
-											<i class="ion-android-calendar"></i>
-											<a href="blog-standard-left-sidebar.html"> june 8, 2018</a>
-										</div>
-										<h2 class="post-title"><a href="blog-single-post-left-sidebar.html">Perfect Perfume & Cologne</a></h2>
-										<p class="post-excerpt">Michele seemed to say, was the 21st-century Gucci girl, an eccentric, fresh-faced weirdo who wasn’t afraid to wear backless fur-lined loafers, to personify the idea of “ugly pretty.”</p>
-										<a href="blog-single-post-left-sidebar.html" class="blog-readmore-btn">read more</a>
-									</div>
-									
-									<!--=======  End of content  =======-->
-                                </div>
-                            </div>
-                            
-                            <!--=======  End of single slider post  =======-->
-                            <!--=======  single slider post  =======-->
-                            <div class="col">
-                                <div class="single-slider-post">
-									<!--=======  image  =======-->
-									
-									<div class="single-slider-post__image mb-30">
-										<a href="blog-single-post-left-sidebar.html">
-											<img src="assets/images/blog/post-thumbnail-370x200.png" class="img-fluid" alt="">
-										</a>
-									</div>
-									
-									<!--=======  End of image  =======-->
-
-									<!--=======  content  =======-->
-									
-									<div class="single-slider-post__content">
-										<div class="post-date">
-											<i class="ion-android-calendar"></i>
-											<a href="blog-standard-left-sidebar.html"> june 10, 2018</a>
-										</div>
-										<h2 class="post-title"><a href="blog-single-post-left-sidebar.html">T-Shirts as Minimalist Style</a></h2>
-										<p class="post-excerpt">Michele seemed to say, was the 21st-century Gucci girl, an eccentric, fresh-faced weirdo who wasn’t afraid to wear backless fur-lined loafers, to personify the idea of “ugly pretty.”</p>
-										<a href="blog-single-post-left-sidebar.html" class="blog-readmore-btn">read more</a>
-									</div>
-									
-									<!--=======  End of content  =======-->
-                                </div>
-                            </div>
+                            ";
+                        }
+                        ?>
                             
                             <!--=======  End of single slider post  =======-->
                         </div>
