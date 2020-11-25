@@ -26,7 +26,7 @@ else{
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- ==== Document Title ==== -->
-    <title>Blog Compose - Estetica Admin</title>
+    <title>Blog Compose - estética Admin</title>
     
     <!-- ==== Document Meta ==== -->
     <meta name="author" content="">
@@ -623,7 +623,7 @@ else{
 
             <!-- Main Footer Start -->
             <footer class="main--footer main--footer-light">
-                <p>Copyright &copy; <a href="#">Estetica</a>. All Rights Reserved.</p>
+                <p>Copyright &copy; <a href="#">estética</a>. All Rights Reserved.</p>
             </footer>
             <!-- Main Footer End -->
         </main>

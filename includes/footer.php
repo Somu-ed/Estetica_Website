@@ -10,7 +10,7 @@
                     <!--=======  logo  =======-->
                     
                     <div class="logo">
-                        <img style="height: 35px;" src="assets/images/navbar.png" class="img-fluid" alt="estetica logo">
+                        <img style="height: 35px;" src="assets/images/navbar.png" class="img-fluid" alt="estética logo">
                     </div>
                     
                     <!--=======  End of logo  =======-->
@@ -18,7 +18,7 @@
                     <!--=======  copyright text  =======-->
                     
                     <div class="copyright-text">
-                        <p> &copy; 2020 Estetica. </p>
+                        <p> &copy; 2020 estética. </p>
                         <p><span>Designed with <i class="fa fa-heart"></i> <br> by <a href="https://perfectshades.in">Perfect Shades</a></span></p>
                         <p>  <span>All Rights Reserved.</span></p>
                     </div>
@@ -37,7 +37,7 @@
                         <nav>
                             <ul>
                                 <li><a href="about">About us</a></li>
-                                <li><a href="https://www.google.com/search?q=estetica+furnishings&oq=estetica+furnishings&aqs=chrome..69i57j46j69i60l3.7448j0j7&sourceid=chrome&ie=UTF-8#">Store location</a></li>
+                                <li><a href="https://www.google.com/search?q=estética+furnishings&oq=estética+furnishings&aqs=chrome..69i57j46j69i60l3.7448j0j7&sourceid=chrome&ie=UTF-8#">Store location</a></li>
                                 <li><a href="contact">Contact</a></li>
                                 <li><a href="products">Products</a></li>
                             </ul>

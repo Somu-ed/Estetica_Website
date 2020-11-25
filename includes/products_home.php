@@ -6,7 +6,7 @@
                     
                     <div class="section-title section-title--one text-center">
                         <h1>Our Products</h1>
-                        <p class="subtitle subtitle--deep mb-0">ESTETICA FURNISHING SOLUTIONS</p>
+                        <p class="subtitle subtitle--deep mb-0">estética FURNISHING SOLUTIONS</p>
                     </div>
                     
                     <!--=======  End of section title  =======-->

@@ -24,7 +24,7 @@
                         
                         <div class="logo">
                             <a href="index.php">
-                                <img style="height: 40px;" src="assets/images/navbar.png" class="img-fluid" alt="estetica logo">
+                                <img style="height: 40px;" src="assets/images/navbar.png" class="img-fluid" alt="estética logo">
                             </a>
                         </div>
                         

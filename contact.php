@@ -80,7 +80,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Contact us | Estetica Furnishing</title>
+	<title>Contact us | estética Furnishing</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -230,7 +230,7 @@
 							<i class="ion-ios-email"></i>
 						</div>
 						<div class="icon-box-content">
-							<p class="content">	Mail: admin@esteticasolutions.in </p>
+							<p class="content">	Mail: admin@estéticasolutions.in </p>
 						</div>
 					</div>
 					
@@ -268,7 +268,7 @@
 					<!--=======  box layout map container  =======-->
 					
 					<div class="box-layout-map-container google-maps">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14963.677629431844!2d85.8240402!3d20.3449478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90848377c4e04171!2sEstetica%20Furnishings!5e0!3m2!1sen!2sin!4v1594119094435!5m2!1sen!2sin" width="700" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14963.677629431844!2d85.8240402!3d20.3449478!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x90848377c4e04171!2sestética%20Furnishings!5e0!3m2!1sen!2sin!4v1594119094435!5m2!1sen!2sin" width="700" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 					</div>
 					
 					<!--=======  End of box layout map container  =======-->
