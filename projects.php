@@ -511,7 +511,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h2 style="font-size: 35px;color: #444444;">Our Customers</h2><br>
+						<h2 style="font-size: 35px;color: #444444;">Our Clients</h2><br>
 					</div>
 					
 					<!--=======  End of section title  =======-->
