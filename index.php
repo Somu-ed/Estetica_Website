@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>estética - One stop furnishing solution</title>
+	<title>Estética - One stop furnishing solution</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -977,7 +977,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">estética  </div>
+                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">Estética  </div>
         
                 <!-- LAYER NR. 4 -->
                 <!-- <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme rs-parallaxlevel-1" 
@@ -1104,7 +1104,10 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 13; white-space: nowrap; font-size: 20px; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">Welcome to the world of estética where you will <br>consume and experience furnishing like never before! </div>
+                    style="z-index: 13; font-size: 20px; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">
+                    <p style="text-align: justify;">
+                    Welcome to the world  of Estética where you will consume <br> and experience furnishing like never before! </p> 
+                </div>
         
                 <!-- LAYER NR. 10 -->
                 <div class="tp-caption Slider-button-alt rev-btn " 
@@ -1135,34 +1138,29 @@
     
     <!--=====  End of sofa banner rev  ======-->
     
+
+	
+    <!--=======  Start of Our Products  =======-->
+
+    <?php include("includes/products_home.php"); ?>
+
+    <!--=======  End of Our Products  =======-->
     
-	<!--=============================================
+    <!--=============================================
+    =          Start of Services area         =
+    =============================================-->
+    <!--=============================================
 	=            section title  container      =
 	=============================================-->
 	
 	<div class="section-title-container mb-50 mb-md-30 mb-sm-30">
         <div class="container">
-            <!-- <div class="row mb-75">
-                <div class="col-6">
-                    <div class="section-title__label section-title__label-style2 section-title__label--left section-title__label-style3--left">
-                        <p>SS-2018 <span class="line">84</span></p>
-                    </div>
-                </div>
-
-                <div class="col-6 text-right">
-                    <div class="section-title__label  section-title__label-style2 section-title__label--right section-title__label-style3--right">
-                        <p>INNOVATIVE <br> DESIGN</p>
-                    </div>
-                </div>
-                    
-            </div> -->
             <div class="row">
                 <div class="col-lg-12">
                     <!--=======  section title  =======-->
                     
                     <div class="section-title section-title--one text-center">
-                        <h1>Our Services</h1>
-                        <p class="subtitle subtitle--deep mb-0">estética FURNISHING SOLUTIONS</p>
+                        <h2 style="font-size: 35px;color: #444444;">Our Services</h2>
                     </div>
                     
                     <!--=======  End of section title  =======-->
@@ -1172,10 +1170,11 @@
     </div>
     
     <!--=====  End of section title container ======-->
+ 
 
     <!--=============================================
-    =            banner category area         =
-    =============================================-->
+	=            section title  container      =
+	=============================================-->
     
     <div class="banner-category-area mb-70 mb-md-50 mb-sm-50">
         <div class="container">
@@ -1250,20 +1249,9 @@
     </div>
     
     <!--=====  End of banner category area  ======-->
- 
 
     <!--=============================================
-	=            section title  container      =
-	=============================================-->
-	
-    <!--=======  Start of Our Products  =======-->
-
-    <?php include("includes/products_home.php"); ?>
-
-	<!--=======  End of Our Products  =======-->
-
-    <!--=============================================
-    =            blog post area         =
+    =            End of Services area           =
     =============================================-->
     
     <?php include("includes/blog_home.php"); ?>
@@ -1281,8 +1269,8 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h1>Testimonials</h1>
-                        <p>estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.</p>
+						<h2 style="font-size: 35px;color: #444444;">Testimonials</h2>
+                        <p>Estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.</p>
 					</div>
 					
 					<!--=======  End of section title  =======-->
@@ -1317,7 +1305,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at estética has been satisfying indeed. We do recommend them to discerning clients.
+                                ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at Estética has been satisfying indeed. We do recommend them to discerning clients.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
@@ -1339,7 +1327,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                In one word, estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend estética to people who are looking for exceptional quality at a fair price!
+                                In one word, Estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend Estética to people who are looking for exceptional quality at a fair price!
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
@@ -1362,7 +1350,8 @@
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
                                 Excellent collections! Speciality is the spaciousness of the premise alongwith the décor, product display and well behaved staff. Though never been your customer, will look forward to be one in near future.
-								</div>
+                                </div>
+                                
 								<div class="multi-testimonial-single-item__author-info">
 									<div class="image">
 										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
@@ -1399,7 +1388,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h1>Our Partner Brands</h1>
+						<h2 style="font-size: 35px;color: #444444;">Our Partner Brands</h2><br>
 					</div>
 					
 					<!--=======  End of section title  =======-->

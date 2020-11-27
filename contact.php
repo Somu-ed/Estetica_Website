@@ -153,7 +153,7 @@
 					<!--=======  breadcrumb list  =======-->
 					
 						<ul class="breadcrumb-list">
-							<li class="breadcrumb-list__item"><a href="index.html">HOME</a></li>
+							<li class="breadcrumb-list__item"><a href="index">HOME</a></li>
 							<li class="breadcrumb-list__item breadcrumb-list__item--active">contact us</li>
 						</ul>
 					
@@ -178,7 +178,7 @@
 					
 					<div class="section-title section-title--one text-center">
 						<p class="subtitle subtitle--deep">COME HAVE A LOOK</p>
-						<h1>Contact detail</h1>
+						<h1 style="font-size: 35px;color: #444444;">Contact Details</h1>
 					</div>
 					
 					<!--=======  End of section title  =======-->
@@ -245,7 +245,7 @@
 						</div>
 						<div class="icon-box-content">
 							<h3 class="title">HOUR OF OPERATION</h3>
-							<p class="content">Monday – Sunday : 11:00 – 21:00</p>
+							<p class="content">Monday–Sunday: 11:00 – 21:00</p>
 						</div>
 					</div>
 					
@@ -290,7 +290,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h1>Get in touch</h1>
+						<h1 style="font-size: 35px;color: #444444;">Get in touch</h1>
 					</div>
 					
 					<!--=======  End of section title  =======-->

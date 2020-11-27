@@ -7,7 +7,7 @@
                     <!--=======  blog intro  =======-->
                     
                     <div class="blog-intro">
-                        <h2>From our blog</h2><br>
+                        <h3 style="font-size: 35px;color: #444444;">From our Blog</h3><br>
                         <a href="blog" class="lezada-button lezada-button--medium">view all</a>
                     </div>
                     
@@ -70,7 +70,7 @@
                                         <a>$date</a>
                                     </div>
                                     <h2 class='post-title'><a href='blog_single.php?id=$id'>$heading</a></h2>
-                                    <p class='post-excerpt'>$description</p>
+                                    <p style='text-align: justify;' class='post-excerpt'>$description</p>
                                     <a href='blog_single.php?id=$id' class='blog-readmore-btn'>read more</a>
                                 </div>
                                 

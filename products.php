@@ -56,7 +56,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<h1 class="breadcrumb-title">Shop</h1>
+					<h1 class="breadcrumb-title">Products</h1>
 
 					<!--=======  breadcrumb list  =======-->
 					

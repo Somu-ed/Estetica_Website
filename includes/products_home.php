@@ -5,8 +5,7 @@
                     <!--=======  section title  =======-->
                     
                     <div class="section-title section-title--one text-center">
-                        <h1>Our Products</h1>
-                        <p class="subtitle subtitle--deep mb-0">estética FURNISHING SOLUTIONS</p>
+                        <h2 style="font-size: 35px;color: #444444;">Our Products</h2>
                     </div>
                     
                     <!--=======  End of section title  =======-->

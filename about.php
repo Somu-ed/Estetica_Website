@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>About Us | estética Furnishing</title>
+	<title>About Us | Estética Furnishing</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -124,10 +124,8 @@
                     <!--=======  section title  =======-->
                     
                     <div class="section-title section-title--one text-center">
-                        
-                        <p class="subtitle subtitle--deep">estética FURNISHING</p>
-                        <h1>Our Story</h1>
-                        <p class="subtitle">estética was born out of our long-drawn dream of bringing Odisha to the centre of attention with respect to furnishings. The state since long has been taken for granted for its consumption of soft furnishings and usually treated to the unwanted dump from the rest of the country. We opened our doors to smart city, Bhubaneswar for giving it a deserved due!</p>
+                        <h1 style="font-size: 35px;color: #444444;">Our Story</h1>
+                        <p class="subtitle">Estética was born out of our long-drawn dream of bringing Odisha to the centre of attention with respect to furnishings. The state since long has been taken for granted for its consumption of soft furnishings and usually treated to the unwanted dump from the rest of the country. We opened our doors to smart city, Bhubaneswar for giving it a deserved due!</p>
                     </div>
                     
                     <!--=======  End of section title  =======-->
@@ -180,8 +178,7 @@
                 <div class="offset-xl-1 col-xl-4 col-lg-6 col-md-6 mb-sm-50">
 
                     <div class="about-page-text">
-                        <p class="subtitle subtitle--deep">estética</p>
-                        <h1>Our Approach</h1>
+                        <h1 style="font-size: 30px;color: #444444;">Our Approach</h1>
                         <p class=" mb-35">We offer consulting on furnishings; we do not just sell it! The team focuses on understanding the customers’ needs, offers all possible options by sharing the technical details on the make & break of fabric and helps the customer to take an informed decision. The team spends time on knowledge share with customers and associates to emphasize on choosing the right kind of furnishings for their spaces. Right from a detailed project brief to execution, we have developed a structured process to serve our customers in the best possible manner. There are checks incorporated at every level of the process to ensure no compromise on quality and timeline adherence. </p>
                     </div>
 
@@ -197,8 +194,7 @@
                 <div class="offset-xl-1 col-xl-4 col-lg-6 col-md-6 mb-sm-50">
 
                     <div class="about-page-text">
-                        <p class="subtitle subtitle--deep">estética</p>
-                        <h1>Our Mission</h1>
+                        <h1 style="font-size: 30px;color: #444444;">Our Mission</h1>
                         <p class=" mb-35">To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share</p>
                     </div>
 
@@ -235,8 +231,7 @@
                 <div class="offset-xl-1 col-xl-4 col-lg-6 col-md-6 mb-sm-50">
 
                     <div class="about-page-text">
-                        <p class="subtitle subtitle--deep">estética</p>
-                        <h1>Our Vision</h1>
+                        <h1 style="font-size: 30px;color: #444444;">Our Vision</h1>
                         <p class=" mb-35">To establish gold standards in the business by:
                             <ul>
                                 <li>•	Bringing a paradigm shift from ‘selling’to çonsulting’</li>
