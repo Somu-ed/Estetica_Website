@@ -35,6 +35,7 @@
                 
                 <!--=======  End of copyright text  =======-->
             </div>
+
             <div class="col footer-single-widget">
                 <!--=======  single widget  =======-->
                     <h5 class="widget-title">ABOUT</h5>
@@ -47,7 +48,6 @@
                                 <li><a href="about">About us</a></li>
                                 <li><a href="https://www.google.com/search?q=estética+furnishings&oq=estética+furnishings&aqs=chrome..69i57j46j69i60l3.7448j0j7&sourceid=chrome&ie=UTF-8#">Store location</a></li>
                                 <li><a href="contact">Contact</a></li>
-                                <li><a href="products">Products</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -56,27 +56,27 @@
                 
                 <!--=======  single widget  =======-->
             </div>
-            <!-- <div class="col footer-single-widget"> -->
+            <div class="col footer-single-widget">
                 <!--=======  single widget  =======-->
-                    <!-- <h5 class="widget-title">USEFUL LINKS</h5> -->
+                    <h5 class="widget-title">NAVIGATION</h5>
 
                     <!--=======  footer navigation container  =======-->
                     
-                    <!-- <div class="footer-nav-container">
+                    <div class="footer-nav-container">
                         <nav>
                             <ul>
-                                <li><a href="#">Returns</a></li>
-                                <li><a href="#">Support Policy</a></li>
-                                <li><a href="#">Size guide</a></li>
-                                <li><a href="#">FAQs</a></li>
+                                <li><a href="index">Home</a></li>
+                                <li><a href="projects">Our Projects</a></li>
+                                <li><a href="products">Products</a></li>
+                                <li><a href="blog">Blog</a></li>
                             </ul>
                         </nav>
-                    </div> -->
+                    </div>
                     
                     <!--=======  End of footer navigation container  =======-->
                 
                 <!--=======  single widget  =======-->
-            <!-- </div> -->
+            </div>
 
             <div class="col footer-single-widget">
                 <!--=======  single widget  =======-->
