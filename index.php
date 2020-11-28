@@ -57,6 +57,15 @@
             no-repeat center center;	
             z-index: 99999;
         }
+
+        .services-title {
+            font-size: 20px;
+            color: #333333;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+            font-weight: 500 !important;
+        }
     </style>
 
 </head>
@@ -94,7 +103,7 @@
             <ul>	<!-- SLIDE  -->
                 <li data-index="rs-27" data-transition="slotslide-horizontal,slotslide-vertical,fadefromright,fadefromleft,fadefromtop,fadefrombottom,fadetoleftfadefromright" data-slotamount="default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default" data-masterspeed="default,default,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#feeab7' style='background:#feeab7' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#9fdaf2' style='background:#9fdaf2' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
             
                     <!-- LAYER NR. 1 -->
@@ -361,7 +370,7 @@
                 <!-- SLIDE  -->
                 <li data-index="rs-28" data-transition="fadetoleftfadefromright,parallaxtoright,parallaxtoleft,parallaxtotop,parallaxtobottom,parallaxhorizontal,parallaxvertical" data-slotamount="default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#f5e8e5' style='background:#f5e8e5' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#ffefd5' style='background:#ffefd5' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
             
                     <!-- LAYER NR. 13 -->
@@ -629,14 +638,14 @@
                 <!-- SLIDE  -->
                 <li data-index="rs-29" data-transition="slidingoverlayup,slidingoverlaydown,slidingoverlayright,slidingoverlayleft,slidingoverlayhorizontal,slidingoverlayvertical" data-slotamount="default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default" data-easeout="default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
                     <!-- MAIN IMAGE -->
-                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#e1dcd5' style='background:#e1dcd5' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
+                    <img src="assets/images/revimages/dummy.png" data-bgcolor='#bced5c' style='background:#bced5c' alt=""  data-lazyload="assets/images/revimages/transparent.png" data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat" data-bgparallax="off" class="rev-slidebg" data-no-retina>
                     <!-- LAYERS -->
             
                     <!-- LAYER NR. 25 -->
                     <div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
                          id="slide-29-layer-31" 
-                         data-x="['left','left','left','left']" data-hoffset="['504','101','244','121']" 
-                         data-y="['top','top','top','top']" data-voffset="['113','48','257','184']" 
+                         data-x="['left','left','left','left']" data-hoffset="['55','-259','-179','-243']" 
+                         data-y="['top','top','top','top']" data-voffset="['84','37','434','268']"
                                     data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -652,7 +661,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['469auto','469auto','469auto','370px']" data-hh="['708px','708','708','558px']" data-lazyload="assets/images/slider/slider_1.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['1453px','1281px','1149px','933px']" data-hh="['727px','641px','575px','467px']" data-lazyload="assets/images/slider/slider_1.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 26 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -1187,7 +1196,7 @@
                         <a >
                             <img src="assets/images/banners/s1.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name" style="font-size: 25px; color: white;">Curtain stiching</span>
+                                <span class="name services-title" >Curtain stitching</span>
                                 <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
@@ -1202,8 +1211,8 @@
                     <div class="single-banner single-banner--hoverzoom">
                         <a >
                             <img src="assets/images/banners/s3.jpg" class="img-fluid" alt="">
-                            <span class="banner-content banner-content--banner-type banner-content--banner-type--top-right">
-                                <span class="name" >Sofa <span>Making</span> </span>
+                            <span class="banner-content banner-content--product-type">
+                                <span class="name services-title" >Sofa Making </span>
                                 <!-- <span class="lezada-button-link">SHOP NOW</span> -->
                             </span>
                         </a>
@@ -1218,8 +1227,8 @@
                     <div class="single-banner single-banner--hoverzoom">
                         <a >
                             <img src="assets/images/banners/s4.jpg" class="img-fluid" alt="">
-                            <span class="banner-content banner-content--banner-type banner-content--banner-type--top-left">
-                                <span class="name" style="font-weight: 5px">Interior <span>solutions</span> </span>
+                            <span class="banner-content banner-content--product-type">
+                                <span class="name services-title" >Interior <span>solutions</span> </span>
                                 <!-- <span class="lezada-button-link">SHOP NOW</span> -->
                             </span>
                         </a>
@@ -1235,7 +1244,7 @@
                         <a >
                             <img src="assets/images/banners/s2.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name" style="font-size: 25px; color: white;">Customized Furniture</span>
+                                <span class="name services-title" >Customized Furniture</span>
                                 <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>

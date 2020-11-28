@@ -515,7 +515,7 @@
 							<!--=======  single product  =======-->
 							<?php
 							$aWhere = array(); 
-							$sLimit = " order by 1 DESC LIMIT 0,$max_limit";
+							$sLimit = " order by 1 LIMIT 0,$max_limit";
 							$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
                             if($cur_cat_id == 0 && $cur_subcat_id == 0){
 								$query = "SELECT * FROM products".$sWhere;
@@ -697,12 +697,12 @@
 							echo"
 							<form action='products.php' method='post'>
 								<input type='hidden' name='limit' value='$max_limit'>";
-								if($max_limit > 10){
+								if($max_limit > 10 && $cur_cat_id == 0 && $cur_subcat_id == 0){
 									echo"
 									<button type='submit' name='less' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-remove'></i> LESS</button>
 									";
 								}
-								if($max_limit<94 && $item_count != 0){
+								if($max_limit<94 && $item_count != 0 && $cur_cat_id == 0 && $cur_subcat_id == 0){
 									echo"<button type='submit' name='more' class='lezada-button lezada-button--medium lezada-button--icon--left'><i class='ion-android-add'></i> MORE</button>";
 								}
 							echo"</form>";

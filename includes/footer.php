@@ -2,6 +2,14 @@
 
 ?>
 
+<style>
+    .copyright-text > p > span > a:hover {
+        color: #dc3545;
+        font-weight: 500;
+        font-size: 16px;
+    }
+</style>
+
 <div class="footer-container footer-one pt-100 pb-50">
     <div class="container wide">
         <div class="row">
