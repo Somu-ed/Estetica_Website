@@ -98,8 +98,59 @@
                             
                             <div class="single-product__image">
                                 <a class="image-wrap">
+                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
                                     <img src="assets/images/products_home/Blind-01.jpg" class="img-fluid" alt="">
                                     <img src="assets/images/products_home/Blind-01.jpg" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                            
+                            <!--=======  End of single product image  =======-->
+                            </div>
+                        </div>
+                        <!--=======  End of single product  =======-->
+                        
+                        <!--=======  single product  =======-->
+                        <div class="col">
+                            <div class="single-product single-product--smarthome">
+                            <!--=======  single product image  =======-->
+                            
+                            <div class="single-product__image">
+                                <a class="image-wrap">
+                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
+                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
                                 </a>
                             </div>
                             
@@ -149,23 +200,6 @@
                             
                             <div class="single-product__image">
                                 <a class="image-wrap">
-                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products_home/Extra-03.jpg" class="img-fluid" alt="">
-                                </a>
-                            </div>
-                            
-                            <!--=======  End of single product image  =======-->
-                            </div>
-                        </div>
-                        <!--=======  End of single product  =======-->
-
-                        <!--=======  single product  =======-->
-                        <div class="col">
-                            <div class="single-product single-product--smarthome">
-                            <!--=======  single product image  =======-->
-                            
-                            <div class="single-product__image">
-                                <a class="image-wrap">
                                     <img src="assets/images/products_home/Flooring-2.jpg" class="img-fluid" alt="">
                                     <img src="assets/images/products_home/Flooring-2.jpg" class="img-fluid" alt="">
                                 </a>
@@ -185,40 +219,6 @@
                                 <a class="image-wrap">
                                     <img src="assets/images/products_home/Hand-Painted-Wall.jpg" class="img-fluid" alt="">
                                     <img src="assets/images/products_home/Hand-Painted-Wall.jpg" class="img-fluid" alt="">
-                                </a>
-                            </div>
-                            
-                            <!--=======  End of single product image  =======-->
-                            </div>
-                        </div>
-                        <!--=======  End of single product  =======-->
-
-                        <!--=======  single product  =======-->
-                        <div class="col">
-                            <div class="single-product single-product--smarthome">
-                            <!--=======  single product image  =======-->
-                            
-                            <div class="single-product__image">
-                                <a class="image-wrap">
-                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products_home/Rugs-02.jpg" class="img-fluid" alt="">
-                                </a>
-                            </div>
-                            
-                            <!--=======  End of single product image  =======-->
-                            </div>
-                        </div>
-                        <!--=======  End of single product  =======-->
-
-                        <!--=======  single product  =======-->
-                        <div class="col">
-                            <div class="single-product single-product--smarthome">
-                            <!--=======  single product image  =======-->
-                            
-                            <div class="single-product__image">
-                                <a class="image-wrap">
-                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
-                                    <img src="assets/images/products_home/Wall-Coverings-02.jpg" class="img-fluid" alt="">
                                 </a>
                             </div>
                             
