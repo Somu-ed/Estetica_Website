@@ -88,7 +88,7 @@
 
 	$temp = 0;
 
-	$max_limit = 10;
+	$max_limit = 20;
 	$limit = 10;
 	//increase limit
 	if(isset($_POST['more'])){
@@ -101,7 +101,7 @@
 		$max_limit = $dec_limit - $limit;
 	}
 	else{
-		$max_limit = 10;
+		$max_limit = 20;
 	}
 
 	// Category wise filter
