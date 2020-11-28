@@ -37,46 +37,50 @@
 	<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
 
     <style>
-     .about__video {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 30px;
-     }
-     .mb-35 {
-        text-align: justify;
-        text-justify: inter-word;
-     }
-     .img-center {
-        align-items: center;
-     }
+		.about__video {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+		}
+		.mb-35 {
+		text-align: justify;
+		text-justify: inter-word;
+		}
+		.img-center {
+		align-items: center;
+		}
 
-	 .partner_logos {
-            height: 65px;
-        }
+		.partner_logos {
+			height: 65px;
+		}
+		.about-page-2-image > img {
+			border-radius: 8px;
+		}
 
-     @media screen and (min-width: 990px) {
-         .about-page-2-image {
-             margin-left: 200px;
-         }
-         .about__video {
-            margin-bottom: 50px;
-         }
-     }
-     @media screen and (max-width: 990px) {
-         .about-page-2-image {
-             display: flex;
-             align-items: center;
-             justify-content: center;
-         }
-         .about-page-2-image > img {
-             width: 100% !important;
-         }
-         .about__video {
-             padding: 20px;
-             margin-bottom: -100px;
-         }
-     }
+		@media screen and (min-width: 990px) {
+			.about-page-2-image {
+				margin-left: 150px;
+				margin-right: 20px;
+			}
+			.about__video {
+			margin-bottom: 50px;
+			}
+		}
+		@media screen and (max-width: 990px) {
+			.about-page-2-image {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.about-page-2-image > img {
+				width: 100% !important;
+			}
+			.about__video {
+				padding: 20px;
+				margin-bottom: -100px;
+			}
+		}
     </style>
 
 </head>
