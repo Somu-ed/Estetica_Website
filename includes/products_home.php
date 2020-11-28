@@ -20,7 +20,7 @@
     =            product carousel container         =
     =============================================-->
     
-    <div class="product-carousel-container product-carousel-container--smarthome mb-35 mb-md-0 mb-sm-0">
+    <div style="margin-left: 20px; margin-right: 20px;" class="product-carousel-container product-carousel-container--smarthome mb-35 mb-md-0 mb-sm-0">
         <div class="row">
             <div class="col-lg-12">
                 <!--=======  product carousel  =======-->
