@@ -88,22 +88,6 @@
 
 	$temp = 0;
 
-	$max_limit = 20;
-	$limit = 10;
-	//increase limit
-	if(isset($_POST['more'])){
-		$new_limit = $_POST['limit'];
-		$max_limit = $new_limit + $limit;
-	}
-	//decrease limit
-	elseif(isset($_POST['less'])){
-		$dec_limit = $_POST['limit'];
-		$max_limit = $dec_limit - $limit;
-	}
-	else{
-		$max_limit = 20;
-	}
-
 	// Category wise filter
 
 	if(isset($_POST['cat'])){
@@ -155,6 +139,31 @@
 		$cur_subcat_name = "Sub-Category";
 		$cur_cat_id = 0;
 		$cur_cat_name = "Category";
+	}
+	
+	if($cur_cat_id == 0){
+		$max_limit = 20;
+	} else {
+		$max_limit = 50;
+	}
+	
+	$limit = 10;
+	//increase limit
+	if(isset($_POST['more'])){
+		$new_limit = $_POST['limit'];
+		$max_limit = $new_limit + $limit;
+	}
+	//decrease limit
+	elseif(isset($_POST['less'])){
+		$dec_limit = $_POST['limit'];
+		$max_limit = $dec_limit - $limit;
+	}
+	else{
+		if($cur_cat_id == 0){
+			$max_limit = 20;
+		} else {
+			$max_limit = 50;
+		}
 	}
 	
 	?>
