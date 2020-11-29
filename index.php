@@ -66,6 +66,43 @@
             padding: 10px;
             font-weight: 500 !important;
         }
+        .welcome-desc {
+            text-align: justify;
+            font-size: 17px;
+        }
+
+        .slider-custom {
+            font-size: 80px !important;
+        }
+
+        @media screen and (max-width: 767px){
+            .welcome-desc {
+                font-size: 11px !important;
+                line-height: 16px !important;
+            }
+            .slider-custom {
+                font-size: 40px !important;
+            }
+        }
+        @media (min-width: 768px) and (max-width: 990px){
+            .welcome-desc {
+                font-size: 12px !important;
+            }
+            .slider-custom {
+                font-size: 69px !important;
+                line-height: 89px !important;
+            }
+        }
+        @media (min-width: 991px) and (max-width: 1024px){
+            .welcome-desc {
+                font-size: 11px !important;
+                line-height: 14px !important;
+            }
+            .slider-custom {
+                font-size: 50px !important;
+                line-height: 64px !important;
+            }
+        }
     </style>
 
 </head>
@@ -153,7 +190,7 @@
                         style="z-index: 6; white-space: nowrap; font-size: 18px; line-height: 36px; font-weight: 400; color: #333333; font-family:Work Sans;"> </div>
             
                     <!-- LAYER NR. 3 -->
-                    <div class="tp-caption   tp-resizeme" 
+                    <div class="tp-caption tp-resizeme slider-custom" 
                          id="slide-27-layer-3" 
                          data-x="['left','center','center','left']" data-hoffset="['1171','288','-84','47']" 
                          data-y="['top','middle','middle','top']" data-voffset="['338','0','-189','142']" 
@@ -173,7 +210,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;"><p style="font-size: 80px;"> Contemporary <br> designs </p></div>
+                        style="z-index: 7; white-space: nowrap; line-height: 120px; font-weight: 600; color: #444444; letter-spacing: 0px;font-family:Work Sans;">Contemporary <br> designs</div>
             
             
                     <!-- LAYER NR. 5 -->
@@ -293,7 +330,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 13;background-color:rgb(155,155,155);"> </div>
+                        style="z-index: 13;background-color:rgb(98,98,98);"> </div>
             
                     <!-- LAYER NR. 10 -->
                     <a class="tp-caption   tp-resizeme" id="slide-27-layer-25" 
@@ -301,7 +338,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -325,7 +362,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -349,7 +386,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -393,7 +430,7 @@
                         data-paddingleft="[0,0,0,0]"
             
                         style="z-index: 5;">
-                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['341auto','341auto','341auto','226px']" data-hh="['651px','651px','651px','432px']" data-lazyload="assets/images/slider/slider_3.png" data-no-retina> </div></div>
+                    <div class="rs-looped rs-slideloop"  data-easing="" data-speed="2" data-xs="0" data-xe="0" data-ys="-10" data-ye="10"><img src="assets/images/revimages/dummy.png" alt="" data-ww="['361auto','361auto','361auto','246px']" data-hh="['671px','671px','671px','452px']" data-lazyload="assets/images/slider/slider_3.png" data-no-retina> </div></div>
             
                     <!-- LAYER NR. 14 -->
                     <div class="tp-caption   tp-resizeme" 
@@ -440,7 +477,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> concepts </div>
+                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #444444; letter-spacing: 0px;font-family:Work Sans;">Innovative<br> concepts </div>
             
                    
             
@@ -561,7 +598,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 13;background-color:rgb(155,155,155);"> </div>
+                        style="z-index: 13;background-color:rgb(98,98,98);"> </div>
             
                     <!-- LAYER NR. 22 -->
                     <a class="tp-caption   tp-resizeme" id="slide-28-layer-25" 
@@ -569,7 +606,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -593,7 +630,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -617,7 +654,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -708,7 +745,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #333333; letter-spacing: 0px;font-family:Work Sans;">Vibrant<br> colours </div>
+                        style="z-index: 7; white-space: nowrap; font-size: 100px; line-height: 120px; font-weight: 600; color: #444444; letter-spacing: 0px;font-family:Work Sans;">Vibrant<br> colours </div>
             
             
                     <!-- LAYER NR. 29 -->
@@ -828,7 +865,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 13;background-color:rgb(155,155,155);"> </div>
+                        style="z-index: 13;background-color:rgb(98,98,98);"> </div>
             
                     <!-- LAYER NR. 34 -->
                     <a class="tp-caption   tp-resizeme" id="slide-29-layer-25" 
@@ -836,7 +873,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['486','56','119','23']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -860,7 +897,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['561','130','-27','251']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -884,7 +921,7 @@
                          data-y="['top','middle','middle','top']" data-voffset="['637','205','-174','495']" 
                                     data-fontsize="['34','34','100','60']"
                         data-lineheight="['72','72','100','90']"
-                        data-color="['rgb(155,155,155)','rgb(155,155,155)','rgb(51,51,51)','rgb(51,51,51)']"
+                        data-color="['rgb(98,98,98)','rgb(98,98,98)','rgb(51,51,51)','rgb(51,51,51)']"
                         data-width="none"
                         data-height="none"
                         data-whitespace="nowrap"
@@ -1113,9 +1150,10 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 13; font-size: 20px; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">
-                    <p style="text-align: justify;">
-                    Welcome to the world  of Estética where you will consume <br> and experience furnishing like never before! </p> 
+                    style="z-index: 13; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">
+                    <p class="welcome-desc">
+                        Welcome to the world  of Estética where you will consume <br> and experience furnishing like never before!
+                    </p> 
                 </div>
         
                 <!-- LAYER NR. 10 -->
@@ -1169,7 +1207,7 @@
                     <!--=======  section title  =======-->
                     
                     <div class="section-title section-title--one text-center">
-                        <h2 style="font-size: 35px;color: #444444;">Our Services</h2>
+                        <h2 style="font-size: 35px;color: #444444;">Services</h2>
                     </div>
                     
                     <!--=======  End of section title  =======-->

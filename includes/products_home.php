@@ -5,7 +5,7 @@
                     <!--=======  section title  =======-->
                     
                     <div class="section-title section-title--one text-center">
-                        <h2 style="font-size: 35px;color: #444444;">Our Products</h2>
+                        <h2 style="font-size: 35px;color: #444444;">Products</h2>
                     </div>
                     
                     <!--=======  End of section title  =======-->

@@ -7,7 +7,7 @@
                     <!--=======  blog intro  =======-->
                     
                     <div class="blog-intro">
-                        <h3 style="font-size: 35px;color: #444444;">From our Blog</h3><br>
+                        <h3 style="font-size: 35px;color: #444444;">Blog</h3><br>
                         <a href="blog" class="lezada-button lezada-button--medium">view all</a>
                     </div>
                     
