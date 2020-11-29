@@ -1355,9 +1355,9 @@
                                 ’Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I've seen so far. Our experience at Estética has been satisfying indeed. We do recommend them to discerning clients.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
+									<!-- <div class="image">
 										<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div>
+									</div> -->
 
 									<div class="content">
 										<p class="name">Revati Pany</p>
@@ -1377,13 +1377,103 @@
                                 In one word, Estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I'd definitely recommend Estética to people who are looking for exceptional quality at a fair price!
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
+									<!-- <div class="image">
 										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
-									</div>
+									</div> -->
 
 									<div class="content">
 										<p class="name">Ar. Prateek Gupta</p>
 										<span class="designation">Principal Architect, Prateek Gupta Architects</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+                        <!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Poetry in fabric, Estética is resplendence at its best. They have something for every corner of your abode. The colourful drapes, with a plethora of designs and variations, vivid patterns and world class material- pave way for a home you can’t take your eyes off.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div> -->
+
+									<div class="content">
+										<p class="name">Dheeshakti Mishra</p>
+										<!-- <span class="designation">Managing Director, Ocasa Design Studio</span> -->
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Absolutely amazing collection, truly classy with excellent staff which is a rareity in Bhubaneshwar. 
+                                The showroom is so well laid, you will just fall in love with everything.
+
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
+									</div> -->
+
+									<div class="content">
+										<p class="name">Paramita Sahu</p>
+										<!-- <span class="designation">Principal Architect, Prateek Gupta Architects</span> -->
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+						
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Loved this place...I purchased curtains from them recently and loved everything about this place starting from behaviour of staff to collections...they have great collections available and a variety of brands starting from pocket friendly to high end brands suiting customer’s needs and taste.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div> -->
+									
+									<div class="content">
+										<p class="name">Urmi Amrita</p>
+										<!-- <span class="designation">Principal architect, SDS consulting</span> -->
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+                        <!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Good shop with nice collection with good price, cooperative employees with products knowledge n understanding of customer taste n choice. One should atleast visit before buying from anywhere.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div> -->
+									
+									<div class="content">
+										<p class="name">Amit Singhania</p>
+										<!-- <span class="designation">Principal architect, SDS consulting</span> -->
 									</div>
 								</div>
 							</div>
@@ -1400,9 +1490,9 @@
                                 </div>
                                 
 								<div class="multi-testimonial-single-item__author-info">
-									<div class="image">
+									<!-- <div class="image">
 										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div>
+									</div> -->
 									
 									<div class="content">
 										<p class="name">Sambid Mohapatra</p>

@@ -373,7 +373,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<h1 style="font-size: 35px;color: #444444;">Customer Speak</h1>
+						<h1 style="font-size: 35px;color: #444444;">Associates</h1>
                         <!-- <p>estética thrives and grows through the word of mouth recommendations of its revered clients and indulgent well-wishers.</p> -->
 					</div>
 					
@@ -409,7 +409,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                Poetry in fabric, Estética is resplendence at its best. They have something for every corner of your abode. The colourful drapes, with a plethora of designs and variations, vivid patterns and world class material- pave way for a home you can’t take your eyes off.
+                                Mr. Chirag Swain is a well known architect and leads the firm in Design and facilities Management. His expertise is in designing of Boutique Hotels, pubs, lounges, discos and restaurants, luxury residential and High-end villas. Estética has collaborated with him for both his residential as well as commercial projects.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<!-- <div class="image">
@@ -417,8 +417,8 @@
 									</div> -->
 
 									<div class="content">
-										<p class="name">Dheeshakti Mishra</p>
-										<!-- <span class="designation">Managing Director, Ocasa Design Studio</span> -->
+										<p class="name">Chirag Swain</p>
+										<span class="designation">Principal Architect, Chirag Design Studio</span>
 									</div>
 								</div>
 							</div>
@@ -431,8 +431,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                Absolutely amazing collection, truly classy with excellent staff which is a rareity in Bhubaneshwar. 
-                                The showroom is so well laid, you will just fall in love with everything.
+                                Mr Chiranjib Patnaik  is an experienced Interior Designer with a demonstrated history of working in the design industry. Skilled in Concept Planning, Furnishings, Planning Consultancy, Kitchen & Bath Design, Window Treatments, and Vendor Management. He has collaborated with Estética for many of his esteemed clients.
 
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
@@ -441,8 +440,8 @@
 									</div> -->
 
 									<div class="content">
-										<p class="name">Paramita Sahu</p>
-										<!-- <span class="designation">Principal Architect, Prateek Gupta Architects</span> -->
+										<p class="name">Chiranjib Patnaik</p>
+										<span class="designation">Proprietor, In-Arc</span>
 									</div>
 								</div>
 							</div>
@@ -455,7 +454,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                Loved this place...I purchased curtains from them recently and loved everything about this place starting from behaviour of staff to collections...they have great collections available and a variety of brands starting from pocket friendly to high end brands suiting customer’s needs and taste.
+                                Mr Krishnendu Nandy is one of the most prominent architects of Odisha. His firm provides services in Architecture, Interior design, Master Planning & Facilities programming. He has over sixteen years of experience in handling varied projects ranging from Hospitality, Corporate, Housing, High end Residential and Retail Centres across India and SAARC Countries. I.D.E.A.Z. Estética has partnered with Mr Nandy for some of its interior projects.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<!-- <div class="image">
@@ -463,8 +462,8 @@
 									</div> -->
 									
 									<div class="content">
-										<p class="name">Urmi Amrita</p>
-										<!-- <span class="designation">Principal architect, SDS consulting</span> -->
+										<p class="name">Krishnendu Nandy</p>
+										<span class="designation">Managing Partner, Ideaz Architectural Consultants</span>
 									</div>
 								</div>
 							</div>
@@ -477,7 +476,7 @@
 						<div class="col">
 							<div class="testimonial-item multi-testimonial-single-item">
 								<div class="multi-testimonial-single-item__text">
-                                Good shop with nice collection with good price, cooperative employees with products knowledge n understanding of customer taste n choice. One should atleast visit before buying from anywhere.
+                                Ms Lisa Acharya is a young, bright architect who runs a successful architecture consultancy firm, L.A.vation. In the span of 10 years, it has gained experience in consulting for a wide range of constructions and have valuable insights into the execution of various kind of small, large and complex projects.They consider "deadlines" sacrosanct and value their commitments. Estética has had a wonderful association with Ms Lisa on some of her big institutional projects.
 								</div>
 								<div class="multi-testimonial-single-item__author-info">
 									<!-- <div class="image">
@@ -485,8 +484,52 @@
 									</div> -->
 									
 									<div class="content">
-										<p class="name">Amit Singhania</p>
-										<!-- <span class="designation">Principal architect, SDS consulting</span> -->
+										<p class="name">Lisa Acharya</p>
+										<span class="designation">Principal Architect, L.A.vation</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+								Ms. Revati Pany is a veteran interior designer who caters to the varying aesthetics of her clientele. Having pursued a short course in Interior Design , she started creating furniture pieces in wood  and wrought iron for discerning clients . Popularity for her work grew , and she started creating and curating full interior spaces . Her love for art and craft helps give a distinct identity to all projects , whether contemporary or classic .
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div> -->
+									
+									<div class="content">
+										<p class="name">Revaty Pany</p>
+										<span class="designation">Managing Director, Ocasa Designs</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!--=======  End of single testimonial  =======-->
+
+						<!--=======  single testimonial  =======-->
+						
+						<div class="col">
+							<div class="testimonial-item multi-testimonial-single-item">
+								<div class="multi-testimonial-single-item__text">
+                                Debasish is an innovative manufacturer of contemporary furniture made of wood and wood- based products. Vibe Studio is a state-of-the-art furniture studio where the furniture is manufactured using German technology. Estética has been a furnishing partner for the studio and has also collaborated with Debasish for his interior projects.
+								</div>
+								<div class="multi-testimonial-single-item__author-info">
+									<!-- <div class="image">
+										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
+									</div> -->
+									
+									<div class="content">
+										<p class="name">Debasish Patnaik</p>
+										<span class="designation">Founder, Vibe Furniture Studio</span>
 									</div>
 								</div>
 							</div>
