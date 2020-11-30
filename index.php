@@ -68,7 +68,8 @@
         }
         .welcome-desc {
             text-align: justify;
-            font-size: 17px;
+            font-size: 16px;
+            line-height: 20px !important;
         }
 
         .slider-custom {
@@ -106,6 +107,12 @@
         @media (min-width: 1024px) and (max-width: 1280px){
             .slider-custom {
                 font-size: 52px !important;
+                line-height: 64px !important;
+            }
+        }
+        @media (min-width: 1280px) and (max-width: 1366px){
+            .slider-custom {
+                font-size: 59px !important;
                 line-height: 64px !important;
             }
         }
@@ -985,7 +992,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 5;background-color:rgb(236,244,246);"> </div>
+                    style="z-index: 5;background-color: rgb(248,227,201);"> </div>
         
                 <!-- LAYER NR. 2 -->
                 <div class="tp-caption   tp-resizeme rs-parallaxlevel-1" 
@@ -1011,9 +1018,9 @@
                 <!-- LAYER NR. 3 -->
                 <div class="tp-caption   tp-resizeme" 
                         id="slide-49-layer-5" 
-                        data-x="['right','right','right','right']" data-hoffset="['0','-12','0','613']" 
+                        data-x="['right','right','right','right']" data-hoffset="['0','-12','20','613']" 
                         data-y="['top','top','top','top']" data-voffset="['150','316','331','297']" 
-                                data-fontsize="['200','150','130','130']"
+                                data-fontsize="['170','150','130','130']"
                     data-lineheight="['200','150','130','130']"
                     data-width="none"
                     data-height="none"
@@ -1029,7 +1036,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">Estética  </div>
+                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">Our Store  </div>
         
                 <!-- LAYER NR. 4 -->
                 <!-- <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme rs-parallaxlevel-1" 
@@ -1150,7 +1157,7 @@
                     data-responsive_offset="on" 
         
                     data-frames='[{"delay":1300,"speed":1180,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                    data-textAlign="['inherit','inherit','inherit','inherit']"
+                    data-textAlign="['justify','justify','justify','justify']"
                     data-paddingtop="[0,0,0,0]"
                     data-paddingright="[0,0,0,0]"
                     data-paddingbottom="[0,0,0,0]"
@@ -1158,7 +1165,7 @@
         
                     style="z-index: 13; line-height: 26px; font-weight: 400; color: #7e7e7e; letter-spacing: 0.5px;font-family:Work Sans;">
                     <p class="welcome-desc">
-                        Welcome to the world  of Estética where you will consume <br> and experience furnishing like never before!
+                        Welcome&nbsp; to&nbsp; the&nbsp; world&nbsp; of&nbsp; Estética&nbsp; where <br> you will consume and experience furnishing <br> like never before!
                     </p> 
                 </div>
         
