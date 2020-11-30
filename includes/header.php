@@ -54,53 +54,7 @@
 
                     <!--=======  headeer right container  =======-->
                     
-                    <div class="header-right-container">
-
-                        <!--=======  header right icons  =======-->
-                        
-                        <div class="header-right-icons d-flex justify-content-end align-items-center h-100">
-                            <!--=======  single-icon  =======-->
-                            
-                            <!-- <div class="single-icon search">
-                                <a href="javascript:void(0)" id="search-icon">
-                                    <i class="ion-ios-search-strong"></i>
-                                </a>
-                            </div> -->
-                            &nbsp;
-                            
-                            <!--=======  End of single-icon  =======-->
-                            <!--=======  single-icon  =======-->
-                            
-                            <!-- <div class="single-icon user-login">
-                                <a href="shop-customer-login.html">
-                                    <i class="ion-android-person"></i>
-                                </a>
-                            </div> -->
-                            
-                            <!--=======  End of single-icon  =======-->
-                            <!--=======  single-icon  =======-->
-                            
-                            <!-- <div class="single-icon wishlist">
-                                <a href="javascript:void(0)" id="offcanvas-wishlist-icon">
-                                    <i class="ion-android-favorite-outline"></i>
-                                    <span class="count">2</span>
-                                </a>
-                            </div> -->
-                            
-                            <!--=======  End of single-icon  =======-->
-                            <!--=======  single-icon  =======-->
-                            
-                            <!-- <div class="single-icon cart">
-                                <a href="javascript:void(0)" id="offcanvas-cart-icon">
-                                    <i class="ion-ios-cart"></i>
-                                    <span class="count">3</span>
-                                </a>
-                            </div> -->
-                            <!--=======  End of single-icon  =======-->
-                        </div>
-                        <!--=======  End of header right icons  =======-->
-    
-                    </div>
+                    
                     
                     <!--=======  End of headeer right container  =======-->
                     

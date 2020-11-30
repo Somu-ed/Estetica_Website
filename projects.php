@@ -1,3 +1,5 @@
+<?php include("config/db_connect.php"); ?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -547,174 +549,14 @@
 	
 	<!--=====  End of multi item testimonial area ======-->
 
-    <!--=============================================
-	=            section title  container      =
-	=============================================-->
-	
-	<div class="section-title-container mb-40">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 offset-lg-2">
-					<!--=======  section title  =======-->
-					
-					<div class="section-title section-title--one text-center">
-						<h2 style="font-size: 35px;color: #444444;">Our Clients</h2><br>
-					</div>
-					
-					<!--=======  End of section title  =======-->
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!--=====  End of section title container ======-->
+    
 
 
 	<!--=============================================
-	=            brand logo area         =
+	=            clients logo area         =
 	=============================================-->
 	
-	<div class="brand-logo-area mb-90 mb-md-60 mb-sm-60">
-		<div class="container wide">
-			<div class="row">
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/picture1.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture2.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture3.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture5.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture6.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-				<div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture8.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-            </div>
-            <br></br>
-            <div class="row">
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture11.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture12.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture13.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture14.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture15.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-                <div class="col-lg-2 col-md-4 mb-md-30 mb-sm-30">
-					<!--=======  single brand logo  =======-->
-					
-					<div class="single-brand">
-						<a href="#">
-							<img class="partner_logos" src="assets/images/brands/Picture16.png" class="img-fluid" alt="">
-						</a>
-					</div>
-					
-					<!--=======  End of single brand logo  =======-->
-				</div>
-			</div>
-		</div>
-	</div>
+	<?php include("includes/clients.php"); ?>
 	
 	<!--=====  End of brand logo area  ======-->
 
@@ -722,7 +564,7 @@
 	=            footer area         =
 	=============================================-->
 	
-	<?php include "includes/footer.php"?>
+	<?php include("includes/footer.php"); ?>
 	
 	<!--=====  End of footer area  ======-->
 

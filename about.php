@@ -195,7 +195,7 @@
 
                     <div class="about-page-text">
                         <h1 style="font-size: 30px;color: #444444;">Our Mission</h1>
-                        <p class=" mb-35">To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share</p>
+                        <p class=" mb-35">To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share.</p>
                     </div>
 
                 </div>
@@ -232,13 +232,12 @@
 
                     <div class="about-page-text">
                         <h1 style="font-size: 30px;color: #444444;">Our Vision</h1>
-                        <p class=" mb-35">To establish gold standards in the business by:
-                            <ul>
-                                <li>•	Bringing a paradigm shift from ‘selling’to çonsulting’</li>
-                                <li>•	Offering customised products & service solutions keeping quality at the core</li>
-                                <li>•	Initiating thought leadership to create a conducive ecosystem for furnishings</li>
-                            </ul>
-                        </p>
+                        <p class=" mb-35">To establish gold standards in the business by:</p>
+                        <ul style="list-style-type:disc; padding-left: 15px; text-align: justify;">
+                            <li>Bringing a paradigm shift from ‘selling to consulting’.</li>
+                            <li>Offering customised products & service solutions keeping quality at the core.</li>
+                            <li>Initiating thought leadership to create a conducive ecosystem for furnishings.</li>
+                        </ul>
                     </div>
 
                 </div>

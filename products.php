@@ -223,6 +223,7 @@
                             </div>
 							<?php echo"<input type='hidden' name='temp' value='$temp'>"; ?>
 							<?php
+							/* 
 							if($cur_cat_id != 0) {
 							echo"
 							<div class='single-icon filter-dropdown'>
@@ -241,6 +242,7 @@
 									echo"</select>
 							</div>";
 								}
+							*/
 							?>
 							&nbsp;&nbsp;&nbsp;
 							<?php

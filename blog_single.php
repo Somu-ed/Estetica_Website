@@ -122,7 +122,7 @@
                                         <a href="#">fashion</a>
                                     </div>
                                     
-                                    <h2 class="post-title"><a href="blog-single-post-left-sidebar.html"><?php echo "$heading";?></a></h2>
+                                    <h2 class="post-title"><a style="text-transform: uppercase !important;" href="blog-single-post-left-sidebar.html"><?php echo "$heading";?></a></h2>
 
                                     <!--=======  End of post category  =======-->
 
@@ -163,8 +163,7 @@
                                             <div class="post-tags">
                                                 <i class="ion-ios-pricetags"></i>
                                                 <ul class="tag-list">
-                                                    <li><a href="#"><?php echo "$keywords";?></a>,</li>
-                                                    
+                                                    <li><a href="#"><?php echo "$keywords";?></a></li>
                                                 </ul>
                                             </div>
                                         </div>
