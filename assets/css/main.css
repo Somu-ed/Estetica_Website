@@ -7929,8 +7929,10 @@ nav.site-nav
   border-bottom: 1px solid #e5e5e5;
 }
 .single-slider-post--sticky .post-title a {
-  font-size: 34px;
+  font-size: 25px;
   line-height: 51px;
+  font-weight: 500 !important;
+  color: #444444 !important;
 }
 
 /*----------  post tag  ----------*/
