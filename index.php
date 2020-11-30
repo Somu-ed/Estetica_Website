@@ -402,7 +402,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Elegant </a>
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-28" data-transition="fadetoleftfadefromright,parallaxtoright,parallaxtoleft,parallaxtotop,parallaxtobottom,parallaxhorizontal,parallaxvertical" data-slotamount="default,default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default,default" data-easeout="default,default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -670,7 +670,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Elegant </a>
                 </li>
                 <!-- SLIDE  -->
                 <li data-index="rs-29" data-transition="slidingoverlayup,slidingoverlaydown,slidingoverlayright,slidingoverlayleft,slidingoverlayhorizontal,slidingoverlayvertical" data-slotamount="default,default,default,default,default,default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default,default,default,default,default,default" data-easeout="default,default,default,default,default,default" data-masterspeed="700,default,default,default,default,default"  data-thumb=""  data-rotate="0,0,0,0,0,0"  data-saveperformance="off"  data-title="Slide" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="" data-description="">
@@ -937,7 +937,7 @@
                         data-paddingbottom="[0,0,0,0]"
                         data-paddingleft="[0,0,0,0]"
             
-                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Superlative </a>
+                        style="z-index: 16; white-space: nowrap; font-size: 34px; line-height: 72px; font-weight: 300; color: #9b9b9b; letter-spacing: 0px;font-family:Work Sans;text-decoration: none;">Elegant </a>
                 </li>
             </ul>
             <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>	</div>
