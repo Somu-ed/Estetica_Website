@@ -1524,7 +1524,7 @@
     
     <!--=======  Start of Our Partner Brands  =======-->
 
-    <?php include("includes/brands_home.php"); ?>
+    <?php include("includes/brands.php"); ?>
 
     <!--=======   End of Our Partner Brands   =======-->
 
