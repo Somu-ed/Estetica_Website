@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 29, 2020 at 04:42 PM
+-- Generation Time: Nov 30, 2020 at 01:16 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -44,8 +44,9 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `image`, `date`, `author`, `category`, `heading`, `short`, `description`, `keywords`) VALUES
-(1, 'post-thumbnail.png', '2020-06-25', 'Amit Ranjan Jena', 'Furniture', 'THE SOLUTION TO DISINFECTING FABRICS!', 'With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.', 'Personal Hygiene\r\nWith new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.\r\n\r\nWe highly recommend washing your hands for approximately 20 seconds to ensure no spreading of the virus. That is the first of many steps to ensure your furniture is virus free!\r\n\r\nMaintaining the Fabrics\r\nAs people have their different techniques on how to clean furniture, there are four different methods to always remember!\r\nThese methods may vary depending on the type of fabric…\r\n\r\n1.Regular cleaning: This provides a daily cleaning that will remove any dust and/or debris that could damage the fabrics. This ensures that your furniture will look good for much longer.\r\n2.Vacuum Fabrics: Vacuuming provides a deeper clean to ensure that no dirt is left on the furniture that could slowly damage the furniture over time. Continue to do this and your furniture will remain better for longer!\r\n3.Removing stains: Stains by far are one thing to fear when it comes to your beautiful furniture. However, by using the right techniques to remove the stains, it will help provide a cleaner look to your fabrics. More details coming up!\r\n4.Deep Cleaning: Finally, depending on your fabrics, it is important to provide a deep clean to remove any build up of dirt. Methods may include steaming the fabrics, if removable, placing them in a washer or using other cleaners.', 'furniture,indoor'),
-(2, 'post-thumbnail-6.png', '2020-06-24', 'Aditya Attri', 'Furniture', 'MODERN FURNITURE IN HEALTH FACILITIES', 'Whether it’s a doctor’s office or at the dentist, what is it that most patients hope to see once they enter through the door? A Beautiful seating area, an elegant but organized reception desk, and different accessories to make them feel comfortable.\r\n\r\n', 'What Look Are You Looking For?\r\nThe first things clients, patients and customers look at are the things that leave the biggest impression. Here at SohoConcept, modern furniture helps bring the whole room together. As explained before, we want to make the patient feel at home, feel comfortable and most importantly confident in the healthcare facility.\r\n\r\nLet’s start off with the variety of chairs SohoConcept has to offer. From the Soho wood chair that will look perfect in a pediatrician’s office to the Crescent wire chair suitable for every waiting room. There is a chair ready for every healthcare facility. The variety of chairs is endless and will without a doubt impress the patients and/or clients.\r\n\r\nSohoConcept doesn’t only offer the best appearance of modern furniture but ensures the greatest quality as well. Patients are in and out of healthcare facilities every day, which means the quality of modern furniture is crucial to ensure it being long lasting. The maintenance of the modern furniture we have to offer are a few quick easy steps to make certain that it stays in the best conditions for years to come.\r\n\r\nModern Furniture is sweeping the nation, and SohoConcept is ready to bring the right energy needed for your location. From homes, to Healthcare Facilities, we are ready!', 'furniture,estetica');
+(1, 'disinfecting-fabrics-thumbnail.jpg', '2020-06-25', 'Sambit Satpathy', 'Furniture', 'THE SOLUTION TO DISINFECTING FABRICS!', 'With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.', 'Personal Hygiene\r\nWith new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.\r\n\r\nWe highly recommend washing your hands for approximately 20 seconds to ensure no spreading of the virus. That is the first of many steps to ensure your furniture is virus free!\r\n\r\nMaintaining the Fabrics\r\nAs people have their different techniques on how to clean furniture, there are four different methods to always remember!\r\nThese methods may vary depending on the type of fabric…\r\n\r\n1.Regular cleaning: This provides a daily cleaning that will remove any dust and/or debris that could damage the fabrics. This ensures that your furniture will look good for much longer.\r\n2.Vacuum Fabrics: Vacuuming provides a deeper clean to ensure that no dirt is left on the furniture that could slowly damage the furniture over time. Continue to do this and your furniture will remain better for longer!\r\n3.Removing stains: Stains by far are one thing to fear when it comes to your beautiful furniture. However, by using the right techniques to remove the stains, it will help provide a cleaner look to your fabrics. More details coming up!\r\n4.Deep Cleaning: Finally, depending on your fabrics, it is important to provide a deep clean to remove any build up of dirt. Methods may include steaming the fabrics, if removable, placing them in a washer or using other cleaners.', 'furniture,indoor'),
+(4, 'choose-curtains-thumbnail.jpg', '2020-11-30', 'Sambit Satpathy', 'Curtains', 'Tips to choose the right curtains\r\n', 'Many times, it is very difficult to choose correct fabric, so Estetica offer few familiar window treatment situations and recommendations for picking the right fabric.', '<p class=\"p1\">Many times, it is very difficult to choose correct fabric, so Estetica offer few familiar window treatment situations and recommendations for picking the right fabric:</p>\r\n<ul class=\"ul1\">\r\n<li class=\"li2\"><span class=\"s2\"><strong>A wide, long window that need plenty of coverage:</strong>&nbsp;Fabrics with some heft to them will meet your coverage needs. Make simple floor-to-ceiling panel draperies in a heavier-weight fabric, such as velvet, chenille, or a blended fabric that limit the light. An alternative is to line your draperies with lining.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A wide, long window where not much coverage is needed:&nbsp;</strong>A swag and cascade (made out of a non-sheer fabric with great drapability, such as a silk or blended cotton) that frames the top and sides of a bank of windows is a perfect treatment to provide some dress-up without much coverage. If you want to use a sheer fabric to diffuse the light, choose panels in organza, chiffon, or even lace.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A room with a small window:&nbsp;</strong>Think about adding a drapery that covers the window entirely. Measure your drapery so that it extends well past the window&rsquo;s trim molding. Then choose a heavier fabric, such as damask, in a colour that matches (or closely matches) the room&rsquo;s paint colour. The window treatment helps block air. Matching the fabric with the room&rsquo;s walls gives the room-enlarging illusion of unbroken wall space.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A very low-ceilinged room:</strong>&nbsp;Measure your draperies so they extend from the floor to the ceiling and match their colour to the wall colour. Be sure to install the curtain rod nearly flush with the ceiling. If you want to let in light, choose a fabric whose texture is very light yet crisp, such as sheer and if you like coverage, choose a tightly woven cotton. Using a fabric that features vertical stripes is another nice way you can create a feeling of length and height in a low-ceilinged room.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A small window, the only source of light in a small kitchen:</strong>&nbsp;If you have a small kitchen with only a tiny window, you want to maximize the window as much as possible.<strong><em>&nbsp;</em></strong>Consider adding a vertical blind, or if you have the ceiling height, an pleated curtain in the medium weight fabric of your choice.<span class=\"Apple-converted-space\">&nbsp;</span></span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A windows in a formal living room: </strong>Pleated curtains look great over sheers in dining rooms, and this treatment lets in adequate light for dining, working, or studying. Choose a fabric with a tight weave and even a bit of stiffness, so that they&rsquo;ll keep their shape.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A bathroom window that needs privacy but still needs natural light:&nbsp;</strong>Try a heavier voile, which give a bit of coverage, yet let in some light. Create a simple curtain panel with this fabric, and your problems are solved.<span class=\"Apple-converted-space\">&nbsp;</span></span></li>\r\n</ul>', 'curtains'),
+(5, 'right-upholstery-thumbnail.jpg', '2020-11-30', 'Sambit Satpathy', 'Upholstery', 'Finding the right upholstery fit\r\n', 'Although we all jump at the chance to replace furniture with newer, but sometimes a good-quality sofa or chair just needs a fabric revamp. The right upholstery can easily transform the look and feel of your dining room, living room or home office furniture.', '<p class=\"p1\">Although we all jump at the chance to replace furniture with newer, but sometimes a good-quality sofa or chair just needs a fabric revamp. The right upholstery can easily transform the look and feel of your dining room, living room or home office furniture. There are many different textures, colours and patterns to choose from, so be sure to consider what makes sense for your family, as well as what complements your room\'s decor. If you\'re on the verge of making a new furniture or re-upholstering your furniture, do consider the following factors to make sure you pick the right material for your furniture -<span class=\"Apple-converted-space\">&nbsp;</span></p>\r\n<p class=\"p2\"><strong>Fabric Durability</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li3\"><span class=\"s2\">Choose a fabric based on its uses like, who will be using your sofa. If your pets will also be sharing your sofa with you, consider a microfiber fabric or leather as they can withstand heavy use.</span></li>\r\n<li class=\"li3\"><span class=\"s2\">Consider fabric durability if your sofa or chair will be placed in a high-traffic area of the home.</span></li>\r\n<li class=\"li4\"><span class=\"s2\">Woven patterns hold up longer than printed ones, as do higher thread counts. Thread count refers to the number of threads per square inch of fabric, and denser fabric lasts longer.</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Fabric Design / Pattern</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Your fabric choice should approximate the style and character of the piece it is covering. For example, a traditional fabric would look better on a traditional style of frame.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Some fabrics appear casual, while others might look more formal. Choose a fabric to echo your own style or theme that you have established throughout the home.</span></li>\r\n<li class=\"li7\"><span class=\"s2\">Consider the scale of the design repeat. It should be appropriate to the size of the furniture it is covering, as well as the room size. A large bold, pattern might work better in a larger room, while a more muted or smaller one might be a better choice for a smaller space.</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Fabric Colour </strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Colour is the most important reason people choose a fabric, so make sure your colour choice is appropriate. For instance, it may be best to avoid a very bold colour for a smaller room, especially if your sofa is also large.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Avoid delicately coloured fabrics around children and pets.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">To strike the right mood, consider the colour temperature. Since warm and cool colours affect the mood of the room, make sure you&rsquo;re choosing the right fabric for the right mood.</span></li>\r\n<li class=\"li7\"><span class=\"s2\">Avoid trendy colours unless you happen to really like them. Colour trends come and go so be careful. What if you don&rsquo;t consider eggplant attractive in the first place? Will you be able to live with a colour even when its popularity wanes?</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Special Considerations</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Fade Resistance: Consider if your fabric is fade resistant especially if it will be placed in a room that gets plenty of sunlight or will be placed close to a window.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Mildew Resistance: Look for fabric that is mildew resistant if you live in a humid climate that fosters mildew.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Allergies: Consider fabric such as microfiber for certain allergies because it is lint free and does not attract dust.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Pets: If you have pets avoid using delicate fabric such as silk, or any fabric with lots of texture. Select pet-friendly upholstery instead.</span></li>\r\n</ul>', 'upholstery');
 
 -- --------------------------------------------------------
 
@@ -74,6 +75,36 @@ INSERT INTO `category` (`cat_id`, `cat_name`) VALUES
 (9, 'Artefacts'),
 (10, 'Hospitality'),
 (11, 'Customised');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `clients`
+--
+
+CREATE TABLE `clients` (
+  `id` int(50) NOT NULL,
+  `img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `clients`
+--
+
+INSERT INTO `clients` (`id`, `img`) VALUES
+(1, 'Picture1.png'),
+(2, 'Picture2.png'),
+(3, 'Picture3.png'),
+(4, 'Picture4.png'),
+(5, 'Picture5.png'),
+(6, 'Picture6.png'),
+(7, 'Picture7.png'),
+(8, 'Picture8.png'),
+(9, 'Picture9.png'),
+(10, 'Picture11.png'),
+(11, 'Picture13.png'),
+(12, 'Picture15.png'),
+(13, 'Picture16.png');
 
 -- --------------------------------------------------------
 
@@ -123,6 +154,35 @@ INSERT INTO `newsletter` (`id`, `email`) VALUES
 (7, 'new@gmail.com'),
 (8, 'final@gmail.com'),
 (9, 'nishant@perfectshades.in');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `partner_brands`
+--
+
+CREATE TABLE `partner_brands` (
+  `id` int(50) NOT NULL,
+  `img` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `partner_brands`
+--
+
+INSERT INTO `partner_brands` (`id`, `img`) VALUES
+(1, 'Ddecor.png'),
+(2, 'India_handloom.png'),
+(3, 'Karpets.png'),
+(4, 'Mac.png'),
+(5, 'Malhar.png'),
+(6, 'Marvel.png'),
+(7, 'Portico.png'),
+(8, 'Sky_homes.png'),
+(9, 'Square_foot.png'),
+(10, 'Tarkett.png'),
+(11, 'True_colors.png'),
+(12, 'WK.png');
 
 -- --------------------------------------------------------
 
@@ -416,6 +476,12 @@ ALTER TABLE `category`
   ADD PRIMARY KEY (`cat_id`);
 
 --
+-- Indexes for table `clients`
+--
+ALTER TABLE `clients`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `contact`
 --
 ALTER TABLE `contact`
@@ -425,6 +491,12 @@ ALTER TABLE `contact`
 -- Indexes for table `newsletter`
 --
 ALTER TABLE `newsletter`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `partner_brands`
+--
+ALTER TABLE `partner_brands`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -459,13 +531,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `category`
 --
 ALTER TABLE `category`
   MODIFY `cat_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
+--
+-- AUTO_INCREMENT for table `clients`
+--
+ALTER TABLE `clients`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `contact`
@@ -478,6 +556,12 @@ ALTER TABLE `contact`
 --
 ALTER TABLE `newsletter`
   MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `partner_brands`
+--
+ALTER TABLE `partner_brands`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `products`

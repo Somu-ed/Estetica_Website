@@ -116,6 +116,12 @@
                 line-height: 64px !important;
             }
         }
+        @media (min-width: 1366px) and (max-width: 1501px){
+            .slider-custom {
+                font-size: 59px !important;
+                line-height: 64px !important;
+            }
+        }
     </style>
 
 </head>
@@ -207,7 +213,7 @@
                          id="slide-27-layer-3" 
                          data-x="['left','center','center','left']" data-hoffset="['1171','288','-84','47']" 
                          data-y="['top','middle','middle','top']" data-voffset="['338','0','-189','142']" 
-                                    data-fontsize="['100','80','100','70']"
+                                    data-fontsize="['80','60','60','40']"
                         data-lineheight="['120','100','120','80']"
                         data-width="none"
                         data-height="none"
