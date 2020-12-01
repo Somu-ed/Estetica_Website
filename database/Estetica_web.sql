@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Nov 30, 2020 at 01:16 PM
+-- Generation Time: Dec 01, 2020 at 05:37 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -172,17 +172,28 @@ CREATE TABLE `partner_brands` (
 
 INSERT INTO `partner_brands` (`id`, `img`) VALUES
 (1, 'Ddecor.png'),
-(2, 'India_handloom.png'),
-(3, 'Karpets.png'),
-(4, 'Mac.png'),
-(5, 'Malhar.png'),
-(6, 'Marvel.png'),
-(7, 'Portico.png'),
-(8, 'Sky_homes.png'),
-(9, 'Square_foot.png'),
-(10, 'Tarkett.png'),
-(11, 'True_colors.png'),
-(12, 'WK.png');
+(2, 'Rumors.png'),
+(3, 'Pure.png'),
+(4, 'Sarom.png'),
+(5, 'Pluche.png'),
+(6, 'Sleepwell.png'),
+(7, 'Maspar.png'),
+(8, 'Recron.png'),
+(9, 'India_handloom.png'),
+(10, 'Karpets.png'),
+(11, 'Mac.png'),
+(12, 'Malhar.png'),
+(13, 'Marvel.png'),
+(14, 'Portico.png'),
+(15, 'Sky_homes.png'),
+(16, 'Square_foot.png'),
+(17, 'Tarkett.png'),
+(18, 'True_colors.png'),
+(19, 'WK.png'),
+(20, 'Indocount.png'),
+(21, 'Tesa.png'),
+(22, 'Heritage.png'),
+(23, 'Indiacraft.png');
 
 -- --------------------------------------------------------
 
@@ -203,16 +214,12 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
-(1, 7, 29, 'Pillow covers_1.jpg', 'Pillow Covers'),
-(2, 7, 29, 'Pillow covers_2.jpg', 'Pillow Covers'),
 (3, 7, 27, 'Dohar_1.jpg', 'Dohar'),
 (4, 7, 27, 'Dohar_2.jpg', 'Dohar'),
 (5, 7, 24, 'Bedsheet with Pillow Cover_1.jpg', 'Bedsheet with Pillow Cover'),
 (6, 7, 24, 'Bedsheet with Pillow Cover_2.jpg', 'Bedsheet with Pillow Cover'),
 (7, 7, 25, 'Bed cover_1.jpg', 'Bed Cover'),
 (8, 7, 25, 'Bed cover_2.jpg', 'Bed Cover'),
-(9, 7, 28, 'Bed runner_1.jpg', 'Bed Runner'),
-(10, 7, 28, 'Bed runner_2.jpg', 'Bed Runner'),
 (11, 7, 26, 'Comforter_1.jpg', 'Comforter'),
 (12, 7, 26, 'Comforter_2.jpg', 'Comforter'),
 (13, 3, 8, 'Roman Blinds.jpg', 'Roman Blinds'),
@@ -243,19 +250,6 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (38, 6, 22, 'Vinyl Flooring_2.jpg', 'Vinyl Flooring'),
 (39, 6, 23, 'outdoor deck.jpg', 'Outdoor Deck'),
 (40, 6, 23, 'outdoor deck(1).jpg', 'Outdoor Deck'),
-(43, 9, 33, 'Wooden.jpg', 'Wooden Artifact'),
-(44, 9, 33, 'Wooden(1).JPG', 'Wooden Artifact'),
-(48, 9, 35, 'Metallic(1).JPG', 'Metallic Artifact'),
-(49, 11, 43, 'Custom cushion fillers_1.jpg', 'custom cushion fillers'),
-(50, 11, 43, 'Custom cushion fillers_2.jpg', 'custom cushion fillers'),
-(51, 11, 44, 'Custom Curtain Fabric.JPG', 'Custom Curtain Fabric'),
-(52, 11, 44, 'Custom Curtain Fabric(1).JPG', 'Custom Curtain Fabric'),
-(53, 11, 45, 'Custom Upholstery Fabric_1.jpg', 'Custom Upholstery Fabric'),
-(54, 11, 45, 'Custom Upholstery Fabric_2.jpg', 'Custom Upholstery Fabric'),
-(55, 11, 46, 'Custom Special Finishes_1.jpg', 'Special Finished Fabric'),
-(56, 11, 46, 'Custom Special Finishes_3.jpg', 'Special Finished Fabric'),
-(57, 11, 47, 'Custom Blinds_1.jpg', 'Custom Blinds'),
-(58, 11, 47, 'Custom Blinds_2.jpg', 'Custom Blinds'),
 (59, 11, 49, 'Custom Rugs_1.jpg', 'Custom Rugs'),
 (60, 11, 49, 'Custom Rugs_2.jpg', 'Custom Rugs'),
 (61, 5, 15, 'wall to wall carpet 1.jpg', 'Wall to Wall Carpet'),
@@ -271,10 +265,6 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (71, 4, 13, 'Wall Coverings_6.jpg', 'Wallpapers'),
 (72, 4, 13, 'Wall Coverings_7.jpg', 'Wallpapers'),
 (73, 4, 13, 'Wall Coverings_8.jpg', 'Wallpapers'),
-(74, 4, 13, 'Wall Coverings_9.jpg', 'Wallpapers'),
-(75, 4, 13, 'Wall Coverings_10.jpg', 'Wallpapers'),
-(76, 4, 14, 'Poster_1.jpg', 'Posters'),
-(77, 4, 14, 'Poster_2.jpg', 'Posters'),
 (78, 10, 37, 'Pillows_1.jpg', 'Pillows'),
 (79, 10, 37, 'Pillows_2.jpg', 'Pillows'),
 (80, 10, 38, 'mattress.jpg', 'Mattress'),
@@ -285,8 +275,6 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (85, 10, 40, 'Mattress Protector_2.jpg', 'Mattress Protector'),
 (86, 10, 42, 'bath mat.jpg', 'Bath Mat'),
 (87, 10, 42, 'bath mat(1).jpg', 'Bath Mat'),
-(88, 11, 48, 'Custom Wallpaper_1.jpg', 'Custom Wallpaper'),
-(89, 11, 48, 'Custom Wallpaper_2.jpg', 'Custom Wallpaper'),
 (90, 11, 48, 'Custom Wallpaper_3.jpg', 'Custom Wallpaper'),
 (91, 11, 48, 'Custom Wallpaper_4.jpg', 'Custom Wallpaper'),
 (92, 11, 48, 'Custom Wallpaper_5.jpg', 'Custom Wallpaper'),
@@ -299,10 +287,9 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (99, 7, 28, 'Bed runner_3.jpg', 'Bed Runner'),
 (100, 7, 24, 'Bedsheet with Pillow Cover_3.jpg', 'Bedsheet with Pillow Cover'),
 (101, 7, 26, 'Comforter_3.jpg', 'Comforter'),
-(102, 7, 26, 'Comforter_3.jpg', 'Comforter'),
+(102, 7, 26, 'Comforter_4.jpg', 'Comforter'),
 (103, 7, 27, 'Dohar_3.jpg', 'Dohar'),
 (104, 7, 27, 'Dohar_4.jpg', 'Dohar'),
-(105, 7, 27, 'Dohar_5.jpg', 'Dohar'),
 (106, 8, 30, 'Cushion-1.jpg', 'Cushion'),
 (107, 8, 30, 'Cushion-2.jpg', 'Cushion'),
 (108, 8, 30, 'Cushion-3.jpg', 'Cushion'),
@@ -310,7 +297,6 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (110, 8, 30, 'Cushion-5.jpg', 'Cushion'),
 (111, 8, 30, 'Cushion-6.jpg', 'Cushion'),
 (112, 8, 30, 'Cushion-7.jpg', 'Cushion'),
-(113, 8, 30, 'Cushion-8.jpg', 'Cushion'),
 (114, 8, 30, 'Cushion-9.jpg', 'Cushion'),
 (115, 8, 30, 'Cushion-10.jpg', 'Cushion'),
 (116, 8, 30, 'Cushion-11.jpg', 'Cushion'),
@@ -345,9 +331,10 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 (145, 9, 35, 'Artefact_6.jpg', 'Artefact'),
 (146, 9, 35, 'Artefact_7.jpg', 'Artefact'),
 (147, 9, 35, 'Artefact_8.jpg', 'Artefact'),
-(148, 9, 35, 'Artefact_9.jpg', 'Artefact'),
-(149, 9, 34, 'Painting.JPG', 'Painting'),
-(150, 9, 34, 'Painting(1).JPG', 'Painting');
+(151, 2, 6, 'Curtains_7.jpg', 'Curtains'),
+(152, 2, 6, 'Curtains_8.jpg', 'Curtains'),
+(153, 2, 6, 'Curtains_9.jpg', 'Curtains'),
+(154, 2, 6, 'Curtains_10.jpg', 'Curtains');
 
 -- --------------------------------------------------------
 
@@ -561,13 +548,13 @@ ALTER TABLE `newsletter`
 -- AUTO_INCREMENT for table `partner_brands`
 --
 ALTER TABLE `partner_brands`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=151;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
 
 --
 -- AUTO_INCREMENT for table `p_cat`
