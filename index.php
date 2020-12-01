@@ -73,7 +73,7 @@
         }
 
         .slider-custom {
-            font-size: 79px !important;
+            font-size: 70px !important;
         }
 
         @media screen and (max-width: 767px){
@@ -112,13 +112,13 @@
         }
         @media (min-width: 1280px) and (max-width: 1366px){
             .slider-custom {
-                font-size: 59px !important;
+                font-size: 52px !important;
                 line-height: 64px !important;
             }
         }
         @media (min-width: 1366px) and (max-width: 1501px){
             .slider-custom {
-                font-size: 59px !important;
+                font-size: 52px !important;
                 line-height: 64px !important;
             }
         }
