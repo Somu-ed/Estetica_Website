@@ -69,7 +69,7 @@
                                         <i class='ion-android-calendar'></i>
                                         <a>$date</a>
                                     </div>
-                                    <h2 class='post-title'><a href='blog_single.php?id=$id'>$heading</a></h2>
+                                    <h2 style='text-transform: uppercase;' class='post-title'><a href='blog_single.php?id=$id'>$heading</a></h2>
                                     <p style='text-align: justify;' class='post-excerpt'>$description</p>
                                     <a href='blog_single.php?id=$id' class='blog-readmore-btn'>read more</a>
                                 </div>
