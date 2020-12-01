@@ -80,7 +80,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Contact us | estética Furnishing</title>
+	<title>Contact us | Estética Furnishing</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -177,7 +177,7 @@
 					<!--=======  section title  =======-->
 					
 					<div class="section-title section-title--one text-center">
-						<p class="subtitle subtitle--deep">COME HAVE A LOOK</p>
+						<p class="subtitle subtitle--deep">COME, HAVE A LOOK!</p>
 						<h1 style="font-size: 35px;color: #444444;">Contact Details</h1>
 					</div>
 					

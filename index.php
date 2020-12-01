@@ -6,7 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Estética - One stop furnishing solution</title>
+	<title>Estética - Odisha's Only Furnishing Studio</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Favicon -->
@@ -1042,7 +1042,7 @@
                     data-paddingbottom="[0,0,0,0]"
                     data-paddingleft="[0,0,0,0]"
         
-                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">Our Store  </div>
+                    style="z-index: 7; white-space: nowrap; font-size: 200px; line-height: 200px; font-weight: 600; color: #ffffff; letter-spacing: 0px;font-family:Work Sans;">Our Studio  </div>
         
                 <!-- LAYER NR. 4 -->
                 <!-- <div class="tp-caption tp-shape tp-shapewrapper  tp-resizeme rs-parallaxlevel-1" 

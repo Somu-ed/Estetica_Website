@@ -4905,7 +4905,7 @@ nav.site-nav
 .product-carousel .slick-arrow {
   background: none;
   border: none;
-  font-size: 30px;
+  font-size: 10px;
   color: #e7e7e7;
   position: absolute;
   top: 50%;
@@ -5379,8 +5379,8 @@ nav.site-nav
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   z-index: 3;
-  visibility: hidden;
-  opacity: 0;
+  visibility: visible;
+  opacity: 1;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;

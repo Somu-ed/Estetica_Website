@@ -66,7 +66,7 @@
                         <nav>
                             <ul>
                                 <li><a href="index">Home</a></li>
-                                <li><a href="projects">Our Projects</a></li>
+                                <li><a href="projects">Projects</a></li>
                                 <li><a href="products">Products</a></li>
                                 <li><a href="blog">Blog</a></li>
                             </ul>
