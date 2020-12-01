@@ -49,7 +49,7 @@
                         
                         <!--=======  single product  =======-->
                         <?php
-						$clients_query = "SELECT * FROM clients ORDER BY 1 DESC LIMIT 0,20";
+						$clients_query = "SELECT * FROM clients ORDER BY 1 DESC";
 
 						$clients_fire = mysqli_query($con,$clients_query);
 

@@ -49,7 +49,7 @@
                         
                         <!--=======  single product  =======-->
                         <?php
-						$brand_query = "SELECT * FROM partner_brands ORDER BY 1 DESC LIMIT 0,20";
+						$brand_query = "SELECT * FROM partner_brands ORDER BY 1";
 
 						$brand_fire = mysqli_query($con,$brand_query);
 
