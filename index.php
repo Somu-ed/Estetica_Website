@@ -76,6 +76,10 @@
             font-size: 70px !important;
         }
 
+        .hello-banner {
+                font-size: 159px !important;
+            }
+            
         @media screen and (max-width: 767px){
             .welcome-desc {
                 font-size: 11px !important;
@@ -84,6 +88,14 @@
             .slider-custom {
                 font-size: 40px !important;
             }
+            .hello-banner {
+                /* opacity: 1 !important;
+                display: initial !important;
+                visibility: visible !important; */
+                font-size: 40px !important;
+                /* color: #333333 !important; */
+            }
+            
         }
         @media (min-width: 768px) and (max-width: 990px){
             .welcome-desc {
@@ -93,8 +105,11 @@
                 font-size: 69px !important;
                 line-height: 89px !important;
             }
+            .hello-banner {
+                font-size: 80px !important;
+            }
         }
-        @media (min-width: 991px) and (max-width: 1024px){
+        @media (min-width: 991px) and (max-width: 1023px){
             .welcome-desc {
                 font-size: 11px !important;
                 line-height: 14px !important;
@@ -103,23 +118,35 @@
                 font-size: 50px !important;
                 line-height: 64px !important;
             }
+            .hello-banner {
+                font-size: 60px !important;
+            }
         }
-        @media (min-width: 1024px) and (max-width: 1280px){
+        @media (min-width: 1024px) and (max-width: 1279px){
             .slider-custom {
                 font-size: 52px !important;
                 line-height: 64px !important;
             }
+            .hello-banner {
+                font-size: 90px !important;
+            }
         }
-        @media (min-width: 1280px) and (max-width: 1366px){
+        @media (min-width: 1280px) and (max-width: 1365px){
             .slider-custom {
                 font-size: 52px !important;
                 line-height: 64px !important;
+            }
+            .hello-banner {
+                font-size: 75px !important;
             }
         }
         @media (min-width: 1366px) and (max-width: 1501px){
             .slider-custom {
                 font-size: 52px !important;
                 line-height: 64px !important;
+            }
+            .hello-banner {
+                font-size: 110px !important;
             }
         }
     </style>
@@ -1022,7 +1049,7 @@
                     style="z-index: 6;"><img src="assets/images/home/hello.png" alt="" data-ww="['1006px','762px','762px','422px']" data-hh="['429px','325px','325px','180px']" data-no-retina> </div>
         
                 <!-- LAYER NR. 3 -->
-                <div class="tp-caption   tp-resizeme" 
+                <div class="tp-caption tp-resizeme hello-banner" 
                         id="slide-49-layer-5" 
                         data-x="['right','right','right','right']" data-hoffset="['0','-12','20','613']" 
                         data-y="['top','top','top','top']" data-voffset="['150','316','331','297']" 
@@ -1031,6 +1058,7 @@
                     data-width="none"
                     data-height="none"
                     data-whitespace="nowrap"
+                    data-visibility="['on','on','on','on']"
             
                     data-type="text" 
                     data-responsive_offset="on" 
@@ -1253,7 +1281,7 @@
                         <a >
                             <img src="assets/images/banners/s1.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name services-title" >Curtain stitching</span>
+                                <span class="name services-title" >Curtain Stitching</span>
                                 <!-- <span class="price">$19.00</span> -->
                             </span>
                         </a>
@@ -1285,7 +1313,7 @@
                         <a >
                             <img src="assets/images/banners/s4.jpg" class="img-fluid" alt="">
                             <span class="banner-content banner-content--product-type">
-                                <span class="name services-title" >Interior <span>solutions</span> </span>
+                                <span class="name services-title" >Interior <span>Solutions</span> </span>
                                 <!-- <span class="lezada-button-link">SHOP NOW</span> -->
                             </span>
                         </a>
