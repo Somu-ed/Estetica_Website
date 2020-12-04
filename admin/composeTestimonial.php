@@ -14,55 +14,75 @@ else{
 <script>
 	$(document).ready(function() {
 
-		$('#delete').click(function() {
+		$('#add').click(function() {
 
-			var nl_id = $("#nl_id").val().trim();     
+			var name = $("#name").val().trim();
+			var designation = $("#designation").val().trim();
+			var review = $("#review").val().trim();
+			if(name == "" || review == ""){
 				swal.fire({
-				title: "Are you sure?",
-				text: "Once deleted, you will not be able to recover this data!",
-				icon: "warning",
+					text: "Some field are Empty !!",
+					icon: "error",
+					buttonsStyling: false,
+					confirmButtonText: "Try again!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					}
+				}).then(function() {
+					KTUtil.scrollTop();
+				});
+			} else {
+				swal.fire({
+				title: "Confirm Submission!!",
+				icon: "info",
 				showCancelButton: true,
-				confirmButtonText: "Yes, delete it!",
+				confirmButtonText: "Confirm",
 				dangerMode: true,
 				})
 				.then((result) => {
 					if (result.value) {
-						$.ajax({
-							url:'nl_del_process.php',
-							type:'post',
-							data:{nl_id:nl_id},
-							success:function(response){
-								if(response == 1){
-									swal.fire({
-									text: "Response Deleted Successfully!!",
-									icon: "success",
-									buttonsStyling: false,
-									confirmButtonText: "Okay!",
-									customClass: {
-										confirmButton: "btn font-weight-bold btn-light-success"
-									}
-								}).then(function() {
-									window.location = "newsletter.php";
-								});
-									
-								}
-								else{
-									swal.fire({
-										text: "Action Failed",
-										icon: "error",
-										buttonsStyling: false,
-										confirmButtonText: "Try again!",
-										customClass: {
-											confirmButton: "btn font-weight-bold btn-light-primary"
-										}
-									}).then(function() {
-										KTUtil.scrollTop();
-									});
-								}
+				$.ajax({
+					url:'add_testimonial_process.php',
+					type:'post',
+					data:{
+						name:name,
+						designation:designation,
+						review:review
+					},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Added Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
 							}
+						}).then(function() {
+							window.location = "composeTestimonial.php";
 						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
 					}
 				});
+			}
+			});
+			}
+			
 		});
 	});
 </script>
@@ -72,7 +92,7 @@ else{
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Newsletter Subscribers | Estetica</title>
+		<title>Contact Responses | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -211,16 +231,16 @@ else{
 													<span class="menu-text">Blog</span>
 												</span>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
-												<a href="posted.php?page=1" class="menu-link">
+											<li class="menu-item menu-item" aria-haspopup="true">
+												<a href="postedBlog?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
-													<span class="menu-text">Posted Blogs</span>
+													<span class="menu-text">Posted</span>
 												</a>
 											</li>
 											<li class="menu-item" aria-haspopup="true">
-												<a href="compose.php" class="menu-link">
+												<a href="composeBlog" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
@@ -230,23 +250,51 @@ else{
 										</ul>
 									</div>
 								</li>
-								<li class="menu-item " aria-haspopup="true">
-									<a href="testimonials.php" class="menu-link">
+
+								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
-											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
-											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 													<polygon points="0 0 24 0 24 24 0 24"/>
 													<path d="M12,18 L7.91561963,20.1472858 C7.42677504,20.4042866 6.82214789,20.2163401 6.56514708,19.7274955 C6.46280801,19.5328351 6.42749334,19.309867 6.46467018,19.0931094 L7.24471742,14.545085 L3.94038429,11.3241562 C3.54490071,10.938655 3.5368084,10.3055417 3.92230962,9.91005817 C4.07581822,9.75257453 4.27696063,9.65008735 4.49459766,9.61846284 L9.06107374,8.95491503 L11.1032639,4.81698575 C11.3476862,4.32173209 11.9473121,4.11839309 12.4425657,4.36281539 C12.6397783,4.46014562 12.7994058,4.61977315 12.8967361,4.81698575 L14.9389263,8.95491503 L19.5054023,9.61846284 C20.0519472,9.69788046 20.4306287,10.2053233 20.351211,10.7518682 C20.3195865,10.9695052 20.2170993,11.1706476 20.0596157,11.3241562 L16.7552826,14.545085 L17.5353298,19.0931094 C17.6286908,19.6374458 17.263103,20.1544017 16.7187666,20.2477627 C16.5020089,20.2849396 16.2790408,20.2496249 16.0843804,20.1472858 L12,18 Z" fill="#000000"/>
 												</g>
-											</svg><!--end::Svg Icon--></span>
-											<!--end::Svg Icon-->
+											</svg><!--end::Svg Icon-->
 										</span>
 										<span class="menu-text">Testimonials</span>
+										<i class="menu-arrow"></i>
 									</a>
+									<div class="menu-submenu">
+										<i class="menu-arrow"></i>
+										<ul class="menu-subnav">
+											<li class="menu-item menu-item-parent" aria-haspopup="true">
+												<span class="menu-link">
+													<span class="menu-text">Testimonials</span>
+												</span>
+											</li>
+											<li class="menu-item" aria-haspopup="true">
+												<a href="viewTestimonials" class="menu-link">
+													<i class="menu-bullet menu-bullet-dot">
+														<span></span>
+													</i>
+													<span class="menu-text">Posted</span>
+												</a>
+											</li>
+											<li class="menu-item menu-item-active" aria-haspopup="true">
+												<a href="composeTestimonial" class="menu-link">
+													<i class="menu-bullet menu-bullet-dot">
+														<span></span>
+													</i>
+													<span class="menu-text">Compose</span>
+												</a>
+											</li>
+										</ul>
+									</div>
 								</li>
-								<li class="menu-item " aria-haspopup="true">
+
+								
+								<li class="menu-item" aria-haspopup="true">
 									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -262,7 +310,7 @@ else{
 										<span class="menu-text">Contact Us</span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-active" aria-haspopup="true">
+								<li class="menu-item " aria-haspopup="true">
 									<a href="newsletter.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File.svg-->
@@ -291,20 +339,19 @@ else{
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
 					<?php include 'includes/header.php'; ?>
-					<!--end::Header-->
-					<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Subheader-->
+                    <!--end::Header-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Subheader-->
 						<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Newsletter Subscribers</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Testimonials</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#XRS-45671</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -312,188 +359,67 @@ else{
 							</div>
 						</div>
 						<!--end::Subheader-->
-						<!--begin::Entry-->
-						<div class="d-flex flex-column-fluid">
+                    <!--begin::Content-->
+                    <div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
-							<div class="container">
-								<!--begin::Row-->
+							<div class="container-fluid">
 								<div class="row">
-									<!--begin::Col-->
-									<?php 
-									global $con;
-									$aWhere = array(); 
-			
-									if(isset($_GET['page'])){
-										$page = $_GET['page'];
-			
-									}
-									else{
-										$page=1;
-									}
-									
-									$start_from = ($page-1) * $per_page;
-									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
-									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM newsletter".$sWhere;
-									$fetch_fire = mysqli_query($con,$fetch);
-									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$nl_id = $row['id'];
-										$nl_mail = $row['email'];
-
-										$length = 100;
-
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+									<div class="col-lg-12">
 										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
-												<a href='#' class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$nl_mail</a><br><br>
-												<form>
-                                                    <input type='hidden' id='nl_id' value='$nl_id'>
-													<a class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4' type='button' id='delete'>Delete</a>
-												</form>
+										<div class="card card-custom gutter-b example example-compact">
+											<div class="card-header">
+												<h3 class="card-title">Add Testimonial</h3>
+												
 											</div>
-											<!--end::Body-->
-										</div>
-										<!--end:: Card-->
-									</div>"); 
-									} ?>
-									<!--end::Col-->
-								</div>
-								<!--end::Row-->
-								<!--begin::Pagination-->
-								<script src="assets/js/jquery-3.5.1.min.js"></script>
-								<script>
-									$(document).ready(function(){
-										// Number of rows selection
-                                        $("#num_rows").change(function(){
-											// Submitting form
-											$("#form").submit();
-										});
-									});
-								</script>
+											<!--begin::Form-->
+											<form class="form">
+												<div class="card-body">
+													<div class="form-group row">
+														<div class="col-lg-6">
+															<label>Full Name <span style="color: #F64E60;">*<span></label>
+															<input type="text" id="name" class="form-control" placeholder="Enter full name" required/>
+															<br>
+														</div>
+														<div class="col-lg-6">
+															<label>Designation</label>
+															<input type="text" id="designation" class="form-control" placeholder="Enter contact number" />
+															<br>
+														</div>
+														<div class="col-lg-12">
+															<label >Review <span style="color: #F64E60;">*<span></label>
 
-								<div class="card card-custom">
-									<div class="card-body py-7">
-										<!--begin::Pagination-->
-										<?php
-										global $con;
-										if(isset($_GET['page'])){
-
-											$page = $_GET['page'];
-									
-										}else{
-											$page=1;
-										}
-									
-										//$per_page=1;
-										$aWhere = array();
-										$aPath = '';
+															<textarea class="form-control" id="review" maxlength="300"  placeholder="" rows="6"></textarea>
+															<span class="form-text text-muted">Enter text within 50 words</span>
 															
-										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM newsletter".$sWhere;
-										$result = mysqli_query($con,$query);
-										$total_records = mysqli_num_rows($result);
-										$total_pages = ceil($total_records / $per_page);
-										$prev = $page -1;
-
-										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
-										<div class='d-flex flex-wrap mr-3'>";
-										if($page>1){
-											echo"
-											<a href='newsletter.php?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a href='newsletter.php?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										else{
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										for($i=1; $i<=$total_pages; $i++){
-											if($i == $page){
-												echo"
-												  <a href='newsletter.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
-												";
-											}
-											else{
-												echo"
-												  <a href='newsletter.php?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
-												";
-											}
-										}
-										if($page == $total_pages){
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-										else{
-											$next = $page+1;
-											echo"
-											<a href='newsletter.php?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a href='newsletter.php?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-
-										echo"
+														</div>
+													</div>
+                                                    <div class="form-group row">
+														
+                                                    </div>
+													<!-- begin: Example Code-->
+													
+													<!-- end: Example Code-->
+												</div>
+												<div class="card-footer">
+													<div class="row">
+														<div class="col-lg-6">
+															
+														</div>
+														<div class="col-lg-6 text-right">
+															<button type="button" id="add" class="btn btn-danger">ADD</button>
+														</div>
+													</div>
+												</div>
+											</form>
+											<!--end::Form-->
 										</div>
-										<div class='d-flex align-items-center'>
-										<form action='newsletter.php' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
-											$numrows_arr = array("1","2");
-											foreach($numrows_arr as $nrow){
-												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
-													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
-												}
-												else{
-													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
-												}
-											}
-											echo"</select>
-										</form>
-											<span class='text-muted'>Displaying $per_page of $total_records records</span>
-										</div>
-									</div>";
-										?>
-										
-										<!--end:: Pagination-->
+										<!--end::Card-->
 									</div>
 								</div>
-								<!--end::Pagination-->
 							</div>
 							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
-					</div>
-					<!--end::Content-->
+                    <!--end::Content-->
 					<!--begin::Footer-->
 					<?php include 'includes/footer.php'; ?>
 					<!--end::Footer-->
@@ -529,7 +455,7 @@ else{
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
