@@ -92,7 +92,7 @@ else{
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Contact Responses | Estetica Admin</title>
+		<title>Testimonials - Compose | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -274,7 +274,7 @@ else{
 												</span>
 											</li>
 											<li class="menu-item" aria-haspopup="true">
-												<a href="viewTestimonials" class="menu-link">
+												<a href="postedTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
