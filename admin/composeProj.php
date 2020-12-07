@@ -1,18 +1,113 @@
 <?php include 'include.php'; ?>
+
+<?php
+if(isset($_POST['num_rows'])){
+	$per_page = $_POST['num_rows'];
+}
+else{
+	$per_page = 1;
+}
+?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#add').click(function() {
+			// var img = $("#img").val().trim();
+			var fd = new FormData();
+
+			var name = $("#name").val().trim();
+            var desc = $("#desc").val().trim();
+			var files = $('#file')[0].files;
+
+			if(name == "" || desc == "" || files.length == 0 ){
+				swal.fire({
+					text: "Some field are Empty !!",
+					icon: "error",
+					buttonsStyling: false,
+					confirmButtonText: "Try again!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					}
+				}).then(function() {
+					KTUtil.scrollTop();
+				});
+			} else {
+				fd.append('file',files[0]);
+                fd.append('name',name);
+				fd.append('desc',desc);
+
+				console.log(fd, name, files, desc);
+
+				swal.fire({
+				title: "Confirm Submission!!",
+				icon: "info",
+				showCancelButton: true,
+				confirmButtonText: "Confirm",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'add_project_process.php',
+					type:'post',
+					data:fd,
+					contentType: false,
+					processData: false,
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Added Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "composeProj.php";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+			}
+			
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Blog - Compose | Estetica Admin</title>
+		<title>Projects - Compose | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" />
 		<!--end::Fonts-->
-		<!--begin::Page Custom Styles(used by this page)-->
-		<link href="assets/css/pages/wizard/wizard-1.css?v=7.0.5" rel="stylesheet" type="text/css" />
-		<!--end::Page Custom Styles-->
+		<!--begin::Page Vendors Styles(used by this page)-->
+		<link href="assets/plugins/custom/fullcalendar/fullcalendar.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
+		<!--end::Page Vendors Styles-->
 		<!--begin::Global Theme Styles(used by all pages)-->
 		<link href="assets/plugins/global/plugins.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/plugins/custom/prismjs/prismjs.bundle.css?v=7.0.5" rel="stylesheet" type="text/css" />
@@ -24,7 +119,19 @@
 		<link href="assets/css/themes/layout/brand/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+        <link rel="shortcut icon" href="assets/media/favicon.svg" />
+        
+        <style>
+            input[type="file"] {
+    display: none;
+}
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+        </style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -82,7 +189,7 @@
 						<!--end::Logo-->
 						<!--begin::Toggle-->
 						<button class="brand-toggle btn btn-sm px-0" id="kt_aside_toggle">
-							<span class="svg-icon svg-icon-xl menu-icon">
+							<span class="svg-icon svg-icon svg-icon-xl">
 								<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg-->
 								<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 									<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -119,7 +226,7 @@
 										<span class="menu-text">Dashboard</span>
 									</a>
 								</li>
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/src/media/svg/icons/Communication/Write.svg-->
@@ -143,15 +250,15 @@
 													<span class="menu-text">Blog</span>
 												</span>
 											</li>
-											<li class="menu-item " aria-haspopup="true">
-												<a href="postedBlog" class="menu-link">
+											<li class="menu-item menu-item" aria-haspopup="true">
+												<a href="postedBlog?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
 													</i>
 													<span class="menu-text">Posted</span>
 												</a>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="composeBlog" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -163,7 +270,7 @@
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Clipboard.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -194,7 +301,7 @@
 													<span class="menu-text">Posted</span>
 												</a>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item-active" aria-haspopup="true">
 												<a href="composeProj" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -247,7 +354,9 @@
 										</ul>
 									</div>
 								</li>
-								<li class="menu-item " aria-haspopup="true">
+
+								
+								<li class="menu-item" aria-haspopup="true">
 									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -292,20 +401,19 @@
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
 					<?php include 'includes/header.php'; ?>
-					<!--end::Header-->
-					<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Subheader-->
+                    <!--end::Header-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Subheader-->
 						<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Blogs</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Projects</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#XRS-45671</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -313,325 +421,92 @@
 							</div>
 						</div>
 						<!--end::Subheader-->
-						<!--begin::Entry-->
-						<div class="d-flex flex-column-fluid">
-                            <!--begin::Container-->
-                            <div class="container">
-								<!--begin::Card-->
-								<div class="card card-custom">
-									<div class="card-body p-0">
-										<div class="wizard wizard-1" id="kt_projects_add" data-wizard-state="step-first" data-wizard-clickable="true">
-											<div class="kt-grid__item">
-												<!--begin::Wizard Nav-->
-												<div class="wizard-nav border-bottom">
-													<div class="wizard-steps p-8 p-lg-10">
-														<div class="wizard-step" data-wizard-type="step" data-wizard-state="current">
-															<div class="wizard-label">
-																<span class="svg-icon svg-icon-4x wizard-icon">
-																	<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Chat-check.svg-->
-																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																			<rect x="0" y="0" width="24" height="24" />
-																			<path d="M4.875,20.75 C4.63541667,20.75 4.39583333,20.6541667 4.20416667,20.4625 L2.2875,18.5458333 C1.90416667,18.1625 1.90416667,17.5875 2.2875,17.2041667 C2.67083333,16.8208333 3.29375,16.8208333 3.62916667,17.2041667 L4.875,18.45 L8.0375,15.2875 C8.42083333,14.9041667 8.99583333,14.9041667 9.37916667,15.2875 C9.7625,15.6708333 9.7625,16.2458333 9.37916667,16.6291667 L5.54583333,20.4625 C5.35416667,20.6541667 5.11458333,20.75 4.875,20.75 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																			<path d="M2,11.8650466 L2,6 C2,4.34314575 3.34314575,3 5,3 L19,3 C20.6568542,3 22,4.34314575 22,6 L22,15 C22,15.0032706 21.9999948,15.0065399 21.9999843,15.009808 L22.0249378,15 L22.0249378,19.5857864 C22.0249378,20.1380712 21.5772226,20.5857864 21.0249378,20.5857864 C20.7597213,20.5857864 20.5053674,20.4804296 20.317831,20.2928932 L18.0249378,18 L12.9835977,18 C12.7263047,14.0909841 9.47412135,11 5.5,11 C4.23590829,11 3.04485894,11.3127315 2,11.8650466 Z M6,7 C5.44771525,7 5,7.44771525 5,8 C5,8.55228475 5.44771525,9 6,9 L15,9 C15.5522847,9 16,8.55228475 16,8 C16,7.44771525 15.5522847,7 15,7 L6,7 Z" fill="#000000" />
-																		</g>
-																	</svg>
-																	<!--end::Svg Icon-->
-																</span>
-																<h3 class="wizard-title">Blog Details</h3>
-															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
+                    <!--begin::Content-->
+                    <div class="d-flex flex-column-fluid">
+							<!--begin::Container-->
+							<div class="container-fluid">
+								<div class="row">
+									<div class="col-lg-12">
+										<!--begin::Card-->
+										<div class="card card-custom gutter-b example example-compact">
+											<div class="card-header">
+												<h3 class="card-title">Add Project</h3>
+												
+											</div>
+
+											<script>
+												$(document).ready(function(){
+													$('input[type="file"]').change(function(e){
+														var fileName = e.target.files[0].name;
+														// alert('The file "' + fileName +  '" has been selected.');
+														document.getElementById("choosen_file").innerHTML = fileName;
+													});
+												});
+											</script>
+
+											<!--begin::Form-->
+											<form method="post" class="form" enctype="multipart/form-data">
+												<div class="card-body">
+													<div class="form-group row">
+														<div class="col-lg-6">
+															<label>Project Name <span style="color: #F64E60;">*<span></label>
+															<input type="text" id="name" class="form-control" placeholder="Enter project name"/>
+															<br>
 														</div>
-														<div class="wizard-step" data-wizard-type="step">
-															<div class="wizard-label">
-																<span class="svg-icon svg-icon-4x wizard-icon">
-																	<!--begin::Svg Icon | path:assets/media/svg/icons/Devices/Display1.svg-->
-																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	    <polygon points="0 0 24 0 24 24 0 24"/>
-                                                                        <rect fill="#000000" opacity="0.3" x="2" y="4" width="20" height="16" rx="2"/>
-                                                                        <polygon fill="#000000" opacity="0.3" points="4 20 10.5 11 17 20"/>
-                                                                        <polygon fill="#000000" points="11 20 15.5 14 20 20"/>
-                                                                        <circle fill="#000000" opacity="0.3" cx="18.5" cy="8.5" r="1.5"/>
-                                                                        </g>
-                                                                    </svg>
-																	<!--end::Svg Icon-->
-																</span>
-																<h3 class="wizard-title">Cover Image</h3>
-															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
+														<div class="col-lg-6">
+                                                        <label >Cover Image <span style="color: #F64E60;">*<span></label>
+															<label class="form-control btn btn-light-success font-weight-bold mr-2">
+                                                            <span class="svg-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Files\Upload.svg-->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                                    <path d="M2,13 C2,12.5 2.5,12 3,12 C3.5,12 4,12.5 4,13 C4,13.3333333 4,15 4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 C2,15 2,13.3333333 2,13 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                                                    <rect fill="#000000" opacity="0.3" x="11" y="2" width="2" height="14" rx="1"/>
+                                                                    <path d="M12.0362375,3.37797611 L7.70710678,7.70710678 C7.31658249,8.09763107 6.68341751,8.09763107 6.29289322,7.70710678 C5.90236893,7.31658249 5.90236893,6.68341751 6.29289322,6.29289322 L11.2928932,1.29289322 C11.6689749,0.916811528 12.2736364,0.900910387 12.6689647,1.25670585 L17.6689647,5.75670585 C18.0794748,6.12616487 18.1127532,6.75845471 17.7432941,7.16896473 C17.3738351,7.57947475 16.7415453,7.61275317 16.3310353,7.24329415 L12.0362375,3.37797611 Z" fill="#000000" fill-rule="nonzero"/>
+                                                                </g>
+                                                            </svg><!--end::Svg Icon--></span>    
+                                                            Upload Image
+                                                            <input style="border: none;" type="file" id="file" class="form-control" placeholder="Enter contact number" />
+                                                            </label>
+															<a style="cursor: pointer; color: gray;" class="btn btn-outline-light">
+																<i style="color: gray;" class="flaticon2-image-file"></i> <span style="align-items: center;" id="choosen_file">No File Chosen </span>
+															</a>
+															<br><br>
 														</div>
-														<div class="wizard-step" data-wizard-type="step">
-															<div class="wizard-label">
-																<span class="svg-icon svg-icon-4x wizard-icon">
-																	<!--begin::Svg Icon | path:assets/media/svg/icons/Home/Globe.svg-->
-																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																	    <rect x="0" y="0" width="24" height="24"/>
-																	    <path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953) "/>
-																	    <path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
-																	</g>
-																    </svg>
-																	<!--end::Svg Icon-->
-																</span>
-																<h3 class="wizard-title">Compose</h3>
-															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
+														<div class="col-lg-12">
+															<label >Description <span style="color: #F64E60;">*<span></label>
+
+															<textarea class="form-control" id="desc" maxlength="700"  placeholder="" rows="6"></textarea>
+															<span class="form-text text-muted">Enter text within 200 words</span>
 														</div>
-														<div class="wizard-step" data-wizard-type="step">
-															<div class="wizard-label">
-																<span class="svg-icon svg-icon-4x wizard-icon">
-																	<!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
-																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																			<rect x="0" y="0" width="24" height="24" />
-																			<path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000" />
-																			<circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5" />
-																		</g>
-																	</svg>
-																	<!--end::Svg Icon-->
-																</span>
-																<h3 class="wizard-title">Review and Submit</h3>
-															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow last">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
+													</div>
+                                                    <div class="form-group row">
+														
+                                                    </div>
+													<!-- begin: Example Code-->
+													
+													<!-- end: Example Code-->
+												</div>
+												<div class="card-footer">
+													<div class="row">
+														<div class="col-lg-6">
+															
+														</div>
+														<div class="col-lg-6 text-right">
+															<button type="button" id="add" class="btn btn-danger">ADD</button>
 														</div>
 													</div>
 												</div>
-												<!--end::Wizard Nav-->
-											</div>
-											<div class="row justify-content-center my-10 px-8 my-lg-15 px-lg-10">
-												<div class="col-xl-12 col-xxl-7">
-													<!--begin::Form Wizard-->
-													<form class="form" id="kt_projects_add_form">
-														<!--begin::Step 1-->
-														<div class="pb-5" data-wizard-type="step-content" data-wizard-state="current">
-															<h3 class="mb-10 font-weight-bold text-dark">Blog Details:</h3>
-															<div class="row">
-																<div class="col-xl-12">
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Date</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="date" type="date" value="<?php echo date('Y-m-d') ?>"/>
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Author</label>
-																		<div class="col-lg-9 col-xl-9">
-																		<div class="input-group input-group-lg input-group-solid">
-																				<div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-user"></i>
-																					</span>
-																				</div>
-																			<input class="form-control form-control-lg form-control-solid" placeholder="Author name" name="author" type="text" value="<?php echo($name); ?>" />
-                                                                        </div>	
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Category</label>
-																		<div class="col-lg-9 col-xl-9">
-																		    <div class="input-group input-group-lg input-group-solid">
-																				<div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-list"></i>
-																					</span>
-																				</div>
-																			    <input class="form-control form-control-lg form-control-solid" name="category" type="text" value="Furniture" />
-																			</div>
-																			<span class="form-text text-muted">Select the blog category from the dropdown</span>
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Heading</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<div class="input-group input-group-lg input-group-solid">
-																				<div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-heading"></i>
-																					</span>
-																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="head" placeholder="Heading" />
-																			</div>
-																		</div>
-																	</div>
-																	<div class="form-group row">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Tags</label>
-																		<div class="col-lg-9 col-xl-9">
-																			<div class="input-group input-group-lg input-group-solid">
-																			    <div class="input-group-prepend">
-																					<span class="input-group-text">
-																						<i class="la la-tags"></i>
-																					</span>
-																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="tags" placeholder="Tags" />
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<!--end::Step 1-->
-														<!--begin::Step 2-->
-														<div class="pb-5" data-wizard-type="step-content">
-															<div class="row">
-																<div class="col-xl-12">
-																	<div class="form-group row">
-																		<div class="col-lg-9 col-xl-6">
-																			<h3 class="kt-section__title kt-section__title-md">Cover Image</h3>
-																		</div>
-																	</div>
-																	
-																	<div class="form-group row align-items-center">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Communication</label>
-																		<div class="col-lg-9 col-xl-6">
-																			<div class="checkbox-inline">
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>Email</label>
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>SMS</label>
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>Phone</label>
-																			</div>
-																		</div>
-																	</div>
-																</div>
-															</div>
-														</div>
-														<!--end::Step 2-->
-														<!--begin::Step 3-->
-														<div class="pb-5" data-wizard-type="step-content">
-															<h3 class="mb-10 font-weight-bold text-dark">Compose your Blog</h3>
-															<div class="modal-body">
-															<div class="form-group row mt-2">
-															<textarea name="mail_message" class="summernote" data-trigger="summernote"></textarea>
-													        </div>
-												            </div>
-														</div>
-														<!--end::Step 3-->
-														<!--begin::Step 4-->
-														<div class="pb-5" data-wizard-type="step-content">
-															<h4 class="mb-10 font-weight-bold">Review your Details and Submit</h4>
-															<h6 class="font-weight-bold mb-3">Project Details:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Name:</td>
-																	<td class="font-weight-bold text-right">Loop Inc CRM App</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Phone:</td>
-																	<td class="font-weight-bold text-right">+61412345678</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Email:</td>
-																	<td class="font-weight-bold text-right">johnwick@reeves.com</td>
-																</tr>
-															</table>
-															<div class="separator separator-dashed my-5"></div>
-															<h6 class="font-weight-bold mb-3">Delivery Info:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Address Line 1:</td>
-																	<td class="font-weight-bold text-right">Fox Avenue 5-6B</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Address Line 2:</td>
-																	<td class="font-weight-bold text-right">Melbourne VIC</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Post:</td>
-																	<td class="font-weight-bold text-right">3000</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Country:</td>
-																	<td class="font-weight-bold text-right">Australia</td>
-																</tr>
-															</table>
-															<div class="separator separator-dashed my-5"></div>
-															<h6 class="font-weight-bold mb-3">Payment Details:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Number:</td>
-																	<td class="font-weight-bold text-right">xxxx xxxx xxxx 1111</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Name:</td>
-																	<td class="font-weight-bold text-right">John Wick</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Expiry:</td>
-																	<td class="font-weight-bold text-right">01/21</td>
-																</tr>
-															</table>
-														</div>
-														<!--end::Step 4-->
-														<!--begin::Actions-->
-														<div class="d-flex justify-content-between border-top mt-5 pt-10">
-															<div class="mr-2">
-																<button type="button" class="btn btn-light-danger font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-prev">Previous</button>
-															</div>
-															<div>
-																<button type="button" class="btn btn-success font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
-																<button type="button" class="btn btn-danger font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-next">Next Step</button>
-															</div>
-														</div>
-														<!--end::Actions-->
-													</form>
-													<!--end::Form Wizard-->
-												</div>
-											</div>
+											</form>
+											<!--end::Form-->
 										</div>
+										<!--end::Card-->
 									</div>
 								</div>
-								<!--end::Card-->
 							</div>
 							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
-					</div>
-					<!--end::Content-->
+                    <!--end::Content-->
 					<!--begin::Footer-->
 					<?php include 'includes/footer.php'; ?>
 					<!--end::Footer-->
@@ -667,11 +542,8 @@
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-        <!--end::Global Theme Bundle-->
-        <!--begin::Page Scripts(used by this page)-->
-		<script src="assets/js/pages/custom/projects/add-project.js?v=7.0.5"></script>
-		<script src="assets/js/pages/crud/forms/editors/summernote.js?v=7.0.5"></script>
-		<!--end::Page Scripts-->
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
 </html>
