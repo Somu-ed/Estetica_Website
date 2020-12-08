@@ -419,7 +419,7 @@ else{
 												<!--end::User-->
 												<!--begin::Desc-->
 												<a href='#' class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$blog_head</a><br><br>
-												<p class='mb-7'>$desc
+												<p class='mb-7' style='text-align: justify;'>$desc</p>
 												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
 												<!--end::Desc-->
 												<!--begin::Info-->

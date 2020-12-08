@@ -417,8 +417,8 @@ else{
 												<!--end::User-->
 												<!--begin::Desc-->
 												
-												<p class='mb-7'>$desc
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
+												<p class='mb-7' style='text-align: justify;'>$desc</p>
+												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a>-->
 												<!--end::Desc-->
 												<!--begin::Info-->
 												<div class='mb-7'>

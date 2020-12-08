@@ -310,7 +310,7 @@ else{
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Testimonials</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Projects</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -344,100 +344,92 @@ else{
 									$start_from = ($page-1) * $per_page;
 									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
 									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM testimonials".$sWhere;
+									$fetch = "SELECT * FROM projects".$sWhere;
 									$fetch_fire = mysqli_query($con,$fetch);
 									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$test_id = $row['id'];
-										$test_name = $row['name'];
-										$test_designation = $row['designation'];
-										$test_review = $row['review'];
+										$proj_id = $row['id'];
+										$proj_name = $row['name'];
+										$proj_desc = $row['description'];
+										$proj_img = $row['img'];
 
-										$length = 200;
+										$length = 300;
 
-										if(strlen($test_review)<=$length)
+										if(strlen($proj_desc)<=$length)
 										  {
-											$desc = $test_review;
+											$desc = $proj_desc;
 										  }
 										  else
 										  {
-											$desc=substr($test_review,0,$length) . '...';
+											$desc=substr($proj_desc,0,$length) . '...';
 										  }
 
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
-										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::Toolbar-->
-												<div class='d-flex justify-content-end'>
-													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
-														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
-															<!--begin::Navigation-->
-															<ul class='navi navi-hover'>
-																<li class='navi-header pb-1'>
-																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-file-1'></i>
-																		</span>
-																		<span class='navi-text'>View</span>
-																	</a>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-edit'></i>
-																		</span>
-																		<span class='navi-text'>Edit</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
-												
-												<p class='mb-7'>$desc
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
-												<!--end::Desc-->
-												<!--begin::Info-->
-												<div class='mb-7'>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Name:</span>
-														<a class='text-muted text-hover-primary'>$test_name</a>
-													</div>
-													<div class='d-flex justify-content-between align-items-cente my-1'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Designation:</span>
-														<a class='text-muted text-hover-primary'>$test_designation</a>
-													</div>
-												</div>
-												<!--end::Info-->
-												<a href='view_post.php?blog_id=$test_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>DELETE</a>
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end:: Card-->
-									</div>"); 
+                                        echo("
+                                        <div class='col-xl-6 col-lg-6 col-md-6 col-sm-6'>
+                                        <!--begin::Card-->
+                                        <div class='card card-custom gutter-b card-stretch'>
+                                            <div class='card-body'>
+                                            <div class='d-flex'>
+                                                <!--begin: Pic-->
+                                                <div class='flex-shrink-0 mr-7 mt-lg-0 mt-3'>
+                                                <div class='symbol symbol-50 symbol-lg-120'>
+                                                    <img
+                                                    style='object-fit: cover;'
+                                                    alt='Pic'
+                                                    src='../assets/images/projects/$proj_img'
+                                                    />
+                                                </div>
+                                                <div
+                                                    class='symbol symbol-50 symbol-lg-120 symbol-primary d-none'
+                                                >
+                                                    <span
+                                                    class='font-size-h3 symbol-label font-weight-boldest'
+                                                    >JM</span
+                                                    >
+                                                </div>
+                                                </div>
+                                                <!--end: Pic-->
+                                                <!--begin: Info-->
+                                                <div class='flex-grow-1'>
+                                                <!--begin: Title-->
+                                                <div
+                                                    class='d-flex align-items-center justify-content-between flex-wrap'
+                                                >
+                                                    <div class='mr-3'>
+                                                    <!--begin::Name-->
+                                                    <a
+                                                        class='d-flex align-items-center text-dark text-hover-primary font-size-h5 font-weight-bold mr-3'
+                                                        >$proj_name
+                                                        <i
+                                                        class='flaticon2-correct text-success icon-md ml-2'
+                                                        ></i
+                                                    ></a>
+                                                    <!--end::Name-->
+                                                    
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!--end: Title-->
+                                                <!--begin: Content-->
+                                                <div
+                                                    class='d-flex align-items-center flex-wrap justify-content-between'
+                                                >
+                                                    <div
+                                                    class='flex-grow-1 font-weight-bold text-dark-50 py-5 py-lg-2 mr-5'
+                                                    style='text-align: justify;'
+                                                    >
+                                                    $desc
+                                                    </div>
+                                                    
+                                                </div>
+                                                <!--end: Content-->
+                                                </div>
+                                                <!--end: Info-->
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Card-->
+                                        </div>
+                                        "); 
 									} ?>
 									<!--end::Col-->
 								</div>
@@ -472,7 +464,7 @@ else{
 										$aPath = '';
 															
 										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM testimonials".$sWhere;
+										$query = "SELECT * FROM projects".$sWhere;
 										$result = mysqli_query($con,$query);
 										$total_records = mysqli_num_rows($result);
                                         $total_pages = ceil($total_records / $per_page);
