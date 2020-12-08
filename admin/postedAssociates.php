@@ -13,7 +13,7 @@ else{
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Posted Testimonials | Estetica</title>
+		<title>Posted Associates | Estetica</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -180,7 +180,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -202,7 +202,7 @@ else{
 													<span class="menu-text">Testimonials</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="postedTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -222,7 +222,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -246,7 +246,7 @@ else{
 													<span class="menu-text">Associates</span>
 												</span>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item-active" aria-haspopup="true">
 												<a href="postedAssociates" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -320,7 +320,7 @@ else{
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Testimonials</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Associates</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -354,7 +354,7 @@ else{
 									$start_from = ($page-1) * $per_page;
 									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
 									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM testimonials".$sWhere;
+									$fetch = "SELECT * FROM associates".$sWhere;
 									$fetch_fire = mysqli_query($con,$fetch);
 									while ($row = mysqli_fetch_array($fetch_fire)) {
 										$test_id = $row['id'];
@@ -482,7 +482,7 @@ else{
 										$aPath = '';
 															
 										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM testimonials".$sWhere;
+										$query = "SELECT * FROM associates".$sWhere;
 										$result = mysqli_query($con,$query);
 										$total_records = mysqli_num_rows($result);
                                         $total_pages = ceil($total_records / $per_page);

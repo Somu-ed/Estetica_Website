@@ -271,137 +271,40 @@
 					>
 						
 						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-										<!-- <div class="image">
-											<img src="assets/images/testimonial/t1.jpg" style="width: 80px" class="img-fluid" alt="">
-										</div> -->
+						<?php
+							$assc_query = "SELECT * FROM associates ORDER BY 1";
 
-										<div class="content">
-											<p class="name">Chirag Swain</p>
-											<span class="designation">Principal Architect, CDS</span>
+							$assc_fire = mysqli_query($con,$assc_query);
+							$assc_id = 1;
+							while($assc = mysqli_fetch_array($assc_fire)){
+								$assc_name = $assc['name'];
+								$assc_desg = $assc['designation'];
+								$assc_rev = $assc['review'];
+								echo"
+								<div class='col'>
+									<div class='testimonial-item multi-testimonial-single-item'>
+									<div class='multi-testimonial-single-item__author-info'>
+											<!-- <div class='image'>
+												<img src='assets/images/testimonial/t1.jpg' style='width: 80px' class='img-fluid' alt=''>
+											</div> -->
+								
+											<div class='content'>
+												<p class='name'>$assc_name</p>
+												<span class='designation'>$assc_desg</span>
+											</div>
 										</div>
-									</div>
-								</div><br>
-								<div class="multi-testimonial-single-item__text">
-                                Mr. Chirag Swain is a well known architect and leads the firm in Design and facilities Management. His expertise is in designing of Boutique Hotels, pubs, lounges, discos and restaurants, luxury residential and High-end villas. Estética has collaborated with him for both his residential as well as commercial projects.
-								</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-									<!-- <div class="image">
-										<img src="assets/images/testimonial/t2.jpg" style="height: 80px; width: 80px;" class="img-fluid" alt="">
-									</div> -->
-
-									<div class="content">
-										<p class="name">Chiranjib Patnaik</p>
-										<span class="designation">Proprietor, In-Arc</span>
-									</div>
-								</div><br>
-								<div class="multi-testimonial-single-item__text">
-                                Mr Chiranjib Patnaik  is an experienced Interior Designer with a demonstrated history of working in the design industry. Skilled in Concept Planning, Furnishings, Planning Consultancy, Kitchen & Bath Design, Window Treatments, and Vendor Management. He has collaborated with Estética for many of his esteemed clients.
-
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-						
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-									<!-- <div class="image">
-										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div> -->
-									
-									<div class="content">
-										<p class="name">Krishnendu Nandy</p>
-										<span class="designation">Managing Partner, IDEAZ</span>
-									</div>
-								</div><br>
-								<div class="multi-testimonial-single-item__text">
-                                Mr Krishnendu Nandy is one of the most prominent architects of Odisha. His firm provides services in Architecture, Interior design, Master Planning & Facilities programming. He has over sixteen years of experience in handling varied projects ranging from Hospitality, Corporate, Housing, High end Residential and Retail Centres across India and SAARC Countries. I.D.E.A.Z. Estética has partnered with Mr Nandy for some of its interior projects.
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-                        <!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-									<!-- <div class="image">
-										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div> -->
-									
-									<div class="content">
-										<p class="name">Lisa Acharya</p>
-										<span class="designation">Principal Architect, L.A.vation</span>
-									</div>
-								</div><br>
-								<div class="multi-testimonial-single-item__text">
-                                Ms Lisa Acharya is a young, bright architect who runs a successful architecture consultancy firm, L.A.vation. In the span of 10 years, it has gained experience in consulting for a wide range of constructions and have valuable insights into the execution of various kind of small, large and complex projects.They consider "deadlines" sacrosanct and value their commitments. Estética has had a wonderful association with Ms Lisa on some of her big institutional projects.
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-									<!-- <div class="image">
-										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div> -->
-									
-									<div class="content">
-										<p class="name">Revaty Pany</p>
-										<span class="designation">Managing Director, Ocasa Designs</span>
-									</div>
-								</div><br>
-								<div class="multi-testimonial-single-item__text">
-								Ms. Revati Pany is a veteran interior designer who caters to the varying aesthetics of her clientele. Having pursued a short course in Interior Design , she started creating furniture pieces in wood  and wrought iron for discerning clients . Popularity for her work grew , and she started creating and curating full interior spaces . Her love for art and craft helps give a distinct identity to all projects , whether contemporary or classic .
-								</div>
-							</div>
-						</div>
-						
-						<!--=======  End of single testimonial  =======-->
-
-						<!--=======  single testimonial  =======-->
-						
-						<div class="col">
-							<div class="testimonial-item multi-testimonial-single-item">
-								<div class="multi-testimonial-single-item__author-info">
-									<!-- <div class="image">
-										<img src="assets/images/testimonial/t3.jpg" style="width: 80px" class="img-fluid" alt="">
-									</div> -->
-									
-									<div class="content">
-										<p class="name">Debasish Patnaik</p>
-										<span class="designation">Founder, Vibe Furniture Studio</span>
+									</div><br>
+									<div class='multi-testimonial-single-item__text'>
+										$assc_rev
 									</div>
 								</div>
-								<br>
-								<div class="multi-testimonial-single-item__text">
-                                Debasish is an innovative manufacturer of contemporary furniture made of wood and wood- based products. Vibe Studio is a state-of-the-art furniture studio where the furniture is manufactured using German technology. Estética has been a furnishing partner for the studio and has also collaborated with Debasish for his interior projects.
-								</div>
-							</div>
-						</div>
+								";
+							
+							} 
+						?>
 						
+						
+
 						<!--=======  End of single testimonial  =======-->
 
 					</div>

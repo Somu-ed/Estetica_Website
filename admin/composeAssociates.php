@@ -5,15 +5,94 @@ if(isset($_POST['num_rows'])){
 	$per_page = $_POST['num_rows'];
 }
 else{
-	$per_page = 12;
+	$per_page = 1;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#add').click(function() {
+
+			var name = $("#name").val().trim();
+			var designation = $("#designation").val().trim();
+			var review = $("#review").val().trim();
+			if(name == "" || review == ""){
+				swal.fire({
+					text: "Some field are Empty !!",
+					icon: "error",
+					buttonsStyling: false,
+					confirmButtonText: "Try again!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					}
+				}).then(function() {
+					KTUtil.scrollTop();
+				});
+			} else {
+				swal.fire({
+				title: "Confirm Submission!!",
+				icon: "info",
+				showCancelButton: true,
+				confirmButtonText: "Confirm",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'add_associates_process.php',
+					type:'post',
+					data:{
+						name:name,
+						designation:designation,
+						review:review
+					},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Added Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "composeAssociates.php";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+			}
+			
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Posted Testimonials | Estetica</title>
+		<title>Associates - Compose | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -117,7 +196,7 @@ else{
 													<span class="menu-text">Blog</span>
 												</span>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item" aria-haspopup="true">
 												<a href="postedBlog?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -180,7 +259,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -202,7 +281,7 @@ else{
 													<span class="menu-text">Testimonials</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="postedTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -222,7 +301,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -254,7 +333,7 @@ else{
 													<span class="menu-text">Posted</span>
 												</a>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item-active" aria-haspopup="true">
 												<a href="composeAssociates" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -266,7 +345,7 @@ else{
 									</div>
 								</li>
 								
-								<li class="menu-item " aria-haspopup="true">
+								<li class="menu-item" aria-haspopup="true">
 									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -311,20 +390,19 @@ else{
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
 					<?php include 'includes/header.php'; ?>
-					<!--end::Header-->
-					<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Subheader-->
+                    <!--end::Header-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Subheader-->
 						<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Testimonials</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Associates - Compose</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#XRS-45671</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -332,251 +410,67 @@ else{
 							</div>
 						</div>
 						<!--end::Subheader-->
-						<!--begin::Entry-->
-						<div class="d-flex flex-column-fluid">
+                    <!--begin::Content-->
+                    <div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
 							<div class="container-fluid">
-								<!--begin::Row-->
 								<div class="row">
-									<!--begin::Col-->
-									<?php 
-									global $con;
-									$aWhere = array(); 
-			
-									if(isset($_GET['page'])){
-										$page = $_GET['page'];
-			
-									}
-									else{
-										$page=1;
-									}
-									
-									$start_from = ($page-1) * $per_page;
-									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
-									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM testimonials".$sWhere;
-									$fetch_fire = mysqli_query($con,$fetch);
-									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$test_id = $row['id'];
-										$test_name = $row['name'];
-										$test_designation = $row['designation'];
-										$test_review = $row['review'];
-
-										$length = 200;
-
-										if(strlen($test_review)<=$length)
-										  {
-											$desc = $test_review;
-										  }
-										  else
-										  {
-											$desc=substr($test_review,0,$length) . '...';
-										  }
-
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+									<div class="col-lg-12">
 										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::Toolbar-->
-												<div class='d-flex justify-content-end'>
-													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
-														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
-															<!--begin::Navigation-->
-															<ul class='navi navi-hover'>
-																<li class='navi-header pb-1'>
-																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-file-1'></i>
-																		</span>
-																		<span class='navi-text'>View</span>
-																	</a>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-edit'></i>
-																		</span>
-																		<span class='navi-text'>Edit</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
+										<div class="card card-custom gutter-b example example-compact">
+											<div class="card-header">
+												<h3 class="card-title">Add Associates Details</h3>
 												
-												<p class='mb-7' style='text-align: justify;'>$desc</p>
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a>-->
-												<!--end::Desc-->
-												<!--begin::Info-->
-												<div class='mb-7'>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Name:</span>
-														<a class='text-muted text-hover-primary'>$test_name</a>
+											</div>
+											<!--begin::Form-->
+											<form class="form">
+												<div class="card-body">
+													<div class="form-group row">
+														<div class="col-lg-6">
+															<label>Full Name <span style="color: #F64E60;">*<span></label>
+															<input type="text" id="name" class="form-control" placeholder="Enter full name" required/>
+															<br>
+														</div>
+														<div class="col-lg-6">
+															<label>Designation</label>
+															<input type="text" id="designation" class="form-control" placeholder="Enter contact number" />
+															<br>
+														</div>
+														<div class="col-lg-12">
+															<label >About <span style="color: #F64E60;">*<span></label>
+
+															<textarea class="form-control" id="review" maxlength="500"  placeholder="" rows="6"></textarea>
+															<span class="form-text text-muted">Enter text within 50 words</span>
+															
+														</div>
 													</div>
-													<div class='d-flex justify-content-between align-items-cente my-1'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Designation:</span>
-														<a class='text-muted text-hover-primary'>$test_designation</a>
+                                                    <div class="form-group row">
+														
+                                                    </div>
+													<!-- begin: Example Code-->
+													
+													<!-- end: Example Code-->
+												</div>
+												<div class="card-footer">
+													<div class="row">
+														<div class="col-lg-6">
+															
+														</div>
+														<div class="col-lg-6 text-right">
+															<button type="button" id="add" class="btn btn-danger">ADD</button>
+														</div>
 													</div>
 												</div>
-												<!--end::Info-->
-												<a href='view_post.php?blog_id=$test_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>DELETE</a>
-											</div>
-											<!--end::Body-->
+											</form>
+											<!--end::Form-->
 										</div>
-										<!--end:: Card-->
-									</div>"); 
-									} ?>
-									<!--end::Col-->
-								</div>
-								<!--end::Row-->
-								<!--begin::Pagination-->
-								<script src="assets/js/jquery-3.5.1.min.js"></script>
-								<script>
-									$(document).ready(function(){
-										// Number of rows selection
-                                        $("#num_rows").change(function(){
-											// Submitting form
-											$("#form").submit();
-										});
-									});
-								</script>
-
-								<div class="card card-custom">
-									<div class="card-body py-7">
-										<!--begin::Pagination-->
-										<?php
-										global $con;
-										if(isset($_GET['page'])){
-
-											$page = $_GET['page'];
-									
-										}else{
-											$page=1;
-										}
-									
-										//$per_page=1;
-										$aWhere = array();
-										$aPath = '';
-															
-										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM testimonials".$sWhere;
-										$result = mysqli_query($con,$query);
-										$total_records = mysqli_num_rows($result);
-                                        $total_pages = ceil($total_records / $per_page);
-                                        if($total_records < $per_page){
-                                            $display = $total_records;
-                                        } else {
-                                            $display = $per_page;
-                                        }
-										$prev = $page -1;
-
-										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
-										<div class='d-flex flex-wrap mr-3'>";
-										if($page>1){
-											echo"
-											<a href='postedTestimonial?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a href='postedTestimonial?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										else{
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										for($i=1; $i<=$total_pages; $i++){
-											if($i == $page){
-												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
-												";
-											}
-											else{
-												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
-												";
-											}
-										}
-										if($page == $total_pages){
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-										else{
-											$next = $page+1;
-											echo"
-											<a href='postedTestimonial?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a href='postedTestimonial?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-
-										echo"
-										</div>
-										<div class='d-flex align-items-center'>
-										<form action='postedTestimonial' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
-											$numrows_arr = array("12","24");
-											foreach($numrows_arr as $nrow){
-												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
-													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
-												}
-												else{
-													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
-												}
-											}
-											echo"</select>
-										</form>
-											<span class='text-muted'>Displaying $display of $total_records records</span>
-										</div>
-									</div>";
-										?>
-										
-										<!--end:: Pagination-->
+										<!--end::Card-->
 									</div>
-                                </div>
-                                <br>
-								<!--end::Pagination-->
+								</div>
 							</div>
 							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
-					</div>
-					<!--end::Content-->
+                    <!--end::Content-->
 					<!--begin::Footer-->
 					<?php include 'includes/footer.php'; ?>
 					<!--end::Footer-->
@@ -612,7 +506,7 @@ else{
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->
