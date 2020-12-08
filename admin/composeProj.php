@@ -123,14 +123,14 @@ else{
         
         <style>
             input[type="file"] {
-    display: none;
-}
-.custom-file-upload {
-    border: 1px solid #ccc;
-    display: inline-block;
-    padding: 6px 12px;
-    cursor: pointer;
-}
+				display: none;
+			}
+			.custom-file-upload {
+				border: 1px solid #ccc;
+				display: inline-block;
+				padding: 6px 12px;
+				cursor: pointer;
+			}
         </style>
 	</head>
     <!--end::Head-->
@@ -428,17 +428,15 @@ else{
 								<div class="row">
 									<div class="col-lg-12">
 										<!--begin::Card-->
-										<div class="card card-custom gutter-b example example-compact">
+										<div class="card card-custom gutter-b card-stretch">
 											<div class="card-header">
-												<h3 class="card-title">Add Project</h3>
-												
+												<h3 class="card-title">Add Project</h3>	
 											</div>
 
 											<script>
 												$(document).ready(function(){
 													$('input[type="file"]').change(function(e){
 														var fileName = e.target.files[0].name;
-														// alert('The file "' + fileName +  '" has been selected.');
 														document.getElementById("choosen_file").innerHTML = fileName;
 													});
 												});
