@@ -47967,8 +47967,8 @@ code {
     max-width: auto; }
   .symbol.symbol-50 > img {
     width: 100%;
-    max-width: 50px;
-    height: 50px; }
+    max-width: 180px;
+    height: 75px; }
   .symbol.symbol-50 .symbol-label {
     width: 50px;
     height: 50px; }
@@ -50666,7 +50666,7 @@ code {
     .symbol.symbol-lg-120 > img {
       width: 100%;
       max-width: 225px;
-      height: 120px; }
+      height: 100px; }
     .symbol.symbol-lg-120 .symbol-label {
       width: 120px;
       height: 120px; }

@@ -5,15 +5,99 @@ if(isset($_POST['num_rows'])){
 	$per_page = $_POST['num_rows'];
 }
 else{
-	$per_page = 12;
+	$per_page = 1;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#add').click(function() {
+			// var img = $("#img").val().trim();
+			var fd = new FormData();
+
+            var category = $(".category:checked").val();
+			var files = $('#file')[0].files;
+
+			if(category == "" || files.length == 0 ){
+				swal.fire({
+					text: "Some field are Empty !!",
+					icon: "error",
+					buttonsStyling: false,
+					confirmButtonText: "Try again!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					}
+				}).then(function() {
+					KTUtil.scrollTop();
+				});
+			} else {
+				fd.append('file',files[0]);
+                fd.append('category',category);
+
+				console.log(fd, category, files);
+
+				swal.fire({
+				title: "Confirm Submission!!",
+				icon: "info",
+				showCancelButton: true,
+				confirmButtonText: "Confirm",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'add_CB_process.php',
+					type:'post',
+					data:fd,
+					contentType: false,
+					processData: false,
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Added Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "composeCB.php";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+			}
+			
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Posted Testimonials | Estetica</title>
+		<title>Brands | Clients - Compose | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -33,7 +117,19 @@ else{
 		<link href="assets/css/themes/layout/brand/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+        <link rel="shortcut icon" href="assets/media/favicon.svg" />
+        
+        <style>
+            input[type="file"] {
+				display: none;
+			}
+			.custom-file-upload {
+				border: 1px solid #ccc;
+				display: inline-block;
+				padding: 6px 12px;
+				cursor: pointer;
+			}
+        </style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -117,7 +213,7 @@ else{
 													<span class="menu-text">Blog</span>
 												</span>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item" aria-haspopup="true">
 												<a href="postedBlog?page=1" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -137,7 +233,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Clipboard.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -180,7 +276,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -202,7 +298,7 @@ else{
 													<span class="menu-text">Testimonials</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="postedTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -264,9 +360,9 @@ else{
 											</li>
 										</ul>
 									</div>
-								</li>
-
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                </li>
+                                
+                                <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Clipboard.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -303,7 +399,7 @@ else{
 													<span class="menu-text">Clients</span>
 												</a>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item-active" aria-haspopup="true">
 												<a href="composeCB" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -315,7 +411,7 @@ else{
 									</div>
 								</li>
 								
-								<li class="menu-item " aria-haspopup="true">
+								<li class="menu-item" aria-haspopup="true">
 									<a href="contact.php" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -360,20 +456,19 @@ else{
 				<div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
 					<!--begin::Header-->
 					<?php include 'includes/header.php'; ?>
-					<!--end::Header-->
-					<!--begin::Content-->
-					<div class="content d-flex flex-column flex-column-fluid" id="kt_content">
-						<!--begin::Subheader-->
+                    <!--end::Header-->
+                    <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                    <!--begin::Subheader-->
 						<div class="subheader py-2 py-lg-4 subheader-solid" id="kt_subheader">
 							<div class="container-fluid d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Testimonials</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Partner Brands | Clients</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#XRS-45671</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -381,251 +476,97 @@ else{
 							</div>
 						</div>
 						<!--end::Subheader-->
-						<!--begin::Entry-->
-						<div class="d-flex flex-column-fluid">
+                    <!--begin::Content-->
+                    <div class="d-flex flex-column-fluid">
 							<!--begin::Container-->
 							<div class="container-fluid">
-								<!--begin::Row-->
 								<div class="row">
-									<!--begin::Col-->
-									<?php 
-									global $con;
-									$aWhere = array(); 
-			
-									if(isset($_GET['page'])){
-										$page = $_GET['page'];
-			
-									}
-									else{
-										$page=1;
-									}
-									
-									$start_from = ($page-1) * $per_page;
-									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
-									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM testimonials".$sWhere;
-									$fetch_fire = mysqli_query($con,$fetch);
-									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$test_id = $row['id'];
-										$test_name = $row['name'];
-										$test_designation = $row['designation'];
-										$test_review = $row['review'];
-
-										$length = 200;
-
-										if(strlen($test_review)<=$length)
-										  {
-											$desc = $test_review;
-										  }
-										  else
-										  {
-											$desc=substr($test_review,0,$length) . '...';
-										  }
-
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+									<div class="col-xl-12 col-lg-12 col-md-6 col-sm-6">
 										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::Toolbar-->
-												<div class='d-flex justify-content-end'>
-													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
-														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
-															<!--begin::Navigation-->
-															<ul class='navi navi-hover'>
-																<li class='navi-header pb-1'>
-																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-file-1'></i>
-																		</span>
-																		<span class='navi-text'>View</span>
-																	</a>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-edit'></i>
-																		</span>
-																		<span class='navi-text'>Edit</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
-												
-												<p class='mb-7' style='text-align: justify;'>$desc</p>
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a>-->
-												<!--end::Desc-->
-												<!--begin::Info-->
-												<div class='mb-7'>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Name:</span>
-														<a class='text-muted text-hover-primary'>$test_name</a>
-													</div>
-													<div class='d-flex justify-content-between align-items-cente my-1'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Designation:</span>
-														<a class='text-muted text-hover-primary'>$test_designation</a>
-													</div>
-												</div>
-												<!--end::Info-->
-												<a href='view_post.php?blog_id=$test_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>DELETE</a>
+										<div class="card card-custom gutter-b card-stretch">
+											<div class="card-header">
+												<h3 class="card-title">Add Partner Brand</h3>	
 											</div>
-											<!--end::Body-->
-										</div>
-										<!--end:: Card-->
-									</div>"); 
-									} ?>
-									<!--end::Col-->
-								</div>
-								<!--end::Row-->
-								<!--begin::Pagination-->
-								<script src="assets/js/jquery-3.5.1.min.js"></script>
-								<script>
-									$(document).ready(function(){
-										// Number of rows selection
-                                        $("#num_rows").change(function(){
-											// Submitting form
-											$("#form").submit();
-										});
-									});
-								</script>
 
-								<div class="card card-custom">
-									<div class="card-body py-7">
-										<!--begin::Pagination-->
-										<?php
-										global $con;
-										if(isset($_GET['page'])){
+											<script>
+												$(document).ready(function(){
+													$('input[type="file"]').change(function(e){
+														var fileName = e.target.files[0].name;
+														document.getElementById("choosen_file").innerHTML = fileName;
+													});
+												});
+											</script>
 
-											$page = $_GET['page'];
-									
-										}else{
-											$page=1;
-										}
-									
-										//$per_page=1;
-										$aWhere = array();
-										$aPath = '';
+											<!--begin::Form-->
+											<form method="post" class="form" enctype="multipart/form-data">
+												<div class="card-body">
+													<div class="form-group row">
+													
+														<div class="col-lg-6">
+                                                        <label >Cover Image <span style="color: #F64E60;">*<span></label>
+															<label class="form-control btn btn-light-success font-weight-bold mr-2">
+                                                            <span class="svg-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Files\Upload.svg-->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                                    <path d="M2,13 C2,12.5 2.5,12 3,12 C3.5,12 4,12.5 4,13 C4,13.3333333 4,15 4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 C2,15 2,13.3333333 2,13 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                                                                    <rect fill="#000000" opacity="0.3" x="11" y="2" width="2" height="14" rx="1"/>
+                                                                    <path d="M12.0362375,3.37797611 L7.70710678,7.70710678 C7.31658249,8.09763107 6.68341751,8.09763107 6.29289322,7.70710678 C5.90236893,7.31658249 5.90236893,6.68341751 6.29289322,6.29289322 L11.2928932,1.29289322 C11.6689749,0.916811528 12.2736364,0.900910387 12.6689647,1.25670585 L17.6689647,5.75670585 C18.0794748,6.12616487 18.1127532,6.75845471 17.7432941,7.16896473 C17.3738351,7.57947475 16.7415453,7.61275317 16.3310353,7.24329415 L12.0362375,3.37797611 Z" fill="#000000" fill-rule="nonzero"/>
+                                                                </g>
+                                                            </svg><!--end::Svg Icon--></span>    
+                                                            Upload Image
+                                                            <input style="border: none;" type="file" id="file" class="form-control" placeholder="Enter contact number" />
+                                                            </label>
+															<a style="cursor: pointer; color: gray;" class="btn btn-outline-light">
+																<i style="color: gray;" class="flaticon2-image-file"></i> <span style="align-items: center;" id="choosen_file">No File Chosen </span>
+															</a>
+															<br><br>
+                                                        </div>
+
+                                                        <div class="col-lg-6">
+                                                            <label>Choose the category <span style="color: #F64E60;">*<span></label>
+                                                            <div class="col-9 col-form-label" >
+                                                                <div class="radio-inline" style="justify-content: space-between;">
+                                                                    <label class="radio radio-outline radio-success">
+                                                                        <input type="radio" class="category" name="category" value="brand"/>
+                                                                        <span></span>
+                                                                        Partner Brands
+                                                                    </label>
+                                                                    <label class="radio radio-outline radio-success">
+                                                                        <input type="radio" class="category" name="category" value="client" />
+                                                                        <span></span>
+                                                                        Clients
+                                                                    </label>
+                                                                </div>
+                                                                <!-- <span class="form-text text-muted">Some help text goes here</span> -->
+                                                            </div>
+                                                        </div>
+														
+													</div>
+													<!-- begin: Example Code-->
+													
+													<!-- end: Example Code-->
+												</div>
+												<div class="card-footer">
+													<div class="row">
+														<div class="col-lg-6">
 															
-										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM testimonials".$sWhere;
-										$result = mysqli_query($con,$query);
-										$total_records = mysqli_num_rows($result);
-                                        $total_pages = ceil($total_records / $per_page);
-                                        if($total_records < $per_page){
-                                            $display = $total_records;
-                                        } else {
-                                            $display = $per_page;
-                                        }
-										$prev = $page -1;
-
-										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
-										<div class='d-flex flex-wrap mr-3'>";
-										if($page>1){
-											echo"
-											<a href='postedTestimonial?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a href='postedTestimonial?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										else{
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-double-arrow-back icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color:grey;' class='ki ki-bold-arrow-back icon-xs'></i>
-											</a>";
-										}
-										for($i=1; $i<=$total_pages; $i++){
-											if($i == $page){
-												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
-												";
-											}
-											else{
-												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
-												";
-											}
-										}
-										if($page == $total_pages){
-											echo"
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a style='pointer-events: none;' class='btn btn-icon btn-sm btn-light-light mr-2 my-1'>
-												<i style='color: grey;' class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-										else{
-											$next = $page+1;
-											echo"
-											<a href='postedTestimonial?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-arrow-next icon-xs'></i>
-											</a>
-											<a href='postedTestimonial?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
-												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
-											</a>";
-										}
-
-										echo"
+														</div>
+														<div class="col-lg-6 text-right">
+															<button type="button" id="add" class="btn btn-danger">ADD</button>
+														</div>
+													</div>
+												</div>
+											</form>
+											<!--end::Form-->
 										</div>
-										<div class='d-flex align-items-center'>
-										<form action='postedTestimonial' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
-											$numrows_arr = array("12","24");
-											foreach($numrows_arr as $nrow){
-												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
-													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
-												}
-												else{
-													echo '<option value="'.$nrow.'">'.$nrow.'</option>';
-												}
-											}
-											echo"</select>
-										</form>
-											<span class='text-muted'>Displaying $display of $total_records records</span>
-										</div>
-									</div>";
-										?>
-										
-										<!--end:: Pagination-->
-									</div>
-                                </div>
-                                <br>
-								<!--end::Pagination-->
+                                        <!--end::Card-->
+                                    </div>
+								</div>
 							</div>
 							<!--end::Container-->
 						</div>
-						<!--end::Entry-->
-					</div>
-					<!--end::Content-->
+                    <!--end::Content-->
 					<!--begin::Footer-->
 					<?php include 'includes/footer.php'; ?>
 					<!--end::Footer-->
@@ -661,7 +602,7 @@ else{
 		<script src="assets/plugins/global/plugins.bundle.js?v=7.0.5"></script>
 		<script src="assets/plugins/custom/prismjs/prismjs.bundle.js?v=7.0.5"></script>
 		<script src="assets/js/scripts.bundle.js?v=7.0.5"></script>
-		<script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
+        <script src="assets/js/pages/features/miscellaneous/sweetalert2.js?v=7.0.5"></script>
 		<!--end::Global Theme Bundle-->
 	</body>
 	<!--end::Body-->

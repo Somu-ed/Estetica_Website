@@ -22,7 +22,7 @@
                     <a href="#" class="navi-item">
                         <span class="navi-link p-0 pb-2">
                             <span class="navi-icon mr-1">
-                                <span class="svg-icon svg-icon-lg svg-icon-primary">
+                                <span class="svg-icon svg-icon-lg svg-icon-danger">
                                     <!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Mail-notification.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -37,7 +37,7 @@
                             <span class="navi-text text-muted text-hover-primary"><?php echo("$id"); ?></span>
                         </span>
                     </a>
-                    <a href="logout.php" class="btn btn-sm btn-light-primary font-weight-bolder py-2 px-5">Sign Out</a>
+                    <a href="logout.php" class="btn btn-sm btn-light-danger font-weight-bolder py-2 px-5">Sign Out</a>
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
-                            <span class="svg-icon svg-icon-md svg-icon-success">
+                            <span class="svg-icon svg-icon-md svg-icon-danger">
                                 <!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
                                     <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">

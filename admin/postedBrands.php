@@ -13,7 +13,7 @@ else{
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Posted Testimonials | Estetica</title>
+		<title>Partner Brands | Estetica</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -180,7 +180,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -202,7 +202,7 @@ else{
 													<span class="menu-text">Testimonials</span>
 												</span>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="postedTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -266,7 +266,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Clipboard.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -287,7 +287,7 @@ else{
 													<span class="menu-text">Brands | Clients</span>
 												</span>
 											</li>
-											<li class="menu-item" aria-haspopup="true">
+											<li class="menu-item menu-item-active" aria-haspopup="true">
 												<a href="postedBrands" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -369,7 +369,7 @@ else{
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Posted Testimonials</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Partner Brands</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -403,100 +403,43 @@ else{
 									$start_from = ($page-1) * $per_page;
 									$sLimit = " order by 1 DESC LIMIT $start_from,$per_page";
 									$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'').$sLimit;
-									$fetch = "SELECT * FROM testimonials".$sWhere;
-									$fetch_fire = mysqli_query($con,$fetch);
-									while ($row = mysqli_fetch_array($fetch_fire)) {
-										$test_id = $row['id'];
-										$test_name = $row['name'];
-										$test_designation = $row['designation'];
-										$test_review = $row['review'];
+									$brand_query = "SELECT * FROM partner_brands".$sWhere;
+									$brand_fire = mysqli_query($con,$brand_query);
+									while ($brand = mysqli_fetch_array($brand_fire)) {
+										$brand_id = $brand['id'];
+										$brand_img = $brand['img'];
 
-										$length = 200;
-
-										if(strlen($test_review)<=$length)
-										  {
-											$desc = $test_review;
-										  }
-										  else
-										  {
-											$desc=substr($test_review,0,$length) . '...';
-										  }
-
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
-										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
-											<!--begin::Body-->
-											<div class='card-body pt-4'>
-												<!--begin::Toolbar-->
-												<div class='d-flex justify-content-end'>
-													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
-														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
-															<!--begin::Navigation-->
-															<ul class='navi navi-hover'>
-																<li class='navi-header pb-1'>
-																	<span class='text-primary text-uppercase font-weight-bold font-size-sm'>Actions:</span>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-file-1'></i>
-																		</span>
-																		<span class='navi-text'>View</span>
-																	</a>
-																</li>
-																<li class='navi-item'>
-																	<a href='#' class='navi-link'>
-																		<span class='navi-icon'>
-																			<i class='flaticon2-edit'></i>
-																		</span>
-																		<span class='navi-text'>Edit</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
-												<!--end::Toolbar-->
-												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
-													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
-														</div>
-													</div>-->
-													<!--end::Pic-->
-													<!--begin::Title-->
-													<!--end::Title-->
-												</div>
-												<!--end::User-->
-												<!--begin::Desc-->
-												
-												<p class='mb-7' style='text-align: justify;'>$desc</p>
-												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a>-->
-												<!--end::Desc-->
-												<!--begin::Info-->
-												<div class='mb-7'>
-													<div class='d-flex justify-content-between align-items-center'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Name:</span>
-														<a class='text-muted text-hover-primary'>$test_name</a>
-													</div>
-													<div class='d-flex justify-content-between align-items-cente my-1'>
-														<span class='text-dark-75 font-weight-bolder mr-2'>Designation:</span>
-														<a class='text-muted text-hover-primary'>$test_designation</a>
-													</div>
-												</div>
-												<!--end::Info-->
-												<a href='view_post.php?blog_id=$test_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>DELETE</a>
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end:: Card-->
-									</div>"); 
+                                        echo("
+                                        <div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+                                        <!--begin::Card-->
+                                        <div class='card card-custom gutter-b card-stretch'>
+                                            <div class='card-body'>
+                                            <div class='d-flex' style='justify-content: center;'>
+                                                <!--begin: Pic-->
+                                                <div class='flex-shrink-0 mr-7 mt-lg-0 mt-3'>
+                                                <div class='symbol symbol-50 symbol-lg-120'>
+                                                    <img
+                                                    style='object-fit: cover;'
+                                                    alt='Pic'
+                                                    src='../assets/images/brands/$brand_img'
+                                                    />
+                                                </div>
+                                                <div
+                                                    class='symbol symbol-50 symbol-lg-120 symbol-primary d-none'
+                                                >
+                                                    <span
+                                                    class='font-size-h3 symbol-label font-weight-boldest'
+                                                    >JM</span
+                                                    >
+                                                </div>
+                                                </div>
+                                                <!--end: Pic-->
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <!--end::Card-->
+                                        </div>
+                                        "); 
 									} ?>
 									<!--end::Col-->
 								</div>
@@ -531,7 +474,7 @@ else{
 										$aPath = '';
 															
 										$sWhere = (count($aWhere)>0?' WHERE '.implode(' or ',$aWhere):'');
-										$query = "SELECT * FROM testimonials".$sWhere;
+										$query = "SELECT * FROM partner_brands".$sWhere;
 										$result = mysqli_query($con,$query);
 										$total_records = mysqli_num_rows($result);
                                         $total_pages = ceil($total_records / $per_page);
@@ -546,10 +489,10 @@ else{
 										<div class='d-flex flex-wrap mr-3'>";
 										if($page>1){
 											echo"
-											<a href='postedTestimonial?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedBrands?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
 											</a>
-											<a href='postedTestimonial?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedBrands?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-back icon-xs'></i>
 											</a>";
 										}
@@ -565,12 +508,12 @@ else{
 										for($i=1; $i<=$total_pages; $i++){
 											if($i == $page){
 												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
+												  <a href='postedBrands?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
 												";
 											}
 											else{
 												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
+												  <a href='postedBrands?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
 												";
 											}
 										}
@@ -586,10 +529,10 @@ else{
 										else{
 											$next = $page+1;
 											echo"
-											<a href='postedTestimonial?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedBrands?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-next icon-xs'></i>
 											</a>
-											<a href='postedTestimonial?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedBrands?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
 											</a>";
 										}
@@ -597,7 +540,7 @@ else{
 										echo"
 										</div>
 										<div class='d-flex align-items-center'>
-										<form action='postedTestimonial' method='post' id='form'>
+										<form action='postedBrands' method='post' id='form'>
 											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
 											$numrows_arr = array("12","24");
 											foreach($numrows_arr as $nrow){
