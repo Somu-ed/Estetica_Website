@@ -5,7 +5,7 @@ if(isset($_POST['num_rows'])){
 	$per_page = $_POST['num_rows'];
 }
 else{
-	$per_page = 1;
+	$per_page = 60;
 }
 ?>
 
@@ -14,9 +14,11 @@ else{
 <script>
 	$(document).ready(function() {
 
-		$('#delete').click(function() {
+		$('.delete').click(function() {
 
-			var nl_id = $("#nl_id").val().trim();     
+			var nl_id= $(this).attr('id'); 
+			console.log(nl_id);
+
 				swal.fire({
 				title: "Are you sure?",
 				text: "Once deleted, you will not be able to recover this data!",
@@ -511,11 +513,13 @@ else{
 
 										$length = 100;
 
-										echo("<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
+										echo("
+										<div class='col-xl-4 col-lg-6 col-md-6 col-sm-6'>
 										<!--begin::Card-->
-										<div class='card card-custom gutter-b card-stretch'>
+										<div class='card card-custom gutter-b'>
 											<!--begin::Body-->
 											<div class='card-body pt-4'>
+												
 												<!--begin::User-->
 												<div class='d-flex align-items-center mb-7'>
 													<!--begin::Pic-->
@@ -530,16 +534,18 @@ else{
 												</div>
 												<!--end::User-->
 												<!--begin::Desc-->
-												<a href='#' class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$nl_mail</a><br><br>
+												<a class='text-dark font-weight-bold text-hover-primary font-size-h4 mb-0'>$nl_mail</a><br><br>
+												<!--<a href='#' class='text-primary pr-1'>#xrs-54pq</a></p>-->
+												<!--end::Desc-->
 												<form>
-                                                    <input type='hidden' id='nl_id' value='$nl_id'>
-													<a class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4' type='button' id='delete'>Delete</a>
+													<button class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4 delete' id='$nl_id' type='button' >Delete</button>
 												</form>
 											</div>
 											<!--end::Body-->
 										</div>
 										<!--end:: Card-->
-									</div>"); 
+									</div>
+										"); 
 									} ?>
 									<!--end::Col-->
 								</div>
@@ -578,6 +584,11 @@ else{
 										$result = mysqli_query($con,$query);
 										$total_records = mysqli_num_rows($result);
 										$total_pages = ceil($total_records / $per_page);
+										if($total_records < $per_page){
+                                            $display = $total_records;
+                                        } else {
+                                            $display = $per_page;
+                                        }
 										$prev = $page -1;
 
 										echo"<div class='d-flex justify-content-between align-items-center flex-wrap'>
@@ -637,7 +648,7 @@ else{
 										<div class='d-flex align-items-center'>
 										<form action='newsletter.php' method='post' id='form'>
 											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
-											$numrows_arr = array("1","2");
+											$numrows_arr = array("60","120","180");
 											foreach($numrows_arr as $nrow){
 												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
 													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
@@ -648,7 +659,7 @@ else{
 											}
 											echo"</select>
 										</form>
-											<span class='text-muted'>Displaying $per_page of $total_records records</span>
+											<span class='text-muted'>Displaying $display of $total_records records</span>
 										</div>
 									</div>";
 										?>

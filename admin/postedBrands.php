@@ -8,6 +8,65 @@ else{
 	$per_page = 12;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('.delete').click(function() {
+
+			var del_id= $(this).attr('id');
+			swal.fire({
+				title: "Are you sure?",
+				text: "Once deleted, you will not be able to recover this data!",
+				icon: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Yes, delete it!",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'brand_del_process.php',
+					type:'post',
+					data:{del_id:del_id},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Response Deleted Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "postedBrands";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
@@ -458,13 +517,17 @@ else{
                                             <div class='d-flex' style='justify-content: center;'>
                                                 <!--begin: Pic-->
                                                 <div class='flex-shrink-0 mr-7 mt-lg-0 mt-3'>
-                                                <div class='symbol symbol-50 symbol-lg-120'>
-                                                    <img
-                                                    style='object-fit: cover;'
-                                                    alt='Pic'
-                                                    src='../assets/images/brands/$brand_img'
-                                                    />
-                                                </div>
+													<div class='symbol symbol-50 symbol-lg-120' style='margin-bottom: 20px;'>
+														<img
+														style='object-fit: cover;'
+														alt='Pic'
+														src='../assets/images/brands/$brand_img'
+														/>
+													</div>
+													
+													<form>
+														<button class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4 delete' id='$brand_id' type='button' >Delete</button>
+													</form>
                                                 <div
                                                     class='symbol symbol-50 symbol-lg-120 symbol-primary d-none'
                                                 >

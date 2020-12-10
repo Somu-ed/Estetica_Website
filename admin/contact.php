@@ -14,9 +14,9 @@ else{
 <script>
 	$(document).ready(function() {
 
-		$('#delete').click(function() {
+		$('.delete').click(function() {
 
-			var del_id = $("#del_id").val().trim();
+			var del_id= $(this).attr('id');
 			swal.fire({
 				title: "Are you sure?",
 				text: "Once deleted, you will not be able to recover this data!",
@@ -42,7 +42,7 @@ else{
 								confirmButton: "btn font-weight-bold btn-light-success"
 							}
 						}).then(function() {
-							window.location = "contact.php";
+							window.location = "contact";
 						});
 							
 						}
@@ -549,8 +549,7 @@ else{
                                                     </div>
                                                     <div class='my-lg-0 my-1'>
                                                     <form>
-                                                        <input type='hidden' id='del_id' value='$cont_id'>
-                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase' type='button' id='delete'>Delete</button>
+                                                        <button class='btn btn-sm btn-light-danger font-weight-bolder text-uppercase delete' type='button' id='$cont_id'>Delete</button>
                                                     </form>
                                                     </div>
                                                 </div>
