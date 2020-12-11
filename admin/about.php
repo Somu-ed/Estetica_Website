@@ -16,10 +16,14 @@ else{
 
 		$('#add').click(function() {
 
-			var name = $("#name").val().trim();
-			var designation = $("#designation").val().trim();
-			var review = $("#review").val().trim();
-			if(name == "" || review == ""){
+			var fd = new FormData();
+
+			var story = $("#story").val();
+            var approach = $("#approach").val();
+            var mission = $("#mission").val();
+            var vision = $("#vision").val();
+
+			if(story == "" || approach == "" || mission == "" || vision == "" ){
 				swal.fire({
 					text: "Some field are Empty !!",
 					icon: "error",
@@ -32,6 +36,13 @@ else{
 					KTUtil.scrollTop();
 				});
 			} else {
+				fd.append('story',story);
+                fd.append('approach',approach);
+                fd.append('mission',mission);
+                fd.append('vision',vision);
+
+				console.log(fd, story, approach, mission, vision);
+
 				swal.fire({
 				title: "Confirm Submission!!",
 				icon: "info",
@@ -42,17 +53,15 @@ else{
 				.then((result) => {
 					if (result.value) {
 				$.ajax({
-					url:'add_testimonial_process.php',
+					url:'add_about_process.php',
 					type:'post',
-					data:{
-						name:name,
-						designation:designation,
-						review:review
-					},
+					data:fd,
+					contentType: false,
+					processData: false,
 					success:function(response){
 						if(response == 1){
 							swal.fire({
-							text: "Added Successfully!!",
+							text: "Updated Successfully!!",
 							icon: "success",
 							buttonsStyling: false,
 							confirmButtonText: "Okay!",
@@ -60,7 +69,7 @@ else{
 								confirmButton: "btn font-weight-bold btn-light-success"
 							}
 						}).then(function() {
-							window.location = "composeTestimonial.php";
+							window.location = "about";
 						});
 							
 						}
@@ -92,7 +101,7 @@ else{
 	<!--begin::Head-->
 	<head><base href="">
 		<meta charset="utf-8" />
-		<title>Testimonials - Compose | Estetica Admin</title>
+		<title>Projects - Compose | Estetica Admin</title>
 		<meta name="description" content="Updates and statistics" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 		<!--begin::Fonts-->
@@ -112,7 +121,19 @@ else{
 		<link href="assets/css/themes/layout/brand/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
-		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+        <link rel="shortcut icon" href="assets/media/favicon.svg" />
+        
+        <style>
+            input[type="file"] {
+				display: none;
+			}
+			.custom-file-upload {
+				border: 1px solid #ccc;
+				display: inline-block;
+				padding: 6px 12px;
+				cursor: pointer;
+			}
+        </style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -257,7 +278,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
+                                <li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
                                     <span class="svg-icon menu-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Clipboard.svg-->
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -300,7 +321,7 @@ else{
 									</div>
 								</li>
 
-								<li class="menu-item menu-item-submenu menu-item-open menu-item-here" aria-haspopup="true" data-menu-toggle="hover">
+								<li class="menu-item menu-item-submenu" aria-haspopup="true" data-menu-toggle="hover">
 									<a href="javascript:;" class="menu-link menu-toggle">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\General\Star.svg-->
@@ -330,7 +351,7 @@ else{
 													<span class="menu-text">Posted</span>
 												</a>
 											</li>
-											<li class="menu-item menu-item-active" aria-haspopup="true">
+											<li class="menu-item" aria-haspopup="true">
 												<a href="composeTestimonial" class="menu-link">
 													<i class="menu-bullet menu-bullet-dot">
 														<span></span>
@@ -434,8 +455,8 @@ else{
 										</ul>
 									</div>
 								</li>
-
-								<li class="menu-item" aria-haspopup="true">
+                                
+                                <li class="menu-item menu-item-active" aria-haspopup="true">
 									<a href="about" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
@@ -452,7 +473,7 @@ else{
 										<span class="menu-text">About us</span>
 									</a>
 								</li>
-								
+
 								<li class="menu-item" aria-haspopup="true">
 									<a href="contact" class="menu-link">
 										<span class="svg-icon menu-icon">
@@ -506,7 +527,7 @@ else{
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Testimonials - Compose</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Projects - Compose</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -525,31 +546,59 @@ else{
 								<div class="row">
 									<div class="col-lg-12">
 										<!--begin::Card-->
-										<div class="card card-custom gutter-b example example-compact">
+										<div class="card card-custom gutter-b card-stretch">
 											<div class="card-header">
-												<h3 class="card-title">Add Testimonial</h3>
-												
+												<h3 class="card-title">Add Project</h3>	
 											</div>
+
+											<script>
+												$(document).ready(function(){
+													$('input[type="file"]').change(function(e){
+														var fileName = e.target.files[0].name;
+														document.getElementById("choosen_file").innerHTML = fileName;
+													});
+												});
+											</script>
+
 											<!--begin::Form-->
-											<form class="form">
+											<form method="post" class="form" enctype="multipart/form-data">
 												<div class="card-body">
 													<div class="form-group row">
-														<div class="col-lg-6">
-															<label>Full Name <span style="color: #F64E60;">*<span></label>
-															<input type="text" id="name" class="form-control" placeholder="Enter full name" required/>
-															<br>
-														</div>
-														<div class="col-lg-6">
-															<label>Designation</label>
-															<input type="text" id="designation" class="form-control" placeholder="Enter contact number" />
-															<br>
-														</div>
-														<div class="col-lg-12">
-															<label >Review <span style="color: #F64E60;">*<span></label>
+                                                        <?php
+                                                            $about_query = "SELECT * FROM about";
+                                                            $about_fire = mysqli_query($con,$about_query);
+                                                            while ($about = mysqli_fetch_array($about_fire)) {
+                                                                $about_id = $about['id'];
+                                                                $about_story = $about['story'];
+                                                                $about_approach = $about['approach'];
+                                                                $about_mission = $about['mission'];
+                                                                $about_vision = $about['vision'];
+                                                            }
+                                                        ?>
+														
+														<div class="col-lg-12" style="margin-bottom: 15px;">
+															<label >Our Story <span style="color: #F64E60;">*<span></label>
 
-															<textarea class="form-control" id="review" maxlength="500"  placeholder="" rows="6"></textarea>
-															<span class="form-text text-muted">Enter text within 50 words</span>
-															
+															<textarea class="form-control" id="story" maxlength="700"  placeholder="" rows="6" ><?php echo"$about_story"; ?></textarea>
+															<span class="form-text text-muted"></span>
+														</div>
+                                                        <div class="col-lg-12" style="margin-bottom: 15px;">
+															<label >Our Approach <span style="color: #F64E60;">*<span></label>
+
+															<textarea class="form-control" id="approach" maxlength="700"  placeholder="" rows="6"><?php echo"$about_approach"; ?></textarea>
+															<span class="form-text text-muted"></span>
+														</div>
+                                                        <div class="col-lg-12" style="margin-bottom: 15px;">
+															<label >Our Mission <span style="color: #F64E60;">*<span></label>
+
+															<textarea class="form-control" id="mission" maxlength="700"  placeholder="" rows="6"><?php echo"$about_mission"; ?></textarea>
+															<span class="form-text text-muted"></span>
+														</div>
+                                                        <div class="col-lg-12" style="margin-bottom: 15px;">
+															<label >Our Vision <span style="color: #F64E60;">*<span></label>
+
+															<textarea class="form-control" id="vision" maxlength="700"  placeholder="" rows="6"><?php echo"$about_vision"; ?></textarea>
+															<span class="form-text text-muted"></span>
 														</div>
 													</div>
                                                     <div class="form-group row">
@@ -565,7 +614,7 @@ else{
 															
 														</div>
 														<div class="col-lg-6 text-right">
-															<button type="button" id="add" class="btn btn-danger">ADD</button>
+															<button type="button" id="add" class="btn btn-danger">UPDATE</button>
 														</div>
 													</div>
 												</div>

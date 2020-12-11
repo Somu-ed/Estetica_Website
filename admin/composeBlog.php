@@ -346,9 +346,27 @@
 										</ul>
 									</div>
 								</li>
+
+								<li class="menu-item" aria-haspopup="true">
+									<a href="about" class="menu-link">
+										<span class="svg-icon menu-icon">
+											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
+											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                                    <rect x="0" y="0" width="24" height="24"/>
+                                                    <circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+                                                    <rect fill="#000000" x="11" y="10" width="2" height="7" rx="1"/>
+                                                    <rect fill="#000000" x="11" y="7" width="2" height="2" rx="1"/>
+                                                </g>
+                                            </svg>
+											<!--end::Svg Icon-->
+										</span>
+										<span class="menu-text">About us</span>
+									</a>
+								</li>
 								
 								<li class="menu-item " aria-haspopup="true">
-									<a href="contact.php" class="menu-link">
+									<a href="contact" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Active-call.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
@@ -364,7 +382,7 @@
 									</a>
 								</li>
 								<li class="menu-item " aria-haspopup="true">
-									<a href="newsletter.php" class="menu-link">
+									<a href="newsletter" class="menu-link">
 										<span class="svg-icon menu-icon">
 											<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File.svg-->
 											<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

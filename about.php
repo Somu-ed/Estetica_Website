@@ -1,3 +1,18 @@
+<?php require "config/db_connect.php";?>
+
+
+<?php
+    $about_query = "SELECT * FROM about";
+    $about_fire = mysqli_query($con,$about_query);
+    while ($about = mysqli_fetch_array($about_fire)) {
+        $about_id = $about['id'];
+        $about_story = $about['story'];
+        $about_approach = $about['approach'];
+        $about_mission = $about['mission'];
+        $about_vision = $about['vision'];
+    }
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
 
@@ -111,7 +126,6 @@
 	</div>
 	
     <!--=======  End of breadcrumb area =======-->
-    
 
     <!--=============================================
 	=            section title  container      =
@@ -125,7 +139,7 @@
                     
                     <div class="section-title section-title--one text-center">
                         <h1 style="font-size: 35px;color: #444444;">Our Story</h1>
-                        <p class="subtitle">Estética was born out of our long-drawn dream of bringing Odisha to the centre of attention with respect to furnishings. The state since long has been taken for granted for its consumption of soft furnishings and usually treated to the unwanted dump from the rest of the country. We opened our doors to smart city, Bhubaneswar for giving it a deserved due!</p>
+                        <p class="subtitle"><?php echo"$about_story"; ?></p>
                     </div>
                     
                     <!--=======  End of section title  =======-->
@@ -179,7 +193,7 @@
 
                     <div class="about-page-text">
                         <h1 style="font-size: 30px;color: #444444;">Our Approach</h1>
-                        <p class=" mb-35">We offer consulting on furnishings; we do not just sell it! The team focuses on understanding the customers’ needs, offers all possible options by sharing the technical details on the make & break of fabric and helps the customer to take an informed decision. The team spends time on knowledge share with customers and associates to emphasize on choosing the right kind of furnishings for their spaces. Right from a detailed project brief to execution, we have developed a structured process to serve our customers in the best possible manner. There are checks incorporated at every level of the process to ensure no compromise on quality and timeline adherence. </p>
+                        <p class=" mb-35"><?php echo"$about_approach"; ?></p>
                     </div>
 
                 </div>
@@ -195,7 +209,7 @@
 
                     <div class="about-page-text">
                         <h1 style="font-size: 30px;color: #444444;">Our Mission</h1>
-                        <p class=" mb-35">To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share.</p>
+                        <p class=" mb-35"><?php echo"$about_mission"; ?></p>
                     </div>
 
                 </div>
@@ -232,12 +246,8 @@
 
                     <div class="about-page-text">
                         <h1 style="font-size: 30px;color: #444444;">Our Vision</h1>
-                        <p class=" mb-35">To establish gold standards in the business by:</p>
-                        <ul style="list-style-type:disc; padding-left: 15px; text-align: justify;">
-                            <li>Bringing a paradigm shift from ‘selling to consulting’.</li>
-                            <li>Offering customised products & service solutions keeping quality at the core.</li>
-                            <li>Initiating thought leadership to create a conducive ecosystem for furnishings.</li>
-                        </ul>
+                        <p class=" mb-35"><?php echo"$about_vision"; ?></p>
+
                     </div>
 
                 </div>
