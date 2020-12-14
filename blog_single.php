@@ -119,7 +119,7 @@
                                     <!--=======  post category  =======-->
                                     
                                     <div class="post-category mb-10">
-                                        <a href="#">fashion</a>
+                                        <a href="#"><?php echo "$category";?></a>
                                     </div>
                                     
                                     <h2 class="post-title"><a style="text-transform: uppercase !important;" href="blog-single-post-left-sidebar.html"><?php echo "$heading";?></a></h2>

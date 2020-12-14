@@ -1,4 +1,101 @@
 <?php include 'include.php'; ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.15.1/standard/ckeditor.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('#add').click(function() {
+			// var img = $("#img").val().trim();
+			var fd = new FormData();
+
+			var date = $("#date").val();
+			var author = $("#author").val().trim();
+			var category = $("#category").val().trim();
+			var head = $("#head").val().trim();
+			var tags = $("#tags").val().trim();
+			var short = $("#short").val().trim();
+			var files = $('#file')[0].files;
+			var desc = CKEDITOR.instances['desc'].getData();
+
+			if(author == "" || category == "" || head == "" ){
+				swal.fire({
+					text: "Some field are Empty !!",
+					icon: "error",
+					buttonsStyling: false,
+					confirmButtonText: "Try again!",
+					customClass: {
+						confirmButton: "btn font-weight-bold btn-light-primary"
+					}
+				}).then(function() {
+					KTUtil.scrollTop();
+				});
+			} else {
+				fd.append('file',files[0]);
+                fd.append('date',date);
+				fd.append('author',author);
+				fd.append('category',category);
+				fd.append('head',head);
+				fd.append('tags',tags);
+				fd.append('short',short);
+				fd.append('desc',desc);
+
+				console.log(fd, files, date, author, category, head, tags, short, desc);
+
+				swal.fire({
+				title: "Confirm Submission!!",
+				icon: "info",
+				showCancelButton: true,
+				confirmButtonText: "Confirm",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'add_blog_process.php',
+					type:'post',
+					data:fd,
+					contentType: false,
+					processData: false,
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Added Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "composeBlog";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+			}
+			
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
@@ -25,6 +122,18 @@
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+
+		<style>
+            input[type="file"] {
+				display: none;
+			}
+			.custom-file-upload {
+				border: 1px solid #ccc;
+				display: inline-block;
+				padding: 6px 12px;
+				cursor: pointer;
+			}
+        </style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -434,7 +543,7 @@
 						<!--begin::Entry-->
 						<div class="d-flex flex-column-fluid">
                             <!--begin::Container-->
-                            <div class="container">
+                            <div class="container-fluid" style="margin-bottom: 20px;">
 								<!--begin::Card-->
 								<div class="card card-custom">
 									<div class="card-body p-0">
@@ -514,51 +623,23 @@
 																</span>
 																<h3 class="wizard-title">Compose</h3>
 															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
+															
 														</div>
-														<div class="wizard-step" data-wizard-type="step">
-															<div class="wizard-label">
-																<span class="svg-icon svg-icon-4x wizard-icon">
-																	<!--begin::Svg Icon | path:assets/media/svg/icons/General/Notification2.svg-->
-																	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																			<rect x="0" y="0" width="24" height="24" />
-																			<path d="M13.2070325,4 C13.0721672,4.47683179 13,4.97998812 13,5.5 C13,8.53756612 15.4624339,11 18.5,11 C19.0200119,11 19.5231682,10.9278328 20,10.7929675 L20,17 C20,18.6568542 18.6568542,20 17,20 L7,20 C5.34314575,20 4,18.6568542 4,17 L4,7 C4,5.34314575 5.34314575,4 7,4 L13.2070325,4 Z" fill="#000000" />
-																			<circle fill="#000000" opacity="0.3" cx="18.5" cy="5.5" r="2.5" />
-																		</g>
-																	</svg>
-																	<!--end::Svg Icon-->
-																</span>
-																<h3 class="wizard-title">Review and Submit</h3>
-															</div>
-															<span class="svg-icon svg-icon-xl wizard-arrow last">
-																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																	</g>
-																</svg>
-																<!--end::Svg Icon-->
-															</span>
-														</div>
+														
 													</div>
 												</div>
 												<!--end::Wizard Nav-->
 											</div>
 											<div class="row justify-content-center my-10 px-8 my-lg-15 px-lg-10">
 												<div class="col-xl-12 col-xxl-7">
+												<script>
+													$(document).ready(function(){
+														$('input[type="file"]').change(function(e){
+															var fileName = e.target.files[0].name;
+															document.getElementById("choosen_file").innerHTML = fileName;
+														});
+													});
+												</script>
 													<!--begin::Form Wizard-->
 													<form class="form" id="kt_projects_add_form">
 														<!--begin::Step 1-->
@@ -569,7 +650,7 @@
 																	<div class="form-group row">
 																		<label class="col-xl-3 col-lg-3 col-form-label">Date</label>
 																		<div class="col-lg-9 col-xl-9">
-																			<input class="form-control form-control-lg form-control-solid" name="date" type="date" value="<?php echo date('Y-m-d') ?>"/>
+																			<input class="form-control form-control-lg form-control-solid" id="date" type="date" value="<?php echo date('Y-m-d') ?>"/>
 																		</div>
 																	</div>
 																	<div class="form-group row">
@@ -581,7 +662,7 @@
 																						<i class="la la-user"></i>
 																					</span>
 																				</div>
-																			<input class="form-control form-control-lg form-control-solid" placeholder="Author name" name="author" type="text" value="<?php echo($name); ?>" />
+																			<input class="form-control form-control-lg form-control-solid" placeholder="Author name" id="author" type="text" value="Sambit Satpathy" />
                                                                         </div>	
 																		</div>
 																	</div>
@@ -594,7 +675,7 @@
 																						<i class="la la-list"></i>
 																					</span>
 																				</div>
-																			    <input class="form-control form-control-lg form-control-solid" name="category" type="text" value="Furniture" />
+																			    <input class="form-control form-control-lg form-control-solid" id="category" type="text" value="Furnishing" />
 																			</div>
 																			<span class="form-text text-muted">Select the blog category from the dropdown</span>
 																		</div>
@@ -608,7 +689,7 @@
 																						<i class="la la-heading"></i>
 																					</span>
 																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="head" placeholder="Heading" />
+																				<input type="text" class="form-control form-control-lg form-control-solid" id="head" placeholder="Heading" />
 																			</div>
 																		</div>
 																	</div>
@@ -621,7 +702,7 @@
 																						<i class="la la-tags"></i>
 																					</span>
 																				</div>
-																				<input type="text" class="form-control form-control-lg form-control-solid" name="tags" placeholder="Tags" />
+																				<input type="text" class="form-control form-control-lg form-control-solid" id="tags" placeholder="Tags" />
 																			</div>
 																		</div>
 																	</div>
@@ -632,29 +713,35 @@
 														<!--begin::Step 2-->
 														<div class="pb-5" data-wizard-type="step-content">
 															<div class="row">
-																<div class="col-xl-12">
+																<div class="col-lg-12">
 																	<div class="form-group row">
 																		<div class="col-lg-9 col-xl-6">
 																			<h3 class="kt-section__title kt-section__title-md">Cover Image</h3>
 																		</div>
 																	</div>
 																	
-																	<div class="form-group row align-items-center">
-																		<label class="col-xl-3 col-lg-3 col-form-label">Communication</label>
-																		<div class="col-lg-9 col-xl-6">
-																			<div class="checkbox-inline">
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>Email</label>
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>SMS</label>
-																				<label class="checkbox">
-																				<input name="communication" type="checkbox" />
-																				<span></span>Phone</label>
-																			</div>
-																		</div>
-																	</div>
+																	
+																	
+																		<label >Cover Image <span style="color: #F64E60;">*<span></label>
+																		<label class="form-control btn btn-light-success font-weight-bold mr-2">
+																		<span class="svg-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Files\Upload.svg-->
+																		<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																				<rect x="0" y="0" width="24" height="24"/>
+																				<path d="M2,13 C2,12.5 2.5,12 3,12 C3.5,12 4,12.5 4,13 C4,13.3333333 4,15 4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 C2,15 2,13.3333333 2,13 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+																				<rect fill="#000000" opacity="0.3" x="11" y="2" width="2" height="14" rx="1"/>
+																				<path d="M12.0362375,3.37797611 L7.70710678,7.70710678 C7.31658249,8.09763107 6.68341751,8.09763107 6.29289322,7.70710678 C5.90236893,7.31658249 5.90236893,6.68341751 6.29289322,6.29289322 L11.2928932,1.29289322 C11.6689749,0.916811528 12.2736364,0.900910387 12.6689647,1.25670585 L17.6689647,5.75670585 C18.0794748,6.12616487 18.1127532,6.75845471 17.7432941,7.16896473 C17.3738351,7.57947475 16.7415453,7.61275317 16.3310353,7.24329415 L12.0362375,3.37797611 Z" fill="#000000" fill-rule="nonzero"/>
+																			</g>
+																		</svg><!--end::Svg Icon--></span>    
+																		Upload Image
+																		<input style="border: none;" type="file" id="file" class="form-control" placeholder="Enter contact number" />
+																		</label>
+																		<a style="cursor: pointer; color: gray;" class="btn btn-outline-light">
+																			<i style="color: gray;" class="flaticon2-image-file"></i> <span style="align-items: center;" id="choosen_file">No File Chosen </span>
+																		</a>
+																		<br><br>
+																		
+																	
 																</div>
 															</div>
 														</div>
@@ -664,74 +751,32 @@
 															<h3 class="mb-10 font-weight-bold text-dark">Compose your Blog</h3>
 															<div class="modal-body">
 															<div class="form-group row mt-2">
-															<textarea name="mail_message" class="summernote" data-trigger="summernote"></textarea>
+															<div class="col-lg-12" style="margin-bottom: 20px;">
+																<label >Short Description <span style="color: #F64E60;">*<span></label>
+
+																<textarea class="form-control" id="short" maxlength="300"  placeholder="" rows="6"></textarea>
+																<span class="form-text text-muted">Enter text within 40 words</span>
+															</div>
+															<!-- <textarea name="mail_message" class="summernote" data-trigger="summernote"></textarea> -->
+															<div class="col-lg-12">
+																<label >Main Description <span style="color: #F64E60;">*<span></label>
+																<textarea id="desc" name="editor1"></textarea>
+																<script>
+																		CKEDITOR.replace( 'editor1' );
+																</script>
+															</div>
 													        </div>
 												            </div>
 														</div>
 														<!--end::Step 3-->
-														<!--begin::Step 4-->
-														<div class="pb-5" data-wizard-type="step-content">
-															<h4 class="mb-10 font-weight-bold">Review your Details and Submit</h4>
-															<h6 class="font-weight-bold mb-3">Project Details:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Name:</td>
-																	<td class="font-weight-bold text-right">Loop Inc CRM App</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Phone:</td>
-																	<td class="font-weight-bold text-right">+61412345678</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Email:</td>
-																	<td class="font-weight-bold text-right">johnwick@reeves.com</td>
-																</tr>
-															</table>
-															<div class="separator separator-dashed my-5"></div>
-															<h6 class="font-weight-bold mb-3">Delivery Info:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Address Line 1:</td>
-																	<td class="font-weight-bold text-right">Fox Avenue 5-6B</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Address Line 2:</td>
-																	<td class="font-weight-bold text-right">Melbourne VIC</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Post:</td>
-																	<td class="font-weight-bold text-right">3000</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Country:</td>
-																	<td class="font-weight-bold text-right">Australia</td>
-																</tr>
-															</table>
-															<div class="separator separator-dashed my-5"></div>
-															<h6 class="font-weight-bold mb-3">Payment Details:</h6>
-															<table class="w-100">
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Number:</td>
-																	<td class="font-weight-bold text-right">xxxx xxxx xxxx 1111</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Name:</td>
-																	<td class="font-weight-bold text-right">John Wick</td>
-																</tr>
-																<tr>
-																	<td class="font-weight-bold text-muted">Card Expiry:</td>
-																	<td class="font-weight-bold text-right">01/21</td>
-																</tr>
-															</table>
-														</div>
-														<!--end::Step 4-->
+
 														<!--begin::Actions-->
 														<div class="d-flex justify-content-between border-top mt-5 pt-10">
 															<div class="mr-2">
 																<button type="button" class="btn btn-light-danger font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-prev">Previous</button>
 															</div>
 															<div>
-																<button type="button" class="btn btn-success font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
+																<button id="add" type="button" class="btn btn-success font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-submit">Submit</button>
 																<button type="button" class="btn btn-danger font-weight-bold text-uppercase px-9 py-4" data-wizard-type="action-next">Next Step</button>
 															</div>
 														</div>
@@ -746,6 +791,7 @@
 								<!--end::Card-->
 							</div>
 							<!--end::Container-->
+
 						</div>
 						<!--end::Entry-->
 					</div>

@@ -559,7 +559,7 @@
 															<br>
 														</div>
 														<div class="col-lg-6">
-                                                        <label >Cover Image <span style="color: #F64E60;">*<span></label>
+                                                        	<label >Cover Image <span style="color: #F64E60;">*<span></label>
 															<label class="form-control btn btn-light-success font-weight-bold mr-2">
                                                             <span class="svg-icon"><!--begin::Svg Icon | path:C:\wamp64\www\keenthemes\themes\metronic\theme\html\demo1\dist/../src/media/svg/icons\Files\Upload.svg-->
                                                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">

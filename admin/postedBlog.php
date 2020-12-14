@@ -5,9 +5,68 @@ if(isset($_POST['num_rows'])){
 	$per_page = $_POST['num_rows'];
 }
 else{
-	$per_page = 1;
+	$per_page = 12;
 }
 ?>
+
+<script src="assets/js/jquery-3.5.1.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+
+		$('.delete').click(function() {
+
+			var del_id= $(this).attr('id');
+			swal.fire({
+				title: "Are you sure?",
+				text: "Once deleted, you will not be able to recover this data!",
+				icon: "warning",
+				showCancelButton: true,
+				confirmButtonText: "Yes, delete it!",
+				dangerMode: true,
+				})
+				.then((result) => {
+					if (result.value) {
+				$.ajax({
+					url:'blog_del_process.php',
+					type:'post',
+					data:{del_id:del_id},
+					success:function(response){
+						if(response == 1){
+							swal.fire({
+							text: "Response Deleted Successfully!!",
+							icon: "success",
+							buttonsStyling: false,
+							confirmButtonText: "Okay!",
+							customClass: {
+								confirmButton: "btn font-weight-bold btn-light-success"
+							}
+						}).then(function() {
+							window.location = "postedBlog";
+						});
+							
+						}
+						else{
+							swal.fire({
+								text: "Action Failed",
+								icon: "error",
+								buttonsStyling: false,
+								confirmButtonText: "Try again!",
+								customClass: {
+									confirmButton: "btn font-weight-bold btn-light-primary"
+								}
+							}).then(function() {
+								KTUtil.scrollTop();
+							});
+						}
+					}
+				});
+			}
+			});
+		});
+	});
+</script>
+
 <!DOCTYPE html>
 <html lang="en">
 	<!--begin::Head-->
@@ -34,6 +93,33 @@ else{
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+
+		<style>
+			@media screen and (max-width: 1366px) {
+				.img-dir {
+					flex-direction: column;
+					justify-content: flex-start !important;
+				}
+				.img-pd {
+					margin-bottom: 20px;
+				}
+				.img-pd > img {
+					max-width: 400px !important;
+					height: 200px !important;
+				}
+			}
+			.img-dir {
+				justify-content: center;
+				align-items:center;
+			}
+			.img-pd {
+					margin-bottom: 20px;
+				}
+			.img-pd > img {
+					max-width: 400px !important;
+					height: 200px !important;
+				}
+		</style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -471,6 +557,7 @@ else{
 										$blog_cat = $row['category'];
 										$blog_auth = $row['author'];
 										$blog_desc = $row['short'];
+										$blog_img = $row['image'];
 
 										$length = 100;
 
@@ -523,13 +610,13 @@ else{
 												</div>
 												<!--end::Toolbar-->
 												<!--begin::User-->
-												<div class='d-flex align-items-center mb-7'>
+												<div class='d-flex img-dir'>
 													<!--begin::Pic-->
-													<!--<div class='flex-shrink-0 mr-4'>
-														<div class='symbol symbol-circle symbol-lg-75'>
-															<img src='assets/media/project-logos/2.png' alt='image' />
+													<div class='flex-shrink-0 mr-7 mt-lg-0 mt-3'>
+														<div class='symbol symbol-50 symbol-lg-120 img-pd'>
+															<img src='../assets/images/blog/$blog_img' alt='blog_cover' />
 														</div>
-													</div>-->
+													</div>
 													<!--end::Pic-->
 													<!--begin::Title-->
 													<!--end::Title-->
@@ -556,7 +643,9 @@ else{
 													</div>
 												</div>
 												<!--end::Info-->
-												<a href='view_post.php?blog_id=$blog_id' class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4'>View Post</a>
+												<form>
+													<button class='btn btn-block btn-sm btn-light-danger font-weight-bolder text-uppercase py-4 delete' id='$blog_id' type='button' >Delete</button>
+												</form>
 											</div>
 											<!--end::Body-->
 										</div>
@@ -664,7 +753,7 @@ else{
 										<div class='d-flex align-items-center'>
 										<form action='postedBlog' method='post' id='form'>
 											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
-											$numrows_arr = array("1","2");
+											$numrows_arr = array("12","24","36","72");
 											foreach($numrows_arr as $nrow){
 												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
 													echo '<option value="'.$nrow.'" selected="selected">'.$nrow.'</option>';
