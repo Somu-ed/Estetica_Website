@@ -662,7 +662,7 @@ else{
 										</div>
 										<div class='d-flex align-items-center'>
 										<form action='postedClients' method='post' id='form'>
-											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-primary font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
+											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-danger font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
 											$numrows_arr = array("12","24");
 											foreach($numrows_arr as $nrow){
 												if(isset($_POST['num_rows']) && $_POST['num_rows'] == $nrow){
