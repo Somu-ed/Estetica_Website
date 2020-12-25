@@ -44,18 +44,18 @@
     background-color: #b4b8ce;
   }
   .header-mobile .burger-icon:hover span {
-    background-color: #3699ff;
+    background-color: #f64e60;
   }
   .header-mobile .burger-icon:hover span::before,
   .header-mobile .burger-icon:hover span::after {
-    background-color: #3699ff;
+    background-color: #f64e60;
   }
   .header-mobile .burger-icon-active span {
-    background-color: #3699ff;
+    background-color: #f64e60;
   }
   .header-mobile .burger-icon-active span::before,
   .header-mobile .burger-icon-active span::after {
-    background-color: #3699ff;
+    background-color: #f64e60;
   }
   .header-mobile .btn i {
     color: #b4b8ce;

@@ -30,6 +30,20 @@
 		<link href="assets/css/themes/layout/aside/light.css?v=7.0.5" rel="stylesheet" type="text/css" />
         <!--end::Layout Themes-->
 		<link rel="shortcut icon" href="assets/media/favicon.svg" />
+
+		<style>
+			@media screen and (max-width: 767px){
+				.bg-custom {
+					background-image: none !important;
+				}
+				.text-mob-small {
+					font-size: 8px;
+				}
+				.text-mob-large {
+					font-size: 18px !important;
+				}
+			}
+		</style>
 	</head>
     <!--end::Head-->
 	<!--begin::Body-->
@@ -429,7 +443,7 @@
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
-									<span class="text-muted font-weight-bold mr-4">#XRS-45670</span>
+									<span class="text-muted font-weight-bold mr-4">#PS20-AD-11</span>
 									<!-- <a href="#" class="btn btn-light-warning font-weight-bolder btn-sm">Add New</a> -->
 									<!--end::Actions-->
 								</div>
@@ -443,111 +457,6 @@
 							<div class="d-flex flex-row flex-column-fluid container">
 						<!--begin::Content Wrapper-->
 						<div class="main d-flex flex-column flex-row-fluid">
-							<!--begin::Subheader-->
-							<div class="subheader py-2 py-lg-4" id="kt_subheader">
-								<div class="w-100 d-flex align-items-center justify-content-between flex-wrap flex-sm-nowrap">
-									<!--begin::Info-->
-									<div class="d-flex align-items-center flex-wrap mr-1">
-										<!--begin::Page Heading-->
-										<div class="d-flex align-items-baseline flex-wrap mr-5">
-											<!--begin::Page Title-->
-											<h5 class="text-dark font-weight-bold my-1 mr-5">Reports</h5>
-											<!--end::Page Title-->
-											<!--begin::Breadcrumb-->
-											<ul class="breadcrumb breadcrumb-transparent breadcrumb-dot font-weight-bold p-0 my-2 font-size-sm">
-												<li class="breadcrumb-item">
-													<a href="" class="text-muted">Dashboard</a>
-												</li>
-												<li class="breadcrumb-item">
-													<a href="" class="text-muted">Application</a>
-												</li>
-											</ul>
-											<!--end::Breadcrumb-->
-										</div>
-										<!--end::Page Heading-->
-									</div>
-									<!--end::Info-->
-									<!--begin::Toolbar-->
-									<div class="d-flex align-items-center">
-										<!--begin::Daterange-->
-										<a href="#" class="btn btn-light-primary btn-sm font-weight-bold mr-2" id="kt_dashboard_daterangepicker" data-toggle="tooltip" title="Select dashboard daterange" data-placement="left">
-											<span class="opacity-60 font-weight-bold mr-2" id="kt_dashboard_daterangepicker_title">Today</span>
-											<span class="font-weight-bold" id="kt_dashboard_daterangepicker_date">Aug 16</span>
-										</a>
-										<!--end::Daterange-->
-										<!--begin::Dropdown-->
-										<div class="dropdown dropdown-inline" data-toggle="tooltip" title="Quick actions" data-placement="left">
-											<a href="#" class="btn btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-												<span class="svg-icon svg-icon-success svg-icon-2x">
-													<!--begin::Svg Icon | path:assets/media/svg/icons/Files/File-plus.svg-->
-													<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-														<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-															<polygon points="0 0 24 0 24 24 0 24" />
-															<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-															<path d="M11,14 L9,14 C8.44771525,14 8,13.5522847 8,13 C8,12.4477153 8.44771525,12 9,12 L11,12 L11,10 C11,9.44771525 11.4477153,9 12,9 C12.5522847,9 13,9.44771525 13,10 L13,12 L15,12 C15.5522847,12 16,12.4477153 16,13 C16,13.5522847 15.5522847,14 15,14 L13,14 L13,16 C13,16.5522847 12.5522847,17 12,17 C11.4477153,17 11,16.5522847 11,16 L11,14 Z" fill="#000000" />
-														</g>
-													</svg>
-													<!--end::Svg Icon-->
-												</span>
-											</a>
-											<div class="dropdown-menu dropdown-menu-md dropdown-menu-right p-0 m-0">
-												<!--begin::Navigation-->
-												<ul class="navi navi-hover">
-													<li class="navi-header font-weight-bold py-4">
-														<span class="font-size-lg">Choose Label:</span>
-														<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-													</li>
-													<li class="navi-separator mb-3 opacity-70"></li>
-													<li class="navi-item">
-														<a href="#" class="navi-link">
-															<span class="navi-text">
-																<span class="label label-xl label-inline label-light-success">Customer</span>
-															</span>
-														</a>
-													</li>
-													<li class="navi-item">
-														<a href="#" class="navi-link">
-															<span class="navi-text">
-																<span class="label label-xl label-inline label-light-danger">Partner</span>
-															</span>
-														</a>
-													</li>
-													<li class="navi-item">
-														<a href="#" class="navi-link">
-															<span class="navi-text">
-																<span class="label label-xl label-inline label-light-warning">Suplier</span>
-															</span>
-														</a>
-													</li>
-													<li class="navi-item">
-														<a href="#" class="navi-link">
-															<span class="navi-text">
-																<span class="label label-xl label-inline label-light-primary">Member</span>
-															</span>
-														</a>
-													</li>
-													<li class="navi-item">
-														<a href="#" class="navi-link">
-															<span class="navi-text">
-																<span class="label label-xl label-inline label-light-dark">Staff</span>
-															</span>
-														</a>
-													</li>
-													<li class="navi-separator mt-3 opacity-70"></li>
-													<li class="navi-footer py-4">
-														<a class="btn btn-clean font-weight-bold btn-sm" href="#">
-														<i class="ki ki-plus icon-sm"></i>Add new</a>
-													</li>
-												</ul>
-												<!--end::Navigation-->
-											</div>
-										</div>
-										<!--end::Dropdown-->
-									</div>
-									<!--end::Toolbar-->
-								</div>
-							</div>
-							<!--end::Subheader-->
 							<div class="content flex-column-fluid" id="kt_content">
 								<!--begin::Dashboard-->
 								<!--begin::Row-->
@@ -557,116 +466,63 @@
 										<div class="card card-custom bg-radial-gradient-danger gutter-b card-stretch">
 											<!--begin::Header-->
 											<div class="card-header border-0 py-5">
-												<h3 class="card-title font-weight-bolder text-white">Sales Progress</h3>
-												<div class="card-toolbar">
-													<div class="dropdown dropdown-inline">
-														<a href="#" class="btn btn-text-white btn-hover-white btn-sm btn-icon border-0" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i class="ki ki-bold-more-hor"></i>
-														</a>
-														<div class="dropdown-menu dropdown-menu-sm dropdown-menu-right">
-															<!--begin::Navigation-->
-															<ul class="navi navi-hover">
-																<li class="navi-header pb-1">
-																	<span class="text-primary text-uppercase font-weight-bold font-size-sm">Add new:</span>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-shopping-cart-1"></i>
-																		</span>
-																		<span class="navi-text">Order</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-calendar-8"></i>
-																		</span>
-																		<span class="navi-text">Event</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-graph-1"></i>
-																		</span>
-																		<span class="navi-text">Report</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-rocket-1"></i>
-																		</span>
-																		<span class="navi-text">Post</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-writing"></i>
-																		</span>
-																		<span class="navi-text">File</span>
-																	</a>
-																</li>
-															</ul>
-															<!--end::Navigation-->
-														</div>
-													</div>
-												</div>
+												<h3 class="card-title font-weight-bolder text-white">Stats</h3>
 											</div>
 											<!--end::Header-->
 											<!--begin::Body-->
 											<div class="card-body d-flex flex-column p-0">
 												<!--begin::Chart-->
-												<div id="kt_mixed_widget_6_chart" style="height: 125px"></div>
+												<div class="bgi-no-repeat bgi-size-cover" style="height: 300px; background-image: url(assets/media/login/login_illustration.svg);"></div>
 												<!--end::Chart-->
 												<!--begin::Stats-->
 												<div class="card-spacer bg-white card-rounded flex-grow-1">
 													<!--begin::Row-->
 													<div class="row m-0">
-													<div class="flex-grow-1 card-spacer pb-0">
+														<div class="flex-grow-1 card-spacer pb-0">
 															<span class="svg-icon svg-icon-2x svg-icon-danger">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																		<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																		<path d="M20,8 L18.173913,8 C17.0693435,8 16.173913,8.8954305 16.173913,10 L16.173913,12 C16.173913,12.5522847 15.7261978,13 15.173913,13 L8.86956522,13 C8.31728047,13 7.86956522,12.5522847 7.86956522,12 L7.86956522,10 C7.86956522,8.8954305 6.97413472,8 5.86956522,8 L4,8 L4,6 C4,4.34314575 5.34314575,3 7,3 L17,3 C18.6568542,3 20,4.34314575 20,6 L20,8 Z" fill="#000000" opacity="0.3"/>
+																		<path d="M6.15999985,21.0604779 L8.15999985,17.5963763 C8.43614222,17.1180837 9.04773263,16.9542085 9.52602525,17.2303509 C10.0043179,17.5064933 10.168193,18.1180837 9.89205065,18.5963763 L7.89205065,22.0604779 C7.61590828,22.5387706 7.00431787,22.7026457 6.52602525,22.4265033 C6.04773263,22.150361 5.88385747,21.5387706 6.15999985,21.0604779 Z M17.8320512,21.0301278 C18.1081936,21.5084204 17.9443184,22.1200108 17.4660258,22.3961532 C16.9877332,22.6722956 16.3761428,22.5084204 16.1000004,22.0301278 L14.1000004,18.5660262 C13.823858,18.0877335 13.9877332,17.4761431 14.4660258,17.2000008 C14.9443184,16.9238584 15.5559088,17.0877335 15.8320512,17.5660262 L17.8320512,21.0301278 Z" fill="#000000" opacity="0.3"/>
+																		<path d="M20,10 L20,15 C20,16.6568542 18.6568542,18 17,18 L7,18 C5.34314575,18 4,16.6568542 4,15 L4,10 L5.86956522,10 L5.86956522,12 C5.86956522,13.6568542 7.21271097,15 8.86956522,15 L15.173913,15 C16.8307673,15 18.173913,13.6568542 18.173913,12 L18.173913,10 L20,10 Z" fill="#000000"/>
 																	</g>
 																</svg>
 																<!--end::Svg Icon-->
 															</span>
-															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$news"; ?></div>
-															<div class="text-muted font-weight-bold">Subscribers</div>
+															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$prod"; ?></div>
+															<div class="text-muted font-weight-bold">Products</div>
 														</div>
 														<div class="flex-grow-1 card-spacer pb-0">
 															<span class="svg-icon svg-icon-2x svg-icon-danger">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																		<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																		<rect x="0" y="0" width="24" height="24"/>
+																		<path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
+																		<path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"/>
+																		<rect fill="#000000" opacity="0.3" x="7" y="10" width="5" height="2" rx="1"/>
+																		<rect fill="#000000" opacity="0.3" x="7" y="14" width="9" height="2" rx="1"/>
 																	</g>
 																</svg>
 																<!--end::Svg Icon-->
 															</span>
-															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$news"; ?></div>
-															<div class="text-muted font-weight-bold">Subscribers</div>
+															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$proj"; ?></div>
+															<div class="text-muted font-weight-bold">Projects</div>
 														</div>
 													</div>
 													<!--end::Row-->
 													<!--begin::Row-->
 													<div class="row m-0">
-													<div class="flex-grow-1 card-spacer pb-0">
+														<div class="flex-grow-1 card-spacer pb-0">
 															<span class="svg-icon svg-icon-2x svg-icon-danger">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																		<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																		<polygon points="0 0 24 0 24 24 0 24"/>
+																		<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+																		<rect fill="#000000" x="6" y="11" width="9" height="2" rx="1"/>
+																		<rect fill="#000000" x="6" y="15" width="5" height="2" rx="1"/>
 																	</g>
 																</svg>
 																<!--end::Svg Icon-->
@@ -679,15 +535,15 @@
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																		<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																		<rect x="0" y="0" width="24" height="24"/>
+																		<path d="M13.0799676,14.7839934 L15.2839934,12.5799676 C15.8927139,11.9712471 16.0436229,11.0413042 15.6586342,10.2713269 L15.5337539,10.0215663 C15.1487653,9.25158901 15.2996742,8.3216461 15.9083948,7.71292558 L18.6411989,4.98012149 C18.836461,4.78485934 19.1530435,4.78485934 19.3483056,4.98012149 C19.3863063,5.01812215 19.4179321,5.06200062 19.4419658,5.11006808 L20.5459415,7.31801948 C21.3904962,9.0071287 21.0594452,11.0471565 19.7240871,12.3825146 L13.7252616,18.3813401 C12.2717221,19.8348796 10.1217008,20.3424308 8.17157288,19.6923882 L5.75709327,18.8875616 C5.49512161,18.8002377 5.35354162,18.5170777 5.4408655,18.2551061 C5.46541191,18.1814669 5.50676633,18.114554 5.56165376,18.0596666 L8.21292558,15.4083948 C8.8216461,14.7996742 9.75158901,14.6487653 10.5215663,15.0337539 L10.7713269,15.1586342 C11.5413042,15.5436229 12.4712471,15.3927139 13.0799676,14.7839934 Z" fill="#000000"/>
+																		<path d="M14.1480759,6.00715131 L13.9566988,7.99797396 C12.4781389,7.8558405 11.0097207,8.36895892 9.93933983,9.43933983 C8.8724631,10.5062166 8.35911588,11.9685602 8.49664195,13.4426352 L6.50528978,13.6284215 C6.31304559,11.5678496 7.03283934,9.51741319 8.52512627,8.02512627 C10.0223249,6.52792766 12.0812426,5.80846733 14.1480759,6.00715131 Z M14.4980938,2.02230302 L14.313049,4.01372424 C11.6618299,3.76737046 9.03000738,4.69181803 7.1109127,6.6109127 C5.19447112,8.52735429 4.26985715,11.1545872 4.51274152,13.802405 L2.52110319,13.985098 C2.22450978,10.7517681 3.35562581,7.53777247 5.69669914,5.19669914 C8.04101739,2.85238089 11.2606138,1.72147333 14.4980938,2.02230302 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
 																	</g>
 																</svg>
 																<!--end::Svg Icon-->
 															</span>
-															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$news"; ?></div>
-															<div class="text-muted font-weight-bold">Subscribers</div>
+															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$cont"; ?></div>
+															<div class="text-muted font-weight-bold">Responses</div>
 														</div>
 													</div>
 													<!--end::Row-->
@@ -700,31 +556,62 @@
 									</div>
 									<div class="col-xl-8">
 										<div class="row">
+											<div class="col-xl-12">
+												<!--begin::Tiles Widget 24-->
+												<div class="card card-custom bg-radial-gradient-danger bgi-no-repeat gutter-b" style="height: 150px; background-image: url(assets/img/home/cover_display.svg;)">
+													<!--begin::Body-->
+													<div class="card-body d-flex">
+														<div class="d-flex py-5 align-items-start flex-grow-1" style="display: flex; flex-direction: row; justify-content: space-between;">
+															<div class="">
+																<a href="composeBlog" class="text-white font-weight-bolder font-size-h2 text-mob-large">Estetica Admin Panel</a>
+																<p class="text-white opacity-75 font-weight-bold mt-3 text-mob-small">Designed & Developed by <b>Perfect Shades</b></p>
+															</div>
+															<div class="">
+																<a href="https://esteticasolutions.in/" class="btn btn-light-danger font-weight-bold mr-2">Visit Main Website</a>
+															</div>
+														</div>
+													</div>
+													<!--end::Body-->
+												</div>
+												<!--end::Tiles Widget 24-->
+											</div>
+										</div>
+										<div class="row">
 											<div class="col-xl-4">
 												<!--begin::Tiles Widget 21-->
-												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b" style="height: 250px; background-image: url(assets/media/svg/icons/Communication/)">
+												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-info" style="height: 250px; background-image: url(assets/media/svg/icons/Communication/)">
 													<!--begin::Body-->
-													<div class="card-body d-flex flex-column p-0">
-														<!--begin::Stats-->
-														<div class="flex-grow-1 card-spacer pb-0">
-															<span class="svg-icon svg-icon-2x svg-icon-info">
+													<div class="card-body d-flex">
+														<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+															<span class="svg-icon svg-icon-2x svg-icon-white" style="margin-bottom: 5px;">
 																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																		<polygon points="0 0 24 0 24 24 0 24" />
-																		<path d="M18,14 C16.3431458,14 15,12.6568542 15,11 C15,9.34314575 16.3431458,8 18,8 C19.6568542,8 21,9.34314575 21,11 C21,12.6568542 19.6568542,14 18,14 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																		<path d="M17.6011961,15.0006174 C21.0077043,15.0378534 23.7891749,16.7601418 23.9984937,20.4 C24.0069246,20.5466056 23.9984937,21 23.4559499,21 L19.6,21 C19.6,18.7490654 18.8562935,16.6718327 17.6011961,15.0006174 Z M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																		<polygon points="0 0 24 0 24 24 0 24"/>
+																		<path d="M12,18 L7.91561963,20.1472858 C7.42677504,20.4042866 6.82214789,20.2163401 6.56514708,19.7274955 C6.46280801,19.5328351 6.42749334,19.309867 6.46467018,19.0931094 L7.24471742,14.545085 L3.94038429,11.3241562 C3.54490071,10.938655 3.5368084,10.3055417 3.92230962,9.91005817 C4.07581822,9.75257453 4.27696063,9.65008735 4.49459766,9.61846284 L9.06107374,8.95491503 L11.1032639,4.81698575 C11.3476862,4.32173209 11.9473121,4.11839309 12.4425657,4.36281539 C12.6397783,4.46014562 12.7994058,4.61977315 12.8967361,4.81698575 L14.9389263,8.95491503 L19.5054023,9.61846284 C20.0519472,9.69788046 20.4306287,10.2053233 20.351211,10.7518682 C20.3195865,10.9695052 20.2170993,11.1706476 20.0596157,11.3241562 L16.7552826,14.545085 L17.5353298,19.0931094 C17.6286908,19.6374458 17.263103,20.1544017 16.7187666,20.2477627 C16.5020089,20.2849396 16.2790408,20.2496249 16.0843804,20.1472858 L12,18 Z" fill="#000000"/>
 																	</g>
 																</svg>
 																<!--end::Svg Icon-->
 															</span>
-															<div class="font-weight-boldest font-size-h3 pt-2"><?php echo"$news"; ?></div>
-															<div class="text-muted font-weight-bold">Subscribers</div>
+									
+															<div class="flex-grow-1">
+																<a href="composeTestimonial" class="text-white font-weight-bolder font-size-h2">Testimonials</a>
+																<p class="text-white opacity-75 font-weight-bold mt-3">Click here to upload new testimonials.</p>
+															</div>
+															<a href='composeTestimonial' class="btn btn-link btn-link-white font-weight-bold">View
+															<span class="svg-icon svg-icon-lg svg-icon-white">
+																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																		<polygon points="0 0 24 0 24 24 0 24" />
+																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																	</g>
+																</svg>
+																<!--end::Svg Icon-->
+															</span></a>
 														</div>
-														<!--end::Stats-->
-														<!--begin::Chart-->
-														<div id="kt_tiles_widget_21_chart" class="card-rounded-bottom" data-color="info" style="height: 100px"></div>
-														<!--end::Chart-->
+														
 													</div>
 													<!--end::Body-->
 												</div>
@@ -732,7 +619,7 @@
 											</div>
 											<div class="col-xl-8">
 												<!--begin::Tiles Widget 25-->
-												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-danger" style="height: 250px; background-image: url(assets/img/home/blog1.png)">
+												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-danger bg-custom" style="height: 250px; background-image: url(assets/img/home/blog1.png)">
 													<div class="card-body d-flex">
 														<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 															<div class="flex-grow-1">
@@ -760,10 +647,10 @@
 										<div class="row">
 											<div class="col-xl-8">
 												<!--begin::Tiles Widget 23-->
-												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-primary" style="height: 250px; height: 250px; background-image: url(assets/img/home/prod.png)">
+												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-primary bg-custom" style="height: 250px; height: 250px; background-image: url(assets/img/home/prod.png)">
 													<!--begin::Body-->
 													<div class="card-body d-flex">
-													<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+														<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
 															<div class="flex-grow-1">
 																<a href="composeProducts" class="text-white font-weight-bolder font-size-h2">Products</a>
 																<p class="text-white opacity-75 font-weight-bold mt-3">Click here to upload new products.</p>
@@ -789,11 +676,42 @@
 											</div>
 											<div class="col-xl-4">
 												<!--begin::Tiles Widget 24-->
-												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b" style="height: 250px; background-image: url(assets/media/stock-600x400/img-28.jpg)">
+												<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-success" style="height: 250px; background-image: url(assets/img/home/)">
 													<!--begin::Body-->
-													<div class="card-body">
-														<a href='#' class="text-dark-75 text-hover-primary font-weight-bolder font-size-h3">Weekly Sales Stats</a>
-														<div class="text-dark-50 font-weight-bold font-size-lg pt-2">890,344 Sales</div>
+													<div class="card-body d-flex">
+														<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+															<span class="svg-icon svg-icon-2x svg-icon-white" style="margin-bottom: 5px;">
+																<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
+																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																		<rect x="0" y="0" width="24" height="24"/>
+																		<path d="M8,3 L8,3.5 C8,4.32842712 8.67157288,5 9.5,5 L14.5,5 C15.3284271,5 16,4.32842712 16,3.5 L16,3 L18,3 C19.1045695,3 20,3.8954305 20,5 L20,21 C20,22.1045695 19.1045695,23 18,23 L6,23 C4.8954305,23 4,22.1045695 4,21 L4,5 C4,3.8954305 4.8954305,3 6,3 L8,3 Z" fill="#000000" opacity="0.3"/>
+																		<path d="M11,2 C11,1.44771525 11.4477153,1 12,1 C12.5522847,1 13,1.44771525 13,2 L14.5,2 C14.7761424,2 15,2.22385763 15,2.5 L15,3.5 C15,3.77614237 14.7761424,4 14.5,4 L9.5,4 C9.22385763,4 9,3.77614237 9,3.5 L9,2.5 C9,2.22385763 9.22385763,2 9.5,2 L11,2 Z" fill="#000000"/>
+																		<rect fill="#000000" opacity="0.3" x="7" y="10" width="5" height="2" rx="1"/>
+																		<rect fill="#000000" opacity="0.3" x="7" y="14" width="9" height="2" rx="1"/>
+																	</g>
+																</svg>
+																<!--end::Svg Icon-->
+															</span>
+									
+															<div class="flex-grow-1">
+																<a href="composeProj" class="text-white font-weight-bolder font-size-h2">Projects</a>
+																<p class="text-white opacity-75 font-weight-bold mt-3">Click here to upload new projects.</p>
+															</div>
+															<a href='composeProj' class="btn btn-link btn-link-white font-weight-bold">View
+															<span class="svg-icon svg-icon-lg svg-icon-white">
+																<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+																<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+																	<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																		<polygon points="0 0 24 0 24 24 0 24" />
+																		<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																		<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+																	</g>
+																</svg>
+																<!--end::Svg Icon-->
+															</span></a>
+														</div>
+														
 													</div>
 													<!--end::Body-->
 												</div>
@@ -806,1317 +724,129 @@
 								<!--begin::Row-->
 								<div class="row">
 									<div class="col-xl-4">
-										<!--begin::Mixed Widget 10-->
-										<div class="card card-custom card-stretch gutter-b">
+										<!--begin::Tiles Widget 23-->
+										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white bg-custom" style="height: 250px; height: 250px; background-image: url(assets/img/home/)">
 											<!--begin::Body-->
-											<div class="card-body d-flex flex-column">
-												<div class="flex-grow-1 pb-5">
-													<!--begin::Info-->
-													<div class="d-flex align-items-center pr-2 mb-6">
-														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">7 Hours Ago</span>
-														<div class="symbol symbol-50">
-															<span class="symbol-label bg-light-light">
-																<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-													</div>
-													<!--end::Info-->
-													<!--begin::Link-->
-													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">PitStop - Multiple Email
-													<br />Generator</a>
-													<!--end::Link-->
-													<!--begin::Desc-->
-													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Pitstop creates quick email campaigns.
-													<br />We help to strengthen your brand
-													<br />for your every purpose.</p>
-													<!--end::Desc-->
-												</div>
-												<!--begin::Team-->
-												<div class="d-flex align-items-center">
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-												</div>
-												<!--end::Team-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Mixed Widget 10-->
-									</div>
-									<div class="col-xl-4">
-										<!--begin::Mixed Widget 11-->
-										<div class="card card-custom card-stretch gutter-b">
-											<!--begin::Body-->
-											<div class="card-body d-flex flex-column">
-												<div class="flex-grow-1 pb-5">
-													<!--begin::Info-->
-													<div class="d-flex align-items-center pr-2 mb-6">
-														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">2 Days Ago</span>
-														<div class="symbol symbol-50">
-															<span class="symbol-label bg-light-light">
-																<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-													</div>
-													<!--end::Info-->
-													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">Craft - ReactJS Admin
-													<br />Theme</a>
-													<!--begin::Desc-->
-													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Craft uses the latest and greatest frameworks
-													<br />with ReactJS for complete modernization and
-													<br />future proofing your business operations
-													<br />and sales opportunities</p>
-													<!--end::Desc-->
-												</div>
-												<!--begin::Team-->
-												<div class="d-flex align-items-center">
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin: Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/005-girl-2.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-												</div>
-												<!--end::Team-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Mixed Widget 11-->
-									</div>
-									<div class="col-xl-4">
-										<!--begin::Mixed Widget 12-->
-										<div class="card card-custom card-stretch gutter-b">
-											<!--begin::Body-->
-											<div class="card-body d-flex flex-column">
-												<div class="flex-grow-1 pb-5">
-													<!--begin::Info-->
-													<div class="d-flex align-items-center pr-2 mb-6">
-														<span class="text-muted font-weight-bold font-size-lg flex-grow-1">5 Weeks Ago</span>
-														<div class="symbol symbol-50">
-															<span class="symbol-label bg-light-light">
-																<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
-															</span>
-														</div>
-													</div>
-													<!--end::Info-->
-													<a href="#" class="text-dark font-weight-bolder text-hover-primary font-size-h4">KT.com - High Quality
-													<br />Templates</a>
-													<!--begin::Desc-->
-													<p class="text-dark-50 font-weight-normal font-size-lg mt-6">Easy to use, incredibly flexible and secure
-													<br />with in-depth documentation that outlines
-													<br />everything for you</p>
-													<!--end::Desc-->
-												</div>
-												<!--begin::Team-->
-												<div class="d-flex align-items-center">
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light mr-3">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/028-girl-16.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-													<!--begin::Pic-->
-													<a href="#" class="symbol symbol-45 symbol-light">
-														<div class="symbol-label">
-															<img src="assets/media/svg/avatars/024-boy-9.svg" class="h-75 align-self-end" alt="" />
-														</div>
-													</a>
-													<!--end::Pic-->
-												</div>
-												<!--end::Team-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Mixed Widget 12-->
-									</div>
-								</div>
-								<!--end::Row-->
-								<!--begin::Row-->
-								<div class="row">
-									<div class="col-xl-6">
-										<!--begin::List Widget 7-->
-										<div class="card card-custom gutter-b card-stretch">
-											<!--begin::Header-->
-											<div class="card-header border-0">
-												<h3 class="card-title font-weight-bolder text-dark">Trends</h3>
-												<div class="card-toolbar">
-													<div class="dropdown dropdown-inline">
-														<a href="#" class="btn btn-clean btn-hover-light-primary btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i class="ki ki-bold-more-ver"></i>
-														</a>
-														<div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-															<!--begin::Naviigation-->
-															<ul class="navi">
-																<li class="navi-header font-weight-bold py-5">
-																	<span class="font-size-lg">Add New:</span>
-																	<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-																</li>
-																<li class="navi-separator mb-3 opacity-70"></li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-shopping-cart-1"></i>
-																		</span>
-																		<span class="navi-text">Order</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-calendar-8"></i>
-																		</span>
-																		<span class="navi-text">Members</span>
-																		<span class="navi-label">
-																			<span class="label label-light-danger label-rounded font-weight-bold">3</span>
-																		</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-telegram-logo"></i>
-																		</span>
-																		<span class="navi-text">Project</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-new-email"></i>
-																		</span>
-																		<span class="navi-text">Record</span>
-																		<span class="navi-label">
-																			<span class="label label-light-success label-rounded font-weight-bold">5</span>
-																		</span>
-																	</a>
-																</li>
-																<li class="navi-separator mt-3 opacity-70"></li>
-																<li class="navi-footer pt-5 pb-4">
-																	<a class="btn btn-light-primary font-weight-bolder btn-sm" href="#">More options</a>
-																	<a class="btn btn-clean font-weight-bold btn-sm d-none" href="#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
-																</li>
-															</ul>
-															<!--end::Naviigation-->
-														</div>
-													</div>
-												</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body pt-0">
-												<!--begin::Item-->
-												<div class="d-flex align-items-center flex-wrap mb-10">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50 symbol-light mr-5">
-														<span class="symbol-label">
-															<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Text-->
-													<div class="d-flex flex-column flex-grow-1 mr-2">
-														<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Top Authors</a>
-														<span class="text-muted font-weight-bold">Mark, Rowling, Esther</span>
-													</div>
-													<!--end::Text-->
-													<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+82$</span>
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center flex-wrap mb-10">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50 symbol-light mr-5">
-														<span class="symbol-label">
-															<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Text-->
-													<div class="d-flex flex-column flex-grow-1 mr-2">
-														<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Popular Authors</a>
-														<span class="text-muted font-weight-bold">Randy, Steve, Mike</span>
-													</div>
-													<!--end::Text-->
-													<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+280$</span>
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center flex-wrap mb-10">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50 symbol-light mr-5">
-														<span class="symbol-label">
-															<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Text-->
-													<div class="d-flex flex-column flex-grow-1 mr-2">
-														<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">New Users</a>
-														<span class="text-muted font-weight-bold">John, Pat, Jimmy</span>
-													</div>
-													<!--end::Text-->
-													<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center flex-wrap mb-10">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50 symbol-light mr-5">
-														<span class="symbol-label">
-															<img src="assets/media/svg/misc/005-bebo.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Text-->
-													<div class="d-flex flex-column flex-grow-1 mr-2">
-														<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Active Customers</a>
-														<span class="text-muted font-weight-bold">Sandra, Tim, Louis</span>
-													</div>
-													<!--end::Text-->
-													<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-												</div>
-												<!--end::Item-->
-												<!--begin::Item-->
-												<div class="d-flex align-items-center flex-wrap">
-													<!--begin::Symbol-->
-													<div class="symbol symbol-50 symbol-light mr-5">
-														<span class="symbol-label">
-															<img src="assets/media/svg/misc/014-kickstarter.svg" class="h-50 align-self-center" alt="" />
-														</span>
-													</div>
-													<!--end::Symbol-->
-													<!--begin::Text-->
-													<div class="d-flex flex-column flex-grow-1 mr-2">
-														<a href="#" class="font-weight-bold text-dark-75 text-hover-primary font-size-lg mb-1">Bestseller Theme</a>
-														<span class="text-muted font-weight-bold">Disco, Retro, Sports</span>
-													</div>
-													<!--end::Text-->
-													<span class="label label-xl label-light label-inline my-lg-0 my-2 text-dark-50 font-weight-bolder">+4500$</span>
-												</div>
-												<!--end::Item-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::List Widget 7-->
-									</div>
-									<div class="col-xl-6">
-										<!--begin::Base Table Widget 5-->
-										<div class="card card-custom gutter-b card-stretch">
-											<!--begin::Header-->
-											<div class="card-header border-0 pt-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">New Arrivals</span>
-													<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-												</h3>
-												<div class="card-toolbar">
-													<ul class="nav nav-pills nav-pills-sm nav-dark-75">
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_4_1">Month</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_4_2">Week</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_4_3">Day</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body pt-2 pb-0">
-												<!--begin::Table-->
-												<div class="table-responsive">
-													<table class="table table-borderless table-vertical-center">
-														<thead>
-															<tr>
-																<th class="p-0" style="width: 50px"></th>
-																<th class="p-0" style="min-width: 150px"></th>
-																<th class="p-0" style="min-width: 140px"></th>
-																<th class="p-0" style="min-width: 110px"></th>
-																<th class="p-0" style="min-width: 50px"></th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td class="py-5 pl-0">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Top Authors</a>
-																	<span class="text-muted font-weight-bold d-block">Successful Fellas</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-500">ReactJs, HTML</span>
-																</td>
-																<td class="text-right">
-																	<span class="label label-lg label-light-primary label-inline">Approved</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Popular Authors</a>
-																	<span class="text-muted font-weight-bold d-block">Most Successful</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-500">Python, MySQL</span>
-																</td>
-																<td class="text-right">
-																	<span class="label label-lg label-light-warning label-inline">In Progress</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="py-5 pl-0">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">New Users</a>
-																	<span class="text-muted font-weight-bold d-block">Awesome Users</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-500">Laravel,Metronic</span>
-																</td>
-																<td class="text-right">
-																	<span class="label label-lg label-light-success label-inline">Success</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="py-5 pl-0">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/005-bebo.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Active Customers</a>
-																	<span class="text-muted font-weight-bold d-block">Best Customers</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-500">AngularJS, C#</span>
-																</td>
-																<td class="text-right">
-																	<span class="label label-lg label-light-danger label-inline">Rejected</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="py-5 pl-0">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/014-kickstarter.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Bestseller Theme</a>
-																	<span class="text-muted font-weight-bold d-block">Amazing Templates</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-500">ReactJS, Ruby</span>
-																</td>
-																<td class="text-right">
-																	<span class="label label-lg label-light-warning label-inline">In Progress</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<!--end::Tablet-->
-											</div>
-											<!--end::Body-->
-										</div>
-										<!--end::Base Table Widget 5-->
-									</div>
-								</div>
-								<!--end::Row-->
-								<!--begin::Row-->
-								<div class="row">
-									<div class="col-xl-12">
-										<!--begin::Advance Table Widget 6-->
-										<div class="card card-custom gutter-b card-stretch">
-											<!--begin::Header-->
-											<div class="card-header border-0 py-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">Agents Stats</span>
-													<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-												</h3>
-												<div class="card-toolbar">
-													<a href="#" class="btn btn-success font-weight-bolder font-size-sm">
-													<span class="svg-icon svg-icon-md svg-icon-white">
-														<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Add-user.svg-->
+											<div class="card-body d-flex">
+												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+													<span class="svg-icon svg-icon-2x svg-icon-danger" style="margin-bottom: 5px;">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
 														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
 															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																<polygon points="0 0 24 0 24 24 0 24" />
-																<path d="M18,8 L16,8 C15.4477153,8 15,7.55228475 15,7 C15,6.44771525 15.4477153,6 16,6 L18,6 L18,4 C18,3.44771525 18.4477153,3 19,3 C19.5522847,3 20,3.44771525 20,4 L20,6 L22,6 C22.5522847,6 23,6.44771525 23,7 C23,7.55228475 22.5522847,8 22,8 L20,8 L20,10 C20,10.5522847 19.5522847,11 19,11 C18.4477153,11 18,10.5522847 18,10 L18,8 Z M9,11 C6.790861,11 5,9.209139 5,7 C5,4.790861 6.790861,3 9,3 C11.209139,3 13,4.790861 13,7 C13,9.209139 11.209139,11 9,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																<path d="M0.00065168429,20.1992055 C0.388258525,15.4265159 4.26191235,13 8.98334134,13 C13.7712164,13 17.7048837,15.2931929 17.9979143,20.2 C18.0095879,20.3954741 17.9979143,21 17.2466999,21 C13.541124,21 8.03472472,21 0.727502227,21 C0.476712155,21 -0.0204617505,20.45918 0.00065168429,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+																<rect x="0" y="0" width="24" height="24"/>
+																<circle fill="#000000" opacity="0.3" cx="12" cy="12" r="10"/>
+																<rect fill="#000000" x="11" y="10" width="2" height="7" rx="1"/>
+																<rect fill="#000000" x="11" y="7" width="2" height="2" rx="1"/>
 															</g>
 														</svg>
 														<!--end::Svg Icon-->
-													</span>Add New Member</a>
+													</span>
+													<div class="flex-grow-1">
+														<a href="about" class="text-danger font-weight-bolder font-size-h2">About</a>
+														<p class="text-muted opacity-75 font-weight-bold mt-3">Click here to edit about page details.</p>
+													</div>
+													<a href='about' class="btn btn-link btn-link-danger font-weight-bold">View
+													<span class="svg-icon svg-icon-lg svg-icon-danger">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																<polygon points="0 0 24 0 24 24 0 24" />
+																<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span></a>
 												</div>
-											</div>
-											<!--end::Header-->
-											<!--begin::Body-->
-											<div class="card-body py-0">
-												<!--begin::Table-->
-												<div class="table-responsive">
-													<table class="table table-head-custom table-vertical-center" id="kt_advance_table_widget_3">
-														<thead>
-															<tr class="text-left text-uppercase">
-																<th class="pl-0" style="width: 20px">
-																	<label class="checkbox checkbox-lg checkbox-inline mr-2">
-																		<input type="checkbox" value="1" />
-																		<span></span>
-																	</label>
-																</th>
-																<th class="px-0" style="width: 50px">authors</th>
-																<th style="min-width: 120px"></th>
-																<th style="min-width: 120px">country</th>
-																<th class="text-info" style="min-width: 150px">company</th>
-																<th style="min-width: 150px">status</th>
-																<th class="pr-0" style="min-width: 160px">action</th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td class="pl-0 py-7">
-																	<label class="checkbox checkbox-lg checkbox-inline">
-																		<input type="checkbox" value="1" />
-																		<span></span>
-																	</label>
-																</td>
-																<td class="pl-0">
-																	<div class="symbol symbol-50 symbol-light mt-1">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/avatars/001-boy.svg" class="h-75 align-self-end" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Brad Simmons</a>
-																	<span class="text-muted font-weight-bold text-muted d-block">HTML, JS, ReactJS</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brasil</span>
-																	<span class="text-muted font-weight-bold">Code: BR</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Intertico</span>
-																	<span class="text-muted font-weight-bold">Web, UI/UX Design</span>
-																</td>
-																<td>
-																	<div class="d-flex flex-column w-100 mr-2">
-																		<div class="d-flex align-items-center justify-content-between mb-2">
-																			<span class="text-muted mr-2 font-size-sm font-weight-bold">65%</span>
-																			<span class="text-muted font-size-sm font-weight-bold">Progress</span>
-																		</div>
-																		<div class="progress progress-xs w-100">
-																			<div class="progress-bar bg-danger" role="progressbar" style="width: 65%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-																		</div>
-																	</div>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Settings-1.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000" />
-																					<path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953)" />
-																					<path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero" />
-																					<path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-7">
-																	<label class="checkbox checkbox-lg checkbox-inline">
-																		<input type="checkbox" value="1" />
-																		<span></span>
-																	</label>
-																</td>
-																<td class="pl-0">
-																	<div class="symbol symbol-50 symbol-light mt-1">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/avatars/018-girl-9.svg" class="h-75 align-self-end" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Jessie Clarcson</a>
-																	<span class="text-muted font-weight-bold text-muted d-block">C#, ASP.NET, MS SQL</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Brasil</span>
-																	<span class="text-muted font-weight-bold">Code: BY</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Agoda</span>
-																	<span class="text-muted font-weight-bold">Houses &amp; Hotels</span>
-																</td>
-																<td>
-																	<div class="d-flex flex-column w-100 mr-2">
-																		<div class="d-flex align-items-center justify-content-between mb-2">
-																			<span class="text-muted mr-2 font-size-sm font-weight-bold">83%</span>
-																			<span class="text-muted font-size-sm font-weight-bold">Progress</span>
-																		</div>
-																		<div class="progress progress-xs w-100">
-																			<div class="progress-bar bg-success" role="progressbar" style="width: 83%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-																		</div>
-																	</div>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Settings-1.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000" />
-																					<path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953)" />
-																					<path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero" />
-																					<path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-7">
-																	<label class="checkbox checkbox-lg checkbox-inline">
-																		<input type="checkbox" value="1" />
-																		<span></span>
-																	</label>
-																</td>
-																<td class="pl-0">
-																	<div class="symbol symbol-50 symbol-light mt-1">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/avatars/047-girl-25.svg" class="h-75 align-self-end" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Lebron Wayde</a>
-																	<span class="text-muted font-weight-bold text-muted d-block">PHP, Laravel, VueJS</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Phillipines</span>
-																	<span class="text-muted font-weight-bold">Code: PH</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">RoadGee</span>
-																	<span class="text-muted font-weight-bold">Transportation</span>
-																</td>
-																<td>
-																	<div class="d-flex flex-column w-100 mr-2">
-																		<div class="d-flex align-items-center justify-content-between mb-2">
-																			<span class="text-muted mr-2 font-size-sm font-weight-bold">47%</span>
-																			<span class="text-muted font-size-sm font-weight-bold">Progress</span>
-																		</div>
-																		<div class="progress progress-xs w-100">
-																			<div class="progress-bar bg-primary" role="progressbar" style="width: 83%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-																		</div>
-																	</div>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Settings-1.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000" />
-																					<path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953)" />
-																					<path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero" />
-																					<path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-7">
-																	<label class="checkbox checkbox-lg checkbox-inline">
-																		<input type="checkbox" value="1" />
-																		<span></span>
-																	</label>
-																</td>
-																<td class="pl-0">
-																	<div class="symbol symbol-50 symbol-light mt-1">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/avatars/014-girl-7.svg" class="h-75 align-self-end" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark-75 font-weight-bolder text-hover-primary mb-1 font-size-lg">Natali Trump</a>
-																	<span class="text-muted font-weight-bold text-muted d-block">Python, PostgreSQL, ReactJS</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">Argentina</span>
-																	<span class="text-muted font-weight-bold">Code: AR</span>
-																</td>
-																<td>
-																	<span class="text-dark-75 font-weight-bolder d-block font-size-lg">The Hill</span>
-																	<span class="text-muted font-weight-bold">Insurance</span>
-																</td>
-																<td>
-																	<div class="d-flex flex-column w-100 mr-2">
-																		<div class="d-flex align-items-center justify-content-between mb-2">
-																			<span class="text-muted mr-2 font-size-sm font-weight-bold">71%</span>
-																			<span class="text-muted font-size-sm font-weight-bold">Progress</span>
-																		</div>
-																		<div class="progress progress-xs w-100">
-																			<div class="progress-bar bg-danger" role="progressbar" style="width: 71%;" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-																		</div>
-																	</div>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Settings-1.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M7,3 L17,3 C19.209139,3 21,4.790861 21,7 C21,9.209139 19.209139,11 17,11 L7,11 C4.790861,11 3,9.209139 3,7 C3,4.790861 4.790861,3 7,3 Z M7,9 C8.1045695,9 9,8.1045695 9,7 C9,5.8954305 8.1045695,5 7,5 C5.8954305,5 5,5.8954305 5,7 C5,8.1045695 5.8954305,9 7,9 Z" fill="#000000" />
-																					<path d="M7,13 L17,13 C19.209139,13 21,14.790861 21,17 C21,19.209139 19.209139,21 17,21 L7,21 C4.790861,21 3,19.209139 3,17 C3,14.790861 4.790861,13 7,13 Z M17,19 C18.1045695,19 19,18.1045695 19,17 C19,15.8954305 18.1045695,15 17,15 C15.8954305,15 15,15.8954305 15,17 C15,18.1045695 15.8954305,19 17,19 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm mx-3">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Write.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M12.2674799,18.2323597 L12.0084872,5.45852451 C12.0004303,5.06114792 12.1504154,4.6768183 12.4255037,4.38993949 L15.0030167,1.70195304 L17.5910752,4.40093695 C17.8599071,4.6812911 18.0095067,5.05499603 18.0083938,5.44341307 L17.9718262,18.2062508 C17.9694575,19.0329966 17.2985816,19.701953 16.4718324,19.701953 L13.7671717,19.701953 C12.9505952,19.701953 12.2840328,19.0487684 12.2674799,18.2323597 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.701953, 10.701953) rotate(-135.000000) translate(-14.701953, -10.701953)" />
-																					<path d="M12.9,2 C13.4522847,2 13.9,2.44771525 13.9,3 C13.9,3.55228475 13.4522847,4 12.9,4 L6,4 C4.8954305,4 4,4.8954305 4,6 L4,18 C4,19.1045695 4.8954305,20 6,20 L18,20 C19.1045695,20 20,19.1045695 20,18 L20,13 C20,12.4477153 20.4477153,12 21,12 C21.5522847,12 22,12.4477153 22,13 L22,18 C22,20.209139 20.209139,22 18,22 L6,22 C3.790861,22 2,20.209139 2,18 L2,6 C2,3.790861 3.790861,2 6,2 L12.9,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																	<a href="#" class="btn btn-icon btn-light btn-hover-primary btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-primary">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/General/Trash.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<rect x="0" y="0" width="24" height="24" />
-																					<path d="M6,8 L6,20.5 C6,21.3284271 6.67157288,22 7.5,22 L16.5,22 C17.3284271,22 18,21.3284271 18,20.5 L18,8 L6,8 Z" fill="#000000" fill-rule="nonzero" />
-																					<path d="M14,4.5 L14,4 C14,3.44771525 13.5522847,3 13,3 L11,3 C10.4477153,3 10,3.44771525 10,4 L10,4.5 L5.5,4.5 C5.22385763,4.5 5,4.72385763 5,5 L5,5.5 C5,5.77614237 5.22385763,6 5.5,6 L18.5,6 C18.7761424,6 19,5.77614237 19,5.5 L19,5 C19,4.72385763 18.7761424,4.5 18.5,4.5 L14,4.5 Z" fill="#000000" opacity="0.3" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-														</tbody>
-													</table>
-												</div>
-												<!--end::Table-->
+												
 											</div>
 											<!--end::Body-->
 										</div>
-										<!--end::Advance Table Widget 6-->
+										<!--end::Tiles Widget 23-->
 									</div>
-								</div>
-								<!--end::Row-->
-								<!--begin::Row-->
-								<div class="row">
-									<div class="col-lg-4">
-										<!--begin::Mixed Widget 15-->
-										<div class="card card-custom card-stretch gutter-b">
-											<!--begin::Header-->
-											<div class="card-header border-0 pt-5">
-												<h3 class="card-title font-weight-bolder">Trends</h3>
-												<div class="card-toolbar">
-													<div class="dropdown dropdown-inline">
-														<a href="#" class="btn btn-clean btn-sm btn-icon" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-															<i class="ki ki-bold-more-hor"></i>
-														</a>
-														<div class="dropdown-menu dropdown-menu-md dropdown-menu-right">
-															<!--begin::Naviigation-->
-															<ul class="navi">
-																<li class="navi-header font-weight-bold py-5">
-																	<span class="font-size-lg">Add New:</span>
-																	<i class="flaticon2-information icon-md text-muted" data-toggle="tooltip" data-placement="right" title="Click to learn more..."></i>
-																</li>
-																<li class="navi-separator mb-3 opacity-70"></li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="flaticon2-shopping-cart-1"></i>
-																		</span>
-																		<span class="navi-text">Order</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-calendar-8"></i>
-																		</span>
-																		<span class="navi-text">Members</span>
-																		<span class="navi-label">
-																			<span class="label label-light-danger label-rounded font-weight-bold">3</span>
-																		</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-telegram-logo"></i>
-																		</span>
-																		<span class="navi-text">Project</span>
-																	</a>
-																</li>
-																<li class="navi-item">
-																	<a href="#" class="navi-link">
-																		<span class="navi-icon">
-																			<i class="navi-icon flaticon2-new-email"></i>
-																		</span>
-																		<span class="navi-text">Record</span>
-																		<span class="navi-label">
-																			<span class="label label-light-success label-rounded font-weight-bold">5</span>
-																		</span>
-																	</a>
-																</li>
-																<li class="navi-separator mt-3 opacity-70"></li>
-																<li class="navi-footer pt-5 pb-4">
-																	<a class="btn btn-light-primary font-weight-bolder btn-sm" href="#">More options</a>
-																	<a class="btn btn-clean font-weight-bold btn-sm d-none" href="#" data-toggle="tooltip" data-placement="right" title="Click to learn more...">Learn more</a>
-																</li>
-															</ul>
-															<!--end::Naviigation-->
-														</div>
-													</div>
-												</div>
-											</div>
-											<!--end::Header-->
+
+									<div class="col-xl-4">
+										<!--begin::Tiles Widget 23-->
+										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white bg-custom" style="height: 250px; height: 250px; background-image: url(assets/img/home/)">
 											<!--begin::Body-->
-											<div class="card-body d-flex flex-column">
-												<!--begin::Chart-->
-												<div id="kt_mixed_widget_15_chart" style="height: 150px"></div>
-												<!--end::Chart-->
-												<!--begin::Items-->
-												<div class="mt-5 flex-grow-1">
-													<!--begin::Item-->
-													<div class="d-flex align-items-center justify-content-between mb-5">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center mr-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
-																<div class="symbol-label">
-																	<img src="assets/media/svg/misc/006-plurk.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div>
-																<a href="#" class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top Authors</a>
-																<div class="font-size-sm text-muted font-weight-bold mt-1">Ricky Hunt, Sandra Trepp</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="label label-light label-inline font-weight-bold text-dark-50 py-4 px-3 font-size-base">+82$</div>
-														<!--end::Label-->
+											<div class="card-body d-flex">
+												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+													<span class="svg-icon svg-icon-2x svg-icon-success" style="margin-bottom: 5px;">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																<rect x="0" y="0" width="24" height="24"/>
+																<path d="M13.0799676,14.7839934 L15.2839934,12.5799676 C15.8927139,11.9712471 16.0436229,11.0413042 15.6586342,10.2713269 L15.5337539,10.0215663 C15.1487653,9.25158901 15.2996742,8.3216461 15.9083948,7.71292558 L18.6411989,4.98012149 C18.836461,4.78485934 19.1530435,4.78485934 19.3483056,4.98012149 C19.3863063,5.01812215 19.4179321,5.06200062 19.4419658,5.11006808 L20.5459415,7.31801948 C21.3904962,9.0071287 21.0594452,11.0471565 19.7240871,12.3825146 L13.7252616,18.3813401 C12.2717221,19.8348796 10.1217008,20.3424308 8.17157288,19.6923882 L5.75709327,18.8875616 C5.49512161,18.8002377 5.35354162,18.5170777 5.4408655,18.2551061 C5.46541191,18.1814669 5.50676633,18.114554 5.56165376,18.0596666 L8.21292558,15.4083948 C8.8216461,14.7996742 9.75158901,14.6487653 10.5215663,15.0337539 L10.7713269,15.1586342 C11.5413042,15.5436229 12.4712471,15.3927139 13.0799676,14.7839934 Z" fill="#000000"/>
+																<path d="M14.1480759,6.00715131 L13.9566988,7.99797396 C12.4781389,7.8558405 11.0097207,8.36895892 9.93933983,9.43933983 C8.8724631,10.5062166 8.35911588,11.9685602 8.49664195,13.4426352 L6.50528978,13.6284215 C6.31304559,11.5678496 7.03283934,9.51741319 8.52512627,8.02512627 C10.0223249,6.52792766 12.0812426,5.80846733 14.1480759,6.00715131 Z M14.4980938,2.02230302 L14.313049,4.01372424 C11.6618299,3.76737046 9.03000738,4.69181803 7.1109127,6.6109127 C5.19447112,8.52735429 4.26985715,11.1545872 4.51274152,13.802405 L2.52110319,13.985098 C2.22450978,10.7517681 3.35562581,7.53777247 5.69669914,5.19669914 C8.04101739,2.85238089 11.2606138,1.72147333 14.4980938,2.02230302 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+													<div class="flex-grow-1">
+														<a href="contact" class="text-success font-weight-bolder font-size-h2">Contact</a>
+														<p class="text-muted opacity-75 font-weight-bold mt-3">Click here to view contact form submissions.</p>
 													</div>
-													<!--end::Item-->
-													<!--begin::Widget Item-->
-													<div class="d-flex align-items-center justify-content-between mb-5">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center mr-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
-																<div class="symbol-label">
-																	<img src="assets/media/svg/misc/015-telegram.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div>
-																<a href="#" class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top Sales</a>
-																<div class="font-size-sm text-muted font-weight-bold mt-1">PitStop Emails</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="label label-light label-inline font-weight-bold text-dark-50 py-4 px-3 font-size-base">+82$</div>
-														<!--end::Label-->
-													</div>
-													<!--end::Widget Item-->
-													<!--begin::Widget Item-->
-													<div class="d-flex align-items-center justify-content-between">
-														<!--begin::Section-->
-														<div class="d-flex align-items-center mr-2">
-															<!--begin::Symbol-->
-															<div class="symbol symbol-50 symbol-light mr-3 flex-shrink-0">
-																<div class="symbol-label">
-																	<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50" alt="" />
-																</div>
-															</div>
-															<!--end::Symbol-->
-															<!--begin::Title-->
-															<div>
-																<a href="#" class="font-size-h6 text-dark-75 text-hover-primary font-weight-bolder">Top Engagement</a>
-																<div class="font-size-sm text-muted font-weight-bold mt-1">KT.com</div>
-															</div>
-															<!--end::Title-->
-														</div>
-														<!--end::Section-->
-														<!--begin::Label-->
-														<div class="label label-light label-inline font-weight-bold text-dark-50 py-4 px-3 font-size-base">+82$</div>
-														<!--end::Label-->
-													</div>
-													<!--end::Widget Item-->
+													<a href='contact' class="btn btn-link btn-link-success font-weight-bold">View
+													<span class="svg-icon svg-icon-lg svg-icon-success">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																<polygon points="0 0 24 0 24 24 0 24" />
+																<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span></a>
 												</div>
-												<!--end::Widget Items-->
 											</div>
 											<!--end::Body-->
 										</div>
-										<!--end::Mixed Widget 15-->
+										<!--end::Tiles Widget 23-->
 									</div>
-									<div class="col-lg-8">
-										<!--begin::Base Table Widget 2-->
-										<div class="card card-custom card-stretch gutter-b">
-											<!--begin::Header-->
-											<div class="card-header border-0 pt-5">
-												<h3 class="card-title align-items-start flex-column">
-													<span class="card-label font-weight-bolder text-dark">New Arrivals</span>
-													<span class="text-muted mt-3 font-weight-bold font-size-sm">More than 400+ new members</span>
-												</h3>
-												<div class="card-toolbar">
-													<ul class="nav nav-pills nav-pills-sm nav-dark-75">
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_2_1">Month</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4" data-toggle="tab" href="#kt_tab_pane_2_2">Week</a>
-														</li>
-														<li class="nav-item">
-															<a class="nav-link py-2 px-4 active" data-toggle="tab" href="#kt_tab_pane_2_3">Day</a>
-														</li>
-													</ul>
-												</div>
-											</div>
-											<!--end::Header-->
+
+									<div class="col-xl-4">
+										<!--begin::Tiles Widget 23-->
+										<div class="card card-custom bgi-no-repeat bgi-size-cover gutter-b bg-white bg-custom" style="height: 250px; height: 250px; background-image: url(assets/img/home/)">
 											<!--begin::Body-->
-											<div class="card-body pt-2 pb-0">
-												<!--begin::Table-->
-												<div class="table-responsive">
-													<table class="table table-borderless table-vertical-center">
-														<thead>
-															<tr>
-																<th class="p-0" style="width: 50px"></th>
-																<th class="p-0" style="min-width: 150px"></th>
-																<th class="p-0" style="min-width: 140px"></th>
-																<th class="p-0" style="min-width: 120px"></th>
-																<th class="p-0" style="min-width: 40px"></th>
-															</tr>
-														</thead>
-														<tbody>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/006-plurk.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Top Authors</a>
-																	<span class="text-muted font-weight-bold d-block">Successful Fellas</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">ReactJs, HTML</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">4600 Users</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/015-telegram.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Popular Authors</a>
-																	<span class="text-muted font-weight-bold d-block">Most Successful</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">Python, MySQL</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">7200 Users</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/003-puzzle.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">New Users</a>
-																	<span class="text-muted font-weight-bold d-block">Awesome Users</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">Laravel, Metronic</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">890 Users</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/005-bebo.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Active Customers</a>
-																	<span class="text-muted font-weight-bold d-block">Best Customers</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">AngularJS, C#</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">6370 Users</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-															<tr>
-																<td class="pl-0 py-5">
-																	<div class="symbol symbol-50 symbol-light mr-2">
-																		<span class="symbol-label">
-																			<img src="assets/media/svg/misc/014-kickstarter.svg" class="h-50 align-self-center" alt="" />
-																		</span>
-																	</div>
-																</td>
-																<td class="pl-0">
-																	<a href="#" class="text-dark font-weight-bolder text-hover-primary mb-1 font-size-lg">Bestseller Theme</a>
-																	<span class="text-muted font-weight-bold d-block">Amazing Templates</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">ReactJS, Ruby</span>
-																</td>
-																<td class="text-right">
-																	<span class="text-muted font-weight-bold">354 Users</span>
-																</td>
-																<td class="text-right pr-0">
-																	<a href="#" class="btn btn-icon btn-light btn-sm">
-																		<span class="svg-icon svg-icon-md svg-icon-success">
-																			<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
-																			<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-																				<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-																					<polygon points="0 0 24 0 24 24 0 24" />
-																					<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
-																					<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
-																				</g>
-																			</svg>
-																			<!--end::Svg Icon-->
-																		</span>
-																	</a>
-																</td>
-															</tr>
-														</tbody>
-													</table>
+											<div class="card-body d-flex">
+												<div class="d-flex py-5 flex-column align-items-start flex-grow-1">
+													<span class="svg-icon svg-icon-2x svg-icon-primary" style="margin-bottom: 5px;">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Communication/Group.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																<polygon points="0 0 24 0 24 24 0 24"/>
+																<path d="M5.85714286,2 L13.7364114,2 C14.0910962,2 14.4343066,2.12568431 14.7051108,2.35473959 L19.4686994,6.3839416 C19.8056532,6.66894833 20,7.08787823 20,7.52920201 L20,20.0833333 C20,21.8738751 19.9795521,22 18.1428571,22 L5.85714286,22 C4.02044787,22 4,21.8738751 4,20.0833333 L4,3.91666667 C4,2.12612489 4.02044787,2 5.85714286,2 Z" fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+																<rect fill="#000000" x="6" y="11" width="9" height="2" rx="1"/>
+																<rect fill="#000000" x="6" y="15" width="5" height="2" rx="1"/>
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span>
+													<div class="flex-grow-1">
+														<a href="newsletter" class="text-primary font-weight-bolder font-size-h2">Newsletter</a>
+														<p class="text-muted opacity-75 font-weight-bold mt-3">Click here to view subscriber list.</p>
+													</div>
+													<a href='newsletter' class="btn btn-link btn-link-primary font-weight-bold">View
+													<span class="svg-icon svg-icon-lg svg-icon-primary">
+														<!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Arrow-right.svg-->
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+															<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+																<polygon points="0 0 24 0 24 24 0 24" />
+																<rect fill="#000000" opacity="0.3" transform="translate(12.000000, 12.000000) rotate(-90.000000) translate(-12.000000, -12.000000)" x="11" y="5" width="2" height="14" rx="1" />
+																<path d="M9.70710318,15.7071045 C9.31657888,16.0976288 8.68341391,16.0976288 8.29288961,15.7071045 C7.90236532,15.3165802 7.90236532,14.6834152 8.29288961,14.2928909 L14.2928896,8.29289093 C14.6714686,7.914312 15.281055,7.90106637 15.675721,8.26284357 L21.675721,13.7628436 C22.08284,14.136036 22.1103429,14.7686034 21.7371505,15.1757223 C21.3639581,15.5828413 20.7313908,15.6103443 20.3242718,15.2371519 L15.0300721,10.3841355 L9.70710318,15.7071045 Z" fill="#000000" fill-rule="nonzero" transform="translate(14.999999, 11.999997) scale(1, -1) rotate(90.000000) translate(-14.999999, -11.999997)" />
+															</g>
+														</svg>
+														<!--end::Svg Icon-->
+													</span></a>
 												</div>
-												<!--end::Table-->
+												
 											</div>
 											<!--end::Body-->
 										</div>
-										<!--end::Base Table Widget 2-->
+
+										
+										<!--end::Tiles Widget 23-->
 									</div>
 								</div>
 								<!--end::Row-->
