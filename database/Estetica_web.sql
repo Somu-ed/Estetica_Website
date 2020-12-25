@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Dec 01, 2020 at 05:37 PM
+-- Generation Time: Dec 25, 2020 at 03:02 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -20,6 +20,52 @@ SET time_zone = "+00:00";
 --
 -- Database: `Estetica_web`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `about`
+--
+
+CREATE TABLE `about` (
+  `id` int(50) NOT NULL,
+  `story` varchar(700) NOT NULL,
+  `approach` varchar(700) NOT NULL,
+  `mission` varchar(700) NOT NULL,
+  `vision` varchar(700) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `about`
+--
+
+INSERT INTO `about` (`id`, `story`, `approach`, `mission`, `vision`) VALUES
+(1, 'Estética was born out of our long-drawn dream of bringing Odisha to the centre of attention with respect to furnishings. The state since long has been taken for granted for its consumption of soft furnishings and usually treated to the unwanted dump from the rest of the country. We opened our doors to smart city, Bhubaneswar for giving it a deserved due!', 'We offer consulting on furnishings; we do not just sell it! The team focuses on understanding the customers’ needs, offers all possible options by sharing the technical details on the make & break of fabric and helps the customer to take an informed decision. The team spends time on knowledge share with customers and associates to emphasize on choosing the right kind of furnishings for their spaces. Right from a detailed project brief to execution, we have developed a structured process to serve our customers in the best possible manner. There are checks incorporated at every level of the process to ensure no compromise on quality and timeline adherence.\n\n', 'To dial up the manner in which furnishing is produced and consumed in Odisha by advocating the best practices in the business and offering a platform for knowledge share.', 'To establish gold standards in the business by:\n<br>\n&#9679 Bringing a paradigm shift from ‘selling to consulting’. <br>\n&#9679 Offering customised products & service solutions keeping quality at the core. <br>\n&#9679 Initiating thought leadership to create a conducive ecosystem for furnishings. ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `associates`
+--
+
+CREATE TABLE `associates` (
+  `id` int(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `designation` varchar(100) NOT NULL,
+  `review` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `associates`
+--
+
+INSERT INTO `associates` (`id`, `name`, `designation`, `review`) VALUES
+(1, 'Chirag Swain', 'Principal Architect, CDS', 'Mr. Chirag Swain is a well known architect and leads the firm in Design and facilities Management. His expertise is in designing of Boutique Hotels, pubs, lounges, discos and restaurants, luxury residential and High-end villas. Estética has collaborated with him for both his residential as well as commercial projects.'),
+(2, 'Chiranjib Patnaik', 'Proprietor, In-Arc', 'Mr Chiranjib Patnaik  is an experienced Interior Designer with a demonstrated history of working in the design industry. Skilled in Concept Planning, Furnishings, Planning Consultancy, Kitchen & Bath Design, Window Treatments, and Vendor Management. He has collaborated with Estética for many of his esteemed clients.'),
+(3, 'Krishnendu Nandy', 'Managing Partner, IDEAZ', 'Mr Krishnendu Nandy is one of the most prominent architects of Odisha. His firm provides services in Architecture, Interior design, Master Planning & Facilities programming. He has over sixteen years of experience in handling varied projects ranging from Hospitality, Corporate, Housing, High end Residential and Retail Centres across India and SAARC Countries. I.D.E.A.Z. Estética has partnered with Mr Nandy for some of its interior projects.'),
+(4, 'Lisa Acharya', 'Principal Architect, L.A.vation', 'Ms Lisa Acharya is a young, bright architect who runs a successful architecture consultancy firm, L.A.vation. In the span of 10 years, it has gained experience in consulting for a wide range of constructions and have valuable insights into the execution of various kind of small, large and complex projects.They consider \"deadlines\" sacrosanct and value their commitments. Estética has had a wonderful association with Ms Lisa on some of her big institutional projects.'),
+(5, 'Revaty Pany', 'Managing Director, Ocasa Designs', 'Ms. Revati Pany is a veteran interior designer who caters to the varying aesthetics of her clientele. Having pursued a short course in Interior Design , she started creating furniture pieces in wood  and wrought iron for discerning clients . Popularity for her work grew , and she started creating and curating full interior spaces . Her love for art and craft helps give a distinct identity to all projects , whether contemporary or classic.'),
+(6, 'Debasish Patnaik', 'Founder, Vibe Furniture Studio', 'Debasish is an innovative manufacturer of contemporary furniture made of wood and wood- based products. Vibe Studio is a state-of-the-art furniture studio where the furniture is manufactured using German technology. Estética has been a furnishing partner for the studio and has also collaborated with Debasish for his interior projects.');
 
 -- --------------------------------------------------------
 
@@ -44,7 +90,7 @@ CREATE TABLE `blog` (
 --
 
 INSERT INTO `blog` (`id`, `image`, `date`, `author`, `category`, `heading`, `short`, `description`, `keywords`) VALUES
-(1, 'disinfecting-fabrics-thumbnail.jpg', '2020-06-25', 'Sambit Satpathy', 'Furniture', 'THE SOLUTION TO DISINFECTING FABRICS!', 'With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.', 'Personal Hygiene\r\nWith new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.\r\n\r\nWe highly recommend washing your hands for approximately 20 seconds to ensure no spreading of the virus. That is the first of many steps to ensure your furniture is virus free!\r\n\r\nMaintaining the Fabrics\r\nAs people have their different techniques on how to clean furniture, there are four different methods to always remember!\r\nThese methods may vary depending on the type of fabric…\r\n\r\n1.Regular cleaning: This provides a daily cleaning that will remove any dust and/or debris that could damage the fabrics. This ensures that your furniture will look good for much longer.\r\n2.Vacuum Fabrics: Vacuuming provides a deeper clean to ensure that no dirt is left on the furniture that could slowly damage the furniture over time. Continue to do this and your furniture will remain better for longer!\r\n3.Removing stains: Stains by far are one thing to fear when it comes to your beautiful furniture. However, by using the right techniques to remove the stains, it will help provide a cleaner look to your fabrics. More details coming up!\r\n4.Deep Cleaning: Finally, depending on your fabrics, it is important to provide a deep clean to remove any build up of dirt. Methods may include steaming the fabrics, if removable, placing them in a washer or using other cleaners.', 'furniture,indoor'),
+(1, 'disinfecting-fabrics-thumbnail.jpg', '2020-06-25', 'Sambit Satpathy', 'Fabrics', 'The solution to disinfecting fabrics', 'With new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.', 'Personal Hygiene\r\nWith new facts coming out on how to stay safe during a pandemic, one thing remains the same: personal hygiene. A virus does not remain on soft surfaces as much as it will on harder surfaces such as wood, metal plastics and laminates.\r\n\r\nWe highly recommend washing your hands for approximately 20 seconds to ensure no spreading of the virus. That is the first of many steps to ensure your furniture is virus free!\r\n\r\nMaintaining the Fabrics\r\nAs people have their different techniques on how to clean furniture, there are four different methods to always remember!\r\nThese methods may vary depending on the type of fabric…\r\n\r\n1.Regular cleaning: This provides a daily cleaning that will remove any dust and/or debris that could damage the fabrics. This ensures that your furniture will look good for much longer.\r\n2.Vacuum Fabrics: Vacuuming provides a deeper clean to ensure that no dirt is left on the furniture that could slowly damage the furniture over time. Continue to do this and your furniture will remain better for longer!\r\n3.Removing stains: Stains by far are one thing to fear when it comes to your beautiful furniture. However, by using the right techniques to remove the stains, it will help provide a cleaner look to your fabrics. More details coming up!\r\n4.Deep Cleaning: Finally, depending on your fabrics, it is important to provide a deep clean to remove any build up of dirt. Methods may include steaming the fabrics, if removable, placing them in a washer or using other cleaners.', 'furniture,indoor'),
 (4, 'choose-curtains-thumbnail.jpg', '2020-11-30', 'Sambit Satpathy', 'Curtains', 'Tips to choose the right curtains\r\n', 'Many times, it is very difficult to choose correct fabric, so Estetica offer few familiar window treatment situations and recommendations for picking the right fabric.', '<p class=\"p1\">Many times, it is very difficult to choose correct fabric, so Estetica offer few familiar window treatment situations and recommendations for picking the right fabric:</p>\r\n<ul class=\"ul1\">\r\n<li class=\"li2\"><span class=\"s2\"><strong>A wide, long window that need plenty of coverage:</strong>&nbsp;Fabrics with some heft to them will meet your coverage needs. Make simple floor-to-ceiling panel draperies in a heavier-weight fabric, such as velvet, chenille, or a blended fabric that limit the light. An alternative is to line your draperies with lining.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A wide, long window where not much coverage is needed:&nbsp;</strong>A swag and cascade (made out of a non-sheer fabric with great drapability, such as a silk or blended cotton) that frames the top and sides of a bank of windows is a perfect treatment to provide some dress-up without much coverage. If you want to use a sheer fabric to diffuse the light, choose panels in organza, chiffon, or even lace.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A room with a small window:&nbsp;</strong>Think about adding a drapery that covers the window entirely. Measure your drapery so that it extends well past the window&rsquo;s trim molding. Then choose a heavier fabric, such as damask, in a colour that matches (or closely matches) the room&rsquo;s paint colour. The window treatment helps block air. Matching the fabric with the room&rsquo;s walls gives the room-enlarging illusion of unbroken wall space.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A very low-ceilinged room:</strong>&nbsp;Measure your draperies so they extend from the floor to the ceiling and match their colour to the wall colour. Be sure to install the curtain rod nearly flush with the ceiling. If you want to let in light, choose a fabric whose texture is very light yet crisp, such as sheer and if you like coverage, choose a tightly woven cotton. Using a fabric that features vertical stripes is another nice way you can create a feeling of length and height in a low-ceilinged room.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A small window, the only source of light in a small kitchen:</strong>&nbsp;If you have a small kitchen with only a tiny window, you want to maximize the window as much as possible.<strong><em>&nbsp;</em></strong>Consider adding a vertical blind, or if you have the ceiling height, an pleated curtain in the medium weight fabric of your choice.<span class=\"Apple-converted-space\">&nbsp;</span></span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A windows in a formal living room: </strong>Pleated curtains look great over sheers in dining rooms, and this treatment lets in adequate light for dining, working, or studying. Choose a fabric with a tight weave and even a bit of stiffness, so that they&rsquo;ll keep their shape.</span></li>\r\n<li class=\"li2\"><span class=\"s2\"><strong>A bathroom window that needs privacy but still needs natural light:&nbsp;</strong>Try a heavier voile, which give a bit of coverage, yet let in some light. Create a simple curtain panel with this fabric, and your problems are solved.<span class=\"Apple-converted-space\">&nbsp;</span></span></li>\r\n</ul>', 'curtains'),
 (5, 'right-upholstery-thumbnail.jpg', '2020-11-30', 'Sambit Satpathy', 'Upholstery', 'Finding the right upholstery fit\r\n', 'Although we all jump at the chance to replace furniture with newer, but sometimes a good-quality sofa or chair just needs a fabric revamp. The right upholstery can easily transform the look and feel of your dining room, living room or home office furniture.', '<p class=\"p1\">Although we all jump at the chance to replace furniture with newer, but sometimes a good-quality sofa or chair just needs a fabric revamp. The right upholstery can easily transform the look and feel of your dining room, living room or home office furniture. There are many different textures, colours and patterns to choose from, so be sure to consider what makes sense for your family, as well as what complements your room\'s decor. If you\'re on the verge of making a new furniture or re-upholstering your furniture, do consider the following factors to make sure you pick the right material for your furniture -<span class=\"Apple-converted-space\">&nbsp;</span></p>\r\n<p class=\"p2\"><strong>Fabric Durability</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li3\"><span class=\"s2\">Choose a fabric based on its uses like, who will be using your sofa. If your pets will also be sharing your sofa with you, consider a microfiber fabric or leather as they can withstand heavy use.</span></li>\r\n<li class=\"li3\"><span class=\"s2\">Consider fabric durability if your sofa or chair will be placed in a high-traffic area of the home.</span></li>\r\n<li class=\"li4\"><span class=\"s2\">Woven patterns hold up longer than printed ones, as do higher thread counts. Thread count refers to the number of threads per square inch of fabric, and denser fabric lasts longer.</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Fabric Design / Pattern</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Your fabric choice should approximate the style and character of the piece it is covering. For example, a traditional fabric would look better on a traditional style of frame.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Some fabrics appear casual, while others might look more formal. Choose a fabric to echo your own style or theme that you have established throughout the home.</span></li>\r\n<li class=\"li7\"><span class=\"s2\">Consider the scale of the design repeat. It should be appropriate to the size of the furniture it is covering, as well as the room size. A large bold, pattern might work better in a larger room, while a more muted or smaller one might be a better choice for a smaller space.</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Fabric Colour </strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Colour is the most important reason people choose a fabric, so make sure your colour choice is appropriate. For instance, it may be best to avoid a very bold colour for a smaller room, especially if your sofa is also large.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Avoid delicately coloured fabrics around children and pets.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">To strike the right mood, consider the colour temperature. Since warm and cool colours affect the mood of the room, make sure you&rsquo;re choosing the right fabric for the right mood.</span></li>\r\n<li class=\"li7\"><span class=\"s2\">Avoid trendy colours unless you happen to really like them. Colour trends come and go so be careful. What if you don&rsquo;t consider eggplant attractive in the first place? Will you be able to live with a colour even when its popularity wanes?</span></li>\r\n</ul>\r\n<p class=\"p5\"><strong>Special Considerations</strong></p>\r\n<ul class=\"ul1\">\r\n<li class=\"li6\"><span class=\"s2\">Fade Resistance: Consider if your fabric is fade resistant especially if it will be placed in a room that gets plenty of sunlight or will be placed close to a window.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Mildew Resistance: Look for fabric that is mildew resistant if you live in a humid climate that fosters mildew.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Allergies: Consider fabric such as microfiber for certain allergies because it is lint free and does not attract dust.</span></li>\r\n<li class=\"li6\"><span class=\"s2\">Pets: If you have pets avoid using delicate fabric such as silk, or any fabric with lots of texture. Select pet-friendly upholstery instead.</span></li>\r\n</ul>', 'upholstery');
 
@@ -120,7 +166,7 @@ CREATE TABLE `contact` (
   `address` varchar(255) NOT NULL,
   `msg` varchar(2048) NOT NULL,
   `time` timestamp NULL DEFAULT current_timestamp(),
-  `date` date NOT NULL
+  `date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -129,7 +175,7 @@ CREATE TABLE `contact` (
 
 INSERT INTO `contact` (`id`, `name`, `email`, `contact`, `address`, `msg`, `time`, `date`) VALUES
 (1, 'Nishant Narayan Rout', 'nishantnarayanrout@gmail.com', '+9163700171707', 'SRM IST, Kattankulathur, Room No 212, Nelson Mandela', 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.', '2020-11-25 22:33:08', '2020-07-09'),
-(2, 'Aditya Attri', 'aditya@gmail.com', '+918939353326', 'SRM IST, Kattankulathur, Room No 215, Nelson Mandela', 'Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus.', '2020-11-25 22:38:28', '2020-07-09');
+(7, 'Nishant Narayan Rout', 'nishantnarayanrout@gmail.com', '+9163700171707', 'SRM IST, Kattankulathur', 'Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero\'s De Finibus Bonorum et Malorum for use in a type specimen book.', '2020-12-10 11:37:26', '2020-12-10');
 
 -- --------------------------------------------------------
 
@@ -152,8 +198,8 @@ INSERT INTO `newsletter` (`id`, `email`) VALUES
 (5, 'ps@gmail.com'),
 (6, 'psnew@gmail.com'),
 (7, 'new@gmail.com'),
-(8, 'final@gmail.com'),
-(9, 'nishant@perfectshades.in');
+(9, 'nishant@perfectshades.in'),
+(10, 'hello@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -339,6 +385,33 @@ INSERT INTO `products` (`id`, `cat_id`, `subcat_id`, `p_img`, `p_cat`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `projects`
+--
+
+CREATE TABLE `projects` (
+  `id` int(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `description` varchar(700) NOT NULL,
+  `img` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `projects`
+--
+
+INSERT INTO `projects` (`id`, `name`, `description`, `img`) VALUES
+(1, 'Customised Wall Art', 'Customised hand paintings done by our own artists from Odisha as per a client’s special request. They commissioned 2  Pattachitra art pieces in their living room right from the entrance of the house of 22ft length X 1.5ft height. 1st painting indicates “ Boita Bandana” the ceremonial farewell to the merchant ship. 2nd one indicates journey of lord Jagannath & Balabhadra via manikapatna for Kanchi journey.', 'P1.jpg'),
+(2, 'Residential Interior Project', 'Theme for this project was WHITE. Client needed all wardrobes, book shelf, kitchen and ceiling colours to be white with combination of rubber wood for panelling of kitchen and living area, TV Unit and all walls in light grey colour. One wall in Master bed Room was painted with Stucco finish, while other 3 Bed Rooms, one wall was painted with textured paint. All furnitures were made in teak wood and doors were changed to white colour. Even dish washer, ceiling fans and refrigerator was ordered in white colour. One of the most elegant projects undertaken by us.', 'P8.jpg'),
+(17, 'News 7 Studio Makeover', 'We were approached by a famous news channel in Bhubaneswar for a studio makeover,  for one of its morning dailies  called “Breakfast Odisha”. After understanding their requirements, we primarily did some cosmetic changes to give a different and contemporary look. In this project, we changed sticker on back side with some vibrant colours along with put some big and small cushions, and added few artefacts on the table to give  it a fresh look. The new look has been noticed and appreciated by the viewers.', 'P3.jpg'),
+(18, 'Customised Fabric Design', 'A senior interior designer from Odisha has asked us to develop this fabric for her client. She shared with us an image of the chair, along with only information that fabric should be soft. This particular design was difficult to develop as it is not clearly visible and there are 3 colours involved in it. Out of 3 options submitted to her, she has approved this one enclosed for her client. The fabric comes out to be perfect as we had used chenille fabric as base for softness as well as upholstery application.', 'P4.jpg'),
+(19, 'Lawn Grass Carpet Installation', 'A beautiful house with an unkempt garden. This house belongs to an ex member of parliament at Bhubaneswar. We were called to give a solution on how to maintain it neat and clean without any gardener’s help. Area was huge i.e. approx. 120 sq. Ft. We suggested to use a lawn grass carpet. We installed lawn grass carpet of 20mm pile height with tuft density of 21000 d/m2. . The client expressed his delight on the outcome.', 'P5.jpg'),
+(20, 'Government Guest House Suites at Puri', 'This is a special project as it was our 1st Interior turnkey project.  The biggest Challenge was to complete interior of 2 Suites of approx. 1500 Sq. ft each suite within 11 days. It includes civil, electrical, false ceiling, carpentry includes wardrobe, study table, tv panel etc, painting, furniture includes bed, chair and centre table and soft furnishing includes mattress, top-of-the-bed items, curtains, cushions, pillows etc. 23 people engaged day & night and then only we could able to hand over on 10th day, one day prior to committed date. Always grateful to the GM for his trust and support. Appreciation by chairman of  the concerned department. Was a cherry on the cake!', 'P6.jpg'),
+(21, 'Panthanivas Refurbishing at BBSR', 'We got this project through one of our associate architect and a very good friend, who has a furniture factory in Bhubaneswar. This is a guest house project with more than 45 rooms, which is being done on phase manner. We, from Estética supplied the soft furnishing which included Mattress, Mattress Protector, Bed Sheet, Pillow, Pillow Case, Comforter, Comforter Cover, bed runner, cushions with cushion covers, face towel, bath towel along with roman blind. The minimalistic interiors were suitably supported by our elegant furnishing.', 'P7.jpg'),
+(22, 'Customised Re-furbishing Project', 'This was a special project and 1st of its kind for us. One of our client wanted her sofa to be re-furbished with Odisha handloom fabric. Initially we were little worried, as normally in Odisha we make light weight handloom fabrics for dress material and sarees,  but took the challenge and we specially developed this ikat fabric with small motif designs for her and were happy to surpass her expectations.', 'P2.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `p_cat`
 --
 
@@ -428,6 +501,32 @@ INSERT INTO `sub_category` (`subcat_id`, `subcat_name`, `cat_id`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `testimonials`
+--
+
+CREATE TABLE `testimonials` (
+  `id` int(50) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `designation` varchar(100) NOT NULL,
+  `review` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `testimonials`
+--
+
+INSERT INTO `testimonials` (`id`, `name`, `designation`, `review`) VALUES
+(6, 'Revati Pany', 'Managing Director, Ocasa Design Studio', 'Very pleasing ambience. Looks like we have found the right store! Really liked the layout.  As far as furnishing goes, the best I\'ve seen so far. Our experience at Estética has been satisfying indeed. We do recommend them to discerning clients.'),
+(9, 'Ar. Prateek Gupta', 'Principal Architect, Prateek Gupta Architects', 'In one word, Estética is elegant. The ambience, the quality of the products, the variety...I loved the craftsmanship and the details.... It exceeded my expectations. I\'d definitely recommend Estética to people who are looking for exceptional quality at a fair price!'),
+(10, 'Sambid Mohapatra', 'Principal architect, SDS consulting', 'Excellent collections! Speciality is the spaciousness of the premise alongwith the décor, product display and well behaved staff. Though never been your customer, will look forward to be one in near future.'),
+(11, 'Dheeshakti Mishra', '', 'Poetry in fabric, Estética is resplendence at its best. They have something for every corner of your abode. The colourful drapes, with a plethora of designs and variations, vivid patterns and world class material- pave way for a home you can’t take your eyes off.'),
+(12, 'Paramita Sahu', '', 'Absolutely amazing collection, truly classy with excellent staff which is a rarity in Bhubaneshwar. The showroom is so well laid, you will just fall in love with everything.'),
+(13, 'Urmi Amrita', '', 'Loved this place...I purchased curtains from them recently and loved everything about this place starting from the behaviour of staff to collections...they have great collections available and a variety of brands starting from pocket friendly to high-end brands suiting customer’s needs and taste.'),
+(14, 'Amit Singhania', '', 'Good shop with nice collection with good price, cooperative employees with products knowledge n understanding of customer taste n choice. One should atleast visit before buying from anywhere.');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -443,12 +542,25 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`name`, `email`, `pwd`, `img`) VALUES
+('Estetica Furnishing', 'admin@esteticasolutions.in', 'EAD-PS@2020', 'estetica.png'),
 ('Nishant Narayan Rout', 'nishant@perfectshades.in', 'nishant1999', 'nishant.jpg'),
 ('Soumyajeet Satpathy', 'soumyajeet@perfectshades.in', 'somu1999', 'somu.jpg');
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `about`
+--
+ALTER TABLE `about`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `associates`
+--
+ALTER TABLE `associates`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `blog`
@@ -493,6 +605,12 @@ ALTER TABLE `products`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `projects`
+--
+ALTER TABLE `projects`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `p_cat`
 --
 ALTER TABLE `p_cat`
@@ -505,6 +623,12 @@ ALTER TABLE `sub_category`
   ADD PRIMARY KEY (`subcat_id`);
 
 --
+-- Indexes for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
@@ -515,10 +639,22 @@ ALTER TABLE `user`
 --
 
 --
+-- AUTO_INCREMENT for table `about`
+--
+ALTER TABLE `about`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `associates`
+--
+ALTER TABLE `associates`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `blog`
 --
 ALTER TABLE `blog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `category`
@@ -530,37 +666,49 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `newsletter`
 --
 ALTER TABLE `newsletter`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `partner_brands`
 --
 ALTER TABLE `partner_brands`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=155;
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=158;
+
+--
+-- AUTO_INCREMENT for table `projects`
+--
+ALTER TABLE `projects`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `p_cat`
 --
 ALTER TABLE `p_cat`
   MODIFY `cat_id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `testimonials`
+--
+ALTER TABLE `testimonials`
+  MODIFY `id` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
