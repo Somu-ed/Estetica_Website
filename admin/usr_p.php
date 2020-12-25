@@ -48,7 +48,7 @@
         <!--begin::Nav-->
         <div class="navi navi-spacer-x-0 p-0">
             <!--begin::Item-->
-            <a href="custom/apps/user/profile-1/personal-information.html" class="navi-item">
+            <a href="http://esteticasolutions.in/" class="navi-item">
                 <div class="navi-link">
                     <div class="symbol symbol-40 bg-light mr-3">
                         <div class="symbol-label">
@@ -66,8 +66,8 @@
                         </div>
                     </div>
                     <div class="navi-text">
-                        <div class="font-weight-bold">My Profile</div>
-                        <div class="text-muted">Account settings and more
+                        <div class="font-weight-bold">Estetica Website</div>
+                        <div class="text-muted">Click here to visit main website
                         <!-- <span class="label label-light-danger label-inline font-weight-bold">update</span> --></div>
                     </div>
                 </div>
