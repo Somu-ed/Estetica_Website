@@ -244,7 +244,7 @@
 							<i class="ion-ios-clock-outline"></i>
 						</div>
 						<div class="icon-box-content">
-							<h3 class="title">HOUR OF OPERATION</h3>
+							<h3 class="title">HOURS OF OPERATION</h3>
 							<p class="content">Monday–Sunday: 11:00 – 21:00</p>
 						</div>
 					</div>
