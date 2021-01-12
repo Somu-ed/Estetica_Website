@@ -95,6 +95,19 @@ else{
 		<link rel="shortcut icon" href="assets/media/favicon.svg" />
 
 		<style>
+			@media screen and (max-width: 1800px) {
+				.img-dir {
+					flex-direction: column;
+					justify-content: flex-start !important;
+				}
+				.img-pd {
+					margin-bottom: 20px;
+				}
+				.img-pd > img {
+					max-width: 300px !important;
+					height: 100px !important;
+				}
+			}
 			@media screen and (max-width: 1366px) {
 				.img-dir {
 					flex-direction: column;
@@ -105,7 +118,7 @@ else{
 				}
 				.img-pd > img {
 					max-width: 400px !important;
-					height: 200px !important;
+					height: 150px !important;
 				}
 			}
 			.img-dir {
