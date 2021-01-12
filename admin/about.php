@@ -527,7 +527,7 @@ else{
 								<!--begin::Info-->
 								<div class="d-flex align-items-center flex-wrap mr-2">
 									<!--begin::Page Title-->
-									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">Projects - Compose</h5>
+									<h5 class="text-dark font-weight-bold mt-2 mb-2 mr-5">About us</h5>
 									<!--end::Page Title-->
 									<!--begin::Actions-->
 									<div class="subheader-separator subheader-separator-ver mt-2 mb-2 mr-4 bg-gray-200"></div>
@@ -548,7 +548,7 @@ else{
 										<!--begin::Card-->
 										<div class="card card-custom gutter-b card-stretch">
 											<div class="card-header">
-												<h3 class="card-title">Add Project</h3>	
+												<h3 class="card-title">Update the details below:</h3>	
 											</div>
 
 											<script>
