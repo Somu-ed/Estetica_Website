@@ -548,9 +548,7 @@ else{
 												<!--begin::Toolbar-->
 												<div class='d-flex justify-content-end'>
 													<div class='dropdown dropdown-inline' data-toggle='tooltip' title='Quick actions' data-placement='left'>
-														<a href='#' class='btn btn-clean btn-hover-light-primary btn-sm btn-icon' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>
-															<i class='ki ki-bold-more-hor'></i>
-														</a>
+														
 														<div class='dropdown-menu dropdown-menu-md dropdown-menu-right'>
 															<!--begin::Navigation-->
 															<ul class='navi navi-hover'>
@@ -666,10 +664,10 @@ else{
 										<div class='d-flex flex-wrap mr-3'>";
 										if($page>1){
 											echo"
-											<a href='postedTestimonial?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedAssociates?page=1' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-back icon-xs'></i>
 											</a>
-											<a href='postedTestimonial?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedAssociates?page=".$prev.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-back icon-xs'></i>
 											</a>";
 										}
@@ -685,12 +683,12 @@ else{
 										for($i=1; $i<=$total_pages; $i++){
 											if($i == $page){
 												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
+												  <a href='postedAssociates?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary active mr-2 my-1'>".$i."</a>
 												";
 											}
 											else{
 												echo"
-												  <a href='postedTestimonial?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
+												  <a href='postedAssociates?page=".$i.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm border-0 btn-hover-primary mr-2 my-1'>".$i."</a>
 												";
 											}
 										}
@@ -706,10 +704,10 @@ else{
 										else{
 											$next = $page+1;
 											echo"
-											<a href='postedTestimonial?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedAssociates?page=".$next.(!empty($aPath)?'&'.$aPath:'')."' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-arrow-next icon-xs'></i>
 											</a>
-											<a href='postedTestimonial?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
+											<a href='postedAssociates?page=$total_pages' class='btn btn-icon btn-sm btn-light-danger mr-2 my-1'>
 												<i class='ki ki-bold-double-arrow-next icon-xs'></i>
 											</a>";
 										}
@@ -717,7 +715,7 @@ else{
 										echo"
 										</div>
 										<div class='d-flex align-items-center'>
-										<form action='postedTestimonial' method='post' id='form'>
+										<form action='postedAssociates' method='post' id='form'>
 											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-danger font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
 											$numrows_arr = array("12","24");
 											foreach($numrows_arr as $nrow){

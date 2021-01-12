@@ -730,7 +730,7 @@ else{
 										echo"
 										</div>
 										<div class='d-flex align-items-center'>
-										<form action='postedTestimonial' method='post' id='form'>
+										<form action='postedProj' method='post' id='form'>
 											<select id='num_rows' name='num_rows' class='form-control form-control-sm text-danger font-weight-bold mr-4 border-0 bg-light-danger' style='width: 60px;'>";
 											$numrows_arr = array("12","24");
 											foreach($numrows_arr as $nrow){
